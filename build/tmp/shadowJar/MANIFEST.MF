@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Title: task ':jar' property 'archiveFileName'
+Version: task ':jar' property 'archiveVersion'
+Main-Class: com.github.freddyyj.randomtrainsimworld2.Main
+
