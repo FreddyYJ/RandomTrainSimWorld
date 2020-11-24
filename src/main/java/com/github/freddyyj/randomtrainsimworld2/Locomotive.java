@@ -23,8 +23,8 @@ public class Locomotive {
 	@Deprecated
 	public Locomotive(int id, String name, com.github.freddyyj.randomtrainsimworld2.Route route)
 	{
-		this.setName(name);
-		this.setRoute(route);
+		this.name=name;
+		this.route=route;
 	}
 
 	/**
@@ -35,8 +35,8 @@ public class Locomotive {
 	 */
 	public Locomotive(String name, com.github.freddyyj.randomtrainsimworld2.Route route, boolean isSelected)
 	{
-		this.setName(name);
-		this.setRoute(route);
+		this.name=name;
+		this.route=route;
 		this.isSelected=isSelected;
 	}
 
@@ -51,13 +51,7 @@ public class Locomotive {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public com.github.freddyyj.randomtrainsimworld2.Route getRoute() {
 		return route;
-	}
-	public void setRoute(com.github.freddyyj.randomtrainsimworld2.Route route) {
-		this.route = route;
 	}
 }
