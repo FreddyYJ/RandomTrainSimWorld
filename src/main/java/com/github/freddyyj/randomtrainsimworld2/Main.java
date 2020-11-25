@@ -1,7 +1,9 @@
 package com.github.freddyyj.randomtrainsimworld2;
 
 import com.github.freddyyj.randomtrainsimworld2.config.Config;
+import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
+import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
 import javafx.application.Application;
 
 import java.util.ArrayList;
@@ -29,6 +31,8 @@ public class Main {
 	private Config config;
 	private static Main core=null;
 	public static void main(String[] args) {
+		LocomotiveReader.reload();
+		WeatherReader.reload();
 		Application.launch(com.github.freddyyj.randomtrainsimworld2.gui.Main.class);
 		
 	}
@@ -52,25 +56,34 @@ public class Main {
 		weathers=new ArrayList<>();
 
 		config=new Config();
+
+		// list of routes
+		ArrayList<String> route=new ArrayList<>();
+		for (int i=0;i<LocomotiveReader.getLocomotiveReaders().size();i++){
+			route.add(LocomotiveReader.getLocomotiveReaders().get(i).getName());
+		}
+		// If no save file exist
 		if (config.getConfig("DefaultSaveFilePath")==null)
-			unselectedLocos=new SaveLoco(com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getRouteList());
+			unselectedLocos=new SaveLoco(route);
 		else {
-			unselectedLocos=new SaveLoco(com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getRouteList(), config.getConfig("DefaultSaveFilePath"));
+			unselectedLocos=new SaveLoco(route, config.getConfig("DefaultSaveFilePath"));
 		}
 
-		for (int i = 0; i< com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getRouteList().size(); i++){
-			com.github.freddyyj.randomtrainsimworld2.Route route=new com.github.freddyyj.randomtrainsimworld2.Route(com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getRouteList().get(i));
+		// create Route list and Locomotive list
+		for (int i=0;i<route.size();i++){
+			routes.add(new Route(route.get(i)));
+
 			ArrayList<Locomotive> locoList=new ArrayList<>();
-			for (int j = 0; j< com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getLocoList().get(i).size(); j++){
-				Locomotive locomotive=new Locomotive(com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getLocoList().get(i).get(j),route);
+			for (int j = 0; j< LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().size(); j++){
+				Locomotive locomotive=new Locomotive(LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().get(j),routes.get(i));
 				locoList.add(locomotive);
 			}
-			locos.put(route,locoList);
-			routes.add(route);
+			locos.put(routes.get(i),locoList);
 		}
 
-		for (int i = 0; i< com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getWeather().size(); i++){
-			com.github.freddyyj.randomtrainsimworld2.Weather weather=new com.github.freddyyj.randomtrainsimworld2.Weather(com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().getWeather().get(i),true);
+		// create weather list
+		for (int i = 0; i< WeatherReader.getWeathers().size(); i++){
+			com.github.freddyyj.randomtrainsimworld2.Weather weather=new com.github.freddyyj.randomtrainsimworld2.Weather(WeatherReader.getWeathers().get(i),true);
 			weathers.add(weather);
 		}
 
