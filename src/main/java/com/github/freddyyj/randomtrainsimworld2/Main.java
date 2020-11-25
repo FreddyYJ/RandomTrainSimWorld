@@ -71,7 +71,7 @@ public class Main {
 
 		// create Route list and Locomotive list
 		for (int i=0;i<route.size();i++){
-			routes.add(new Route(route.get(i)));
+			routes.add(new Route(route.get(i),LocomotiveReader.getLocomotiveReaders().get(i).getCode()));
 
 			ArrayList<Locomotive> locoList=new ArrayList<>();
 			for (int j = 0; j< LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().size(); j++){
@@ -88,7 +88,6 @@ public class Main {
 		}
 
 		reload();
-		//com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().reload(unselectedLocos);
 	}
 
 	/**

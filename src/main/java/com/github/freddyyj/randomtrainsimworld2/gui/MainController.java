@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 /**
  * Main controller of {@link com.github.freddyyj.randomtrainsimworld2.gui.Main}.
@@ -80,7 +81,7 @@ public class MainController {
             route.setOnAction(this::onCheckRouteSelect);
             route.setOnMouseClicked(this::onCheckRouteClick);
             route.setPadding(new Insets(5.,0.,0.,5.));
-            route.setId("check"+core.getRoutes().get(i));
+            route.setId("check"+core.getRoutes().get(i).getCode());
             boxRoute.getChildren().add(route);
 
             // add route VBox in loco pane
@@ -88,11 +89,12 @@ public class MainController {
             locoOfRoute.setDisable(true);
             locoOfRoute.setVisible(false);
             locoOfRoute.prefHeight(200.);
-            locoOfRoute.setId("box"+core.getRoutes().get(i));
+            locoOfRoute.setId("box"+core.getRoutes().get(i).getCode());
 
             // add locomotives in route VBox
             for (int j=0;j<core.getLocomotive(core.getRoutes().get(i).getName()).size();j++){
-                CheckBox locomotive=new CheckBox(core.getLocomotive(core.getRoutes().get(i).getName()).get(j).getName());
+                String locoName=core.getLocomotive(core.getRoutes().get(i).getName()).get(j).getName();
+                CheckBox locomotive=new CheckBox(locoName);
                 locomotive.setOnAction(this::onCheckLocoSelect);
                 locomotive.setSelected(true);
                 locomotive.setPadding(new Insets(5.,0.,0.,5.));
@@ -134,9 +136,6 @@ public class MainController {
 
     @FXML
     protected void onCheckRouteClick(MouseEvent e) {
-        if (currentBox == null) {
-            return;
-        }
         if (e.getSource() instanceof CheckBox) {
             currentBox = (CheckBox) e.getSource();
         }
@@ -200,6 +199,7 @@ public class MainController {
 
     @FXML
     protected void onRandomLoco(ActionEvent e) {
+        if (currentBox==null) return;
         Locomotive selected=random.randomLocomotive(Main.getInstance().getLocomotive(currentBox.getText()));
         CheckBox loco = getLocoByName(selected.getName(),currentBox.getText());
 
@@ -349,6 +349,7 @@ public class MainController {
      */
     protected VBox getLocoBoxByID(String routeId) {
         List<Node> loco = boxLoco.getChildren();
+
         String locoId;
         String[] id = routeId.split("check");
         locoId = id[1];

@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * @author FreddyYJ_
  */
 public class Route {
+	private String code;
 	private String name;
-	private ArrayList<Locomotive> locomotives;
 	/**
 	 * If true, this route can be selected by random pick.
 	 */
@@ -17,7 +17,7 @@ public class Route {
 
 	/**
 	 * Constructor with route ID and route text file.
-	 * @deprecated Use {@link Route#Route(String, boolean)} instead.
+	 * @deprecated Use {@link Route#Route(String, String,boolean)} instead.
 	 * @param num route ID
 	 * @param file route text file
 	 */
@@ -29,7 +29,7 @@ public class Route {
 	}
 	/**
 	 * Constructor with route ID and route name.
-	 * @deprecated Use {@link Route#Route(String, boolean)} instead.
+	 * @deprecated Use {@link Route#Route(String, String,boolean)} instead.
 	 * @param num route ID
 	 * @param name route name
 	 */
@@ -40,7 +40,7 @@ public class Route {
 
 	/**
 	 * Constructor with route ID, route name and locomotive list.
-	 * @deprecated Use {@link Route#Route(String, boolean)} instead.
+	 * @deprecated Use {@link Route#Route(String, String,boolean)} instead.
 	 * @param num route ID
 	 * @param name route name
 	 * @param locos locomotive list
@@ -48,19 +48,6 @@ public class Route {
 	@Deprecated
 	public Route(int num,String name, ArrayList<Locomotive> locos) {
 		this.name=name;
-		locomotives=locos;
-	}
-
-	/**
-	 * Constructor with route name, locomotive list and selection of this route.
-	 * @param name route name
-	 * @param locos locomotive list
-	 * @param select initial {@link Route#isSelected} value
-	 */
-	public Route(String name, ArrayList<Locomotive> locos,boolean select){
-		this.name=name;
-		locomotives=locos;
-		isSelected=select;
 	}
 
 	/**
@@ -68,24 +55,22 @@ public class Route {
 	 * @param name route name
 	 * @param select initial {@link Route#isSelected} value
 	 */
-	public Route(String name,boolean select){
+	public Route(String name,String code,boolean select){
 		this.name=name;
 		isSelected=select;
+		this.code=code;
 	}
 
 	/**
 	 * Constructor with route name. {@link Route#isSelected} sets to true.
 	 * @param name route name
 	 */
-	public Route(String name){
-		this(name,true);
+	public Route(String name,String code){
+		this(name,code,true);
 	}
 	public String getName()
 	{
 		return name;
 	}
-	public ArrayList<Locomotive> getLocomotives()
-	{
-		return locomotives;
-	}
+	public String getCode(){return code;}
 }

@@ -27,11 +27,10 @@ public class LocomotiveReader {
     public static void reload(){
         JsonReader reader= Json.createReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"));
         JsonObject object=reader.readObject();
-        ArrayList<String> locos=new ArrayList<>();
 
         Set<String> set=object.keySet();
         for (int i=0;i< set.size();i++){
-            locos.clear();
+            ArrayList<String> locos=new ArrayList<>();
             String key=(set.toArray(new String[1]))[i];
             JsonObject route=object.getJsonObject(key);
 
