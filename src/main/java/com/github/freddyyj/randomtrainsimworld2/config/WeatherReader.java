@@ -1,14 +1,8 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Main;
-
 import javax.json.Json;
 import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
 import javax.json.JsonReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
