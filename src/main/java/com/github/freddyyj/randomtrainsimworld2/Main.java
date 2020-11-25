@@ -88,7 +88,7 @@ public class Main {
 		}
 
 		reload();
-		com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().reload(unselectedLocos);
+		//com.github.freddyyj.randomtrainsimworld2.gui.Main.getController().reload(unselectedLocos);
 	}
 
 	/**

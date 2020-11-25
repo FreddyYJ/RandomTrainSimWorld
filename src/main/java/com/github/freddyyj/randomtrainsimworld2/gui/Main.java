@@ -39,7 +39,7 @@ public class Main extends Application{
 		FXMLLoader loader=new FXMLLoader(getClass().getClassLoader().getResource("MainDoc.fxml"));
 		scene=new Scene(loader.load(),250,75);
 		stage=primaryStage;
-		primaryStage.setTitle("randomtrainsimworld2");
+		primaryStage.setTitle("Random Train Sim World 2");
 		primaryStage.setScene(scene);
 		primaryStage.setWidth(500);
 		primaryStage.setHeight(400);

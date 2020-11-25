@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Set;
 
 public class LocomotiveReader {
-    private static File file=new File(Thread.currentThread().getContextClassLoader().getResource("locomotives.json").getFile());
     private static ArrayList<LocomotiveReader> routes=new ArrayList<>();
     private String code;
     private String name;
@@ -26,27 +25,23 @@ public class LocomotiveReader {
         locomotives=locos;
     }
     public static void reload(){
-        try {
-            JsonReader reader= Json.createReader(new FileInputStream(file));
-            JsonObject object=reader.readObject();
-            ArrayList<String> locos=new ArrayList<>();
+        JsonReader reader= Json.createReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"));
+        JsonObject object=reader.readObject();
+        ArrayList<String> locos=new ArrayList<>();
 
-            Set<String> set=object.keySet();
-            for (int i=0;i< set.size();i++){
-                locos.clear();
-                String key=(set.toArray(new String[1]))[i];
-                JsonObject route=object.getJsonObject(key);
+        Set<String> set=object.keySet();
+        for (int i=0;i< set.size();i++){
+            locos.clear();
+            String key=(set.toArray(new String[1]))[i];
+            JsonObject route=object.getJsonObject(key);
 
-                route.getJsonArray("locomotives").forEach(locomotive->{
-                    locos.add(locomotive.toString());
-                });
-                routes.add(new LocomotiveReader(key,route.getString("name"),locos,route.getString("nation")));
-            }
-
-            reader.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            route.getJsonArray("locomotives").forEach(locomotive->{
+                locos.add(locomotive.toString());
+            });
+            routes.add(new LocomotiveReader(key,route.getString("name"),locos,route.getString("nation")));
         }
+
+        reader.close();
 
     }
     public static List<LocomotiveReader> getLocomotiveReaders(){return routes;}

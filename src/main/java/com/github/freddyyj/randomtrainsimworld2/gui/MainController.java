@@ -3,8 +3,10 @@ package com.github.freddyyj.randomtrainsimworld2.gui;
 import com.github.freddyyj.randomtrainsimworld2.*;
 import com.github.freddyyj.randomtrainsimworld2.Main;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -56,9 +58,6 @@ public class MainController {
     private MenuItem itemClose;
     @FXML
     private MenuItem itemAbout;
-    private List<List<Node>> locos;
-    private List<Node> routes;
-    private List<Node> weathers;
     private VBox currentRoute; // Box of locos that selected
     private CheckBox currentBox; // Route Checkbox
     private Random random;
@@ -71,35 +70,46 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        locos = new Vector<List<Node>>();
-        routes = boxRoute.getChildren();
-        weathers = boxWeather.getChildren();
-        currentRoute = getLocoBoxByID("checkCSX");
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-        List<Node> locoList;
-        for (int i = 0; i < boxLoco.getChildren().size(); i++) {
-            VBox locoBox = (VBox) boxLoco.getChildren().get(i);
-            locoList = locoBox.getChildren();
-            locos.add(locoList);
-        }
+        Main core=Main.getInstance();
 
-        Vector<String> routes = new Vector<>();
-        HashMap<String, List<String>> locos = new HashMap<>();
-        for (int i = 0; i < this.routes.size(); i++) {
-            routes.add(((CheckBox) this.routes.get(i)).getText());
-            List<String> locoLists = new Vector<>();
-            for (int j = 0; j < this.locos.get(i).size(); j++) {
-                locoLists.add(((CheckBox) this.locos.get(i).get(j)).getText());
+        // create UI elements depend on JSON file
+        for(int i=0;i<core.getRoutes().size();i++){
+            // add route checkbox
+            CheckBox route=new CheckBox(core.getRoutes().get(i).getName());
+            route.setSelected(true);
+            route.setOnAction(this::onCheckRouteSelect);
+            route.setOnMouseClicked(this::onCheckRouteClick);
+            route.setPadding(new Insets(5.,0.,0.,5.));
+            route.setId("check"+core.getRoutes().get(i));
+            boxRoute.getChildren().add(route);
+
+            // add route VBox in loco pane
+            VBox locoOfRoute=new VBox();
+            locoOfRoute.setDisable(true);
+            locoOfRoute.setVisible(false);
+            locoOfRoute.prefHeight(200.);
+            locoOfRoute.setId("box"+core.getRoutes().get(i));
+
+            // add locomotives in route VBox
+            for (int j=0;j<core.getLocomotive(core.getRoutes().get(i).getName()).size();j++){
+                CheckBox locomotive=new CheckBox(core.getLocomotive(core.getRoutes().get(i).getName()).get(j).getName());
+                locomotive.setOnAction(this::onCheckLocoSelect);
+                locomotive.setSelected(true);
+                locomotive.setPadding(new Insets(5.,0.,0.,5.));
+                locoOfRoute.getChildren().add(locomotive);
             }
-            locos.put(((CheckBox) this.routes.get(i)).getText(), locoLists);
-        }
-        Vector<String> weather = new Vector<>();
-        for (int i = 0; i < weathers.size(); i++) {
-            weather.add(((CheckBox) weathers.get(i)).getText());
+
+            boxLoco.getChildren().add(locoOfRoute);
         }
 
-        currentBox = (CheckBox) this.routes.get(0);
+        // add weather checkbox
+        for (int i=0;i<core.getWeathers().size();i++){
+            CheckBox weather=new CheckBox(core.getWeathers().get(i).getName());
+            weather.setSelected(true);
+            weather.setOnAction(this::onCheckWeatherSelect);
+            weather.setPadding(new Insets(5.,0.,0.,5.));
+            boxWeather.getChildren().add(weather);
+        }
 
         anchorPane.sceneProperty().addListener((observableScene, oldScene, newScene) -> {
             if (oldScene == null && newScene != null) {
@@ -108,45 +118,7 @@ public class MainController {
         });
 
         random=Random.getInstance();
-    }
-
-    /**
-     * Get all route list.
-     * @return all route list
-     */
-    public ArrayList<String> getRouteList(){
-        ArrayList<String> route=new ArrayList<>();
-        for (int i=0;i<routes.size();i++){
-            route.add(((CheckBox)routes.get(i)).getText());
-        }
-        return route;
-    }
-
-    /**
-     * Get all locomotive list.
-     * @return all locomotive list
-     */
-    public ArrayList<ArrayList<String>> getLocoList(){
-        ArrayList<ArrayList<String>> loco=new ArrayList<>();
-        for (int i=0;i<locos.size();i++){
-            loco.add(new ArrayList<>());
-            for (int j=0;j<locos.get(i).size();j++){
-                loco.get(i).add(((CheckBox)locos.get(i).get(j)).getText());
-            }
-        }
-        return loco;
-    }
-
-    /**
-     * Get all weather list.
-     * @return all weather list
-     */
-    public ArrayList<String> getWeather(){
-        ArrayList<String> weather=new ArrayList<>();
-        for (int i=0;i<weathers.size();i++){
-            weather.add(((CheckBox)weathers.get(i)).getText());
-        }
-        return weather;
+        reload(Main.getInstance().getUnselectedLocos());
     }
 
     /**
@@ -163,16 +135,15 @@ public class MainController {
     @FXML
     protected void onCheckRouteClick(MouseEvent e) {
         if (currentBox == null) {
-            currentBox = (CheckBox) routes.get(0);
+            return;
         }
         if (e.getSource() instanceof CheckBox) {
             currentBox = (CheckBox) e.getSource();
         }
-        if (currentRoute == null) {
-            currentRoute = getLocoBoxByID("checkCSX");
+        if( currentRoute!=null){
+            currentRoute.setVisible(false);
+            currentRoute.setDisable(true);
         }
-        currentRoute.setVisible(false);
-        currentRoute.setDisable(true);
         Node routeBox = (Node) e.getSource();
         String id = routeBox.getId();
         currentRoute = getLocoBoxByID(id);
@@ -192,15 +163,16 @@ public class MainController {
         Locomotive loco = random.randomLocomotiveInAll(locoList);
         Route route = loco.getRoute();
 
-        CheckBox locoBox = getLocoByName(loco.getName(), route.getName());
         Weather weather = random.randomWeather(Main.getInstance().getWeathers());
 
         textPickedRoute.setText(route.getName());
         textPickedLoco.setText(loco.getName());
         textPickedWeather.setText(weather.getName());
 
-        currentRoute.setVisible(false);
-        currentRoute.setDisable(true);
+        if (currentRoute!=null){
+            currentRoute.setVisible(false);
+            currentRoute.setDisable(true);
+        }
         String name=getRouteByName(route.getName()).getId();
         currentRoute = getLocoBoxByID(name);
         currentRoute.setVisible(true);
@@ -214,9 +186,10 @@ public class MainController {
         Route selected=random.randomRoute(Main.getInstance().getRoutes());
         CheckBox selectedRoute = getRouteByName(selected.getName());
 
-        currentRoute.setVisible(false);
-        currentRoute.setDisable(true);
-
+        if (currentRoute!=null){
+            currentRoute.setVisible(false);
+            currentRoute.setDisable(true);
+        }
         textPickedRoute.setText(selectedRoute.getText());
         currentRoute = getLocoBoxByID(selectedRoute.getId());
         currentRoute.setVisible(true);
@@ -238,60 +211,6 @@ public class MainController {
     protected void onRandomWeather(ActionEvent e) {
         Weather weather = random.randomWeather(Main.getInstance().getWeathers());
         textPickedWeather.setText(weather.getName());
-    }
-    @FXML
-    protected void onRandom2020(ActionEvent e){
-        ArrayList<ArrayList<Locomotive>> locoList=new ArrayList<>();
-        for (int i=0;i<Main.getInstance().getRoutes().size();i++){
-            if (!Main.getInstance().getRoutes().get(i).getName().endsWith("(TSW2)"))
-                locoList.add(Main.getInstance().getLocomotive(Main.getInstance().getRoutes().get(i).getName()));
-        }
-
-        Locomotive loco = random.randomLocomotiveInAll(locoList);
-        Route route = loco.getRoute();
-
-        CheckBox locoBox = getLocoByName(loco.getName(), route.getName());
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
-
-        textPickedRoute.setText(route.getName());
-        textPickedLoco.setText(loco.getName());
-        textPickedWeather.setText(weather.getName());
-
-        currentRoute.setVisible(false);
-        currentRoute.setDisable(true);
-        String name=getRouteByName(route.getName()).getId();
-        currentRoute = getLocoBoxByID(name);
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-
-        currentBox=getRouteByName(loco.getRoute().getName());
-    }
-    @FXML
-    protected void onRandom2(ActionEvent e){
-        ArrayList<ArrayList<Locomotive>> locoList=new ArrayList<>();
-        for (int i=0;i<Main.getInstance().getRoutes().size();i++){
-            if (Main.getInstance().getRoutes().get(i).getName().endsWith("(TSW2)"))
-                locoList.add(Main.getInstance().getLocomotive(Main.getInstance().getRoutes().get(i).getName()));
-        }
-
-        Locomotive loco = random.randomLocomotiveInAll(locoList);
-        Route route = loco.getRoute();
-
-        CheckBox locoBox = getLocoByName(loco.getName(), route.getName());
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
-
-        textPickedRoute.setText(route.getName());
-        textPickedLoco.setText(loco.getName());
-        textPickedWeather.setText(weather.getName());
-
-        currentRoute.setVisible(false);
-        currentRoute.setDisable(true);
-        String name=getRouteByName(route.getName()).getId();
-        currentRoute = getLocoBoxByID(name);
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-
-        currentBox=getRouteByName(loco.getRoute().getName());
     }
 
     @FXML
@@ -382,37 +301,42 @@ public class MainController {
      * @param save a {@link SaveLoco} object
      */
     public void reload(SaveLoco save) {
-        ArrayList<String> routes=save.getRoute();
-        for (int i = 0; i < this.routes.size(); i++) {
-            if (routes.contains(((CheckBox)this.routes.get(i)).getText())) {
-                ((CheckBox) this.routes.get(i)).setSelected(false);
+        // reload routes
+        ObservableList<Node> routeList=this.boxRoute.getChildren();
+        for (int i = 0; i < routeList.size(); i++) {
+            CheckBox route= (CheckBox) routeList.get(i);
+            if (save.getRoute().contains(route.getText())) {
+                route.setSelected(false);
             } else {
-                ((CheckBox) this.routes.get(i)).setSelected(true);
+                route.setSelected(true);
             }
         }
 
-        ArrayList<ArrayList<String>> locos=new ArrayList<>();
-        for (int i=0;i<this.routes.size();i++){
-            locos.add(save.getLocomotive(((CheckBox)this.routes.get(i)).getText()));
-        }
-
-        for (int i = 0; i < locos.size(); i++) {
-            for (int j = 0; j < this.locos.get(i).size(); j++) {
-                if (locos.get(i).contains(((CheckBox)this.locos.get(i).get(j)).getText())) {
-                    ((CheckBox) this.locos.get(i).get(j)).setSelected(false);
+        // reload locomotives
+        ObservableList<Node> locoBoxList=this.boxLoco.getChildren();
+        for (int i = 0; i < locoBoxList.size(); i++) {
+            VBox box= (VBox) locoBoxList.get(i);
+            CheckBox route= (CheckBox) routeList.get(i);
+            ObservableList<Node> locoBox=box.getChildren();
+            for (int j = 0; j < locoBox.size(); j++) {
+                CheckBox loco= (CheckBox) locoBox.get(j);
+                if (save.getLocomotive(route.getText()).contains(loco.getText())) {
+                    loco.setSelected(false);
                 } else {
-                    ((CheckBox) this.locos.get(i).get(j)).setSelected(true);
+                    loco.setSelected(true);
                 }
 
             }
         }
 
-        ArrayList<String> weathers=save.getWeather();
-        for (int i = 0; i < this.weathers.size(); i++) {
-            if (weathers.contains(((CheckBox)this.weathers.get(i)).getText())) {
-                ((CheckBox) this.weathers.get(i)).setSelected(false);
+        // reload weathers
+        ObservableList<Node> weatherList=this.boxWeather.getChildren();
+        for (int i = 0; i < weatherList.size(); i++) {
+            CheckBox weather= (CheckBox) weatherList.get(i);
+            if (save.getWeather().contains(weather.getText())) {
+                weather.setSelected(false);
             } else {
-                ((CheckBox) this.weathers.get(i)).setSelected(true);
+                weather.setSelected(true);
             }
         }
 
@@ -428,12 +352,8 @@ public class MainController {
         String locoId;
         String[] id = routeId.split("check");
         locoId = id[1];
-        if (locoId.endsWith("Tsw2")){
-            locoId=locoId.split("Tsw2")[0];
-            locoId = "box" + locoId + "LocosTsw2";
-        }
-        else
-            locoId = "box" + locoId + "Locos";
+        locoId = "box" + locoId;
+
         for (int i = 0; i < loco.size(); i++) {
             if (loco.get(i).getId().equals(locoId))
                 return (VBox) loco.get(i);
@@ -449,16 +369,12 @@ public class MainController {
     protected CheckBox getRouteByVBox(VBox locoId) {
         String id;
         id = (locoId.getId().split("box"))[1];
-        id = (id.split("Locos"))[0];
-        if(id.endsWith("Tsw2")){
-            id=id.split("Tsw2")[0];
-            id="check" + id+"Tsw2";
-        }
-        else
-            id = "check" + id;
-        for (int i = 0; i < routes.size(); i++) {
-            if (routes.get(i).getId().equals(id))
-                return (CheckBox) routes.get(i);
+        id = "check" + id;
+
+        ObservableList<Node> routeList=this.boxRoute.getChildren();
+        for (int i = 0; i < routeList.size(); i++) {
+            if (routeList.get(i).getId().equals(id))
+                return (CheckBox) routeList.get(i);
         }
         return null;
     }
@@ -469,8 +385,9 @@ public class MainController {
      * @return route {@link CheckBox}
      */
     protected CheckBox getRouteByName(String name){
-        for (int i=0;i<routes.size();i++){
-            if (((CheckBox)routes.get(i)).getText().equals(name)) return (CheckBox)routes.get(i);
+        ObservableList<Node> routeList=this.boxRoute.getChildren();
+        for (int i=0;i<routeList.size();i++){
+            if (((CheckBox)routeList.get(i)).getText().equals(name)) return (CheckBox)routeList.get(i);
         }
         return null;
     }
@@ -483,11 +400,13 @@ public class MainController {
      */
     protected CheckBox getLocoByName(String name, String route) {
         int routeIndex=0;
-        for (int i=0;i<routes.size();i++){
-            if (((CheckBox)routes.get(i)).getText().equals(route))
+
+        ObservableList<Node> routeList=this.boxRoute.getChildren();
+        for (int i=0;i<routeList.size();i++){
+            if (((CheckBox)routeList.get(i)).getText().equals(route))
                 routeIndex=i;
         }
-        List<Node> locoList = locos.get(routeIndex);
+        ObservableList<Node> locoList = getLocoBoxByID(routeList.get(routeIndex).getId()).getChildren();
         for (int i = 0; i < locoList.size(); i++) {
             if (((CheckBox) locoList.get(i)).getText().equals(name))
                 return (CheckBox) locoList.get(i);
@@ -501,9 +420,10 @@ public class MainController {
      * @return weather {@link CheckBox}
      */
     protected CheckBox getWeatherByName(String name) {
-        for (int i = 0; i < weathers.size(); i++) {
-            if (((CheckBox) weathers.get(i)).getText().equals(name))
-                return (CheckBox) weathers.get(i);
+        ObservableList<Node> weatherList=this.boxWeather.getChildren();
+        for (int i = 0; i < weatherList.size(); i++) {
+            if (((CheckBox) weatherList.get(i)).getText().equals(name))
+                return (CheckBox) weatherList.get(i);
         }
         return null;
     }

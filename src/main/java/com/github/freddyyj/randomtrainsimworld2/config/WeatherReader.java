@@ -13,22 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherReader {
-    private static File file=new File(Thread.currentThread().getContextClassLoader().getResource("weathers.json").getFile());
     private static ArrayList<String> weathers=new ArrayList<>();
     private WeatherReader(){}
     public static void reload(){
-        try {
-            JsonReader reader=Json.createReader(new FileInputStream(file));
-            JsonArray array=reader.readArray();
+        JsonReader reader=Json.createReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("weathers.json"));
+        JsonArray array=reader.readArray();
 
-            for (int i=0;i< array.size();i++){
-                weathers.add(array.getString(i));
-            }
-
-            reader.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        for (int i=0;i< array.size();i++){
+            weathers.add(array.getString(i));
         }
+
+        reader.close();
 
     }
     public static List<String> getWeathers(){return weathers;}
