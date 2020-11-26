@@ -8,6 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * reader of all locomotive json file
+ * <p>
+ *     This class reads all routes and locomotives from locomotives.json in jar.
+ *
+ *     One object has one route, and its locomotives.
+ * </p>
+ */
 public class LocomotiveReader {
     private static ArrayList<LocomotiveReader> routes=new ArrayList<>();
     private String code;
@@ -20,6 +28,10 @@ public class LocomotiveReader {
         this.nation=nation;
         locomotives=locos;
     }
+
+    /**
+     * Reload locomotives.json
+     */
     public static void reload(){
         JsonReader reader= Json.createReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"));
         JsonObject object=reader.readObject();
@@ -39,7 +51,18 @@ public class LocomotiveReader {
         reader.close();
 
     }
+
+    /**
+     * Get {@link LocomotiveReader} list
+     * @return LocomotiveReader list
+     */
     public static List<LocomotiveReader> getLocomotiveReaders(){return routes;}
+
+    /**
+     * Get one {@link LocomotiveReader} object with route code
+     * @param code route code
+     * @return LocomotiveReader object
+     */
     public static LocomotiveReader getLocomotiveReader(String code){
         for (int i=0;i<routes.size();i++){
             if (routes.get(i).getCode().equals(code)) return routes.get(i);
@@ -49,5 +72,10 @@ public class LocomotiveReader {
     public String getCode(){return code;}
     public String getName(){return name;}
     public String getNation(){return nation;}
+
+    /**
+     * Get locomotives list from this route
+     * @return locomotive list
+     */
     public List<String> getLocomotives(){return locomotives;}
 }

@@ -5,6 +5,11 @@ import java.util.ArrayList;
 
 /**
  * A route class
+ * <p>
+ *     Route name is a name of route.(ex. Sand Patch Grade)
+ *
+ *     Route code is a 2 to 4 length code of this route.(ex. SPG if this route is Sand Patch Grade)
+ * </p>
  * @author FreddyYJ_
  */
 public class Route {
@@ -54,6 +59,7 @@ public class Route {
 	 * Constructor with route name and selection.
 	 * @param name route name
 	 * @param select initial {@link Route#isSelected} value
+	 * @param code route code
 	 */
 	public Route(String name,String code,boolean select){
 		this.name=name;
@@ -64,6 +70,7 @@ public class Route {
 	/**
 	 * Constructor with route name. {@link Route#isSelected} sets to true.
 	 * @param name route name
+	 * @param code route code
 	 */
 	public Route(String name,String code){
 		this(name,code,true);
