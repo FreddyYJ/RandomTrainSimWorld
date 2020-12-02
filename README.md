@@ -4,6 +4,9 @@ A new random Train Sim World 2 picker based on RandomTSW.
 This Program is based on RandomTrainSimWorld, a random picker for Train Sim World 2020 and 2. This program only include TSW2, not 2020.
 
 ## Changelog
+v0.1.3: Minor Locomotive Issue
+* Remove locomotive 'DB BR 106 ICE 3M' from Hauptstrecke Rhein-Ruhr
+
 v0.1.2: Heavy Freight DLC & C40-8W
 * Add new locomotive 'C40-8W CSX' in Sand Patch Grade
 * Add new locomotives 'BR Class 08 BLU' and 'BR Class 40 BLU' in Northern-Trans Pennine
