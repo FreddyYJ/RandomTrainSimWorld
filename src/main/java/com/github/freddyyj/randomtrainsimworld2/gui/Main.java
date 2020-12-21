@@ -65,6 +65,7 @@ public class Main extends Application{
 				else event.consume();
 			}
 			core.saveConfig();
+			core.close();
 		});
 		primaryStage.show();
 	}
