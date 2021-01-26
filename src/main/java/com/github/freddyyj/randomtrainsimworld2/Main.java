@@ -262,7 +262,7 @@ public class Main {
 	 * Save and close save file.
 	 */
 	public void close() {
-		unselectedLocos.save();
+		if (unselectedLocos.hasSavefile()) unselectedLocos.save();
 	}
 
 	/**
