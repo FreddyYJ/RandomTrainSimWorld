@@ -81,6 +81,9 @@ public class SaveLoco {
 		}
 		
 	}
+	public boolean hasSavefile(){
+		return saveFile != null;
+	}
 
 	/**
 	 * Reload savefile.
