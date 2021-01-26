@@ -1,8 +1,7 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
-import javax.json.*;
 import java.io.*;
-
+import org.json.simple.*;
 /**
  * Default configuration class
  * Don't create this object directly. Use {@link com.github.freddyyj.randomtrainsimworld2.Main} methods instead.
@@ -10,7 +9,7 @@ import java.io.*;
  */
 public class Config {
 	private static final String FILE_NAME="/randomtrainsimworld2.json";
-	private JsonObject object;
+	private JSONObject object;
 	private String documentFile=javax.swing.filechooser.FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
 	private File saveFile;
 
