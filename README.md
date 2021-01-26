@@ -4,6 +4,9 @@ A new random Train Sim World 2 picker based on RandomTSW.
 This Program is based on RandomTrainSimWorld, a random picker for Train Sim World 2020 and 2. This program only include TSW2, not 2020.
 
 ## Changelog
+v0.1.5: Small Issue Fix at closing
+* Fix issue when closing proram without savefile
+
 v0.1.4: LGV Méditerranée
 * Add new route 'LGV Méditerranée'
 * Add new locomotive 'TGV Duplex 200 CM' in LGV Méditerranée
