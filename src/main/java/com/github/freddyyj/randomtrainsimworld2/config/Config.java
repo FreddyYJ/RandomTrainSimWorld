@@ -2,6 +2,9 @@ package com.github.freddyyj.randomtrainsimworld2.config;
 
 import java.io.*;
 import org.json.simple.*;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 /**
  * Default configuration class
  * Don't create this object directly. Use {@link com.github.freddyyj.randomtrainsimworld2.Main} methods instead.
@@ -24,26 +27,20 @@ public class Config {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			JsonObjectBuilder builder=Json.createObjectBuilder();
-			builder.addNull("DefaultSaveFilePath");
-			object=builder.build();
+			JSONObject config=new JSONObject();
+			config.put("DefaultSaveFilePath",null);
+			object=config;
 			
-			FileOutputStream writer;
 			try {
-				writer = new FileOutputStream(saveFile);
-				JsonWriter jsonWriter=Json.createWriter(writer);
-				jsonWriter.writeObject(object);
-				jsonWriter.close();
-			} catch (FileNotFoundException e) {
+				config.writeJSONString(new FileWriter(saveFile));
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 		try {
-			FileInputStream reader=new FileInputStream(saveFile);
-			JsonReader jsonReader=Json.createReader(reader);
-			object=jsonReader.readObject();
-			jsonReader.close();
-		} catch (FileNotFoundException e) {
+			JSONParser parser=new JSONParser();
+			object= (JSONObject) parser.parse(new FileReader(saveFile));
+		} catch (ParseException | IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -54,9 +51,7 @@ public class Config {
 	 * @param value target value
 	 */
 	public void setConfig(String key,String value) {
-		JsonObjectBuilder builder=Json.createObjectBuilder(object);
-		builder.add(key, value);
-		object=builder.build();
+		object.put(key, value);
 	}
 
 	/**
@@ -68,9 +63,9 @@ public class Config {
 	 * @return value of key
 	 */
 	public String getConfig(String key) {
-		if (object.get(key)==JsonValue.NULL || !object.containsKey(key))
+		if (object.get(key)==null || !object.containsKey(key))
 			return null;
-		return object.getString(key);
+		return (String) object.get(key);
 	}
 
 	/**
@@ -78,11 +73,8 @@ public class Config {
 	 */
 	public void save() {
 		try {
-			FileOutputStream writer = new FileOutputStream(saveFile);
-			JsonWriter jsonWriter=Json.createWriter(writer);
-			jsonWriter.writeObject(object);
-			jsonWriter.close();
-		} catch (FileNotFoundException e) {
+			object.writeJSONString(new FileWriter(saveFile));
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
