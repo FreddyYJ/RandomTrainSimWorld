@@ -5,7 +5,9 @@ import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
 import javafx.application.Application;
+import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -31,8 +33,12 @@ public class Main {
 	private Config config;
 	private static Main core=null;
 	public static void main(String[] args) {
-		LocomotiveReader.reload();
-		WeatherReader.reload();
+		try {
+			LocomotiveReader.reload();
+			WeatherReader.reload();
+		} catch (IOException | ParseException e) {
+			e.printStackTrace();
+		}
 		Application.launch(com.github.freddyyj.randomtrainsimworld2.gui.Main.class);
 		
 	}
