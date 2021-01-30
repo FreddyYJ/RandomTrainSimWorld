@@ -75,15 +75,6 @@ public class SaveLoco {
 		}
 
 	}
-
-	/**
-	 * Check if save file is set.
-	 * <p>
-	 *     Savefile is only not set when before save first save file.
-	 *     If you save savefile once, it will always be {@code true}.
-	 * </p>
-	 * @return true when set
-	 */
 	public boolean hasSavefile(){
 		return saveFile != null;
 	}
