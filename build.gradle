@@ -13,9 +13,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.openjfx:javafx-controls:13.0.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    implementation 'org.openjfx:javafx-controls:15.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'org.openjfx:javafx-fxml:13.0.2'
+    implementation 'org.openjfx:javafx-fxml:15.0.1'
 }
 jar {
     manifest {
