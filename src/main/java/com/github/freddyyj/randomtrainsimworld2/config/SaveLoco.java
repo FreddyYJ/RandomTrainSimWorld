@@ -1,5 +1,6 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -59,7 +60,7 @@ public class SaveLoco {
 				}
 				object.add("weather", new JsonArray());
 
-				object.writeJSONString(new FileWriter(saveFile));
+				save(saveFile);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -237,7 +238,7 @@ public class SaveLoco {
 	/**
 	 * Save savefile.
 	 */
-	public void save() {
+	public void save() throws IOException {
 		this.save(saveFile);
 	}
 
@@ -245,13 +246,9 @@ public class SaveLoco {
 	 * Save savefile at specific {@link File}.
 	 * @param file savefile file
 	 */
-	public void save(File file) {
-		try {
-			object.writeJSONString(new FileWriter(file));
+	public void save(File file) throws IOException {
+			JsonUtils.write(object,file);
 			isChanged=false;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 	private int find(JsonArray array,String string) {
 		for (int i=0;i<array.size();i++) {

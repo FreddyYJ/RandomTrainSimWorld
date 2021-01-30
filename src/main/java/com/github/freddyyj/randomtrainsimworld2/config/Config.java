@@ -1,5 +1,6 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -33,7 +34,7 @@ public class Config {
 			object=config;
 			
 			try {
-				config.writeJSONString(new FileWriter(saveFile));
+				JsonUtils.write(config,saveFile);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -71,12 +72,7 @@ public class Config {
 	/**
 	 * Save changes.
 	 */
-	public void save() {
-		try {
-			object.writeJSONString(new FileWriter(saveFile));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+	public void save() throws IOException {
+			JsonUtils.write(object,saveFile);
 	}
 }
