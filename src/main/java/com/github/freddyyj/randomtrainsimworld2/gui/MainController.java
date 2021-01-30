@@ -24,6 +24,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,7 +69,13 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        Main core=Main.getInstance();
+        Main core= null;
+        try {
+            core = Main.getInstance();
+        } catch (IOException e) {
+            // TODO: Catch IOException
+            e.printStackTrace();
+        }
 
         // create UI elements depend on JSON file
         for(int i=0;i<core.getRoutes().size();i++){
@@ -117,7 +124,12 @@ public class MainController {
         });
 
         random=Random.getInstance();
-        reload(Main.getInstance().getUnselectedLocos());
+        try {
+            reload(Main.getInstance().getUnselectedLocos());
+        } catch (IOException e) {
+            // TODO: Catch IOException
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -152,14 +164,22 @@ public class MainController {
     @FXML
     protected void onRandomAll(ActionEvent e) {
         ArrayList<ArrayList<Locomotive>> locoList=new ArrayList<>();
-        for (int i=0;i<Main.getInstance().getRoutes().size();i++){
-            locoList.add(Main.getInstance().getLocomotive(Main.getInstance().getRoutes().get(i).getName()));
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
+        for (int i=0;i<core.getRoutes().size();i++){
+            locoList.add(core.getLocomotive(core.getRoutes().get(i).getName()));
         }
 
         Locomotive loco = random.randomLocomotiveInAll(locoList);
         Route route = loco.getRoute();
 
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
+        Weather weather = random.randomWeather(core.getWeathers());
 
         textPickedRoute.setText(route.getName());
         textPickedLoco.setText(loco.getName());
@@ -179,7 +199,15 @@ public class MainController {
 
     @FXML
     protected void onRandomRoute(ActionEvent e) {
-        Route selected=random.randomRoute(Main.getInstance().getRoutes());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
+        Route selected=random.randomRoute(core.getRoutes());
         CheckBox selectedRoute = getRouteByName(selected.getName());
 
         if (currentRoute!=null){
@@ -196,8 +224,16 @@ public class MainController {
 
     @FXML
     protected void onRandomLoco(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
         if (currentBox==null) return;
-        Locomotive selected=random.randomLocomotive(Main.getInstance().getLocomotive(currentBox.getText()));
+        Locomotive selected=random.randomLocomotive(core.getLocomotive(currentBox.getText()));
         CheckBox loco = getLocoByName(selected.getName(),currentBox.getText());
 
         textPickedRoute.setText(currentBox.getText());
@@ -206,67 +242,124 @@ public class MainController {
 
     @FXML
     protected void onRandomWeather(ActionEvent e) {
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
+        Weather weather = random.randomWeather(core.getWeathers());
         textPickedWeather.setText(weather.getName());
     }
 
     @FXML
     protected void onCheckLocoSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedLoco = (CheckBox) e.getSource();
-            Main.getInstance().selectLocomotive(selectedLoco.isSelected(), Main.getInstance().getLocomotive(currentBox.getText(),selectedLoco.getText()), Main.getInstance().getRoute(currentBox.getText()));
+            core.selectLocomotive(selectedLoco.isSelected(), core.getLocomotive(currentBox.getText(),selectedLoco.getText()), core.getRoute(currentBox.getText()));
         }
     }
 
     @FXML
     protected void onCheckRouteSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedRoute = (CheckBox) e.getSource();
-            Main.getInstance().selectRoute(selectedRoute.isSelected(), Main.getInstance().getRoute(selectedRoute.getText()));
+            core.selectRoute(selectedRoute.isSelected(), core.getRoute(selectedRoute.getText()));
         }
 
     }
 
     @FXML
     protected void onCheckWeatherSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedWeather = (CheckBox) e.getSource();
-            Main.getInstance().selectWeather(selectedWeather.isSelected(), Main.getInstance().getWeather(selectedWeather.getText()));
+            core.selectWeather(selectedWeather.isSelected(), core.getWeather(selectedWeather.getText()));
         }
 
     }
 
     @FXML
     protected void onSaveAs(ActionEvent e) {
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Save File as");
-        chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
-        File currentFile = chooser.showSaveDialog(anchorPane.getScene().getWindow());
-        if (currentFile != null) {
-            Main.getInstance().saveAs(currentFile.getPath());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+
+            FileChooser chooser = new FileChooser();
+            chooser.setTitle("Save File as");
+            chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
+            File currentFile = chooser.showSaveDialog(anchorPane.getScene().getWindow());
+            if (currentFile != null) {
+                core.saveAs(currentFile.getPath());
+            }
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
         }
+
     }
 
     @FXML
     protected void onLoad(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
+        }
+
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Load Save File");
         chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
         File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
         if (file != null) {
-            Main.getInstance().reloadSaveFile(file.getPath());
-            reload(Main.getInstance().getUnselectedLocos());
+            core.reloadSaveFile(file.getPath());
+            reload(core.getUnselectedLocos());
         }
     }
 
     @FXML
     protected void onSave(ActionEvent e) {
-        if (Main.getInstance().getSaveFilePath() != null)
-            Main.getInstance().saveAs(Main.getInstance().getSaveFilePath());
-        else {
-            onSaveAs(e);
+        Main core=null;
+        try{
+            core=Main.getInstance();
+
+            if (core.getSaveFilePath() != null)
+                core.saveAs(core.getSaveFilePath());
+            else {
+                onSaveAs(e);
+            }
+        }catch (IOException excep){
+            // TODO: Catch IOException
+            excep.printStackTrace();
         }
-    }
+}
 
     @FXML
     protected void onClose(ActionEvent e) {

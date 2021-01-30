@@ -21,29 +21,17 @@ public class Config {
 	/**
 	 * Constructor
 	 */
-	public Config() {
+	public Config() throws IOException {
 		saveFile=new File(documentFile+FILE_NAME);
 		if (!saveFile.exists()) {
-			try {
-				saveFile.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			saveFile.createNewFile();
 			JsonObject config=new JsonObject();
 			config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
 			object=config;
 			
-			try {
-				JsonUtils.write(config,saveFile);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			JsonUtils.write(config,saveFile);
 		}
-		try {
-			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 	}
 
 	/**

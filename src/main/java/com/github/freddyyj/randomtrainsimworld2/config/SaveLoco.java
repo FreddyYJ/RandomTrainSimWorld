@@ -43,34 +43,22 @@ public class SaveLoco {
 	 * @param routes list of all routes
 	 * @param defaultPath savefile path
 	 */
-	public SaveLoco(ArrayList<String> routes,String defaultPath) {
+	public SaveLoco(ArrayList<String> routes,String defaultPath) throws IOException {
 		saveFile=new File(defaultPath);
 		if (!saveFile.exists()) {
-			try {
-				saveFile.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			try {
-				object=new JsonObject();
-				object.add("route",new JsonArray());
+			saveFile.createNewFile();
+			object=new JsonObject();
+			object.add("route",new JsonArray());
 
-				for (String route : routes) {
-					object.add(route, new JsonArray());
-				}
-				object.add("weather", new JsonArray());
-
-				save(saveFile);
-			} catch (IOException e) {
-				e.printStackTrace();
+			for (String route : routes) {
+				object.add(route, new JsonArray());
 			}
+			object.add("weather", new JsonArray());
+
+			save(saveFile);
 		}
 		
-		try {
-			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 
 	}
 	public boolean hasSavefile(){
