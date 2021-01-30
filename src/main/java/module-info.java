@@ -7,6 +7,6 @@ module RandomTrainSimWorld2.main {
     requires javafx.base;
     requires javafx.controls;
     requires javafx.fxml;
-    requires json.simple;
+    requires com.google.gson;
     requires java.desktop;
 }

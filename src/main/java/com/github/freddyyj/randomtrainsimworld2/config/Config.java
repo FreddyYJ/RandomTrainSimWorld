@@ -1,9 +1,10 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.google.gson.JsonNull;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.*;
-import org.json.simple.*;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  * Default configuration class
@@ -12,7 +13,7 @@ import org.json.simple.parser.ParseException;
  */
 public class Config {
 	private static final String FILE_NAME="/randomtrainsimworld2.json";
-	private JSONObject object;
+	private JsonObject object;
 	private String documentFile=javax.swing.filechooser.FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
 	private File saveFile;
 
@@ -27,8 +28,8 @@ public class Config {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			JSONObject config=new JSONObject();
-			config.put("DefaultSaveFilePath",null);
+			JsonObject config=new JsonObject();
+			config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
 			object=config;
 			
 			try {
@@ -38,9 +39,8 @@ public class Config {
 			}
 		}
 		try {
-			JSONParser parser=new JSONParser();
-			object= (JSONObject) parser.parse(new FileReader(saveFile));
-		} catch (ParseException | IOException e) {
+			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -51,7 +51,7 @@ public class Config {
 	 * @param value target value
 	 */
 	public void setConfig(String key,String value) {
-		object.put(key, value);
+		object.addProperty(key, value);
 	}
 
 	/**
@@ -63,9 +63,9 @@ public class Config {
 	 * @return value of key
 	 */
 	public String getConfig(String key) {
-		if (object.get(key)==null || !object.containsKey(key))
+		if (object.get(key)==null || !object.has(key))
 			return null;
-		return (String) object.get(key);
+		return object.get(key).getAsString();
 	}
 
 	/**
