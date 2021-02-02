@@ -4,6 +4,8 @@ import com.github.freddyyj.randomtrainsimworld2.config.Config;
 import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
+import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
+import com.google.gson.JsonNull;
 import javafx.application.Application;
 
 import java.io.IOException;
@@ -282,7 +284,7 @@ public class Main {
 	 * Reload savefile from specific path.
 	 * @param path file path
 	 */
-	public void reloadSaveFile(String path) {
+	public void reloadSaveFile(String path) throws FileNotFoundException {
 		setSaveFilePath(path);
 		unselectedLocos.reload();
 	}

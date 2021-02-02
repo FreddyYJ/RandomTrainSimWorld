@@ -3,6 +3,7 @@ package com.github.freddyyj.randomtrainsimworld2.gui;
 import com.github.freddyyj.randomtrainsimworld2.*;
 import com.github.freddyyj.randomtrainsimworld2.Main;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
+import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -339,7 +340,12 @@ public class MainController {
         chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
         File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
         if (file != null) {
-            core.reloadSaveFile(file.getPath());
+            try {
+                core.reloadSaveFile(file.getPath());
+            } catch (FileNotFoundException fileNotFoundException) {
+                // TODO: Catch FileNotFound
+                fileNotFoundException.printStackTrace();
+            }
             reload(core.getUnselectedLocos());
         }
     }

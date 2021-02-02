@@ -1,5 +1,6 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
@@ -24,14 +25,23 @@ public class Config {
 	public Config() throws IOException {
 		saveFile=new File(documentFile+FILE_NAME);
 		if (!saveFile.exists()) {
-			saveFile.createNewFile();
+			try {
+				saveFile.createNewFile();
+			}catch (SecurityException e){
+				throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
+			}
+
 			JsonObject config=new JsonObject();
 			config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
 			object=config;
 			
 			JsonUtils.write(config,saveFile);
 		}
-		object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+		try {
+			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+		} catch (FileNotFoundException e) {
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+		}
 	}
 
 	/**
@@ -52,7 +62,7 @@ public class Config {
 	 * @return value of key
 	 */
 	public String getConfig(String key) {
-		if (object.get(key)==null || !object.has(key))
+		if (object.get(key) instanceof JsonNull || !object.has(key))
 			return null;
 		return object.get(key).getAsString();
 	}

@@ -2,6 +2,7 @@ package com.github.freddyyj.randomtrainsimworld2.config;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -26,8 +27,9 @@ public class WeatherReader {
     public static void reload() throws IOException {
         JsonArray weather= JsonParser.parseReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("weathers.json"))).getAsJsonArray();
 
-        for (Object o : weather) {
-            weathers.add((String) o);
+        for (int i=0;i<weather.size();i++) {
+            String o=weather.get(i).getAsString();
+            weathers.add(o);
         }
     }
 

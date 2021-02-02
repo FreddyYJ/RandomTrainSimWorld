@@ -1,5 +1,6 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -46,7 +47,12 @@ public class SaveLoco {
 	public SaveLoco(ArrayList<String> routes,String defaultPath) throws IOException {
 		saveFile=new File(defaultPath);
 		if (!saveFile.exists()) {
-			saveFile.createNewFile();
+			try {
+				saveFile.createNewFile();
+			}catch (SecurityException e){
+				throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
+			}
+
 			object=new JsonObject();
 			object.add("route",new JsonArray());
 
@@ -57,8 +63,12 @@ public class SaveLoco {
 
 			save(saveFile);
 		}
-		
-		object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+
+		try {
+			object = JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+		}catch (FileNotFoundException e){
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+		}
 
 	}
 	public boolean hasSavefile(){
@@ -68,12 +78,12 @@ public class SaveLoco {
 	/**
 	 * Reload savefile.
 	 */
-	public void reload() {
+	public void reload() throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException {
 		try {
 			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 			isChanged=false;
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 
