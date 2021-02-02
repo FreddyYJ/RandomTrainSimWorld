@@ -43,6 +43,9 @@ public class SaveLoco {
 	 * </p>
 	 * @param routes list of all routes
 	 * @param defaultPath savefile path
+	 * @throws PermissionDeniedException If save file cannot accessible
+	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException If save file not exist
+	 * @throws IOException If IO errors occurred
 	 */
 	public SaveLoco(ArrayList<String> routes,String defaultPath) throws IOException {
 		saveFile=new File(defaultPath);

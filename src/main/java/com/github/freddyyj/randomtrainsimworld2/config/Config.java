@@ -22,6 +22,8 @@ public class Config {
 
 	/**
 	 * Constructor
+	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException Throws when config file({@code FILE_NAME}) missing
+	 * @throws IOException If I/O Exception occurred
 	 */
 	public Config() throws IOException {
 		saveFile=new File(documentFile+FILE_NAME);
@@ -64,6 +66,7 @@ public class Config {
 
 	/**
 	 * Save changes.
+	 * @throws IOException If I/O exception occurred
 	 */
 	public void save() throws IOException {
 			JsonUtils.write(object,saveFile);
