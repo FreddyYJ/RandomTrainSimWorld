@@ -2,8 +2,10 @@ package com.github.freddyyj.randomtrainsimworld2.gui;
 
 import com.github.freddyyj.randomtrainsimworld2.*;
 import com.github.freddyyj.randomtrainsimworld2.Main;
+import com.github.freddyyj.randomtrainsimworld2.config.Config;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -523,5 +525,40 @@ public class MainController {
                 return (CheckBox) weatherList.get(i);
         }
         return null;
+    }
+    private void handleException(Exception e){
+        Alert errorAlert=new Alert(AlertType.ERROR);
+        if (e instanceof FileNotFoundException){
+            FileNotFoundException exception= (FileNotFoundException) e;
+            if (exception.getErrorFile().equals(Config.FILE_NAME)){
+                errorAlert.setTitle("File Not Fonud!");
+                errorAlert.setHeaderText("Config file not found!");
+                errorAlert.setContentText("Did you delete config file manually?");
+            }
+            else{
+                errorAlert.setTitle("File Not Found!");
+                errorAlert.setHeaderText("Savefile not found!");
+                errorAlert.setContentText("Did you delete "+exception.getErrorFile()+" manually?");
+            }
+        }
+        else if (e instanceof PermissionDeniedException){
+            PermissionDeniedException exception= (PermissionDeniedException) e;
+            if (exception.getErrorFile().equals(Config.FILE_NAME)){
+                errorAlert.setTitle("Permission Denied!");
+                errorAlert.setHeaderText("Cannot access config file!");
+                errorAlert.setContentText("Check permission of home or document directory.");
+            }
+            else{
+                errorAlert.setTitle("Permission Denied!");
+                errorAlert.setHeaderText("Cannot access savefile!");
+                errorAlert.setContentText("Check permission of "+exception.getErrorFile()+", or run in root.");
+            }
+        }
+        else{
+            errorAlert.setTitle("Unknown error!");
+            errorAlert.setHeaderText("Unknown exception thrown!");
+            errorAlert.setContentText("error Message:\n"+e.getMessage());
+        }
+        errorAlert.show();
     }
 }

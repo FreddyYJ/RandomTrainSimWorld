@@ -14,7 +14,7 @@ import java.io.*;
  * @author FreddyYJ_
  */
 public class Config {
-	private static final String FILE_NAME="/randomtrainsimworld2.json";
+	public static final String FILE_NAME="/randomtrainsimworld2.json";
 	private JsonObject object;
 	private String documentFile=javax.swing.filechooser.FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
 	private File saveFile;
