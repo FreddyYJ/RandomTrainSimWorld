@@ -70,8 +70,9 @@ public class Main extends Application{
 					core.saveConfig();
 					core.close();
 				}catch (IOException e){
-					// TODO: Catch IOException at saving files
+					System.out.println("Error occurred at initializing JavaFX!");
 					e.printStackTrace();
+					System.exit(1);
 				}
 			});
 		primaryStage.show();

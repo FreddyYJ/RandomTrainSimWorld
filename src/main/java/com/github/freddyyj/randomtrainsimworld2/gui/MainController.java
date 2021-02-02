@@ -76,8 +76,9 @@ public class MainController {
         try {
             core = Main.getInstance();
         } catch (IOException e) {
-            // TODO: Catch IOException
+            System.out.println("Error occurred at initializing JavaFX!");
             e.printStackTrace();
+            System.exit(1);
         }
 
         // create UI elements depend on JSON file
@@ -130,8 +131,9 @@ public class MainController {
         try {
             reload(Main.getInstance().getUnselectedLocos());
         } catch (IOException e) {
-            // TODO: Catch IOException
+            System.out.println("Error occurred at initializing JavaFX!");
             e.printStackTrace();
+            System.exit(1);
         }
     }
 
@@ -171,8 +173,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         for (int i=0;i<core.getRoutes().size();i++){
@@ -206,8 +208,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         Route selected=random.randomRoute(core.getRoutes());
@@ -231,8 +233,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         if (currentBox==null) return;
@@ -249,8 +251,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         Weather weather = random.randomWeather(core.getWeathers());
@@ -263,8 +265,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         if (e.getSource() instanceof CheckBox) {
@@ -279,8 +281,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         if (e.getSource() instanceof CheckBox) {
@@ -296,8 +298,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         if (e.getSource() instanceof CheckBox) {
@@ -321,8 +323,7 @@ public class MainController {
                 core.saveAs(currentFile.getPath());
             }
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
         }
 
     }
@@ -333,8 +334,8 @@ public class MainController {
         try{
             core=Main.getInstance();
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
+            return;
         }
 
         FileChooser chooser = new FileChooser();
@@ -344,9 +345,9 @@ public class MainController {
         if (file != null) {
             try {
                 core.reloadSaveFile(file.getPath());
-            } catch (FileNotFoundException fileNotFoundException) {
-                // TODO: Catch FileNotFound
-                fileNotFoundException.printStackTrace();
+            } catch (IOException excep) {
+                handleException(excep);
+                return;
             }
             reload(core.getUnselectedLocos());
         }
@@ -364,8 +365,7 @@ public class MainController {
                 onSaveAs(e);
             }
         }catch (IOException excep){
-            // TODO: Catch IOException
-            excep.printStackTrace();
+            handleException(excep);
         }
 }
 
