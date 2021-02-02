@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class SaveLoco {
 	private JsonObject object;
-	private File saveFile;
+	private File saveFile=null;
 	private boolean isChanged=false;
 
 	/**
@@ -102,8 +102,8 @@ public class SaveLoco {
 	public ArrayList<String> getRoute(){
 		JsonArray routeArray= object.getAsJsonArray("route");
 		ArrayList<String> routeStrings=new ArrayList<>();
-		for (Object o : routeArray) {
-			routeStrings.add((String) o);
+		for (int i=0;i<routeArray.size();i++) {
+			routeStrings.add(routeArray.get(i).getAsString());
 		}
 		return routeStrings;
 		

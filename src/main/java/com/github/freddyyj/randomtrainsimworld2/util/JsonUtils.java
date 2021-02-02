@@ -10,12 +10,12 @@ import java.io.IOException;
 public class JsonUtils {
     public static void write(JsonObject object, File targetFile) throws IOException {
         FileWriter writer=new FileWriter(targetFile);
-        writer.write(object.getAsString());
+        writer.write(object.toString());
         writer.close();
     }
     public static void write(JsonArray object, File targetFile) throws IOException {
         FileWriter writer=new FileWriter(targetFile);
-        writer.write(object.getAsString());
+        writer.write(object.toString());
         writer.close();
     }
 

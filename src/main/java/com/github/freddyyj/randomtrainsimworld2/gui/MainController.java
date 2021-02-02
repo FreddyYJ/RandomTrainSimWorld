@@ -129,7 +129,8 @@ public class MainController {
 
         random=Random.getInstance();
         try {
-            reload(Main.getInstance().getUnselectedLocos());
+            if (Main.getInstance().getUnselectedLocos().hasSavefile())
+                reload(Main.getInstance().getUnselectedLocos());
         } catch (IOException e) {
             System.out.println("Error occurred at initializing JavaFX!");
             e.printStackTrace();

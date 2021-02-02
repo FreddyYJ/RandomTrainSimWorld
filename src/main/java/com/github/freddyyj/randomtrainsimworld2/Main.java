@@ -93,7 +93,7 @@ public class Main {
 			weathers.add(weather);
 		}
 
-		reload();
+		if (unselectedLocos.hasSavefile()) reload();
 	}
 
 	/**

@@ -2,6 +2,7 @@ package com.github.freddyyj.randomtrainsimworld2.config;
 
 import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -25,19 +26,13 @@ public class Config {
 	public Config() throws IOException {
 		saveFile=new File(documentFile+FILE_NAME);
 		if (!saveFile.exists()) {
-			try {
-				saveFile.createNewFile();
-			}catch (SecurityException e){
-				throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
-			}
-
-			JsonObject config=new JsonObject();
-			config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
-			object=config;
-			
-			JsonUtils.write(config,saveFile);
+			createConfig();
 		}
 		try {
+			FileReader reader=new FileReader(saveFile);
+			JsonElement readed=JsonParser.parseReader(new FileReader(saveFile));
+			if (!(readed instanceof JsonObject)) createConfig();
+
 			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 		} catch (FileNotFoundException e) {
 			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
@@ -72,5 +67,18 @@ public class Config {
 	 */
 	public void save() throws IOException {
 			JsonUtils.write(object,saveFile);
+	}
+	private void createConfig() throws IOException {
+		try {
+			saveFile.createNewFile();
+		}catch (SecurityException e){
+			throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
+		}
+
+		JsonObject config=new JsonObject();
+		config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
+		object=config;
+
+		JsonUtils.write(config,saveFile);
 	}
 }
