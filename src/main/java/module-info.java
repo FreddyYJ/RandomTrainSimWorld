@@ -13,4 +13,5 @@ module RandomTrainSimWorld2.main {
     requires javafx.fxml;
     requires com.google.gson;
     requires java.desktop;
+    opens com.github.freddyyj.randomtrainsimworld2.gui to javafx.fxml;
 }
