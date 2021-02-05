@@ -18,5 +18,5 @@
   "NTP": {"name": "Northern-Trans Pennine","locomotives": ["BR Class 101 BLG","BR Class 47/4 BLU","BR Class 45/1 BLU","BR Class 08 BLU","BR Class 40 BLU"],"nation": "UK"},
   "GWE": {"name": "Great Western Express","locomotives": ["EWS/DBS Class 66","GWR Class 125(43) HST","GWR Class 166"],"nation": "UK"},
   "LGV": {"name": "LGV Méditerranée","locomotives": ["TGV Duplex 200 CM"],"nation": "France"},
-  "SEHS": {"name": "Southeastern High Speed","locomotives": ["SEB Class 375/9","SEB Class 395 'Javelin'"],"nation": "UK"}
+  "SEHS": {"name": "Southeastern High Speed","locomotives": ["SEB Class 375/9","SEB Class 395 'Javelin'","RF Class 37/5","RF Class 20","BLU Class 31/1","EWS Class 66","BLU Class 47/4","BLU Class 45/1","BLU Class 40"],"nation": "UK"}
 }
