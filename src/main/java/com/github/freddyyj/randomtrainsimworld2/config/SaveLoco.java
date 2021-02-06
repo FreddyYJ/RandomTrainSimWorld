@@ -153,7 +153,7 @@ public class SaveLoco {
 	public void addRoute(String route) {
 		JsonArray routeArray=object.getAsJsonArray("route");
 		if (find(routeArray, route)==-1) {
-			object.addProperty("route", route);
+			routeArray.add(route);
 			isChanged=true;
 		}
 	}
