@@ -15,6 +15,10 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
 
 ## Changelog
+v0.2.1: Minor issue in saving and loading route
+* Fix issue in saving and loading route from savefile
+* Update information popup page
+
 v0.2.0: Runtime image & Southeastern High Speed
 * Create Java Runtime, so don't have to run command to run program
 * Add new route 'Southeastern High Speed'
