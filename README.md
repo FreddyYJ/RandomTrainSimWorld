@@ -18,6 +18,10 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.2.1: Minor issue in saving and loading route
+* Fix issue in saving and loading route from savefile
+* Update information popup page
+
 v0.2.0: Runtime image & Southeastern High Speed
 * Create Java Runtime, so don't have to run command to run program
 * Add new route 'Southeastern High Speed'

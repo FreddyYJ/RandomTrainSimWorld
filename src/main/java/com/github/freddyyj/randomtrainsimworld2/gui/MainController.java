@@ -379,9 +379,9 @@ public class MainController {
     @FXML
     protected void onHelp(ActionEvent e) {
         Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Random Train Sim World");
+        alert.setTitle("Random Train Sim World 2");
         alert.setHeaderText("Random picker for Train Sim World");
-        alert.setContentText("Homepage: https://github.com/FreddyYJ/RandomTrainSimWorld");
+        alert.setContentText("Homepage: https://github.com/FreddyYJ/RandomTrainSimWorld2");
 
         alert.showAndWait();
     }
