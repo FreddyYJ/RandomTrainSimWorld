@@ -1,6 +1,11 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
-import javax.json.*;
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -10,7 +15,7 @@ import java.util.ArrayList;
  */
 public class SaveLoco {
 	private JsonObject object;
-	private File saveFile;
+	private File saveFile=null;
 	private boolean isChanged=false;
 
 	/**
@@ -21,16 +26,13 @@ public class SaveLoco {
 	 * @param routes list of all routes
 	 */
 	public SaveLoco(ArrayList<String> routes) {
-		JsonObjectBuilder builder=Json.createObjectBuilder();
-		
-		builder.add("route",Json.createArrayBuilder());
+		object=new JsonObject();
 		
 		for (int i=0;i<routes.size();i++) {
-			builder.add(routes.get(i),Json.createArrayBuilder());
+			object.add(routes.get(i),new JsonArray());
 		}
-		builder.add("weather", Json.createArrayBuilder());
+		object.add("weather", new JsonArray());
 		
-		object=builder.build();
 		isChanged=true;
 	}
 
@@ -41,45 +43,36 @@ public class SaveLoco {
 	 * </p>
 	 * @param routes list of all routes
 	 * @param defaultPath savefile path
+	 * @throws PermissionDeniedException If save file cannot accessible
+	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException If save file not exist
+	 * @throws IOException If IO errors occurred
 	 */
-	public SaveLoco(ArrayList<String> routes,String defaultPath) {
+	public SaveLoco(ArrayList<String> routes,String defaultPath) throws IOException {
 		saveFile=new File(defaultPath);
 		if (!saveFile.exists()) {
 			try {
 				saveFile.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
+			}catch (SecurityException e){
+				throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
 			}
-			try {
-				
-				JsonObjectBuilder builder=Json.createObjectBuilder();
-				
-				builder.add("route",Json.createArrayBuilder());
-				
-				for (int i=0;i<routes.size();i++) {
-					builder.add(routes.get(i),Json.createArrayBuilder());
-				}
-				builder.add("weather", Json.createArrayBuilder());
-				
-				object=builder.build();
-				FileOutputStream writer=new FileOutputStream(saveFile);
-				JsonWriter jsonWriter=Json.createWriter(writer);
-				jsonWriter.writeObject(object);
-				jsonWriter.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+
+			object=new JsonObject();
+			object.add("route",new JsonArray());
+
+			for (String route : routes) {
+				object.add(route, new JsonArray());
 			}
+			object.add("weather", new JsonArray());
+
+			save(saveFile);
 		}
-		
+
 		try {
-			FileInputStream reader=new FileInputStream(saveFile);
-			JsonReader jsonReader=Json.createReader(reader);
-			object=jsonReader.readObject();
-			jsonReader.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			object = JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+		}catch (FileNotFoundException e){
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
-		
+
 	}
 	public boolean hasSavefile(){
 		return saveFile != null;
@@ -88,16 +81,12 @@ public class SaveLoco {
 	/**
 	 * Reload savefile.
 	 */
-	public void reload() {
-		FileInputStream reader;
+	public void reload() throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException {
 		try {
-			reader = new FileInputStream(saveFile);
-			JsonReader jsonReader=Json.createReader(reader);
-			object=jsonReader.readObject();
-			jsonReader.close();
+			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 			isChanged=false;
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 
@@ -114,10 +103,10 @@ public class SaveLoco {
 	 * @return unselected route list
 	 */
 	public ArrayList<String> getRoute(){
-		JsonArray routeArray= (JsonArray) object.get("route");
+		JsonArray routeArray= object.getAsJsonArray("route");
 		ArrayList<String> routeStrings=new ArrayList<>();
 		for (int i=0;i<routeArray.size();i++) {
-			routeStrings.add(routeArray.getString(i));
+			routeStrings.add(routeArray.get(i).getAsString());
 		}
 		return routeStrings;
 		
@@ -127,16 +116,15 @@ public class SaveLoco {
 	 * @return unselected locomotive list
 	 */
 	public ArrayList<String> getLocomotive(String route){
-		JsonArray locoArray= (JsonArray) object.get(route);
+		JsonArray locoArray= object.getAsJsonArray(route);
 		if (locoArray==null) {
-			JsonObjectBuilder builder=Json.createObjectBuilder(object);
-			builder.add(route, Json.createArrayBuilder());
-			object=builder.build();
-			locoArray= (JsonArray) object.get(route);
+			object.add(route, new JsonArray());
+			locoArray= object.getAsJsonArray(route);
 		}
+
 		ArrayList<String> locoStrings=new ArrayList<>();
 		for (int i=0;i<locoArray.size();i++) {
-			locoStrings.add(locoArray.getString(i));
+			locoStrings.add(locoArray.get(i).getAsString());
 		}
 		return locoStrings;
 
@@ -146,10 +134,10 @@ public class SaveLoco {
 	 * @return unselected weather list
 	 */
 	public ArrayList<String> getWeather(){
-		JsonArray weatherArray= (JsonArray) object.get("weather");
+		JsonArray weatherArray= object.getAsJsonArray("weather");
 		ArrayList<String> weatherStrings=new ArrayList<>();
 		for (int i=0;i<weatherArray.size();i++) {
-			weatherStrings.add(weatherArray.getString(i));
+			weatherStrings.add(weatherArray.get(i).getAsString());
 		}
 		return weatherStrings;
 
@@ -163,13 +151,9 @@ public class SaveLoco {
 	 * @param route unselected route name
 	 */
 	public void addRoute(String route) {
-		JsonArray routeArray= (JsonArray) object.get("route");
-		JsonArrayBuilder builder=Json.createArrayBuilder(routeArray);
+		JsonArray routeArray=object.getAsJsonArray("route");
 		if (find(routeArray, route)==-1) {
-			builder.add(route);
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add("route", builder);
-			object=objectBuilder.build();
+			object.addProperty("route", route);
 			isChanged=true;
 		}
 	}
@@ -183,13 +167,9 @@ public class SaveLoco {
 	 * @param loco locomotive name
 	 */
 	public void addLocomotive(String route,String loco) {
-		JsonArray locoArray=(JsonArray) object.get(route);
-		JsonArrayBuilder builder=Json.createArrayBuilder(locoArray);
+		JsonArray locoArray=object.getAsJsonArray(route);
 		if (find(locoArray, loco)==-1) {
-			builder.add(loco);
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add(route, builder);
-			object=objectBuilder.build();
+			object.addProperty(route, loco);
 			isChanged=true;
 		}
 	}
@@ -202,13 +182,9 @@ public class SaveLoco {
 	 * @param weather weather name
 	 */
 	public void addWeather(String weather) {
-		JsonArray weatherArray= (JsonArray) object.get("weather");
-		JsonArrayBuilder builder=Json.createArrayBuilder(weatherArray);
+		JsonArray weatherArray= object.getAsJsonArray("weather");
 		if (find(weatherArray, weather)==-1) {
-			builder.add(weather);
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add("weather", builder);
-			object=objectBuilder.build();
+			object.addProperty("weather", weather);
 			isChanged=true;
 		}
 
@@ -222,13 +198,9 @@ public class SaveLoco {
 	 * @param route route name
 	 */
 	public void removeRoute(String route) {
-		JsonArray routeArray= (JsonArray) object.get("route");
-		JsonArrayBuilder builder=Json.createArrayBuilder(routeArray);
+		JsonArray routeArray= object.getAsJsonArray("route");
 		if (find(routeArray, route)!=-1) {
-			builder.remove(find(routeArray, route));
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add("route", builder);
-			object=objectBuilder.build();
+			routeArray.remove(find(routeArray, route));
 			isChanged=true;
 		}
 	}
@@ -242,13 +214,9 @@ public class SaveLoco {
 	 * @param loco locomotive name
 	 */
 	public void removeLocomotive(String route,String loco) {
-		JsonArray locoArray=(JsonArray) object.get(route);
-		JsonArrayBuilder builder=Json.createArrayBuilder(locoArray);
+		JsonArray locoArray=object.getAsJsonArray(route);
 		if (find(locoArray, loco)!=-1) {
-			builder.remove(find(locoArray, loco));
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add(route, builder);
-			object=objectBuilder.build();
+			locoArray.remove(find(locoArray, loco));
 			isChanged=true;
 		}
 	}
@@ -261,13 +229,9 @@ public class SaveLoco {
 	 * @param weather weather name
 	 */
 	public void removeWeather(String weather) {
-		JsonArray weatherArray= (JsonArray) object.get("weather");
-		JsonArrayBuilder builder=Json.createArrayBuilder(weatherArray);
+		JsonArray weatherArray= object.getAsJsonArray("weather");
 		if (find(weatherArray, weather)!=-1) {
-			builder.remove(find(weatherArray, weather));
-			JsonObjectBuilder objectBuilder=Json.createObjectBuilder(object);
-			objectBuilder.add("weather", builder);
-			object=objectBuilder.build();
+			weatherArray.remove(find(weatherArray, weather));
 			isChanged=true;
 		}
 	}
@@ -275,7 +239,7 @@ public class SaveLoco {
 	/**
 	 * Save savefile.
 	 */
-	public void save() {
+	public void save() throws IOException {
 		this.save(saveFile);
 	}
 
@@ -283,20 +247,13 @@ public class SaveLoco {
 	 * Save savefile at specific {@link File}.
 	 * @param file savefile file
 	 */
-	public void save(File file) {
-		try {
-			FileOutputStream writer = new FileOutputStream(file);
-			JsonWriter jsonWriter=Json.createWriter(writer);
-			jsonWriter.writeObject(object);
-			jsonWriter.close();
+	public void save(File file) throws IOException {
+			JsonUtils.write(object,file);
 			isChanged=false;
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
 	}
 	private int find(JsonArray array,String string) {
 		for (int i=0;i<array.size();i++) {
-			if (array.getString(i).equals(string))
+			if (array.get(i).getAsString().equals(string))
 				return i;
 		}
 		return -1;

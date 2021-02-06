@@ -4,8 +4,11 @@ import com.github.freddyyj.randomtrainsimworld2.config.Config;
 import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
+import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
+import com.google.gson.JsonNull;
 import javafx.application.Application;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -31,8 +34,12 @@ public class Main {
 	private Config config;
 	private static Main core=null;
 	public static void main(String[] args) {
-		LocomotiveReader.reload();
-		WeatherReader.reload();
+		try {
+			LocomotiveReader.reload();
+			WeatherReader.reload();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		Application.launch(com.github.freddyyj.randomtrainsimworld2.gui.Main.class);
 		
 	}
@@ -41,7 +48,7 @@ public class Main {
 	 * Get instance.
 	 * @return instance of this class
 	 */
-	public static Main getInstance() {
+	public static Main getInstance() throws IOException {
 		if (core==null) core=new Main();
 		return core;
 	}
@@ -49,8 +56,7 @@ public class Main {
 	/**
 	 * default constructor
 	 */
-	protected Main()
-	{
+	protected Main() throws IOException {
 		routes=new ArrayList<>();
 		locos=new HashMap<>();
 		weathers=new ArrayList<>();
@@ -87,7 +93,7 @@ public class Main {
 			weathers.add(weather);
 		}
 
-		reload();
+		if (unselectedLocos.hasSavefile()) reload();
 	}
 
 	/**
@@ -261,7 +267,7 @@ public class Main {
 	/**
 	 * Save and close save file.
 	 */
-	public void close() {
+	public void close() throws IOException {
 		if (unselectedLocos.hasSavefile()) unselectedLocos.save();
 	}
 
@@ -269,7 +275,7 @@ public class Main {
 	 * Save savefile at specific path.
 	 * @param path file path
 	 */
-	public void saveAs(String path) {
+	public void saveAs(String path) throws IOException {
 		setSaveFilePath(path);
 		unselectedLocos.save();
 	}
@@ -278,7 +284,7 @@ public class Main {
 	 * Reload savefile from specific path.
 	 * @param path file path
 	 */
-	public void reloadSaveFile(String path) {
+	public void reloadSaveFile(String path) throws FileNotFoundException {
 		setSaveFilePath(path);
 		unselectedLocos.reload();
 	}
@@ -315,7 +321,7 @@ public class Main {
 	/**
 	 * Save configuration.
 	 */
-	public void saveConfig() {
+	public void saveConfig() throws IOException {
 		config.save();
 	}
 }

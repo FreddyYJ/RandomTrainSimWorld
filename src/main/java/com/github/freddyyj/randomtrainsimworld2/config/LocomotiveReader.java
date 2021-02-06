@@ -1,9 +1,11 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -32,24 +34,18 @@ public class LocomotiveReader {
     /**
      * Reload locomotives.json
      */
-    public static void reload(){
-        JsonReader reader= Json.createReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"));
-        JsonObject object=reader.readObject();
+    public static void reload() throws IOException {
+        JsonObject object= JsonParser.parseReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"))).getAsJsonObject();
 
         Set<String> set=object.keySet();
         for (int i=0;i< set.size();i++){
             ArrayList<String> locos=new ArrayList<>();
             String key=(set.toArray(new String[1]))[i];
-            JsonObject route=object.getJsonObject(key);
+            JsonObject route= object.getAsJsonObject(key);
 
-            route.getJsonArray("locomotives").forEach(locomotive->{
-                locos.add(locomotive.toString());
-            });
-            routes.add(new LocomotiveReader(key,route.getString("name"),locos,route.getString("nation")));
+            route.get("locomotives").getAsJsonArray().forEach(locomotive-> locos.add(locomotive.toString()));
+            routes.add(new LocomotiveReader(key,route.get("name").getAsString(),locos,route.get("nation").getAsString()));
         }
-
-        reader.close();
-
     }
 
     /**

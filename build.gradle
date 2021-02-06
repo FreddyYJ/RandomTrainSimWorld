@@ -2,10 +2,11 @@ plugins {
     id 'java'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
     id 'org.openjfx.javafxplugin' version '0.0.9'
+    id "org.beryx.jlink" version "2.23.3"
 }
 
 group 'com.github.freddyyj'
-version '0.1.5'
+version '0.2.0'
 
 repositories {
     mavenCentral()
@@ -13,12 +14,10 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     implementation 'org.openjfx:javafx-controls:15.0.1'
-    implementation 'javax.json:javax.json-api:1.1.4'
-    implementation 'org.glassfish:javax.json:1.1.4'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.openjfx:javafx-fxml:15.0.1'
-    runtimeClasspath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
 }
 jar {
     manifest {
@@ -28,6 +27,7 @@ jar {
         configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
     }
 }
+mainClassName = "com.github.freddyyj.randomtrainsimworld2.Main"
 javafx {
     version = "15.0.1"
     modules = [ 'javafx.controls' ,'javafx.fxml']

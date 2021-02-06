@@ -3,7 +3,25 @@ A new random Train Sim World 2 picker based on RandomTSW.
 
 This Program is based on RandomTrainSimWorld, a random picker for Train Sim World 2020 and 2. This program only include TSW2, not 2020.
 
+## Requirement
+This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
+
+## Install
+1. Download ```RandomTrainSimWorld2.zip``` or ```RandomTrainSimWorld2.tar.gz``` from release.
+2. unzip or untar it.
+3. go in directory/folder called RandomTrainSimWorld2.
+4. Run ```RandomTrainSimWorld2.exe``` for Windows or ```RandomTrainSimWorld2``` for Linux.
+5. Finish!
+6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
+
 ## Changelog
+v0.2.0: Runtime image & Southeastern High Speed
+* Create Java Runtime, so don't have to run command to run program
+* Add new route 'Southeastern High Speed'
+* Add new locomotive 'SEB Class 375/9' and 'SEB Class 395 'Javelin'' in Southeastern High Speed
+* Add lots of UK locomotives in Southeastern High Speed, it includes this locomotives in timetable
+* Improve and add exceptions, improved exception throws and catch
+
 v0.1.5: Small Issue Fix at closing
 * Fix issue when closing proram without savefile
 

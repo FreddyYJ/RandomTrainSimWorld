@@ -2,7 +2,10 @@ package com.github.freddyyj.randomtrainsimworld2.gui;
 
 import com.github.freddyyj.randomtrainsimworld2.*;
 import com.github.freddyyj.randomtrainsimworld2.Main;
+import com.github.freddyyj.randomtrainsimworld2.config.Config;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
+import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +27,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,7 +72,14 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        Main core=Main.getInstance();
+        Main core= null;
+        try {
+            core = Main.getInstance();
+        } catch (IOException e) {
+            System.out.println("Error occurred at initializing JavaFX!");
+            e.printStackTrace();
+            System.exit(1);
+        }
 
         // create UI elements depend on JSON file
         for(int i=0;i<core.getRoutes().size();i++){
@@ -117,7 +128,14 @@ public class MainController {
         });
 
         random=Random.getInstance();
-        reload(Main.getInstance().getUnselectedLocos());
+        try {
+            if (Main.getInstance().getUnselectedLocos().hasSavefile())
+                reload(Main.getInstance().getUnselectedLocos());
+        } catch (IOException e) {
+            System.out.println("Error occurred at initializing JavaFX!");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
 
     /**
@@ -152,14 +170,22 @@ public class MainController {
     @FXML
     protected void onRandomAll(ActionEvent e) {
         ArrayList<ArrayList<Locomotive>> locoList=new ArrayList<>();
-        for (int i=0;i<Main.getInstance().getRoutes().size();i++){
-            locoList.add(Main.getInstance().getLocomotive(Main.getInstance().getRoutes().get(i).getName()));
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
+        for (int i=0;i<core.getRoutes().size();i++){
+            locoList.add(core.getLocomotive(core.getRoutes().get(i).getName()));
         }
 
         Locomotive loco = random.randomLocomotiveInAll(locoList);
         Route route = loco.getRoute();
 
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
+        Weather weather = random.randomWeather(core.getWeathers());
 
         textPickedRoute.setText(route.getName());
         textPickedLoco.setText(loco.getName());
@@ -179,7 +205,15 @@ public class MainController {
 
     @FXML
     protected void onRandomRoute(ActionEvent e) {
-        Route selected=random.randomRoute(Main.getInstance().getRoutes());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
+        Route selected=random.randomRoute(core.getRoutes());
         CheckBox selectedRoute = getRouteByName(selected.getName());
 
         if (currentRoute!=null){
@@ -196,8 +230,16 @@ public class MainController {
 
     @FXML
     protected void onRandomLoco(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
         if (currentBox==null) return;
-        Locomotive selected=random.randomLocomotive(Main.getInstance().getLocomotive(currentBox.getText()));
+        Locomotive selected=random.randomLocomotive(core.getLocomotive(currentBox.getText()));
         CheckBox loco = getLocoByName(selected.getName(),currentBox.getText());
 
         textPickedRoute.setText(currentBox.getText());
@@ -206,67 +248,127 @@ public class MainController {
 
     @FXML
     protected void onRandomWeather(ActionEvent e) {
-        Weather weather = random.randomWeather(Main.getInstance().getWeathers());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
+        Weather weather = random.randomWeather(core.getWeathers());
         textPickedWeather.setText(weather.getName());
     }
 
     @FXML
     protected void onCheckLocoSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedLoco = (CheckBox) e.getSource();
-            Main.getInstance().selectLocomotive(selectedLoco.isSelected(), Main.getInstance().getLocomotive(currentBox.getText(),selectedLoco.getText()), Main.getInstance().getRoute(currentBox.getText()));
+            core.selectLocomotive(selectedLoco.isSelected(), core.getLocomotive(currentBox.getText(),selectedLoco.getText()), core.getRoute(currentBox.getText()));
         }
     }
 
     @FXML
     protected void onCheckRouteSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedRoute = (CheckBox) e.getSource();
-            Main.getInstance().selectRoute(selectedRoute.isSelected(), Main.getInstance().getRoute(selectedRoute.getText()));
+            core.selectRoute(selectedRoute.isSelected(), core.getRoute(selectedRoute.getText()));
         }
 
     }
 
     @FXML
     protected void onCheckWeatherSelect(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
         if (e.getSource() instanceof CheckBox) {
             CheckBox selectedWeather = (CheckBox) e.getSource();
-            Main.getInstance().selectWeather(selectedWeather.isSelected(), Main.getInstance().getWeather(selectedWeather.getText()));
+            core.selectWeather(selectedWeather.isSelected(), core.getWeather(selectedWeather.getText()));
         }
 
     }
 
     @FXML
     protected void onSaveAs(ActionEvent e) {
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Save File as");
-        chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
-        File currentFile = chooser.showSaveDialog(anchorPane.getScene().getWindow());
-        if (currentFile != null) {
-            Main.getInstance().saveAs(currentFile.getPath());
+        Main core=null;
+        try{
+            core=Main.getInstance();
+
+            FileChooser chooser = new FileChooser();
+            chooser.setTitle("Save File as");
+            chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
+            File currentFile = chooser.showSaveDialog(anchorPane.getScene().getWindow());
+            if (currentFile != null) {
+                core.saveAs(currentFile.getPath());
+            }
+        }catch (IOException excep){
+            handleException(excep);
         }
+
     }
 
     @FXML
     protected void onLoad(ActionEvent e) {
+        Main core=null;
+        try{
+            core=Main.getInstance();
+        }catch (IOException excep){
+            handleException(excep);
+            return;
+        }
+
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Load Save File");
         chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
         File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
         if (file != null) {
-            Main.getInstance().reloadSaveFile(file.getPath());
-            reload(Main.getInstance().getUnselectedLocos());
+            try {
+                core.reloadSaveFile(file.getPath());
+            } catch (IOException excep) {
+                handleException(excep);
+                return;
+            }
+            reload(core.getUnselectedLocos());
         }
     }
 
     @FXML
     protected void onSave(ActionEvent e) {
-        if (Main.getInstance().getSaveFilePath() != null)
-            Main.getInstance().saveAs(Main.getInstance().getSaveFilePath());
-        else {
-            onSaveAs(e);
+        Main core=null;
+        try{
+            core=Main.getInstance();
+
+            if (core.getSaveFilePath() != null)
+                core.saveAs(core.getSaveFilePath());
+            else {
+                onSaveAs(e);
+            }
+        }catch (IOException excep){
+            handleException(excep);
         }
-    }
+}
 
     @FXML
     protected void onClose(ActionEvent e) {
@@ -424,5 +526,40 @@ public class MainController {
                 return (CheckBox) weatherList.get(i);
         }
         return null;
+    }
+    private void handleException(Exception e){
+        Alert errorAlert=new Alert(AlertType.ERROR);
+        if (e instanceof FileNotFoundException){
+            FileNotFoundException exception= (FileNotFoundException) e;
+            if (exception.getErrorFile().equals(Config.FILE_NAME)){
+                errorAlert.setTitle("File Not Fonud!");
+                errorAlert.setHeaderText("Config file not found!");
+                errorAlert.setContentText("Did you delete config file manually?");
+            }
+            else{
+                errorAlert.setTitle("File Not Found!");
+                errorAlert.setHeaderText("Savefile not found!");
+                errorAlert.setContentText("Did you delete "+exception.getErrorFile()+" manually?");
+            }
+        }
+        else if (e instanceof PermissionDeniedException){
+            PermissionDeniedException exception= (PermissionDeniedException) e;
+            if (exception.getErrorFile().equals(Config.FILE_NAME)){
+                errorAlert.setTitle("Permission Denied!");
+                errorAlert.setHeaderText("Cannot access config file!");
+                errorAlert.setContentText("Check permission of home or document directory.");
+            }
+            else{
+                errorAlert.setTitle("Permission Denied!");
+                errorAlert.setHeaderText("Cannot access savefile!");
+                errorAlert.setContentText("Check permission of "+exception.getErrorFile()+", or run in root.");
+            }
+        }
+        else{
+            errorAlert.setTitle("Unknown error!");
+            errorAlert.setHeaderText("Unknown exception thrown!");
+            errorAlert.setContentText("error Message:\n"+e.getMessage());
+        }
+        errorAlert.show();
     }
 }

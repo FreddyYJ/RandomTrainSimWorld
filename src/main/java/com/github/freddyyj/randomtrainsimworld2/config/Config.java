@@ -1,6 +1,12 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
-import javax.json.*;
+import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.*;
 
 /**
@@ -9,43 +15,29 @@ import java.io.*;
  * @author FreddyYJ_
  */
 public class Config {
-	private static final String FILE_NAME="/randomtrainsimworld2.json";
+	public static final String FILE_NAME="/randomtrainsimworld2.json";
 	private JsonObject object;
 	private String documentFile=javax.swing.filechooser.FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
 	private File saveFile;
 
 	/**
 	 * Constructor
+	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException Throws when config file({@code FILE_NAME}) missing
+	 * @throws IOException If I/O Exception occurred
 	 */
-	public Config() {
+	public Config() throws IOException {
 		saveFile=new File(documentFile+FILE_NAME);
 		if (!saveFile.exists()) {
-			try {
-				saveFile.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			JsonObjectBuilder builder=Json.createObjectBuilder();
-			builder.addNull("DefaultSaveFilePath");
-			object=builder.build();
-			
-			FileOutputStream writer;
-			try {
-				writer = new FileOutputStream(saveFile);
-				JsonWriter jsonWriter=Json.createWriter(writer);
-				jsonWriter.writeObject(object);
-				jsonWriter.close();
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+			createConfig();
 		}
 		try {
-			FileInputStream reader=new FileInputStream(saveFile);
-			JsonReader jsonReader=Json.createReader(reader);
-			object=jsonReader.readObject();
-			jsonReader.close();
+			FileReader reader=new FileReader(saveFile);
+			JsonElement readed=JsonParser.parseReader(new FileReader(saveFile));
+			if (!(readed instanceof JsonObject)) createConfig();
+
+			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 
@@ -55,9 +47,7 @@ public class Config {
 	 * @param value target value
 	 */
 	public void setConfig(String key,String value) {
-		JsonObjectBuilder builder=Json.createObjectBuilder(object);
-		builder.add(key, value);
-		object=builder.build();
+		object.addProperty(key, value);
 	}
 
 	/**
@@ -69,23 +59,29 @@ public class Config {
 	 * @return value of key
 	 */
 	public String getConfig(String key) {
-		if (object.get(key)==JsonValue.NULL || !object.containsKey(key))
+		if (object.get(key) instanceof JsonNull || !object.has(key))
 			return null;
-		return object.getString(key);
+		return object.get(key).getAsString();
 	}
 
 	/**
 	 * Save changes.
+	 * @throws IOException If I/O exception occurred
 	 */
-	public void save() {
+	public void save() throws IOException {
+			JsonUtils.write(object,saveFile);
+	}
+	private void createConfig() throws IOException {
 		try {
-			FileOutputStream writer = new FileOutputStream(saveFile);
-			JsonWriter jsonWriter=Json.createWriter(writer);
-			jsonWriter.writeObject(object);
-			jsonWriter.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			saveFile.createNewFile();
+		}catch (SecurityException e){
+			throw new PermissionDeniedException(e.getMessage(),saveFile.getName());
 		}
 
+		JsonObject config=new JsonObject();
+		config.add("DefaultSaveFilePath",JsonNull.INSTANCE);
+		object=config;
+
+		JsonUtils.write(config,saveFile);
 	}
 }

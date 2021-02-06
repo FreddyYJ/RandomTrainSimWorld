@@ -8,6 +8,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -43,30 +44,36 @@ public class Main extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.setWidth(500);
 		primaryStage.setHeight(400);
+
 		if(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png")!=null)
 			primaryStage.getIcons().add(new Image(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png"))));
 		controller=loader.getController();
-		com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
-		primaryStage.setOnCloseRequest(event -> {
-			com.github.freddyyj.randomtrainsimworld2.Main core= com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
-			if(core.isSaveChanged()) {
-				Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Do you want to save changed?", ButtonType.YES,ButtonType.NO,ButtonType.CANCEL);
-				alert.setHeaderText("Savefile changed!");
-				alert.setTitle("Save File");
-				Optional<ButtonType> result = alert.showAndWait();
 
-				if (result.isPresent() && result.get() == ButtonType.YES) {
-					controller.onSave(null);
+		com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
+
+			primaryStage.setOnCloseRequest(event -> {
+				try {
+					com.github.freddyyj.randomtrainsimworld2.Main core = com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
+					if (core.isSaveChanged()) {
+						Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to save changed?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+						alert.setHeaderText("Savefile changed!");
+						alert.setTitle("Save File");
+						Optional<ButtonType> result = alert.showAndWait();
+
+						if (result.isPresent() && result.get() == ButtonType.YES) {
+							controller.onSave(null);
+							core.saveConfig();
+						} else event.consume();
+					}
 					core.saveConfig();
+					core.close();
+					primaryStage.close();
+				}catch (IOException e){
+					System.out.println("Error occurred at initializing JavaFX!");
+					e.printStackTrace();
+					System.exit(1);
 				}
-				else if (result.isPresent() && result.get() == ButtonType.NO){
-					core.saveConfig();
-				}
-				else event.consume();
-			}
-			core.saveConfig();
-			core.close();
-		});
+			});
 		primaryStage.show();
 	}
 	public static MainController getController(){
