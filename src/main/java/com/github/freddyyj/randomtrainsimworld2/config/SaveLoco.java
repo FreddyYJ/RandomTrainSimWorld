@@ -169,7 +169,7 @@ public class SaveLoco {
 	public void addLocomotive(String route,String loco) {
 		JsonArray locoArray=object.getAsJsonArray(route);
 		if (find(locoArray, loco)==-1) {
-			object.addProperty(route, loco);
+			locoArray.add(loco);
 			isChanged=true;
 		}
 	}
@@ -184,7 +184,7 @@ public class SaveLoco {
 	public void addWeather(String weather) {
 		JsonArray weatherArray= object.getAsJsonArray("weather");
 		if (find(weatherArray, weather)==-1) {
-			object.addProperty("weather", weather);
+			weatherArray.add(weather);
 			isChanged=true;
 		}
 

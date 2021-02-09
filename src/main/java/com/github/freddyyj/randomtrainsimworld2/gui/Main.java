@@ -63,10 +63,10 @@ public class Main extends Application{
 						if (result.isPresent() && result.get() == ButtonType.YES) {
 							controller.onSave(null);
 							core.saveConfig();
+							core.close();
 						} else event.consume();
 					}
 					core.saveConfig();
-					core.close();
 					primaryStage.close();
 				}catch (IOException e){
 					System.out.println("Error occurred at initializing JavaFX!");
