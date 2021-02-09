@@ -15,6 +15,10 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
 
 ## Changelog
+v0.2.2
+* Fix issue when running program after closing program without saving change
+* Fix issue in saving and loading locomotive and weather
+
 v0.2.1: Minor issue in saving and loading route
 * Fix issue in saving and loading route from savefile
 * Update information popup page
