@@ -18,6 +18,9 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.2.3
+* Add new locomotive 'SEW Class 465/9' in Southeastern High Speed
+
 v0.2.2
 * Fix issue when running program after closing program without saving change
 * Fix issue in saving and loading locomotive and weather
