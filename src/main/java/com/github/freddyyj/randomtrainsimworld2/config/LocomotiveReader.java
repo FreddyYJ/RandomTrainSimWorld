@@ -43,7 +43,11 @@ public class LocomotiveReader {
             String key=(set.toArray(new String[1]))[i];
             JsonObject route= object.getAsJsonObject(key);
 
-            route.get("locomotives").getAsJsonArray().forEach(locomotive-> locos.add(locomotive.toString()));
+            route.get("locomotives").getAsJsonArray().forEach(locomotive-> {
+                String loco=locomotive.toString();
+                loco=loco.substring(1,loco.length()-1);
+                locos.add(loco);
+            });
             routes.add(new LocomotiveReader(key,route.get("name").getAsString(),locos,route.get("nation").getAsString()));
         }
     }
