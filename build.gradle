@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.github.freddyyj'
-version '0.2.3'
+version '0.2.4'
 
 repositories {
     mavenCentral()
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.1'
     implementation 'org.openjfx:javafx-controls:15.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.openjfx:javafx-fxml:15.0.1'
@@ -31,4 +31,8 @@ mainClassName = "com.github.freddyyj.randomtrainsimworld2.Main"
 javafx {
     version = "15.0.1"
     modules = [ 'javafx.controls' ,'javafx.fxml']
+}
+
+test {
+    useJUnitPlatform()
 }
