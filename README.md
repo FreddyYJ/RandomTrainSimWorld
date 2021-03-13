@@ -14,6 +14,9 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 5. Finish!
 6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
 
+## Docs
+Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
+
 ## Changelog
 v0.2.4
 * Add new route 'Great Western Express (BR)'
