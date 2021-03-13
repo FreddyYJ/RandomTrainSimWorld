@@ -15,6 +15,14 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
 
 ## Changelog
+v0.2.4
+* Add new route 'Great Western Express (BR)'
+* Add new locomotive 'BR Class 08', 'BR Class 101', 'BR Class 31/1', 'BR Class 47/4', 'BR Class 45/1' and 'BR Class 52 "Western"'
+* Change route name 'Great Western Express' to 'Great Western Express (GWR)'
+* Remove ```"``` from front and end of locomotives
+* Upgrade JUnit version to 5.7.1
+* Add JUnit test for LocomotiveReader
+
 v0.2.3
 * Add new locomotive 'SEW Class 465/9' in Southeastern High Speed
 
