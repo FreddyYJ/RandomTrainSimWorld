@@ -18,6 +18,10 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.2.5
+* Add new route 'Arosa Linie'
+* Add new locomotive 'RhB GE 4/4 II' in Arosa Linie
+
 v0.2.4
 * Add new route 'Great Western Express (BR)'
 * Add new locomotive 'BR Class 08', 'BR Class 101', 'BR Class 31/1', 'BR Class 47/4', 'BR Class 45/1' and 'BR Class 52 "Western"'
