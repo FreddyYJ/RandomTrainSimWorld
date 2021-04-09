@@ -22,6 +22,7 @@ v0.2.6
 * Add new route 'Clinchfield Railroad'
 * Add new locomotives 'SD40 CRR' and 'F7 CRR' in Clinchfield Railroad
 * Add new locomotive 'SD40 CRR' in Sand Patch Grade
+* Update License to MIT License
 
 v0.2.5
 * Add new route 'Arosa Linie'
