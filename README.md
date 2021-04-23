@@ -18,6 +18,9 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.2.7
+* Add new locomotive 'DB BR 101' in Haupstrecke Rhein-Ruhr
+
 v0.2.6
 * Add new route 'Clinchfield Railroad'
 * Add new locomotives 'SD40 CRR' and 'F7 CRR' in Clinchfield Railroad
