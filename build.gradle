@@ -2,7 +2,8 @@ plugins {
     id 'java'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
     id 'org.openjfx.javafxplugin' version '0.0.9'
-    id "org.beryx.jlink" version "2.23.3"
+    id "org.beryx.jlink" version "2.23.7"
+    id 'jacoco'
 }
 
 group 'com.github.freddyyj'
@@ -10,23 +11,15 @@ version '0.2.7'
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
     implementation 'org.openjfx:javafx-controls:15.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.openjfx:javafx-fxml:15.0.1'
 }
-jar {
-    manifest {
-        attributes  'Title': archiveFileName, 'Version': archiveVersion, 'Main-Class': 'com.github.freddyyj.randomtrainsimworld2.Main'
-    }
-    from {
-        configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
-    }
-}
+
 mainClassName = "com.github.freddyyj.randomtrainsimworld2.Main"
 javafx {
     version = "15.0.1"
