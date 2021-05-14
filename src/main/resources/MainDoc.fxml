@@ -51,10 +51,7 @@
                   </VBox>
                </content>
             </ScrollPane>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-               <content>
-                  <Pane fx:id="boxLoco" prefHeight="200.0" prefWidth="200.0" />
-               </content>
+            <ScrollPane fx:id="boxLoco" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
             </ScrollPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                <content>

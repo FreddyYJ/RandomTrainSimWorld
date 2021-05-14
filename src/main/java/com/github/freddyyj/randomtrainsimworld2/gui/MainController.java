@@ -2,6 +2,7 @@ package com.github.freddyyj.randomtrainsimworld2.gui;
 
 import com.github.freddyyj.randomtrainsimworld2.*;
 import com.github.freddyyj.randomtrainsimworld2.Main;
+import com.github.freddyyj.randomtrainsimworld2.Random;
 import com.github.freddyyj.randomtrainsimworld2.config.Config;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
@@ -11,11 +12,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -28,8 +26,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Main controller of {@link com.github.freddyyj.randomtrainsimworld2.gui.Main}.
@@ -41,7 +38,7 @@ public class MainController {
     @FXML
     private VBox boxRoute;
     @FXML
-    private Pane boxLoco;
+    private ScrollPane boxLoco;
     @FXML
     private VBox boxWeather;
     @FXML
@@ -63,6 +60,8 @@ public class MainController {
     private VBox currentRoute; // Box of locos that selected
     private CheckBox currentBox; // Route Checkbox
     private Random random;
+
+    private HashMap<String,VBox> locomotiveVBoxs=new HashMap<>();
 
     /**
      * default constructor
@@ -109,7 +108,8 @@ public class MainController {
                 locoOfRoute.getChildren().add(locomotive);
             }
 
-            boxLoco.getChildren().add(locoOfRoute);
+//            boxLoco.getChildren().add(locoOfRoute);
+            locomotiveVBoxs.put(core.getRoutes().get(i).getCode(),locoOfRoute);
         }
 
         // add weather checkbox
@@ -163,6 +163,7 @@ public class MainController {
         currentRoute = getLocoBoxByID(id);
         currentRoute.setVisible(true);
         currentRoute.setDisable(false);
+        boxLoco.setContent(currentRoute);
 
         textPickedRoute.setText(((CheckBox) routeBox).getText());
     }
@@ -199,6 +200,7 @@ public class MainController {
         currentRoute = getLocoBoxByID(name);
         currentRoute.setVisible(true);
         currentRoute.setDisable(false);
+        boxLoco.setContent(currentRoute);
 
         currentBox=getRouteByName(loco.getRoute().getName());
     }
@@ -224,6 +226,7 @@ public class MainController {
         currentRoute = getLocoBoxByID(selectedRoute.getId());
         currentRoute.setVisible(true);
         currentRoute.setDisable(false);
+        boxLoco.setContent(currentRoute);
 
         currentBox=selectedRoute;
     }
@@ -412,18 +415,24 @@ public class MainController {
         }
 
         // reload locomotives
-        ObservableList<Node> locoBoxList=this.boxLoco.getChildren();
-        for (int i = 0; i < locoBoxList.size(); i++) {
-            VBox box= (VBox) locoBoxList.get(i);
-            CheckBox route= (CheckBox) routeList.get(i);
+//        ObservableList<Node> locoBoxList=this.boxLoco.getChildren();
+        for (Map.Entry<String,VBox> boxByRoute: locomotiveVBoxs.entrySet()) {
+            VBox box= boxByRoute.getValue();
+            CheckBox route=null;
+            for (int i=0;i<routeList.size();i++){
+                if (((CheckBox) routeList.get(i)).getText().equals(boxByRoute.getKey())) {
+                    route = (CheckBox) routeList.get(i);
+                    break;
+                }
+            }
+            if (route==null){
+                throw new NullPointerException("MainController.reload(): No route found: "+boxByRoute.getKey());
+            }
+
             ObservableList<Node> locoBox=box.getChildren();
             for (int j = 0; j < locoBox.size(); j++) {
                 CheckBox loco= (CheckBox) locoBox.get(j);
-                if (save.getLocomotive(route.getText()).contains(loco.getText())) {
-                    loco.setSelected(false);
-                } else {
-                    loco.setSelected(true);
-                }
+                loco.setSelected(!save.getLocomotive(route.getText()).contains(loco.getText()));
 
             }
         }
@@ -447,16 +456,16 @@ public class MainController {
      * @return {@link VBox} that has locomotive {@link CheckBox}s
      */
     protected VBox getLocoBoxByID(String routeId) {
-        List<Node> loco = boxLoco.getChildren();
+        Collection<VBox> loco = locomotiveVBoxs.values();
 
         String locoId;
         String[] id = routeId.split("check");
         locoId = id[1];
         locoId = "box" + locoId;
 
-        for (int i = 0; i < loco.size(); i++) {
-            if (loco.get(i).getId().equals(locoId))
-                return (VBox) loco.get(i);
+        for (VBox locomotive: loco) {
+            if (locomotive.getId().equals(locoId))
+                return locomotive;
         }
         return null;
     }
