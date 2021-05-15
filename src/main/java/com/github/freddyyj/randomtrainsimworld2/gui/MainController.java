@@ -108,7 +108,6 @@ public class MainController {
                 locoOfRoute.getChildren().add(locomotive);
             }
 
-//            boxLoco.getChildren().add(locoOfRoute);
             locomotiveVBoxs.put(core.getRoutes().get(i).getCode(),locoOfRoute);
         }
 
