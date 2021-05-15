@@ -7,17 +7,40 @@ This Program is based on RandomTrainSimWorld, a random picker for Train Sim Worl
 This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 
 ## Install
-1. Download ```RandomTrainSimWorld2.zip``` or ```RandomTrainSimWorld2.tar.gz``` from release.
-2. unzip or untar it.
-3. go in directory/folder called RandomTrainSimWorld2.
-4. Run ```RandomTrainSimWorld2.exe``` for Windows or ```RandomTrainSimWorld2``` for Linux.
+### For Windows
+For Windows, I'm providing installer called ```RandomTrainSimWorld2.msi```.
+1. Download ```RandomTrainSimWorld2.msi``` from release.
+2. Run it.
+3. Create shortcut to ```C:\Program Files\RandomTrainSimWorld2\RandomTrainSimWorld2.exe```
+4. Run shortcut
 5. Finish!
-6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
+
+### For Linux
+For Linux, I'm providing runtime image. So, just run it in terminal.
+1. Download ```RandomTrainSimWorld2``` from release.
+2. Open terminal, and go to downloaded directory.
+3. Run ```./RandomTrainSimWorld2```.
+4. Finish!
 
 ## Docs
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.3.0
+* Add new route 'Hauptstrecke Hamburg-Lübeck'
+* Add new locomotives 'DB BR 112.1' and 'MRCE ES-64 U2' in Hauptstrecke Hamburg-Lübeck
+* Add locomotives 'DB BR 185.2', 'MRCE BR 185.5', 'DB BR 146.2', 'DB BR 766.2 DBpbzfa', 'DB BR 767.2 DABpbzfa', 'DB BR 101', 'DB BR 182', and 'DB BR 155' in Hauptstrecke Hamburg-Lübeck
+* Add locomotive 'MRCE ES-64 U2', 'DB BR 767.2 DABpbzfa' and 'DB BR 112.1' in Hauptstrecke München-Augsburg
+* Add locomotive 'DB BR 767.2 DABpbzfa', 'DB BR 112.1', 'DB BR 422' and 'MRCE BR 185.5' in Schnellfahrstrecke Köln
+* Add locomotive 'DB BR 767.2 DABpbzfa' and 'DB BR 112.1' in Hauptstrecke Rhein-Ruhr, Main-Spessart Bahn and Ruhr-Sieg Nord
+* Add locomotive 'MRCE ES-64 U2' and 'DB BR 112.1' in Hauptstrecke Rhein-Ruhr
+* Divide 'Rapid Transit' to 'Rapid Transit (2017)' and 'Rapid Transit (2021)'
+* Add locomotives 'DB BR 767.2 DABpbzfa', 'DB BR 766.2 DBpbzfa', 'S-Bahn BR 1442 "Talent 2"' and 'DB BR 182' in Rapid Transit (2017)
+* Add locomotives 'DB BR 767.2 DABpbzfa', 'DB BR 766.2 DBpbzfa', 'S-Bahn BR 1442 "Talent 2"', 'DB BR 143' and 'DB BR 182' in Rapid Transit (2021)
+* Change runtime files in release
+* Add JUnit test for some basic classes
+* Fix no vertical scroll in locomotive box
+
 v0.2.7
 * Add new locomotive 'DB BR 101' in Haupstrecke Rhein-Ruhr
 

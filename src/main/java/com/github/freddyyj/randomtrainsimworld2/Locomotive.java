@@ -15,13 +15,13 @@ public class Locomotive {
 
 	/**
 	 * Constructor with loco ID, loco name and running route
-	 * @deprecated Use {@link Locomotive#Locomotive(String, com.github.freddyyj.randomtrainsimworld2.Route)} instead.
+	 * @deprecated Use {@link Locomotive#Locomotive(String, Route)} instead.
 	 * @param id locomotive ID
 	 * @param name locomotive name
 	 * @param route route that this locomotive running
 	 */
 	@Deprecated
-	public Locomotive(int id, String name, com.github.freddyyj.randomtrainsimworld2.Route route)
+	public Locomotive(int id, String name, Route route)
 	{
 		this.name=name;
 		this.route=route;
@@ -33,7 +33,7 @@ public class Locomotive {
 	 * @param route route that this locomotive running
 	 * @param isSelected initial {@link Locomotive#isSelected} value
 	 */
-	public Locomotive(String name, com.github.freddyyj.randomtrainsimworld2.Route route, boolean isSelected)
+	public Locomotive(String name, Route route, boolean isSelected)
 	{
 		this.name=name;
 		this.route=route;
@@ -45,13 +45,13 @@ public class Locomotive {
 	 * @param name locomotive name
 	 * @param route route that this locomotive running
 	 */
-	public Locomotive(String name, com.github.freddyyj.randomtrainsimworld2.Route route){
+	public Locomotive(String name, Route route){
 		this(name,route,true);
 	}
 	public String getName() {
 		return name;
 	}
-	public com.github.freddyyj.randomtrainsimworld2.Route getRoute() {
+	public Route getRoute() {
 		return route;
 	}
 }

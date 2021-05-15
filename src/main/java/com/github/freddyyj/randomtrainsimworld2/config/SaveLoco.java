@@ -27,7 +27,8 @@ public class SaveLoco {
 	 */
 	public SaveLoco(ArrayList<String> routes) {
 		object=new JsonObject();
-		
+
+		object.add("route",new JsonArray());
 		for (int i=0;i<routes.size();i++) {
 			object.add(routes.get(i),new JsonArray());
 		}
