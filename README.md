@@ -9,12 +9,11 @@ This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
 ## Install
 ### For Windows
 For Windows, I'm providing installer called ```RandomTrainSimWorld2.msi```.
-1. Download ```RandomTrainSimWorld2.zip``` from release.
-2. unzip it.
-3. go in folder called RandomTrainSimWorld2.
-4. Run ```RandomTrainSimWorld2.exe``` for Windows or ```RandomTrainSimWorld2``` for Linux.
+1. Download ```RandomTrainSimWorld2.msi``` from release.
+2. Run it.
+3. Create shortcut to ```C:\Program Files\RandomTrainSimWorld2\RandomTrainSimWorld2.exe```
+4. Run shortcut
 5. Finish!
-6. (Optional) If you want to install in local bin(```C:\Program Files``` in Windows, ```/opt/``` in Linux), run ```RandomTrainSimWorld2-<version>.exe/.msi``` or ```RandomTrainSimWorld2-<version>-<architecture>.rpm/.deb```. It doesn't make link, so for comfortable usage, create link to it.
 
 ### For Linux
 For Linux, I'm providing runtime image. So, just run it in terminal.
@@ -38,6 +37,7 @@ v0.3.0
 * Divide 'Rapid Transit' to 'Rapid Transit (2017)' and 'Rapid Transit (2021)'
 * Add locomotives 'DB BR 767.2 DABpbzfa', 'DB BR 766.2 DBpbzfa', 'S-Bahn BR 1442 "Talent 2"' and 'DB BR 182' in Rapid Transit (2017)
 * Add locomotives 'DB BR 767.2 DABpbzfa', 'DB BR 766.2 DBpbzfa', 'S-Bahn BR 1442 "Talent 2"', 'DB BR 143' and 'DB BR 182' in Rapid Transit (2021)
+* Change runtime files in release
 * Add JUnit test for some basic classes
 * Fix no vertical scroll in locomotive box
 
