@@ -108,7 +108,7 @@ public class MainController {
                 locoOfRoute.getChildren().add(locomotive);
             }
 
-            locomotiveVBoxs.put(core.getRoutes().get(i).getCode(),locoOfRoute);
+            locomotiveVBoxs.put(core.getRoutes().get(i).getName(),locoOfRoute);
         }
 
         // add weather checkbox
