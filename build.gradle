@@ -33,3 +33,12 @@ test {
         runOnClasspath=true
     }
 }
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': "com.github.freddyyj.randomtrainsimworld2.Main"
+        )
+    }
+}
