@@ -20,8 +20,9 @@
   "GWE_GWR": {"name": "Great Western Express(GWR)","locomotives": ["EWS/DBS Class 66","GWR Class 125(43) HST","GWR Class 166"],"nation": "UK"},
   "GWE_BR": {"name": "Great Western Express(BR)","locomotives": ["BR Class 08","BR Class 101","BR Class 31/1","BR Class 47/4","BR Class 45/1","BR Class 52 'Western'"],"nation": "UK"},
   "LGV": {"name": "LGV Méditerranée","locomotives": ["TGV Duplex 200 CM"],"nation": "France"},
-  "SEHS": {"name": "Southeastern High Speed","locomotives": ["SEW Class 465/9","SEB Class 375/9","SEB Class 395 'Javelin'","RF Class 37/5","RF Class 20","BLU Class 31/1","EWS Class 66","BLU Class 47/4","BLU Class 45/1","BLU Class 40"],"nation": "UK"},
+  "SEHS": {"name": "Southeastern High Speed","locomotives": ["SEW Class 465/9","SEB Class 375/9","SEB Class 395 'Javelin'","BR Class 37/5 RF","BR Class 20 RF","BR Class 31/1 BLU","EWS Class 66","BR Class 47/4 BLU","BR Class 45/1 BLU","BR Class 40 BLU"],"nation": "UK"},
   "AL": {"name": "Arosa Linie","locomotives": ["RhB GE 4/4 II"],"nation": "Swiss"},
   "CFR": {"name": "Clinchfield Railroad","locomotives": ["SD40 CRR","F7 CRR"],"nation": "USA"},
-  "HHL": {"name": "Hauptstrecke Hamburg-Lübeck","locomotives": ["DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 101","DB BR 182","MRCE ES-64 U2","DB BR 155","DB BR 112.1"],"nation": "Germany"}
+  "HHL": {"name": "Hauptstrecke Hamburg-Lübeck","locomotives": ["DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 101","DB BR 182","MRCE ES-64 U2","DB BR 155","DB BR 112.1"],"nation": "Germany"},
+  "CCL": {"name": "Cathcart Circle Line","locomotives": ["ScR Class 314","BR Class 37/5 RF","BR Class 20 RF","BR Class 31/1 BLU","EWS Class 66","BR Class 47/4 BLU"],"nation": "UK"}
 }
