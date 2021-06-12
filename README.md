@@ -26,6 +26,12 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.3.1
+* Add new route 'Cathcart Circle Line'
+* Add new locomotives 'ScR Class 314' in Cathcart Circle Line
+* Add locomotives 'BR Class 37/5 RF', 'BR Class 31/1 BLU', 'BR Class 47/4 BLU', 'BR Class 45/1 BLU' in Cathcart Circle Line
+* Change locomotives 'RF/BLU Class XX' to 'BR Class XX RF/BLU' in Southeastern High Speed
+
 v0.3.0
 * Add new route 'Hauptstrecke Hamburg-Lübeck'
 * Add new locomotives 'DB BR 112.1' and 'MRCE ES-64 U2' in Hauptstrecke Hamburg-Lübeck
