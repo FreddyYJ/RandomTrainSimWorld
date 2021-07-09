@@ -26,6 +26,10 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.3.2
+* Add new route 'Cane Creek'
+* Add new locomotives 'UP SD40-2' and 'UP AC4400CW' in Cane Creek
+
 v0.3.1
 * Add new route 'Cathcart Circle Line'
 * Add new locomotives 'ScR Class 314' in Cathcart Circle Line
