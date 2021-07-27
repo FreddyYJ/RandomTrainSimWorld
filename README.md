@@ -27,7 +27,7 @@ Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
 v0.4.0
-* Update JDK and OpenJFX version to 16
+* Update JDK and OpenJFX version to 16, Gradle version to 7.1.1
 * Update dependencies and plugins version to latest
 * Change internal String data to object(class)
 * Fix and improve JUnit tests
