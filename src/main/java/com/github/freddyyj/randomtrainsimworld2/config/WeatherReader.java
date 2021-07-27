@@ -26,6 +26,7 @@ public class WeatherReader {
      * Reload weathers.json
      */
     public static void reload() throws IOException {
+        weathers=new ArrayList<>();
         JsonArray weather= JsonParser.parseReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("weathers.json"))).getAsJsonArray();
 
         for (int i=0;i<weather.size();i++) {
