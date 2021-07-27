@@ -1,16 +1,16 @@
 package com.github.freddyyj.randomtrainsimworld2;
 
 import com.github.freddyyj.randomtrainsimworld2.config.Config;
-import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
+import com.github.freddyyj.randomtrainsimworld2.config.RouteReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
 import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
-import com.google.gson.JsonNull;
 import javafx.application.Application;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * main class for control logics
@@ -18,24 +18,24 @@ import java.util.HashMap;
  * @author FreddyYJ_
  */
 public class Main {
-	private ArrayList<com.github.freddyyj.randomtrainsimworld2.Route> routes;
+	private ArrayList<Route> routes;
 
 	/**
 	 * Get locomotive list.
 	 * @return locomotive list
 	 */
-	public HashMap<com.github.freddyyj.randomtrainsimworld2.Route, ArrayList<Locomotive>> getLocos() {
+	public HashMap<Route, List<Locomotive>> getLocos() {
 		return locos;
 	}
 
-	private HashMap<com.github.freddyyj.randomtrainsimworld2.Route,ArrayList<Locomotive>> locos;
-	private ArrayList<com.github.freddyyj.randomtrainsimworld2.Weather> weathers;
+	private HashMap<Route,List<Locomotive>> locos;
+	private List<Weather> weathers;
 	private SaveLoco unselectedLocos;
 	private Config config;
 	private static Main core=null;
 	public static void main(String[] args) {
 		try {
-			LocomotiveReader.reload();
+			RouteReader.reload();
 			WeatherReader.reload();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -63,34 +63,26 @@ public class Main {
 
 		config=new Config();
 
-		// list of routes
-		ArrayList<String> route=new ArrayList<>();
-		for (int i=0;i<LocomotiveReader.getLocomotiveReaders().size();i++){
-			route.add(LocomotiveReader.getLocomotiveReaders().get(i).getName());
-		}
-		// If no save file exist
-		if (config.getConfig("DefaultSaveFilePath")==null)
-			unselectedLocos=new SaveLoco(route);
-		else {
-			unselectedLocos=new SaveLoco(route, config.getConfig("DefaultSaveFilePath"));
-		}
-
 		// create Route list and Locomotive list
-		for (int i=0;i<route.size();i++){
-			routes.add(new Route(route.get(i),LocomotiveReader.getLocomotiveReaders().get(i).getCode()));
+		RouteReader.reload();
+		List<RouteReader> readers=RouteReader.getRouteReaders();
+		for (int i=0;i<readers.size();i++){
+			RouteReader currentReader=readers.get(i);
+			routes.add(currentReader.getRoute());
 
-			ArrayList<Locomotive> locoList=new ArrayList<>();
-			for (int j = 0; j< LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().size(); j++){
-				Locomotive locomotive=new Locomotive(LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().get(j),routes.get(i));
-				locoList.add(locomotive);
-			}
+			List<Locomotive> locoList=currentReader.getLocomotives();
 			locos.put(routes.get(i),locoList);
 		}
 
 		// create weather list
-		for (int i = 0; i< WeatherReader.getWeathers().size(); i++){
-			com.github.freddyyj.randomtrainsimworld2.Weather weather=new com.github.freddyyj.randomtrainsimworld2.Weather(WeatherReader.getWeathers().get(i),true);
-			weathers.add(weather);
+		WeatherReader.reload();
+		weathers=WeatherReader.getWeathers();
+
+		// If no save file exist
+		if (config.getConfig("DefaultSaveFilePath")==null)
+			unselectedLocos=new SaveLoco(routes);
+		else {
+			unselectedLocos=new SaveLoco(routes, config.getConfig("DefaultSaveFilePath"));
 		}
 
 		if (unselectedLocos.hasSavefile()) reload();
@@ -115,7 +107,7 @@ public class Main {
 					break;
 				}
 			}
-			ArrayList<String> locos=unselectedLocos.getLocomotive(routes.get(i).getName());
+			ArrayList<String> locos=unselectedLocos.getLocomotive(routes.get(i));
 			for (int k=0;k<this.locos.get(routes.get(i)).size();k++){
 				for (int l=0;l<locos.size();l++){
 					if (this.locos.get(routes.get(i)).get(k).getName().equals(locos.get(l))){
@@ -140,23 +132,23 @@ public class Main {
 	 * Get route list.
 	 * @return routes list
 	 */
-	public ArrayList<com.github.freddyyj.randomtrainsimworld2.Route> getRoutes(){return routes;}
+	public List<Route> getRoutes(){return routes;}
 
 	/**
 	 * Get weather list.
 	 * @return weather list
 	 */
-	public ArrayList<com.github.freddyyj.randomtrainsimworld2.Weather> getWeathers(){return weathers;}
+	public List<Weather> getWeathers(){return weathers;}
 
 	/**
-	 * Get {@link com.github.freddyyj.randomtrainsimworld2.Route} object with specific name.
+	 * Get {@link Route} object with specific name.
 	 * <p>
-	 *     If {@link com.github.freddyyj.randomtrainsimworld2.Route} object with name was not found, returns null.
+	 *     If {@link Route} object with name was not found, returns null.
 	 * </p>
 	 * @param name route name
-	 * @return {@link com.github.freddyyj.randomtrainsimworld2.Route} object
+	 * @return {@link Route} object
 	 */
-	public com.github.freddyyj.randomtrainsimworld2.Route getRoute(String name) {
+	public Route getRoute(String name) {
 		for (int i=0;i<routes.size();i++) {
 			if (routes.get(i).getName().equals(name)) {
 				return routes.get(i);
@@ -173,7 +165,7 @@ public class Main {
 	 * @param routeName route name
 	 * @return list of {@link Locomotive} object
 	 */
-	public ArrayList<Locomotive> getLocomotive(String routeName) {
+	public List<Locomotive> getLocomotive(String routeName) {
 		com.github.freddyyj.randomtrainsimworld2.Route route=getRoute(routeName);
 		if (locos.get(route).size()>=1)
 			return locos.get(route);
@@ -190,7 +182,7 @@ public class Main {
 	 * @return {@link Locomotive} object
 	 */
 	public Locomotive getLocomotive(String routeName,String locoName){
-		ArrayList<Locomotive> locoList=getLocomotive(routeName);
+		List<Locomotive> locoList=getLocomotive(routeName);
 		for (int i=0;i<locoList.size();i++){
 			if (locoList.get(i).getName().equals(locoName)) return locoList.get(i);
 		}
@@ -198,14 +190,14 @@ public class Main {
 	}
 
 	/**
-	 * Get {@link com.github.freddyyj.randomtrainsimworld2.Weather} object with specific weather name.
+	 * Get {@link Weather} object with specific weather name.
 	 * <p>
 	 *     If not found, return null.
 	 * </p>
 	 * @param name weather name
-	 * @return {@link com.github.freddyyj.randomtrainsimworld2.Weather} object
+	 * @return {@link Weather} object
 	 */
-	public com.github.freddyyj.randomtrainsimworld2.Weather getWeather(String name) {
+	public Weather getWeather(String name) {
 		for (int i=0;i<weathers.size();i++) {
 			if (weathers.get(i).getName().equals(name)) {
 				return weathers.get(i);
@@ -215,17 +207,17 @@ public class Main {
 	}
 
 	/**
-	 * Add or remove {@link com.github.freddyyj.randomtrainsimworld2.Route} from routes list.
+	 * Add or remove {@link Route} from routes list.
 	 * @param isSelected add when true, remove when false
-	 * @param route {@link com.github.freddyyj.randomtrainsimworld2.Route} that want to add or remove
+	 * @param route {@link Route} that want to add or remove
 	 */
-	public void selectRoute(boolean isSelected, com.github.freddyyj.randomtrainsimworld2.Route route) {
+	public void selectRoute(boolean isSelected, Route route) {
 		if (!isSelected) {
-			unselectedLocos.addRoute(route.getName());
+			unselectedLocos.addRoute(route);
 			route.isSelected=false;
 		}
 		else {
-			unselectedLocos.removeRoute(route.getName());
+			unselectedLocos.removeRoute(route);
 			route.isSelected=true;
 		}
 	}
@@ -233,32 +225,32 @@ public class Main {
 	 * Add or remove {@link Locomotive} from locomotive list.
 	 * @param isSelected add when true, remove when false
 	 * @param loco {@link Locomotive} that want to add or remove
-	 * @param route {@link com.github.freddyyj.randomtrainsimworld2.Route} of loco
+	 * @param route {@link Route} of loco
 	 */
-	public void selectLocomotive(boolean isSelected, Locomotive loco, com.github.freddyyj.randomtrainsimworld2.Route route) {
-		ArrayList<Locomotive> locoList=getLocomotive(route.getName());
+	public void selectLocomotive(boolean isSelected, Locomotive loco, Route route) {
+		List<Locomotive> locoList=getLocomotive(route.getName());
 		if (!isSelected) {
-			unselectedLocos.addLocomotive(route.getName(),loco.getName());
+			unselectedLocos.addLocomotive(loco);
 			loco.isSelected=false;
 		}
 		else {
-			unselectedLocos.removeLocomotive(route.getName(),loco.getName());
+			unselectedLocos.removeLocomotive(loco);
 			loco.isSelected=true;
 		}
 
 	}
 	/**
-	 * Add or remove {@link com.github.freddyyj.randomtrainsimworld2.Weather} from weather list.
+	 * Add or remove {@link Weather} from weather list.
 	 * @param isSelected add when true, remove when false
-	 * @param weather {@link com.github.freddyyj.randomtrainsimworld2.Weather} that want to add or remove
+	 * @param weather {@link Weather} that want to add or remove
 	 */
-	public void selectWeather(boolean isSelected, com.github.freddyyj.randomtrainsimworld2.Weather weather) {
+	public void selectWeather(boolean isSelected, Weather weather) {
 		if (!isSelected) {
-			unselectedLocos.addWeather(weather.getName());
+			unselectedLocos.addWeather(weather);
 			weather.isSelected=false;
 		}
 		else {
-			unselectedLocos.removeWeather(weather.getName());
+			unselectedLocos.removeWeather(weather);
 			weather.isSelected=true;
 		}
 
