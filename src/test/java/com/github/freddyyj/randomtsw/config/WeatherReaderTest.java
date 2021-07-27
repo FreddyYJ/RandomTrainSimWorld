@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class WeatherReaderTest {
-    private static List<String> reader;
     @BeforeAll
     public static void createReader(){
         try {
@@ -16,10 +15,10 @@ public class WeatherReaderTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reader=WeatherReader.getWeathers();
     }
     @Test
     public void weatherTest(){
-        Assertions.assertEquals(reader.get(0),"Spring Clear");
+        List<Weather> weathers=WeatherReader.getWeathers();
+        Assertions.assertEquals(weathers.get(0).getName(),"Spring Clear");
     }
 }

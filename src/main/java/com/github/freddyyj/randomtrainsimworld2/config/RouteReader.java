@@ -1,5 +1,7 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.Locomotive;
+import com.github.freddyyj.randomtrainsimworld2.Route;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -21,17 +23,26 @@ public class RouteReader {
     private static ArrayList<RouteReader> routes=new ArrayList<>();
     private String code;
     private String name;
-    private List<String> locomotives;
+    private Route route;
+    private List<Locomotive> locomotives;
     private String nation;
     private RouteReader(String code, String name, List<String> locos, String nation){
         this.code=code;
         this.name=name;
         this.nation=nation;
-        locomotives=locos;
+        this.route=new Route(name,code);
+        this.locomotives=new ArrayList<>();
+        for (String loco:locos){
+            locomotives.add(new Locomotive(loco,route));
+        }
     }
 
     /**
-     * Reload locomotives.json
+     * Reload locomotives.json.
+     * <p>
+     *     This method will create all objects new.
+     *     You should reset all settings(e.g. {@link SaveLoco}).
+     * </p>
      */
     public static void reload() throws IOException {
         JsonObject object= JsonParser.parseReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"))).getAsJsonObject();
@@ -71,10 +82,11 @@ public class RouteReader {
     public String getCode(){return code;}
     public String getName(){return name;}
     public String getNation(){return nation;}
+    public Route getRoute(){return route;}
 
     /**
      * Get locomotives list from this route
      * @return locomotive list
      */
-    public List<String> getLocomotives(){return locomotives;}
+    public List<Locomotive> getLocomotives(){return locomotives;}
 }

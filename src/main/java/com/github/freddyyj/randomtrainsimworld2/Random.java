@@ -3,6 +3,7 @@ package com.github.freddyyj.randomtrainsimworld2;
 import com.github.freddyyj.randomtrainsimworld2.exception.NoElementSelectedException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Random picker class.
@@ -40,7 +41,7 @@ public class Random {
      * @param routes list of routes
      * @return picked route
      */
-    public com.github.freddyyj.randomtrainsimworld2.Route randomRoute(ArrayList<com.github.freddyyj.randomtrainsimworld2.Route> routes){
+    public Route randomRoute(List<Route> routes){
         int i,temp=0;
         for (i=0;i<routes.size();i++){
             if (!routes.get(i).isSelected) temp++;
@@ -63,7 +64,7 @@ public class Random {
      * @param locomotives list of locomotives
      * @return picked locomotive
      */
-    public Locomotive randomLocomotive(ArrayList<Locomotive> locomotives){
+    public Locomotive randomLocomotive(List<Locomotive> locomotives){
         int i,temp=0;
         for (i=0;i<locomotives.size();i++){
             if (!locomotives.get(i).isSelected) temp++;
@@ -86,7 +87,7 @@ public class Random {
      * @param locomotives list of list of locomotives
      * @return picked locomotive
      */
-    public Locomotive randomLocomotiveInAll(ArrayList<ArrayList<Locomotive>> locomotives){
+    public Locomotive randomLocomotiveInAll(List<List<Locomotive>> locomotives){
         ArrayList<Locomotive> list=new ArrayList<>();
         for (int i=0;i<locomotives.size();i++){
             list.addAll(locomotives.get(i));
@@ -122,7 +123,7 @@ public class Random {
      * @param weathers list of weathers
      * @return picked weather
      */
-    public Weather randomWeather(ArrayList<Weather> weathers){
+    public Weather randomWeather(List<Weather> weathers){
         int i,temp=0;
         for (i=0;i<weathers.size();i++){
             if (!weathers.get(i).isSelected) temp++;

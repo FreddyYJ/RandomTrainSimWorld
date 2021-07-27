@@ -1,5 +1,7 @@
 package com.github.freddyyj.randomtsw.config;
 
+import com.github.freddyyj.randomtrainsimworld2.Locomotive;
+import com.github.freddyyj.randomtrainsimworld2.Route;
 import com.github.freddyyj.randomtrainsimworld2.config.RouteReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -31,5 +33,20 @@ public class RouteReaderTest {
 
         Assertions.assertEquals(reader.getName(),"Sand Patch Grade");
         Assertions.assertEquals(reader.getNation(),"USA");
+    }
+
+    @Test
+    public void getRouteTest(){
+        Route route=RouteReader.getRouteReader("SPG").getRoute();
+
+        Assertions.assertNotNull(route);
+        Assertions.assertEquals(route.getName(),"Sand Patch Grade");
+    }
+    @Test
+    public void getLocoTest(){
+        List<Locomotive> locos=RouteReader.getRouteReader("SPG").getLocomotives();
+
+        Assertions.assertNotNull(locos);
+        Assertions.assertEquals(locos.size(),5);
     }
 }

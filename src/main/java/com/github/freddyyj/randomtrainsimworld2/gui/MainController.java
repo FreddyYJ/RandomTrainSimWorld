@@ -169,7 +169,7 @@ public class MainController {
 
     @FXML
     protected void onRandomAll(ActionEvent e) {
-        ArrayList<ArrayList<Locomotive>> locoList=new ArrayList<>();
+        List<List<Locomotive>> locoList=new ArrayList<>();
         Main core=null;
         try{
             core=Main.getInstance();
@@ -431,7 +431,11 @@ public class MainController {
             ObservableList<Node> locoBox=box.getChildren();
             for (int j = 0; j < locoBox.size(); j++) {
                 CheckBox loco= (CheckBox) locoBox.get(j);
-                loco.setSelected(!save.getLocomotive(route.getText()).contains(loco.getText()));
+                try {
+                    loco.setSelected(!save.getLocomotive(Main.getInstance().getRoute(route.getText())).contains(loco.getText()));
+                } catch (IOException e) {
+                    handleException(e);
+                }
 
             }
         }

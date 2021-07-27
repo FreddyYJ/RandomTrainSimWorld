@@ -1,5 +1,8 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
+import com.github.freddyyj.randomtrainsimworld2.Locomotive;
+import com.github.freddyyj.randomtrainsimworld2.Route;
+import com.github.freddyyj.randomtrainsimworld2.Weather;
 import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
 import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonArray;
@@ -8,6 +11,7 @@ import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class for managing savefile.
@@ -25,12 +29,12 @@ public class SaveLoco {
 	 * </p>
 	 * @param routes list of all routes
 	 */
-	public SaveLoco(ArrayList<String> routes) {
+	public SaveLoco(List<Route> routes) {
 		object=new JsonObject();
 
 		object.add("route",new JsonArray());
 		for (int i=0;i<routes.size();i++) {
-			object.add(routes.get(i),new JsonArray());
+			object.add(routes.get(i).getName(),new JsonArray());
 		}
 		object.add("weather", new JsonArray());
 		
@@ -48,7 +52,7 @@ public class SaveLoco {
 	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException If save file not exist
 	 * @throws IOException If IO errors occurred
 	 */
-	public SaveLoco(ArrayList<String> routes,String defaultPath) throws IOException {
+	public SaveLoco(List<Route> routes, String defaultPath) throws IOException {
 		saveFile=new File(defaultPath);
 		if (!saveFile.exists()) {
 			try {
@@ -60,8 +64,8 @@ public class SaveLoco {
 			object=new JsonObject();
 			object.add("route",new JsonArray());
 
-			for (String route : routes) {
-				object.add(route, new JsonArray());
+			for (Route route : routes) {
+				object.add(route.getName(), new JsonArray());
 			}
 			object.add("weather", new JsonArray());
 
@@ -116,11 +120,11 @@ public class SaveLoco {
 	 * Get locomotive list that unselected.
 	 * @return unselected locomotive list
 	 */
-	public ArrayList<String> getLocomotive(String route){
-		JsonArray locoArray= object.getAsJsonArray(route);
+	public ArrayList<String> getLocomotive(Route route){
+		JsonArray locoArray= object.getAsJsonArray(route.getName());
 		if (locoArray==null) {
-			object.add(route, new JsonArray());
-			locoArray= object.getAsJsonArray(route);
+			object.add(route.getName(), new JsonArray());
+			locoArray= object.getAsJsonArray(route.getName());
 		}
 
 		ArrayList<String> locoStrings=new ArrayList<>();
@@ -149,12 +153,12 @@ public class SaveLoco {
 	 * <p>
 	 *     This route must be unselected.
 	 * </p>
-	 * @param route unselected route name
+	 * @param route unselected route
 	 */
-	public void addRoute(String route) {
+	public void addRoute(Route route) {
 		JsonArray routeArray=object.getAsJsonArray("route");
-		if (find(routeArray, route)==-1) {
-			routeArray.add(route);
+		if (find(routeArray, route.getName())==-1) {
+			routeArray.add(route.getName());
 			isChanged=true;
 		}
 	}
@@ -164,13 +168,12 @@ public class SaveLoco {
 	 * <p>
 	 *     Locomotive must be unselected.
 	 * </p>
-	 * @param route route of locomotive
-	 * @param loco locomotive name
+	 * @param loco locomotive
 	 */
-	public void addLocomotive(String route,String loco) {
-		JsonArray locoArray=object.getAsJsonArray(route);
-		if (find(locoArray, loco)==-1) {
-			locoArray.add(loco);
+	public void addLocomotive(Locomotive loco) {
+		JsonArray locoArray=object.getAsJsonArray(loco.getRoute().getName());
+		if (find(locoArray, loco.getName())==-1) {
+			locoArray.add(loco.getName());
 			isChanged=true;
 		}
 	}
@@ -180,12 +183,12 @@ public class SaveLoco {
 	 * <p>
 	 *     Weather must be unselected.
 	 * </p>
-	 * @param weather weather name
+	 * @param weather weather
 	 */
-	public void addWeather(String weather) {
+	public void addWeather(Weather weather) {
 		JsonArray weatherArray= object.getAsJsonArray("weather");
-		if (find(weatherArray, weather)==-1) {
-			weatherArray.add(weather);
+		if (find(weatherArray, weather.getName())==-1) {
+			weatherArray.add(weather.getName());
 			isChanged=true;
 		}
 
@@ -196,12 +199,12 @@ public class SaveLoco {
 	 * <p>
 	 *     Route must be selected.
 	 * </p>
-	 * @param route route name
+	 * @param route route
 	 */
-	public void removeRoute(String route) {
+	public void removeRoute(Route route) {
 		JsonArray routeArray= object.getAsJsonArray("route");
-		if (find(routeArray, route)!=-1) {
-			routeArray.remove(find(routeArray, route));
+		if (find(routeArray, route.getName())!=-1) {
+			routeArray.remove(find(routeArray, route.getName()));
 			isChanged=true;
 		}
 	}
@@ -211,13 +214,12 @@ public class SaveLoco {
 	 * <p>
 	 *     Locomotive must be selected.
 	 * </p>
-	 * @param route route of locomotive
-	 * @param loco locomotive name
+	 * @param loco locomotive
 	 */
-	public void removeLocomotive(String route,String loco) {
-		JsonArray locoArray=object.getAsJsonArray(route);
-		if (find(locoArray, loco)!=-1) {
-			locoArray.remove(find(locoArray, loco));
+	public void removeLocomotive(Locomotive loco) {
+		JsonArray locoArray=object.getAsJsonArray(loco.getRoute().getName());
+		if (find(locoArray, loco.getName())!=-1) {
+			locoArray.remove(find(locoArray, loco.getName()));
 			isChanged=true;
 		}
 	}
@@ -229,10 +231,10 @@ public class SaveLoco {
 	 * </p>
 	 * @param weather weather name
 	 */
-	public void removeWeather(String weather) {
+	public void removeWeather(Weather weather) {
 		JsonArray weatherArray= object.getAsJsonArray("weather");
-		if (find(weatherArray, weather)!=-1) {
-			weatherArray.remove(find(weatherArray, weather));
+		if (find(weatherArray, weather.getName())!=-1) {
+			weatherArray.remove(find(weatherArray, weather.getName()));
 			isChanged=true;
 		}
 	}
