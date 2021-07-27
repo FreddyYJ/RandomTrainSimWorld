@@ -20,7 +20,7 @@ import java.util.Set;
  * </p>
  */
 public class RouteReader {
-    private static ArrayList<RouteReader> routes=new ArrayList<>();
+    private static ArrayList<RouteReader> routes;
     private String code;
     private String name;
     private Route route;
@@ -45,6 +45,7 @@ public class RouteReader {
      * </p>
      */
     public static void reload() throws IOException {
+        routes=new ArrayList<>();
         JsonObject object= JsonParser.parseReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("locomotives.json"))).getAsJsonObject();
 
         Set<String> set=object.keySet();
