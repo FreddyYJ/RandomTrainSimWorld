@@ -1,6 +1,5 @@
 package com.github.freddyyj.randomtrainsimworld2.config;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -18,13 +17,13 @@ import java.util.Set;
  *     One object has one route, and its locomotives.
  * </p>
  */
-public class LocomotiveReader {
-    private static ArrayList<LocomotiveReader> routes=new ArrayList<>();
+public class RouteReader {
+    private static ArrayList<RouteReader> routes=new ArrayList<>();
     private String code;
     private String name;
     private List<String> locomotives;
     private String nation;
-    private LocomotiveReader(String code, String name, List<String> locos,String nation){
+    private RouteReader(String code, String name, List<String> locos, String nation){
         this.code=code;
         this.name=name;
         this.nation=nation;
@@ -48,22 +47,22 @@ public class LocomotiveReader {
                 loco=loco.substring(1,loco.length()-1);
                 locos.add(loco);
             });
-            routes.add(new LocomotiveReader(key,route.get("name").getAsString(),locos,route.get("nation").getAsString()));
+            routes.add(new RouteReader(key,route.get("name").getAsString(),locos,route.get("nation").getAsString()));
         }
     }
 
     /**
-     * Get {@link LocomotiveReader} list
+     * Get {@link RouteReader} list
      * @return LocomotiveReader list
      */
-    public static List<LocomotiveReader> getLocomotiveReaders(){return routes;}
+    public static List<RouteReader> getRouteReaders(){return routes;}
 
     /**
-     * Get one {@link LocomotiveReader} object with route code
+     * Get one {@link RouteReader} object with route code
      * @param code route code
      * @return LocomotiveReader object
      */
-    public static LocomotiveReader getLocomotiveReader(String code){
+    public static RouteReader getRouteReader(String code){
         for (int i=0;i<routes.size();i++){
             if (routes.get(i).getCode().equals(code)) return routes.get(i);
         }

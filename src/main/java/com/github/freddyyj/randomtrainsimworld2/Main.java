@@ -1,11 +1,10 @@
 package com.github.freddyyj.randomtrainsimworld2;
 
 import com.github.freddyyj.randomtrainsimworld2.config.Config;
-import com.github.freddyyj.randomtrainsimworld2.config.LocomotiveReader;
+import com.github.freddyyj.randomtrainsimworld2.config.RouteReader;
 import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
 import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
-import com.google.gson.JsonNull;
 import javafx.application.Application;
 
 import java.io.IOException;
@@ -35,7 +34,7 @@ public class Main {
 	private static Main core=null;
 	public static void main(String[] args) {
 		try {
-			LocomotiveReader.reload();
+			RouteReader.reload();
 			WeatherReader.reload();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -65,8 +64,8 @@ public class Main {
 
 		// list of routes
 		ArrayList<String> route=new ArrayList<>();
-		for (int i=0;i<LocomotiveReader.getLocomotiveReaders().size();i++){
-			route.add(LocomotiveReader.getLocomotiveReaders().get(i).getName());
+		for (int i = 0; i< RouteReader.getRouteReaders().size(); i++){
+			route.add(RouteReader.getRouteReaders().get(i).getName());
 		}
 		// If no save file exist
 		if (config.getConfig("DefaultSaveFilePath")==null)
@@ -77,11 +76,11 @@ public class Main {
 
 		// create Route list and Locomotive list
 		for (int i=0;i<route.size();i++){
-			routes.add(new Route(route.get(i),LocomotiveReader.getLocomotiveReaders().get(i).getCode()));
+			routes.add(new Route(route.get(i), RouteReader.getRouteReaders().get(i).getCode()));
 
 			ArrayList<Locomotive> locoList=new ArrayList<>();
-			for (int j = 0; j< LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().size(); j++){
-				Locomotive locomotive=new Locomotive(LocomotiveReader.getLocomotiveReaders().get(i).getLocomotives().get(j),routes.get(i));
+			for (int j = 0; j< RouteReader.getRouteReaders().get(i).getLocomotives().size(); j++){
+				Locomotive locomotive=new Locomotive(RouteReader.getRouteReaders().get(i).getLocomotives().get(j),routes.get(i));
 				locoList.add(locomotive);
 			}
 			locos.put(routes.get(i),locoList);
