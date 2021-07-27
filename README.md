@@ -4,7 +4,7 @@ A new random Train Sim World 2 picker based on RandomTSW.
 This Program is based on RandomTrainSimWorld, a random picker for Train Sim World 2020 and 2. This program only include TSW2, not 2020.
 
 ## Requirement
-This program is created in OpenJDK 15.0.2, OpenJFX 15.0.1 and Gradle.
+This program is created in OpenJDK 16, OpenJFX 16 and Gradle.
 
 ## Install
 ### For Windows
@@ -26,6 +26,12 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.4.0
+* Update JDK and OpenJFX version to 16
+* Update dependencies and plugins version to latest
+* Change internal String data to object(class)
+* Fix and improve JUnit tests
+
 v0.3.2
 * Add new route 'Cane Creek'
 * Add new locomotives 'UP SD40-2' and 'UP AC4400CW' in Cane Creek
