@@ -84,8 +84,7 @@ public class MainController {
         // create UI elements depend on JSON file
         for(int i=0;i<core.getRoutes().size();i++){
             // add route checkbox
-            String routeName=new String(core.getRoutes().get(i).getName().getBytes(), StandardCharsets.UTF_8);
-            CheckBox route=new CheckBox(routeName);
+            CheckBox route=new CheckBox(core.getRoutes().get(i).getName());
             route.setSelected(true);
             route.setOnAction(this::onCheckRouteSelect);
             route.setOnMouseClicked(this::onCheckRouteClick);
