@@ -26,6 +26,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.4.1
+* Add new route 'Northeast Corridor'
+* Add new locomotive 'ACS-64', 'MBTA F40PH-3C' and 'MBTA CTC-3'
+* Fix charset problem in Windows
+
 v0.4.0
 * Update JDK and OpenJFX version to 16, Gradle version to 7.1.1
 * Update dependencies and plugins version to latest
