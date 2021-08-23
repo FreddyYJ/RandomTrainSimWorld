@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -83,7 +84,8 @@ public class MainController {
         // create UI elements depend on JSON file
         for(int i=0;i<core.getRoutes().size();i++){
             // add route checkbox
-            CheckBox route=new CheckBox(core.getRoutes().get(i).getName());
+            String routeName=new String(core.getRoutes().get(i).getName().getBytes(), StandardCharsets.UTF_8);
+            CheckBox route=new CheckBox(routeName);
             route.setSelected(true);
             route.setOnAction(this::onCheckRouteSelect);
             route.setOnMouseClicked(this::onCheckRouteClick);
