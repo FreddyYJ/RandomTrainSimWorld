@@ -29,7 +29,6 @@ Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 v0.4.1
 * Add new route 'Northeast Corridor'
 * Add new locomotive 'ACS-64', 'MBTA F40PH-3C' and 'MBTA CTC-3'
-* Fix charset problem in Windows
 
 v0.4.0
 * Update JDK and OpenJFX version to 16, Gradle version to 7.1.1
