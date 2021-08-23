@@ -25,5 +25,6 @@
   "CFR": {"name": "Clinchfield Railroad","locomotives": ["SD40 CRR","F7 CRR"],"nation": "USA"},
   "HHL": {"name": "Hauptstrecke Hamburg-Lübeck","locomotives": ["DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 101","DB BR 182","MRCE ES-64 U2","DB BR 155","DB BR 112.1"],"nation": "Germany"},
   "CCL": {"name": "Cathcart Circle Line","locomotives": ["ScR Class 314","BR Class 37/5 RF","BR Class 20 RF","BR Class 31/1 BLU","EWS Class 66","BR Class 47/4 BLU"],"nation": "UK"},
-  "CCS": {"name": "Cane Creek","locomotives": ["UP SD40-2","UP AC4400CW"],"nation": "USA"}
+  "CCS": {"name": "Cane Creek","locomotives": ["UP SD40-2","UP AC4400CW"],"nation": "USA"},
+  "NEC": {"name": "Northeast Corridor","locomotives": ["ACS-64","MBTA F40PH-3C","MBTA CTC-3"],"nation": "USA"}
 }
