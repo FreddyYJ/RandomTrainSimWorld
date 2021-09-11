@@ -26,6 +26,14 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.4.3
+* Remove locomotive 'DB BR 155' from Nahverkehr Dresden
+
+v0.4.2
+* Add new route 'Nahverkehr Dreseden'
+* Add appropriate locomotives in Nahverkehr Dresden
+* Update dependencies to latest version
+
 v0.4.1
 * Add new route 'Northeast Corridor'
 * Add new locomotive 'ACS-64', 'MBTA F40PH-3C' and 'MBTA CTC-3'
