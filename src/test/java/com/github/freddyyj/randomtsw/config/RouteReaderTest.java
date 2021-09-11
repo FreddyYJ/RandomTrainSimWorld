@@ -23,7 +23,7 @@ public class RouteReaderTest {
     @Test
     public void getRouteReadersTest(){
         List<RouteReader> readers= RouteReader.getRouteReaders();
-        Assertions.assertEquals(readers.size(),28);
+        Assertions.assertEquals(readers.size(),29);
     }
 
     @Test
