@@ -26,6 +26,13 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.0
+* Add new Route 'London Commuter'
+* Add new Locomotive 'GX Class 387/2' in London Commuter
+* Add locomotives 'SN Class 377/4', 'SEB Class 375/9' and 'EWS Class 66' in London Commuter
+* Fix non-ASCII characters in routes and locomotives
+* Update dependencies to up-to-date
+
 v0.4.4
 * Fix unit tests fail
 
