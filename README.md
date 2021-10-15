@@ -26,6 +26,10 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.1
+* Add new locomotive '1938 Heritage Tube Stock' in London Bakerloo Line
+* Add new locomotive 'DB BR 187' in all German Routes
+
 v0.5.0
 * Add new Route 'London Commuter'
 * Add new Locomotive 'GX Class 387/2' in London Commuter
