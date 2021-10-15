@@ -74,9 +74,13 @@ public class SaveLoco {
 		}
 
 		try {
-			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16)).getAsJsonObject();
-		}catch (FileNotFoundException e){
-			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16BE)).getAsJsonObject();
+		}catch (IOException e){
+			if (e instanceof FileNotFoundException fnf)
+				throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(fnf.getMessage(),saveFile.getName());
+			else{
+				object = JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+			}
 		}
 
 	}
