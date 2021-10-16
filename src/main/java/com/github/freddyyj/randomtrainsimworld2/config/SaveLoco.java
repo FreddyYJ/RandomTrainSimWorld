@@ -8,8 +8,10 @@ import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -78,18 +80,8 @@ public class SaveLoco {
 		}catch (FileNotFoundException e){
 			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		} catch (IllegalStateException e){
-			BufferedReader reader=new BufferedReader(new FileReader((saveFile)));
-			String line;
-			StringBuilder fileString= new StringBuilder();
-			while ((line=reader.readLine())!=null){
-				fileString.append(line).append("\n");
-			}
-			reader.close();
-
-			FileWriter writer=new FileWriter(saveFile,StandardCharsets.UTF_16BE);
-			writer.write(fileString.toString());
-			writer.close();
-
+			String content= FileUtils.readFileToString(saveFile, Charset.defaultCharset());
+			FileUtils.write(saveFile,content,StandardCharsets.UTF_16BE);
 			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16BE)).getAsJsonObject();
 		}
 	}
