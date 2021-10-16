@@ -6,6 +6,8 @@ import com.google.gson.JsonObject;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * utilities related with Json
@@ -20,7 +22,7 @@ public class JsonUtils {
      * @throws IOException If output error occurred
      */
     public static void write(JsonObject object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile);
+        FileWriter writer=new FileWriter(targetFile, StandardCharsets.UTF_16);
         writer.write(object.toString());
         writer.close();
     }
@@ -32,7 +34,7 @@ public class JsonUtils {
      * @throws IOException If output error occurred
      */
     public static void write(JsonArray object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile);
+        FileWriter writer=new FileWriter(targetFile,StandardCharsets.UTF_16);
         writer.write(object.toString());
         writer.close();
     }

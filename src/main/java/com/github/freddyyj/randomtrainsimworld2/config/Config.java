@@ -6,8 +6,11 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Default configuration class
@@ -31,11 +34,7 @@ public class Config {
 			createConfig();
 		}
 		try {
-			FileReader reader=new FileReader(saveFile);
-			JsonElement readed=JsonParser.parseReader(new FileReader(saveFile));
-			if (!(readed instanceof JsonObject)) createConfig();
-
-			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+			object= JsonParser.parseReader(new FileReader(saveFile,StandardCharsets.UTF_16)).getAsJsonObject();
 		} catch (FileNotFoundException e) {
 			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
