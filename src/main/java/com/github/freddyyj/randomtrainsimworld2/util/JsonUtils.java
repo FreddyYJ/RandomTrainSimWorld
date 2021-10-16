@@ -22,7 +22,7 @@ public class JsonUtils {
      * @throws IOException If output error occurred
      */
     public static void write(JsonObject object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile, StandardCharsets.UTF_16BE);
+        FileWriter writer=new FileWriter(targetFile, StandardCharsets.UTF_16);
         writer.write(object.toString());
         writer.close();
     }
@@ -34,7 +34,7 @@ public class JsonUtils {
      * @throws IOException If output error occurred
      */
     public static void write(JsonArray object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile,StandardCharsets.UTF_16BE);
+        FileWriter writer=new FileWriter(targetFile,StandardCharsets.UTF_16);
         writer.write(object.toString());
         writer.close();
     }

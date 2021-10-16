@@ -34,13 +34,9 @@ public class Config {
 			createConfig();
 		}
 		try {
-			object= JsonParser.parseReader(new FileReader(saveFile,StandardCharsets.UTF_16BE)).getAsJsonObject();
+			object= JsonParser.parseReader(new FileReader(saveFile,StandardCharsets.UTF_16)).getAsJsonObject();
 		} catch (FileNotFoundException e) {
 			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
-		} catch (IllegalStateException e){
-			String content= FileUtils.readFileToString(saveFile, Charset.defaultCharset());
-			FileUtils.write(saveFile,content,StandardCharsets.UTF_16BE);
-			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16BE)).getAsJsonObject();
 		}
 	}
 
