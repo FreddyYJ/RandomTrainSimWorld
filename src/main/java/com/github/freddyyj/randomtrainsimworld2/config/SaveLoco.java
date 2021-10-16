@@ -80,14 +80,14 @@ public class SaveLoco {
 		} catch (IllegalStateException e){
 			BufferedReader reader=new BufferedReader(new FileReader((saveFile)));
 			String line;
-			String fileString="";
+			StringBuilder fileString= new StringBuilder();
 			while ((line=reader.readLine())!=null){
-				fileString.concat(line);
+				fileString.append(line).append("\n");
 			}
 			reader.close();
 
 			FileWriter writer=new FileWriter(saveFile,StandardCharsets.UTF_16BE);
-			writer.write(fileString);
+			writer.write(fileString.toString());
 			writer.close();
 
 			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16BE)).getAsJsonObject();
