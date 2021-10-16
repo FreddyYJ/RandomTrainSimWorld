@@ -78,7 +78,19 @@ public class SaveLoco {
 		}catch (FileNotFoundException e){
 			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		} catch (IllegalStateException e){
-			object = JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
+			BufferedReader reader=new BufferedReader(new FileReader((saveFile)));
+			String line;
+			String fileString="";
+			while ((line=reader.readLine())!=null){
+				fileString.concat(line);
+			}
+			reader.close();
+
+			FileWriter writer=new FileWriter(saveFile,StandardCharsets.UTF_16BE);
+			writer.write(fileString);
+			writer.close();
+
+			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16BE)).getAsJsonObject();
 		}
 	}
 	public boolean hasSavefile(){
