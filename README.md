@@ -26,6 +26,9 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.3
+* Add new locomotive 'SN Class 313/4' in East Coastway and London Commuter
+
 v0.5.2
 * Update default JSON encoding to UTF-16
 
