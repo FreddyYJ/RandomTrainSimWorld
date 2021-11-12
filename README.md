@@ -26,6 +26,12 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.4
+* Add new route 'West Cornwall Local'
+* Add new locomotive 'BR Class 150' and 'BR Class 37/5' in West Cornwall Local
+* Add BR Class 40, 45/1, 47/4, 08, 101 in West Cornwall Local
+* Add BR Class 40, 37/5, 101, 31/1, 45/1 in West Somerset Railway
+
 v0.5.3
 * Add new locomotive 'SN Class 313/4' in East Coastway and London Commuter
 
