@@ -47,6 +47,6 @@ public class RouteReaderTest {
         List<Locomotive> locos=RouteReader.getRouteReader("SPG").getLocomotives();
 
         Assertions.assertNotNull(locos);
-        Assertions.assertEquals(locos.size(),5);
+        Assertions.assertEquals(locos.size(),6);
     }
 }

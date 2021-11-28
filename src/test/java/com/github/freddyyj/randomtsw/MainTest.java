@@ -31,7 +31,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getLocomotivesTest(){
-        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),5);
+        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),6);
     }
     @Test
     @Order(2)
