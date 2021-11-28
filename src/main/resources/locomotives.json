@@ -29,5 +29,6 @@
   "NEC": {"name": "Northeast Corridor","locomotives": ["ACS-64","MBTA F40PH-3C","MBTA CTC-3"],"nation": "USA"},
   "ND": {"name": "Nahverkehr Dresden","locomotives": ["DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 101","DB BR 182","DB BR 442 'Talent 2'","DB BR 112.1","DB BR 143","DB BR 406 ICE 3M","DBB BR 363","DB BR 187"],"nation": "Germany"},
   "LC": {"name": "London Commuter","locomotives": ["EWS Class 66","SN Class 377/4","GWR Class 166","GX Class 387/2","SEB Class 375/9","SN Class 313/4"],"nation": "UK"},
-  "WCL": {"name": "West Cornwall Local","locomotives": ["BR Class 150","BR Class 37/5","BR Class 40 BLU","BR Class 08","BR Class 45/1 BLU","BR Class 47/4 BLU","BR Class 101 BLG"],"nation": "UK"}
+  "WCL": {"name": "West Cornwall Local","locomotives": ["BR Class 150","BR Class 37/5","BR Class 40 BLU","BR Class 08","BR Class 45/1 BLU","BR Class 47/4 BLU","BR Class 101 BLG"],"nation": "UK"},
+  "SMH": {"name": "Sherman Hill","locomotives": ["UP SD40-2","UP SD70ACe"],"nation": "USA"}
 }
