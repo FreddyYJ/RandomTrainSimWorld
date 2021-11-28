@@ -1,5 +1,5 @@
 {
-  "SPG": {"name": "Sand Patch Grade","locomotives": ["GP38-2 CSX","SD40-2 CSX","AC4400CW CSX","C40-8W CSX","SD40 CRR"],"nation": "USA"},
+  "SPG": {"name": "Sand Patch Grade","locomotives": ["GP38-2 CSX","SD40-2 CSX","AC4400CW CSX","C40-8W CSX","SD40 CRR","UP SD70ACe"],"nation": "USA"},
   "SFK": {"name": "Schnellfahrstrecke K\u00f6ln","locomotives": ["DB BR 442 'Talent 2'","DB BR 406 ICE 3M","DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 143","DB BR 422","DB BR 112.1","DB BR 187"],"nation": "Germany"},
   "LUB": {"name": "London Underground Bakerloo","locomotives": ["1972 Mk.II Tube Stock","1938 Heritage Tube Stock"],"nation": "UK"},
   "HRR": {"name": "Hauptstrecke Rhein-Ruhr","locomotives": ["DB BR 425","DB BR 422","DB BR 185.2","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 767.2 DABpbzfa","DB BR 143","DB BR 182","DB BR 155","DB BR 101","DB BR 112.1","DB BR 187"],"nation": "Germany"},
