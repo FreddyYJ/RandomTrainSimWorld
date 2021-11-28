@@ -26,6 +26,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.5
+* Add new route 'Sherman Hill'
+* Add new locomotive 'UP SD70ACe' in Sherman Hill
+* Add locomotive 'UP SD40-2' in Sherman Hill and Sand Patch Grade
+
 v0.5.4
 * Add new route 'West Cornwall Local'
 * Add new locomotive 'BR Class 150' and 'BR Class 37/5' in West Cornwall Local
