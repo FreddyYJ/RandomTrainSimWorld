@@ -26,6 +26,9 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.6
+* Add new locomotive 'DB G6' in Rhein-Ruhr Osten
+
 v0.5.5
 * Add new route 'Sherman Hill'
 * Add new locomotive 'UP SD70ACe' in Sherman Hill
