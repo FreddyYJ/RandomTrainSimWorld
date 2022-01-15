@@ -26,6 +26,13 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
 ## Changelog
+v0.5.7
+* Remove 'DB BR 767.2 DABpbzfa' from german routes(duplicate with DB BR 766.2)
+* Add 'MRCE ES-64 U2' and 'DB BR 155' in Nahverkehr Dresden
+* Add new route 'Tharandter Rampe'
+* Add new locomotives 'DB BR 612' and 'RP BR 185.6' in Tharandter Rampe
+* Add locomotives 'DB BR 143, 766.2, 363, 112.1, 187, 185.2, 155', 'MRCE BR 185.5', 'MRCE ES-64 U2', 'DB G6' and 'S-Bahn BR 1442 "Talent 2"' in Tharandter Rampe
+
 v0.5.6
 * Add new locomotive 'DB G6' in Rhein-Ruhr Osten
 
