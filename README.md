@@ -25,7 +25,22 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 ## Docs
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
 
+## Note for New Journey Expansion
+### Sand Patch Grade
+New Journey Expansion DLC adds SD40 CSX as variation of SD40. But for convenience at selecting journey, it is only seperated at Sand Patch Grade.
+### Schnellfahrstrecke Köln
+New Journey Expantion DLC adds DB BR 423 at Schnellfahrstrecke Köln, added at RandomTSW2 as normally.
+### London Underground Bakerloo
+New Journey Expantion DLC adds 1972 Mk.II Tube Stock-AL as variation of 1972 Mk.II Tube Stock. But for convenience at selecting journey, it is seperated.
+In game, original name of 1972 Mk.II Tube Stock-AL is 1972 Mk.II Tube Stock-LT.
+
 ## Changelog
+v0.5.8
+* Add New Journey Expansion DLC
+* Add new locomotive 'SD40 CSX' at Sand Patch Grade
+* Add locomotive 'DB BR 423' and 'DB BR 425' at Schnellfahrstrecke Köln
+* Add new locomotive '1972 Mk.II Tube Stock-AL' at London Underground Bakerloo
+
 v0.5.7
 * Remove 'DB BR 767.2 DABpbzfa' from german routes(duplicate with DB BR 766.2)
 * Add 'MRCE ES-64 U2' and 'DB BR 155' in Nahverkehr Dresden
