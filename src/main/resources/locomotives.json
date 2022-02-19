@@ -1,7 +1,7 @@
 {
-  "SPG": {"name": "Sand Patch Grade","locomotives": ["GP38-2 CSX","SD40-2 CSX","AC4400CW CSX","C40-8W CSX","SD40 CRR","UP SD70ACe"],"nation": "USA"},
-  "SFK": {"name": "Schnellfahrstrecke K\u00f6ln","locomotives": ["DB BR 442 'Talent 2'","DB BR 406 ICE 3M","DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 143","DB BR 422","DB BR 112.1","DB BR 187"],"nation": "Germany"},
-  "LUB": {"name": "London Underground Bakerloo","locomotives": ["1972 Mk.II Tube Stock","1938 Heritage Tube Stock"],"nation": "UK"},
+  "SPG": {"name": "Sand Patch Grade","locomotives": ["GP38-2 CSX","SD40-2 CSX","AC4400CW CSX","C40-8W CSX","SD40 CRR","UP SD70ACe","SD40 CSX"],"nation": "USA"},
+  "SFK": {"name": "Schnellfahrstrecke K\u00f6ln","locomotives": ["DB BR 442 'Talent 2'","DB BR 406 ICE 3M","DB BR 185.2","MRCE BR 185.5","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 143","DB BR 422","DB BR 112.1","DB BR 187","DB BR 423","DB BR 425"],"nation": "Germany"},
+  "LUB": {"name": "London Underground Bakerloo","locomotives": ["1972 Mk.II Tube Stock","1938 Heritage Tube Stock","1972 Mk.II Tube Stock-AL"],"nation": "UK"},
   "HRR": {"name": "Hauptstrecke Rhein-Ruhr","locomotives": ["DB BR 425","DB BR 422","DB BR 185.2","DB BR 146.2","DB BR 766.2 DBpbzfa","DB BR 143","DB BR 182","DB BR 155","DB BR 101","DB BR 112.1","DB BR 187"],"nation": "Germany"},
   "ECW": {"name": "East Coastway","locomotives": ["SN Class 377/4","EWS/DBS Class 66","SN Class 313/4","RB Class 37/5 RF","BR Class 31/1 BLU","BR Class 47/4 BLU","BR Class 45/1 BLU","BR Class 40 BLU"],"nation": "UK"},
   "PC": {"name": "Peninsula Corridor","locomotives": ["F40PH-2CAT CT97","Gallery Cab Car CT97","GP38-2 UP","MP36PH-3C CT 'Baby Bullet'","Bi-Level Cab Car CT97","MP15DC CT"],"nation": "USA"},
