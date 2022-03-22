@@ -31,5 +31,6 @@
   "LC": {"name": "London Commuter","locomotives": ["EWS Class 66","SN Class 377/4","GWR Class 166","GX Class 387/2","SEB Class 375/9","SN Class 313/4"],"nation": "UK"},
   "WCL": {"name": "West Cornwall Local","locomotives": ["BR Class 150","BR Class 37/5","BR Class 40 BLU","BR Class 08","BR Class 45/1 BLU","BR Class 47/4 BLU","BR Class 101 BLG"],"nation": "UK"},
   "SMH": {"name": "Sherman Hill","locomotives": ["UP SD40-2","UP SD70ACe"],"nation": "USA"},
-  "TRR": {"name": "Tharandter Rampe","locomotives": ["DB BR 612","DB BR 143","RP BR 185.6","DB BR 766.2 DBpbzfa","DBB BR 363","MRCE BR 185.5","MRCE ES-64 U2","DB G6","DB BR 112.1","DB BR 187","DB BR 442 'Talent 2'","DB BR 185.2","DB BR 155","S-Bahn BR 1442 'Talent 2'"],"nation": "Germany"}
+  "TRR": {"name": "Tharandter Rampe","locomotives": ["DB BR 612","DB BR 143","RP BR 185.6","DB BR 766.2 DBpbzfa","DBB BR 363","MRCE BR 185.5","MRCE ES-64 U2","DB G6","DB BR 112.1","DB BR 187","DB BR 442 'Talent 2'","DB BR 185.2","DB BR 155","S-Bahn BR 1442 'Talent 2'"],"nation": "Germany"},
+  "HLL": {"name": "Harlem Line","locomotives": ["M3A MTA","M7A MTA"],"nation": "USA"}
 }
