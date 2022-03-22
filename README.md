@@ -35,6 +35,10 @@ New Journey Expantion DLC adds 1972 Mk.II Tube Stock-AL as variation of 1972 Mk.
 In game, original name of 1972 Mk.II Tube Stock-AL is 1972 Mk.II Tube Stock-LT.
 
 ## Changelog
+v0.5.9
+* Add Harlem Line
+* Add new locomotives 'M3A MTA' and 'M7A MTA' in Harlem Line
+
 v0.5.8
 * Add New Journey Expansion DLC
 * Add new locomotive 'SD40 CSX' at Sand Patch Grade
