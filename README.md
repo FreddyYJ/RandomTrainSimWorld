@@ -35,6 +35,10 @@ New Journey Expantion DLC adds 1972 Mk.II Tube Stock-AL as variation of 1972 Mk.
 In game, original name of 1972 Mk.II Tube Stock-AL is 1972 Mk.II Tube Stock-LT.
 
 ## Changelog
+v0.5.10
+* Add new route 'S-Bahn Zentralschweiz'
+* Add new locomotive 'SBB RABe 513' in S-Bahn Zentralschweiz
+
 v0.5.9
 * Add Harlem Line
 * Add new locomotives 'M3A MTA' and 'M7A MTA' in Harlem Line
