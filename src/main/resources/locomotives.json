@@ -33,5 +33,6 @@
   "SMH": {"name": "Sherman Hill","locomotives": ["UP SD40-2","UP SD70ACe"],"nation": "USA"},
   "TRR": {"name": "Tharandter Rampe","locomotives": ["DB BR 612","DB BR 143","RP BR 185.6","DB BR 766.2 DBpbzfa","DBB BR 363","MRCE BR 185.5","MRCE ES-64 U2","DB G6","DB BR 112.1","DB BR 187","DB BR 442 'Talent 2'","DB BR 185.2","DB BR 155","S-Bahn BR 1442 'Talent 2'"],"nation": "Germany"},
   "HLL": {"name": "Harlem Line","locomotives": ["M3A MTA","M7A MTA"],"nation": "USA"},
-  "SZS": {"name": "S-Bahn Zentralschweiz","locomotives": ["SBB RABe 523"],"nation": "Swiss"}
+  "SZS": {"name": "S-Bahn Zentralschweiz","locomotives": ["SBB RABe 523"],"nation": "Swiss"},
+  "HSC": {"name": "Horseshoe Curve","locomotives": ["NS ES44AC","NS GP38-2"],"nation": "USA"}
 }
