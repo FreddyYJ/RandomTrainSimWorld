@@ -35,5 +35,6 @@
   "HLL": {"name": "Harlem Line","locomotives": ["M3A MTA","M7A MTA"],"nation": "USA"},
   "SZS": {"name": "S-Bahn Zentralschweiz","locomotives": ["SBB RABe 523"],"nation": "Swiss"},
   "HSC": {"name": "Horseshoe Curve","locomotives": ["NS ES44AC","NS GP38-2"],"nation": "USA"},
-  "SOS": {"name": "Spirit of Steam","locomotives": ["LMS Jubilee Class","LMS Stanier 8F Class"],"nation": "UK"}
+  "SOS": {"name": "Spirit of Steam","locomotives": ["LMS Jubilee Class","LMS Stanier 8F Class"],"nation": "UK"},
+  "IOW2022": {"name": "Isle of Wight 2022","locomotives": ["BR Class 484"],"nation": "UK"}
 }
