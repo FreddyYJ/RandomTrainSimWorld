@@ -35,6 +35,10 @@ New Journey Expantion DLC adds 1972 Mk.II Tube Stock-AL as variation of 1972 Mk.
 In game, original name of 1972 Mk.II Tube Stock-AL is 1972 Mk.II Tube Stock-LT.
 
 ## Changelog
+v0.5.13
+* Add new route 'Isle of Wight 2022'
+* Add new locomotive 'BR Class 484'
+
 v0.5.12
 * Add new route 'Spirit of Steam'
 * Add new locomotive 'LMS Jubilee Class' and 'LMS Stanier 8F Class'
