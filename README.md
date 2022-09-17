@@ -25,6 +25,13 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.6.0
+* Update to Train Sim World 3
+* Add new routes 'Cajon Pass' and 'Schnellfahrstrecke Kassel', and their locomotives
+* Update locomotive lists for each routes
+* Add new weather 'dynamic'
+* Remove 2 from project name, to support later series
+
 v0.5.13
 * Add new route 'Isle of Wight 2022'
 * Add new locomotive 'BR Class 484'
