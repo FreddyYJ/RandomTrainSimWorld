@@ -23,7 +23,7 @@ public class RouteReaderTest {
     @Test
     public void getRouteReadersTest(){
         List<RouteReader> readers= RouteReader.getRouteReaders();
-        Assertions.assertEquals(readers.size(),38);
+        Assertions.assertEquals(readers.size(),40);
     }
 
     @Test
@@ -47,6 +47,6 @@ public class RouteReaderTest {
         List<Locomotive> locos=RouteReader.getRouteReader("SPG").getLocomotives();
 
         Assertions.assertNotNull(locos);
-        Assertions.assertEquals(locos.size(),7);
+        Assertions.assertEquals(locos.size(),5);
     }
 }

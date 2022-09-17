@@ -21,7 +21,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getRoutesTest() {
-        Assertions.assertEquals(core.getRoutes().size(),38);
+        Assertions.assertEquals(core.getRoutes().size(),40);
     }
     @Test
     @Order(2)
@@ -31,7 +31,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getLocomotivesTest(){
-        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),7);
+        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),5);
     }
     @Test
     @Order(2)
