@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2.gui;
+package com.github.freddyyj.randomtrainsimworld.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -49,11 +49,11 @@ public class Main extends Application{
 			primaryStage.getIcons().add(new Image(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png"))));
 		controller=loader.getController();
 
-		com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
+		com.github.freddyyj.randomtrainsimworld.Main.getInstance();
 
 			primaryStage.setOnCloseRequest(event -> {
 				try {
-					com.github.freddyyj.randomtrainsimworld2.Main core = com.github.freddyyj.randomtrainsimworld2.Main.getInstance();
+					com.github.freddyyj.randomtrainsimworld.Main core = com.github.freddyyj.randomtrainsimworld.Main.getInstance();
 					if (core.isSaveChanged()) {
 						Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to save changed?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
 						alert.setHeaderText("Savefile changed!");

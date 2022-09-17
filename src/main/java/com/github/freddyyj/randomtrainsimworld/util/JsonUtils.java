@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2.util;
+package com.github.freddyyj.randomtrainsimworld.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**

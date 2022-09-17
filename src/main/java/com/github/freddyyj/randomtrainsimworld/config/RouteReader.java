@@ -1,7 +1,7 @@
-package com.github.freddyyj.randomtrainsimworld2.config;
+package com.github.freddyyj.randomtrainsimworld.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Locomotive;
-import com.github.freddyyj.randomtrainsimworld2.Route;
+import com.github.freddyyj.randomtrainsimworld.Locomotive;
+import com.github.freddyyj.randomtrainsimworld.Route;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 

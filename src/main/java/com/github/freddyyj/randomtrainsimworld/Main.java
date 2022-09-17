@@ -1,10 +1,10 @@
-package com.github.freddyyj.randomtrainsimworld2;
+package com.github.freddyyj.randomtrainsimworld;
 
-import com.github.freddyyj.randomtrainsimworld2.config.Config;
-import com.github.freddyyj.randomtrainsimworld2.config.RouteReader;
-import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
-import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
-import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
+import com.github.freddyyj.randomtrainsimworld.config.Config;
+import com.github.freddyyj.randomtrainsimworld.config.RouteReader;
+import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
+import com.github.freddyyj.randomtrainsimworld.config.WeatherReader;
+import com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException;
 import javafx.application.Application;
 
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Application.launch(com.github.freddyyj.randomtrainsimworld2.gui.Main.class);
+		Application.launch(com.github.freddyyj.randomtrainsimworld.gui.Main.class);
 		
 	}
 
@@ -166,7 +166,7 @@ public class Main {
 	 * @return list of {@link Locomotive} object
 	 */
 	public List<Locomotive> getLocomotive(String routeName) {
-		com.github.freddyyj.randomtrainsimworld2.Route route=getRoute(routeName);
+		com.github.freddyyj.randomtrainsimworld.Route route=getRoute(routeName);
 		if (locos.get(route).size()>=1)
 			return locos.get(route);
 		else return null;

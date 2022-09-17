@@ -1,12 +1,12 @@
-package com.github.freddyyj.randomtrainsimworld2.gui;
+package com.github.freddyyj.randomtrainsimworld.gui;
 
-import com.github.freddyyj.randomtrainsimworld2.*;
-import com.github.freddyyj.randomtrainsimworld2.Main;
-import com.github.freddyyj.randomtrainsimworld2.Random;
-import com.github.freddyyj.randomtrainsimworld2.config.Config;
-import com.github.freddyyj.randomtrainsimworld2.config.SaveLoco;
-import com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException;
-import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld.*;
+import com.github.freddyyj.randomtrainsimworld.Main;
+import com.github.freddyyj.randomtrainsimworld.Random;
+import com.github.freddyyj.randomtrainsimworld.config.Config;
+import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
+import com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException;
+import com.github.freddyyj.randomtrainsimworld.exception.PermissionDeniedException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +18,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
@@ -26,11 +25,10 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
- * Main controller of {@link com.github.freddyyj.randomtrainsimworld2.gui.Main}.
+ * Main controller of {@link com.github.freddyyj.randomtrainsimworld.gui.Main}.
  * Call {@link MainController#setRandom(Random)} to set random object to your custom class.
  */
 public class MainController {
@@ -141,7 +139,7 @@ public class MainController {
     /**
      * Set random class.
      * <p>
-     *     If you want to set custom random class, call {@link com.github.freddyyj.randomtrainsimworld2.gui.Main}.{@link com.github.freddyyj.randomtrainsimworld2.gui.Main#controller}.setRandom(Random).
+     *     If you want to set custom random class, call {@link com.github.freddyyj.randomtrainsimworld.gui.Main}.{@link com.github.freddyyj.randomtrainsimworld.gui.Main#controller}.setRandom(Random).
      * </p>
      * @param random extended {@link Random} object
      */

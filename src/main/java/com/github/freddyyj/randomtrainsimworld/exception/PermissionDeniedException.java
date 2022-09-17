@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2.exception;
+package com.github.freddyyj.randomtrainsimworld.exception;
 
 /**
  * an {@code SecurityException}, but has file name that occur this error

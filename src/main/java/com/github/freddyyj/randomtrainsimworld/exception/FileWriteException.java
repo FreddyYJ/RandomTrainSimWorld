@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2.exception;
+package com.github.freddyyj.randomtrainsimworld.exception;
 
 import java.io.IOException;
 

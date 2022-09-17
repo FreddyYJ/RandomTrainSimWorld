@@ -1,20 +1,17 @@
-package com.github.freddyyj.randomtrainsimworld2.config;
+package com.github.freddyyj.randomtrainsimworld.config;
 
-import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
-import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
-import com.google.gson.JsonElement;
+import com.github.freddyyj.randomtrainsimworld.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld.util.JsonUtils;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.apache.commons.io.FileUtils;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
  * Default configuration class
- * Don't create this object directly. Use {@link com.github.freddyyj.randomtrainsimworld2.Main} methods instead.
+ * Don't create this object directly. Use {@link com.github.freddyyj.randomtrainsimworld.Main} methods instead.
  * @author FreddyYJ_
  */
 public class Config {
@@ -25,7 +22,7 @@ public class Config {
 
 	/**
 	 * Constructor
-	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException Throws when config file({@code FILE_NAME}) missing
+	 * @throws com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException Throws when config file({@code FILE_NAME}) missing
 	 * @throws IOException If I/O Exception occurred
 	 */
 	public Config() throws IOException {
@@ -36,7 +33,7 @@ public class Config {
 		try {
 			object= JsonParser.parseReader(new FileReader(saveFile,StandardCharsets.UTF_16)).getAsJsonObject();
 		} catch (FileNotFoundException e) {
-			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+			throw new com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 

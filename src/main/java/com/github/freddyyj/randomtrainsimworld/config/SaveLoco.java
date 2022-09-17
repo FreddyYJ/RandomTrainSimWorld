@@ -1,24 +1,22 @@
-package com.github.freddyyj.randomtrainsimworld2.config;
+package com.github.freddyyj.randomtrainsimworld.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Locomotive;
-import com.github.freddyyj.randomtrainsimworld2.Route;
-import com.github.freddyyj.randomtrainsimworld2.Weather;
-import com.github.freddyyj.randomtrainsimworld2.exception.PermissionDeniedException;
-import com.github.freddyyj.randomtrainsimworld2.util.JsonUtils;
+import com.github.freddyyj.randomtrainsimworld.Locomotive;
+import com.github.freddyyj.randomtrainsimworld.Route;
+import com.github.freddyyj.randomtrainsimworld.Weather;
+import com.github.freddyyj.randomtrainsimworld.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld.util.JsonUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.apache.commons.io.FileUtils;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Class for managing savefile.
- * Don't create this object. Use {@link com.github.freddyyj.randomtrainsimworld2.Main#setSaveFilePath(String)} or {@link com.github.freddyyj.randomtrainsimworld2.Main#saveAs(String)} instead.
+ * Don't create this object. Use {@link com.github.freddyyj.randomtrainsimworld.Main#setSaveFilePath(String)} or {@link com.github.freddyyj.randomtrainsimworld.Main#saveAs(String)} instead.
  */
 public class SaveLoco {
 	private JsonObject object;
@@ -52,7 +50,7 @@ public class SaveLoco {
 	 * @param routes list of all routes
 	 * @param defaultPath savefile path
 	 * @throws PermissionDeniedException If save file cannot accessible
-	 * @throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException If save file not exist
+	 * @throws com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException If save file not exist
 	 * @throws IOException If IO errors occurred
 	 */
 	public SaveLoco(List<Route> routes, String defaultPath) throws IOException {
@@ -78,7 +76,7 @@ public class SaveLoco {
 		try {
 			object = JsonParser.parseReader(new FileReader(saveFile, StandardCharsets.UTF_16)).getAsJsonObject();
 		}catch (FileNotFoundException e){
-			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+			throw new com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 	public boolean hasSavefile(){
@@ -88,12 +86,12 @@ public class SaveLoco {
 	/**
 	 * Reload savefile.
 	 */
-	public void reload() throws com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException {
+	public void reload() throws com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException {
 		try {
 			object= JsonParser.parseReader(new FileReader(saveFile)).getAsJsonObject();
 			isChanged=false;
 		} catch (FileNotFoundException e) {
-			throw new com.github.freddyyj.randomtrainsimworld2.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
+			throw new com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException(e.getMessage(),saveFile.getName());
 		}
 	}
 

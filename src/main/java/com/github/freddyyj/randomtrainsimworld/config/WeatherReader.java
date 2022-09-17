@@ -1,11 +1,9 @@
-package com.github.freddyyj.randomtrainsimworld2.config;
+package com.github.freddyyj.randomtrainsimworld.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Weather;
+import com.github.freddyyj.randomtrainsimworld.Weather;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-import com.google.gson.JsonPrimitive;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;

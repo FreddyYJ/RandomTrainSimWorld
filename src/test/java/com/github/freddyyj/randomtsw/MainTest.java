@@ -1,6 +1,6 @@
 package com.github.freddyyj.randomtsw;
 
-import com.github.freddyyj.randomtrainsimworld2.Main;
+import com.github.freddyyj.randomtrainsimworld.Main;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package com.github.freddyyj.randomtsw.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Weather;
-import com.github.freddyyj.randomtrainsimworld2.config.WeatherReader;
+import com.github.freddyyj.randomtrainsimworld.Weather;
+import com.github.freddyyj.randomtrainsimworld.config.WeatherReader;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
