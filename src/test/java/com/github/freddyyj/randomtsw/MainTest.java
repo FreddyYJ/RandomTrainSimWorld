@@ -1,6 +1,6 @@
 package com.github.freddyyj.randomtsw;
 
-import com.github.freddyyj.randomtrainsimworld2.Main;
+import com.github.freddyyj.randomtrainsimworld.Main;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getRoutesTest() {
-        Assertions.assertEquals(core.getRoutes().size(),38);
+        Assertions.assertEquals(core.getRoutes().size(),40);
     }
     @Test
     @Order(2)
@@ -31,7 +31,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getLocomotivesTest(){
-        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),7);
+        Assertions.assertEquals(core.getLocomotive("Sand Patch Grade").size(),5);
     }
     @Test
     @Order(2)
@@ -41,7 +41,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getWeathersTest(){
-        Assertions.assertEquals(core.getWeathers().size(),16);
+        Assertions.assertEquals(core.getWeathers().size(),17);
     }
     @Test
     @Order(2)

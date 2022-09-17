@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2;
+package com.github.freddyyj.randomtrainsimworld;
 
 /**
  * A weather class

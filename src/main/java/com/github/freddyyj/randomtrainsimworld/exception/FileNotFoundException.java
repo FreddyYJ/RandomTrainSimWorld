@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2.exception;
+package com.github.freddyyj.randomtrainsimworld.exception;
 
 /**
  * throws if file is not exist

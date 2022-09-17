@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2;
+package com.github.freddyyj.randomtrainsimworld;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 module:RandomTrainSimWorld2.main
-com.github.freddyyj.randomtrainsimworld2
-com.github.freddyyj.randomtrainsimworld2.config
-com.github.freddyyj.randomtrainsimworld2.exception
-com.github.freddyyj.randomtrainsimworld2.gui
-com.github.freddyyj.randomtrainsimworld2.util
+com.github.freddyyj.randomtrainsimworld
+com.github.freddyyj.randomtrainsimworld.config
+com.github.freddyyj.randomtrainsimworld.exception
+com.github.freddyyj.randomtrainsimworld.gui
+com.github.freddyyj.randomtrainsimworld.util

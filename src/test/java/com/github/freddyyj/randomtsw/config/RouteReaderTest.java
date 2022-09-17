@@ -1,8 +1,8 @@
 package com.github.freddyyj.randomtsw.config;
 
-import com.github.freddyyj.randomtrainsimworld2.Locomotive;
-import com.github.freddyyj.randomtrainsimworld2.Route;
-import com.github.freddyyj.randomtrainsimworld2.config.RouteReader;
+import com.github.freddyyj.randomtrainsimworld.Locomotive;
+import com.github.freddyyj.randomtrainsimworld.Route;
+import com.github.freddyyj.randomtrainsimworld.config.RouteReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -23,7 +23,7 @@ public class RouteReaderTest {
     @Test
     public void getRouteReadersTest(){
         List<RouteReader> readers= RouteReader.getRouteReaders();
-        Assertions.assertEquals(readers.size(),38);
+        Assertions.assertEquals(readers.size(),40);
     }
 
     @Test
@@ -47,6 +47,6 @@ public class RouteReaderTest {
         List<Locomotive> locos=RouteReader.getRouteReader("SPG").getLocomotives();
 
         Assertions.assertNotNull(locos);
-        Assertions.assertEquals(locos.size(),7);
+        Assertions.assertEquals(locos.size(),5);
     }
 }

@@ -1,6 +1,6 @@
-package com.github.freddyyj.randomtrainsimworld2;
+package com.github.freddyyj.randomtrainsimworld;
 
-import com.github.freddyyj.randomtrainsimworld2.exception.NoElementSelectedException;
+import com.github.freddyyj.randomtrainsimworld.exception.NoElementSelectedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Random picker class.
  * <p>
- *     Extend this class and call {@link com.github.freddyyj.randomtrainsimworld2.gui.MainController#setRandom(Random)} to change your custom random class.
+ *     Extend this class and call {@link com.github.freddyyj.randomtrainsimworld.gui.MainController#setRandom(Random)} to change your custom random class.
  *     This class should be singleton.
  * </p>
  * @author FreddyYJ_

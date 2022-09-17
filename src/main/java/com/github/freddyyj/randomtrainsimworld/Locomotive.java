@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld2;
+package com.github.freddyyj.randomtrainsimworld;
 
 /**
  * A locomotive class
@@ -6,7 +6,7 @@ package com.github.freddyyj.randomtrainsimworld2;
  */
 public class Locomotive {
 	private String name;
-	private com.github.freddyyj.randomtrainsimworld2.Route route;
+	private com.github.freddyyj.randomtrainsimworld.Route route;
 
 	/**
 	 * If true, this locomotive can be selected by random pick.
