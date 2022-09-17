@@ -1,38 +1,28 @@
-# RandomTrainSimWorld2
-A new random Train Sim World 2 picker based on RandomTSW.
-
-This Program is based on RandomTrainSimWorld, a random picker for Train Sim World 2020 and 2. This program only include TSW2, not 2020.
+# RandomTrainSimWorld
+Random route/locomotive/weather chooser for Train Sim World.
+Containing every routes/locomotives/weathers of latest Train Sim World 3.
 
 ## Requirement
 This program is created in OpenJDK 16, OpenJFX 16 and Gradle.
 
 ## Install
 ### For Windows
-For Windows, I'm providing installer called ```RandomTrainSimWorld2.msi```.
-1. Download ```RandomTrainSimWorld2.msi``` from release.
+For Windows, I'm providing installer called ```RandomTrainSimWorld.msi```.
+1. Download ```RandomTrainSimWorld.msi``` from release.
 2. Run it.
-3. Create shortcut to ```C:\Program Files\RandomTrainSimWorld2\RandomTrainSimWorld2.exe```
+3. Create shortcut to ```C:\Program Files\RandomTrainSimWorld\RandomTrainSimWorld.exe```
 4. Run shortcut
 5. Finish!
 
 ### For Linux
 For Linux, I'm providing runtime image. So, just run it in terminal.
-1. Download ```RandomTrainSimWorld2``` from release.
+1. Download ```RandomTrainSimWorld``` from release.
 2. Open terminal, and go to downloaded directory.
-3. Run ```./RandomTrainSimWorld2```.
+3. Run ```./RandomTrainSimWorld```.
 4. Finish!
 
 ## Docs
-Documentation: https://freddyyj.github.io/RandomTrainSimWorld2/
-
-## Note for New Journey Expansion
-### Sand Patch Grade
-New Journey Expansion DLC adds SD40 CSX as variation of SD40. But for convenience at selecting journey, it is only seperated at Sand Patch Grade.
-### Schnellfahrstrecke Köln
-New Journey Expantion DLC adds DB BR 423 at Schnellfahrstrecke Köln, added at RandomTSW2 as normally.
-### London Underground Bakerloo
-New Journey Expantion DLC adds 1972 Mk.II Tube Stock-AL as variation of 1972 Mk.II Tube Stock. But for convenience at selecting journey, it is seperated.
-In game, original name of 1972 Mk.II Tube Stock-AL is 1972 Mk.II Tube Stock-LT.
+Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
 v0.5.13
