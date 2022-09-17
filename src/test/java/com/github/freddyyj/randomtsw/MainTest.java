@@ -41,7 +41,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getWeathersTest(){
-        Assertions.assertEquals(core.getWeathers().size(),16);
+        Assertions.assertEquals(core.getWeathers().size(),17);
     }
     @Test
     @Order(2)
