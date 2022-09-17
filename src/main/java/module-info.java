@@ -1,8 +1,8 @@
 /**
- * RandomTSW2 is random picker for Train Sim World 2.
+ * RandomTSW is random picker for Train Sim World.
  * @author FreddyYJ_
  */
-module RandomTrainSimWorld2.main {
+module RandomTrainSimWorld.main {
     exports com.github.freddyyj.randomtrainsimworld;
     exports com.github.freddyyj.randomtrainsimworld.exception;
     exports com.github.freddyyj.randomtrainsimworld.config;
