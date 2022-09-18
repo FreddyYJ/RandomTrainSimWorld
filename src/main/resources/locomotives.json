@@ -279,7 +279,8 @@
   "AL": {
     "name": "Arosa Linie",
     "locomotives": [
-      "RhB GE 4/4 II"
+      "RhB GE 4/4 II",
+      "RhB GE 4/4 II Anniv."
     ],
     "nation": "Swiss"
   },
