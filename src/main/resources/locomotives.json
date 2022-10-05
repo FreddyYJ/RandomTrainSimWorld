@@ -272,7 +272,8 @@
       "SEB Class 395 'Javelin'",
       "EWS Class 66",
       "TGV Duplex 200 CM",
-      "LMS Jubilee Class"
+      "LMS Jubilee Class",
+      "EWS Class 66 RHTT"
     ],
     "nation": "UK"
   },
@@ -465,7 +466,8 @@
     "name": "Cajon Pass",
     "locomotives": [
       "ES44C4 BNSF",
-      "SD40-2 BNSF"
+      "SD40-2 BNSF",
+      "F7 Santa Fe"
     ],
     "nation": "USA"
   },
@@ -481,7 +483,8 @@
       "RP BR 185.6",
       "MRCE BR 185.5",
       "DB BR 185.2",
-      "DB BR 187"
+      "DB BR 187",
+      "Dispolok ES-64 U2"
     ],
     "nation": "Germany"
   }

@@ -25,6 +25,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.6.2
+* Add new locomotive 'F7 Santa Fe' to Cajon Pass
+* Add new locomotive 'Dispolok ES-64 U2' to Schnellfahrstrecke Kassel
+* Add new locomotive 'EWS Class 66' to Southeastern High Speed
+
 v0.6.1
 * Add locomotive 'RhB GE 4/4 II Anniv.' to Arosa Linie
 
