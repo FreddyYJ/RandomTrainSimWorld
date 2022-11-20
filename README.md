@@ -3,7 +3,7 @@ Random route/locomotive/weather chooser for Train Sim World.
 Containing every routes/locomotives/weathers of latest Train Sim World 3.
 
 ## Requirement
-This program is created in OpenJDK 16, OpenJFX 16 and Gradle.
+This program is created in OpenJDK 18, OpenJFX 18 and Gradle.
 
 ## Install
 ### For Windows
@@ -25,6 +25,13 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.0
+* Add new route 'Birmingham Cross-City'
+* Add new locomotive 'WMR Class 323' to Birmingham Cross-City
+* Add locomotives 'GWR Class 125(43) HST', 'EWS Class 66' and 'BR Class 37/5 RF' to Birmingham Cross-City
+* Update Java version to 18
+* Update JavaFX version to 18
+
 v0.6.2
 * Add new locomotive 'F7 Santa Fe' to Cajon Pass
 * Add new locomotive 'Dispolok ES-64 U2' to Schnellfahrstrecke Kassel
