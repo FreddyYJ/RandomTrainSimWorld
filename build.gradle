@@ -16,15 +16,15 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
-    implementation 'org.openjfx:javafx-controls:16'
-    implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'org.openjfx:javafx-fxml:16'
+    implementation 'org.openjfx:javafx-controls:18'
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'org.openjfx:javafx-fxml:18'
     implementation 'commons-io:commons-io:2.11.0'
 }
 
 mainClassName = "com.github.freddyyj.randomtrainsimworld.Main"
 javafx {
-    version = "16"
+    version = "18"
     modules = [ 'javafx.controls' ,'javafx.fxml']
 }
 
