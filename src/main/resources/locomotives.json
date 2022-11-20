@@ -487,5 +487,15 @@
       "Dispolok ES-64 U2"
     ],
     "nation": "Germany"
+  },
+  "BCC": {
+    "name": "Birmingham Cross-City",
+    "locomotives": [
+      "WMR Class 323",
+      "GWR Class 125(43) HST",
+      "EWS Class 66",
+      "BR Class 37/5 RF"
+    ],
+    "nation": "UK"
   }
 }
