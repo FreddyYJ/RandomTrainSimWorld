@@ -24,7 +24,11 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 204"
+      "DB BR 204",
+      "DB BR 110",
+      "DB BR 423",
+      "DB BR 425",
+      "DB BR 101"
     ],
     "nation": "Germany"
   },
@@ -51,7 +55,8 @@
       "DB BR 101",
       "DB BR 112.1",
       "DB BR 187",
-      "DB BR 767.2 DABpbzfa"
+      "DB BR 767.2 DABpbzfa",
+      "DB BR 110"
     ],
     "nation": "Germany"
   },
@@ -129,7 +134,8 @@
       "DB BR 204",
       "DB BR 112.1",
       "DB BR 187",
-      "DB BR 767.2 DABpbzfa"
+      "DB BR 767.2 DABpbzfa",
+      "DB BR 110"
     ],
     "nation": "Germany"
   },
@@ -177,7 +183,8 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 204"
+      "DB BR 204",
+      "DB BR 110"
     ],
     "nation": "Germany"
   },
@@ -195,7 +202,8 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB G6",
-      "DB BR 204"
+      "DB BR 204",
+      "DB BR 110"
     ],
     "nation": "Germany"
   },
@@ -363,7 +371,8 @@
       "MRCE ES-64 U2",
       "DB BR 155",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 204"
+      "DB BR 204",
+      "DB BR 110"
     ],
     "nation": "Germany"
   },
@@ -497,5 +506,27 @@
       "BR Class 37/5 RF"
     ],
     "nation": "UK"
+  },
+  "BSBO": {
+    "name": "BahnStrecke Bremen-Oldenburg",
+    "locomotives": [
+      "Press BR 155",
+      "DB BR 425",
+      "DB BR 110",
+      "DB BR 463.0 Bnrdzf",
+      "DB BR 101",
+      "DB BR 182",
+      "MRCE ES-64 U2",
+      "RP BR 185.6",
+      "MRCE BR 185.5",
+      "DB BR 185.2",
+      "DB BR 187",
+      "DB BR 204",
+      "DBB BR 363",
+      "DB BR 612",
+      "DB G6",
+      "DB BR 401 ICE 1"
+    ],
+    "nation": "Germany"
   }
 }
