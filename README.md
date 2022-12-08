@@ -25,6 +25,12 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.1
+* Add new route 'BahnStrecke Bremen-Oldenburg'
+* Add new locomotives 'Press BR 155', 'DB BR 110' and 'DB BR 463.0 Bnrdzf' in BahnStrecke Bremen-Oldenburg
+* Add locomotives 'DB BR 110', 'DB BR 425', 'DB BR 423' and 'DB BR 101' in Schnellfahrstrecke Köln
+* Add locomotive 'DB BR 110' in Haupstrecke Rhein-Ruhr, Main-Spessart Bahn, Hauptstrecke München-Augsburg, Rhein-Ruhr Osten and Nahverkehr Dreseden
+
 v0.7.0
 * Add new route 'Birmingham Cross-City'
 * Add new locomotive 'WMR Class 323' to Birmingham Cross-City
