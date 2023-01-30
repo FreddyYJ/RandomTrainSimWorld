@@ -25,6 +25,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.2
+* Add new route 'Edinburgh Glasgow'
+* Add new locomotive 'ScR Class 385' in Edinburgh Glasgow
+* Add locomotives 'ScR Class 314' and 'EWS Class 66' in Edinburgh Glasgow
+
 v0.7.1
 * Add new route 'BahnStrecke Bremen-Oldenburg'
 * Add new locomotives 'Press BR 155', 'DB BR 110' and 'DB BR 463.0 Bnrdzf' in BahnStrecke Bremen-Oldenburg
