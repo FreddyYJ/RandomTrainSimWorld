@@ -528,5 +528,14 @@
       "DB BR 401 ICE 1"
     ],
     "nation": "Germany"
+  },
+  "EG": {
+    "name": "Edinburgh Glasgow",
+    "locomotives": [
+      "ScR Class 385",
+      "ScR Class 314",
+      "EWS Class 66"
+    ],
+    "nation": "UK"
   }
 }
