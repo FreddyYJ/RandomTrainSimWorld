@@ -25,6 +25,14 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.3
+* Add new route 'Northeast Corridor'
+* Add new locomotives 'ALP-46', 'Acela Express', 'Multi-Level Commuter Cab Car' and 'Amfleet Cab Car' in Northeast Corridor
+* Add a locomotive 'ACS-64' in Northeast Corridor
+* Add a new locomotive 'UP SD70ACe Heritage' in Sherman Hill
+* Add a new locomotive 'Acela Express' in Boston Sprinter
+* Change config file name to `randomtrainsimworld.json`
+
 v0.7.2
 * Add new route 'Edinburgh Glasgow'
 * Add new locomotive 'ScR Class 385' in Edinburgh Glasgow
