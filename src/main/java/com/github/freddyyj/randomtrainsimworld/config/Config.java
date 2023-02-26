@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
  * @author FreddyYJ_
  */
 public class Config {
-	public static final String FILE_NAME="/randomtrainsimworld2.json";
+	public static final String FILE_NAME="/randomtrainsimworld.json";
 	private JsonObject object;
 	private String documentFile=javax.swing.filechooser.FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
 	private File saveFile;
