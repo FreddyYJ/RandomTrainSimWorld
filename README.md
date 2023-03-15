@@ -25,6 +25,9 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.4
+* Add new locomotive 'LMS Jubilee Class' in West Cornwall Local
+
 v0.7.3
 * Add new route 'Northeast Corridor'
 * Add new locomotives 'ALP-46', 'Acela Express', 'Multi-Level Commuter Cab Car' and 'Amfleet Cab Car' in Northeast Corridor
