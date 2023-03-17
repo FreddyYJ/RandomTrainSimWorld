@@ -528,7 +528,8 @@
       "DBB BR 363",
       "DB BR 612",
       "DB G6",
-      "DB BR 401 ICE 1"
+      "DB BR 401 ICE 1",
+      "DB BR 103"
     ],
     "nation": "Germany"
   },
@@ -551,5 +552,15 @@
       "Amfleet Cab Car"
     ],
     "nation": "USA"
+  },
+  "LRS": {
+    "name": "Linke Rheinstrecke",
+    "locomotives": [
+      "DB BR 103",
+      "DB BR 110",
+      "DB BR 463.0 Bnrdzf",
+      "DB BR 401 ICE 1"
+    ],
+    "nation": "Germany"
   }
 }
