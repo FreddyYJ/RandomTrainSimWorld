@@ -25,6 +25,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.5
+* Add new route 'Linke Rheinstrecke'
+* Add new locomotive 'DB BR 103' in Linke Rheinstrecke and Bahnstrecke Bremen-Oldenburg
+* Add locomotives 'DB BR 110', 'DB BR 463.0 Bnrdzf' and 'DB BR 401 ICE 1' in Linke Rheinstrecke
+
 v0.7.4
 * Add new locomotive 'LMS Jubilee Class' in West Cornwall Local
 
