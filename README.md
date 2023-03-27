@@ -25,6 +25,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.6
+* Add new route 'Niddertalbahn'
+* Add new locomotive 'DB BR 628.2' and 'DBB BR 365' in Niddertalbahn
+* Add new locomotibe 'DB BR 628.2' in Linke Rheinstrecke
+
 v0.7.5
 * Add new route 'Linke Rheinstrecke'
 * Add new locomotive 'DB BR 103' in Linke Rheinstrecke and Bahnstrecke Bremen-Oldenburg
