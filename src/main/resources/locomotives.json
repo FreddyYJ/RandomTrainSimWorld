@@ -559,7 +559,16 @@
       "DB BR 103",
       "DB BR 110",
       "DB BR 463.0 Bnrdzf",
-      "DB BR 401 ICE 1"
+      "DB BR 401 ICE 1",
+      "DB BR 628.2"
+    ],
+    "nation": "Germany"
+  },
+  "NB": {
+    "name": "Niddertalbahn",
+    "locomotives": [
+      "DB BR 628.2",
+      "DBB BR 365"
     ],
     "nation": "Germany"
   }
