@@ -25,6 +25,13 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.7
+* Add new route 'Midland Main Line'
+* Add new locomotives 'EMT Class 158/0' and 'EMT Class 125(43) HST' in Midland Main Line
+* Add locomotive 'LMS Jubilee Class', 'EPX Class 37/7', 'BR Class 45/1 BLU' and 'EWS Class 66' in Midland Main Line
+* Add locomotive 'LMS Jubilee Class' and 'BR Class 37/5 RSR' in Edinburgh Glasgow
+* Add locomotive 'EPX Class 37/7' and 'BR Class 47/4 BLU' in Southeastern High Speed
+
 v0.7.6
 * Add new route 'Niddertalbahn'
 * Add new locomotive 'DB BR 628.2' and 'DBB BR 365' in Niddertalbahn
