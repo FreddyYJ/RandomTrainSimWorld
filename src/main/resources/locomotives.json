@@ -281,7 +281,9 @@
       "EWS Class 66",
       "TGV Duplex 200 CM",
       "LMS Jubilee Class",
-      "EWS Class 66 RHTT"
+      "EWS Class 66 RHTT",
+      "EPX Class 37/7",
+      "BR Class 47/4 BLU"
     ],
     "nation": "UK"
   },
@@ -538,7 +540,9 @@
     "locomotives": [
       "ScR Class 385",
       "ScR Class 314",
-      "EWS Class 66"
+      "EWS Class 66",
+      "LMS Jubilee Class",
+      "BR Class 37/5 RSR",
     ],
     "nation": "UK"
   },
@@ -571,5 +575,17 @@
       "DBB BR 365"
     ],
     "nation": "Germany"
+  },
+  "MML": {
+    "name": "Midland Main Line",
+    "locomotives": [
+      "EMT Class 158/0",
+      "EMT Class 125(43) HST",
+      "EWS Class 66",
+      "LMS Jubilee Class",
+      "EPX Class 37/7",
+      "BR Class 45/1 BLU"
+    ],
+    "nation": "UK"
   }
 }
