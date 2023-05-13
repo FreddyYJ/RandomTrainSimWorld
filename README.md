@@ -25,6 +25,11 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.8
+* Add new route 'Peak Forest Railway'
+* Add locomotives 'LMS Jubilee Class' and 'LMS Stanier 8F Class' in Peak Forest Railway
+* Add new locomotive 'LMS Fowler 4F Class' in Peak Forest Railway
+
 v0.7.7
 * Add new route 'Midland Main Line'
 * Add new locomotives 'EMT Class 158/0' and 'EMT Class 125(43) HST' in Midland Main Line
