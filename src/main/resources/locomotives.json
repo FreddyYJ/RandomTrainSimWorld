@@ -587,5 +587,14 @@
       "BR Class 45/1 BLU"
     ],
     "nation": "UK"
+  },
+  "PFR": {
+    "name": "Peak Forest Railway",
+    "locomotives": [
+      "LMS Jubilee Class",
+      "LMS Stanier 8F Class",
+      "LMS Fowler 4F Class"
+    ],
+    "nation": "UK"
   }
 }
