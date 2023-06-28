@@ -283,7 +283,8 @@
       "LMS Jubilee Class",
       "EWS Class 66 RHTT",
       "EPX Class 37/7",
-      "BR Class 47/4 BLU"
+      "BR Class 47/4 BLU",
+      "GRN Class 33"
     ],
     "nation": "UK"
   },
@@ -594,6 +595,19 @@
       "LMS Jubilee Class",
       "LMS Stanier 8F Class",
       "LMS Fowler 4F Class"
+    ],
+    "nation": "UK"
+  },
+  "GL": {
+    "name": "Glossop Line",
+    "locomotives": [
+      "NT Class 323",
+      "EMT Class 158/0",
+      "RF Class 20",
+      "RF Class 37/5",
+      "BLU Class 40",
+      "EWS Class 66",
+      "LMS Jubilee Class"
     ],
     "nation": "UK"
   }

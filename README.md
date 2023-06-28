@@ -25,6 +25,12 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.9
+* Add new route 'Glossop Line'
+* Add new locomotive 'NT Class 323' in Glossop Line
+* Add appropriate locomotives in Glossop Line
+* Add 'GRN Class 33' in Southeastern High Speed
+
 v0.7.8
 * Add new route 'Peak Forest Railway'
 * Add locomotives 'LMS Jubilee Class' and 'LMS Stanier 8F Class' in Peak Forest Railway
