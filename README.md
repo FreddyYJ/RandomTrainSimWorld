@@ -25,6 +25,9 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.10
+* Add new locomotive 'TL Class 700/0' in Southeastern High Speed
+
 v0.7.9
 * Add new route 'Glossop Line'
 * Add new locomotive 'NT Class 323' in Glossop Line

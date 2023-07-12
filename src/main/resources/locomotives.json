@@ -275,6 +275,7 @@
   "SEHS": {
     "name": "Southeastern High Speed",
     "locomotives": [
+      "TL Class 700/0",
       "SEW Class 465/9",
       "SEB Class 375/9",
       "SEB Class 395 'Javelin'",
