@@ -25,6 +25,9 @@ For Linux, I'm providing runtime image. So, just run it in terminal.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v0.7.11
+* Add new locomotive 'NS ES44AC Heritage' in Horseshoe Curve
+
 v0.7.10
 * Add new locomotive 'TL Class 700/0' in Southeastern High Speed
 
