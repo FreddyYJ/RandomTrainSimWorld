@@ -14,17 +14,32 @@ For Windows, I'm providing installer called ```RandomTrainSimWorld.msi```.
 4. Run shortcut
 5. Finish!
 
-### For Linux
-For Linux, I'm providing runtime image. So, just run it in terminal.
-1. Download ```RandomTrainSimWorld``` from release.
-2. Open terminal, and go to downloaded directory.
-3. Run ```./RandomTrainSimWorld```.
-4. Finish!
+### For the other OS
+For the other OS, we do not provide executable binary.
+Please download the source code and build with Gradle Wrapper:
+```
+git clone https://github.com/FreddyYJ/RandomTrainSimWorld.git
+cd RandomTrainSimWorld
+./gradlew jpackage
+```
+After running these commands, an executable binary will be stored in `build/jpackage/RandomTrainSimWorld`.
+An installer will be stored in `build/jpackage`.
 
 ## Docs
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.0
+* Update Gradle Wrapper to 8.3
+* Update JDK and JavaFX version to 18
+* Update to Train Sim World 4
+* Add new routes 'S-Bahn Vorarlberg', 'Antelope Valley Line' and 'East Coast Main Line'
+* Add new locomotives 'ÖBB 4024 S-Bahn' and 'Railpool BR 193 Vectron' to S-Bahn Vorarlberg
+* Add new locomotives 'Metrolink F125' and 'Metrolink Rotem Bi-Level Cab Car' to Antelope Valley Line
+* Add new locomotives 'LNER Class 801' and 'LNER Class A3 Flying Scotsman' to East Coast Main Line
+* Add new locomotive 'Railpool BR 193 Vectron' to such German routes
+* Remove 'DB BR 204' from Nahverkehr Dresden
+
 v0.7.11
 * Add new locomotive 'NS ES44AC Heritage' in Horseshoe Curve
 

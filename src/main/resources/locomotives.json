@@ -28,7 +28,8 @@
       "DB BR 110",
       "DB BR 423",
       "DB BR 425",
-      "DB BR 101"
+      "DB BR 101",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -56,7 +57,8 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 110"
+      "DB BR 110",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -118,7 +120,8 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 204"
+      "DB BR 204",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -135,7 +138,8 @@
       "DB BR 112.1",
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 110"
+      "DB BR 110",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -184,7 +188,8 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 204",
-      "DB BR 110"
+      "DB BR 110",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -203,7 +208,8 @@
       "DB BR 187",
       "DB G6",
       "DB BR 204",
-      "DB BR 110"
+      "DB BR 110",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -324,7 +330,8 @@
       "DB BR 204",
       "DBB BR 363",
       "DB BR 363",
-      "DB G6"
+      "DB G6",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -376,8 +383,8 @@
       "MRCE ES-64 U2",
       "DB BR 155",
       "DB BR 767.2 DABpbzfa",
-      "DB BR 204",
-      "DB BR 110"
+      "DB BR 110",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -435,7 +442,8 @@
       "DB BR 185.2",
       "DB BR 155",
       "S-Bahn BR 1442 'Talent 2'",
-      "DB BR 767.2 DABpbzfa"
+      "DB BR 767.2 DABpbzfa",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -501,7 +509,8 @@
       "MRCE BR 185.5",
       "DB BR 185.2",
       "DB BR 187",
-      "Dispolok ES-64 U2"
+      "Dispolok ES-64 U2",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -534,7 +543,8 @@
       "DB BR 612",
       "DB G6",
       "DB BR 401 ICE 1",
-      "DB BR 103"
+      "DB BR 103",
+      "Railpool BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -612,5 +622,41 @@
       "LMS Jubilee Class"
     ],
     "nation": "UK"
+  },
+  "SBV": {
+    "name": "S-Bahn Vorarlberg",
+    "locomotives": [
+      "\u00d6BB 4024 S-Bahn",
+      "MRCE ES-64 U2",
+      "SBB RABe 523",
+      "DB BR 185",
+      "Railpool BR 193 Vectron"
+    ],
+    "nation": "Germany"
+  },
+  "AVL": {
+    "name": "Antelope Valley Line",
+    "locomotives": [
+      "Metrolink F125",
+      "Metrolink Rotem Bi-Level Cab Car",
+      "UP AC4400CW",
+      "BNSF ES44C4",
+      "BNSF SD70ACe",
+      "CJP F7"
+    ],
+    "nation": "USA"
+  },
+  "ECML": {
+    "name": "East Coast Main Line",
+    "locomotives": [
+      "LNER Class 801",
+      "LNER Class A3 'Flying Scotsman'",
+      "EWS Class 66",
+      "EMT Class 158/0",
+      "GRN Class 47",
+      "TL Class 700/0",
+      "GWR Class 43(125) HST"
+    ],
+    "nation": "Germany"
   }
 }

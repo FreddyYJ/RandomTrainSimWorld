@@ -7,17 +7,17 @@ plugins {
 }
 
 group 'com.github.freddyyj'
-version '0.7.11'
+version '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     implementation 'org.openjfx:javafx-controls:18'
-    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.openjfx:javafx-fxml:18'
     implementation 'commons-io:commons-io:2.11.0'
 }
