@@ -406,6 +406,7 @@
       "REG Class 150/2",
       "BR Class 37/5",
       "BR Class 40 BLU",
+      "BR Class 142 Provincial",
       "BR Class 08",
       "BR Class 45/1 BLU",
       "BR Class 47/4 BLU",
@@ -658,5 +659,20 @@
       "GWR Class 43(125) HST"
     ],
     "nation": "Germany"
+  },
+  "BPB": {
+    "name": "Blackpool Branches",
+    "locomotives": [
+      "BR Class 142 Provincial",
+      "BR Class 08",
+      "BR Class 101",
+      "LMS Stanier 8F",
+      "BR Class 20",
+      "BR Class 31/1",
+      "BR Class 40",
+      "BR Class 45/1",
+      "BR Class 47/4"
+    ],
+    "nation": "UK"
   }
 }
