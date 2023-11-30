@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.2
+* Add new route Maintalbahn
+* Add locomotives for Maintalbahn
+
 v1.0.0
 * Update Gradle Wrapper to 8.3
 * Update JDK and JavaFX version to 18

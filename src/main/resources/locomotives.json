@@ -674,5 +674,16 @@
       "BR Class 47/4"
     ],
     "nation": "UK"
+  },
+  "MTB": {
+    "name": "Maintalbahn",
+    "locomotives": [
+      "DB BR 642",
+      "DB BR 612",
+      "DB BR 628.2",
+      "DBB BR 363",
+      "DB G6"
+    ],
+    "nation": "Germany"
   }
 }
