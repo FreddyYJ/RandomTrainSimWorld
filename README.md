@@ -29,8 +29,12 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.3
+* Add new route 'Berninalinie'
+* Add new locomotive 'RhB Allegra ABe 8/12' in Berninalinie
+
 v1.0.2
-* Add new route Maintalbahn
+* Add new route 'Maintalbahn'
 * Add locomotives for Maintalbahn
 
 v1.0.0
