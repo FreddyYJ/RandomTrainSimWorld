@@ -685,5 +685,12 @@
       "DB G6"
     ],
     "nation": "Germany"
+  },
+  "BNL": {
+    "name": "Berninalinie",
+    "locomotives": [
+      "RhB Allegra ABe 8/12"
+    ],
+    "nation": "Swiss"
   }
 }
