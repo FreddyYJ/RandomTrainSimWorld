@@ -29,7 +29,8 @@
       "DB BR 423",
       "DB BR 425",
       "DB BR 101",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -58,7 +59,8 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -139,7 +141,8 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -189,7 +192,8 @@
       "DB BR 767.2 DABpbzfa",
       "DB BR 204",
       "DB BR 110",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -209,7 +213,8 @@
       "DB G6",
       "DB BR 204",
       "DB BR 110",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -384,7 +389,8 @@
       "DB BR 155",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron"
+      "Railpool BR 193 Vectron",
+      "DB BR 111"
     ],
     "nation": "Germany"
   },
@@ -502,10 +508,12 @@
     "locomotives": [
       "DB BR 403 ICE 3",
       "DB BR 401 ICE 1",
+      "DB BR 403 ICE 3 Rainbow",
+      "DB BR 401 ICE 1 DBE",
       "DB BR 101",
       "DB BR 155",
       "DB BR 182",
-      "MRCE ES-64 U2",
+      "Dispolok BR 182",
       "RP BR 185.6",
       "MRCE BR 185.5",
       "DB BR 185.2",
@@ -534,9 +542,6 @@
       "DB BR 463.0 Bnrdzf",
       "DB BR 101",
       "DB BR 182",
-      "MRCE ES-64 U2",
-      "RP BR 185.6",
-      "MRCE BR 185.5",
       "DB BR 185.2",
       "DB BR 187",
       "DB BR 204",
@@ -658,7 +663,7 @@
       "TL Class 700/0",
       "GWR Class 43(125) HST"
     ],
-    "nation": "Germany"
+    "nation": "UK"
   },
   "BPB": {
     "name": "Blackpool Branches",
@@ -692,5 +697,24 @@
       "RhB Allegra ABe 8/12"
     ],
     "nation": "Swiss"
+  },
+  "BSR": {
+    "name": "BahnStrecke Salzburg-Rosenheim",
+    "locomotives": [
+      "DB BR 111",
+      "\u00d6BB 4024",
+      "DB BR 628.2",
+      "DB BR 766.2 DBpbzfa",
+      "DBB BR 363",
+      "DB BR 103",
+      "DB BR 101",
+      "DB BR 155",
+      "DB BR 182",
+      "DB BR 185",
+      "DB BR 187",
+      "Railpool BR 193 Vectron",
+      "DB G6"
+    ],
+    "nation": "Germany"
   }
 }
