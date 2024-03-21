@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.5
+* Add new route 'London Overground'
+* Add new locomotive 'TFL Class 710/2 in London Overground
+* Add locomotives in London Overground
+
 v1.0.4
 * Add new route 'BahnStrecke Salzburg-Rosenheim'
 * Add new locomotive 'DB BR 111' in available routes

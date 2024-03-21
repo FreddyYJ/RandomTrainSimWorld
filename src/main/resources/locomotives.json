@@ -716,5 +716,17 @@
       "DB G6"
     ],
     "nation": "Germany"
+  },
+  "LOG": {
+    "name": "London Overground",
+    "locomotives": [
+      "TFL Class 710/2",
+      "EWS Class 66",
+      "RF Class 20",
+      "LMS Jubilee",
+      "GRN Class 33",
+      "BR Class 37/7"
+    ],
+    "nation": "UK"
   }
 }
