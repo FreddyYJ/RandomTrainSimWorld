@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.6
+* Add new route 'Fife Circle Line'
+* Add new locomotive 'SCR Class 170' in Fife Circle Line
+* Add locomotive 'SCR Class 385' in Fife Circle Line
+
 v1.0.5
 * Add new route 'London Overground'
 * Add new locomotive 'TFL Class 710/2 in London Overground

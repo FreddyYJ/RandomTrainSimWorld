@@ -728,5 +728,13 @@
       "BR Class 37/7"
     ],
     "nation": "UK"
+  },
+  "FCL": {
+    "name": "Fife Circle Line",
+    "locomotives": [
+      "SCR Class 170",
+      "SCR Class 385"
+    ],
+    "nation": "UK"
   }
 }
