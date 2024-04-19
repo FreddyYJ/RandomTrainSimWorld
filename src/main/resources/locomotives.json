@@ -713,7 +713,8 @@
       "DB BR 185",
       "DB BR 187",
       "Railpool BR 193 Vectron",
-      "DB G6"
+      "DB G6",
+      "\u00d6BB 1116"
     ],
     "nation": "Germany"
   },
@@ -736,5 +737,16 @@
       "SCR Class 385"
     ],
     "nation": "UK"
+  },
+  "SMB": {
+    "name": "Semmeringbahn",
+    "locomotives": [
+      "\u00d6BB 4024",
+      "\u00d6BB 1116 'Taurus'",
+      "DB BR 103",
+      "BR Class 47/4 BLU",
+      "Railpool BR 193 Vectron"
+    ],
+    "nation": "Austria"
   }
 }

@@ -29,6 +29,12 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.7
+* Add new route 'Semmeringbahn'
+* Add new locomotive 'ÖBB 1116 Taurus' in Semmeringbahn
+* Add suitable locomotives to Semmeringbahn
+* Add new locomotive 'ÖBB 1116 Taurus' in Bahnstrecke Salzburg-Rosenheim
+
 v1.0.6
 * Add new route 'Fife Circle Line'
 * Add new locomotive 'SCR Class 170' in Fife Circle Line
