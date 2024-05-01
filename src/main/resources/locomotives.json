@@ -748,5 +748,14 @@
       "Railpool BR 193 Vectron"
     ],
     "nation": "Austria"
+  },
+  "LIRRC": {
+    "name": "LIRR Commuter",
+    "locomotives": [
+      "M9 LIRR",
+      "M7 LIRR",
+      "M3 LIRR"
+    ],
+    "nation": "USA"
   }
 }

@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.8
+* Add new route 'LIRR Commuter'
+* Add new locomotive 'M9 LIRR' in LIRR Commuter
+* Add locomotives M3 LIRR and M7 LIRR in LIRR Commuter
+
 v1.0.7
 * Add new route 'Semmeringbahn'
 * Add new locomotive 'ÖBB 1116 Taurus' in Semmeringbahn
