@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.9
+* Add new locomotive 'DB BR 218' and 'DB BR 463.0 Bnrdzf Diesel' at available routes
+
 v1.0.8
 * Add new route 'LIRR Commuter'
 * Add new locomotive 'M9 LIRR' in LIRR Commuter
