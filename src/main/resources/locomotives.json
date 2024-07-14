@@ -245,7 +245,12 @@
       "GRN Class 33",
       "BR Class 20 RF",
       "MAR Class 52 'Western'",
-      "BR Class 47/4 BLU"
+      "BR Class 47/4 BLU",
+      "LNER Class A3 'Flying Scotsman'",
+      "LMS Fowler 4F Class",
+      "LMS Jubilee Class",
+      "LMS Stanier 8F Class",
+      "REG Class 150/2"
     ],
     "nation": "UK"
   },
@@ -265,7 +270,9 @@
     "locomotives": [
       "EWS/DBS Class 66",
       "GWR Class 125(43) HST",
-      "GWR Class 166"
+      "GWR Class 166",
+      "GRN Class 47",
+      "BR Class 52 BLU"
     ],
     "nation": "UK"
   },
@@ -351,9 +358,16 @@
     "name": "Cathcart Circle Line",
     "locomotives": [
       "ScR Class 314",
+      "ScR Class 380",
+      "ScR Class 170",
+      "ScR Class 385",
       "BR Class 37/5 RF",
       "BR Class 20 RF",
+      "GRN Class 33",
       "BR Class 31/1 BLU",
+      "BR Class 40 BLU",
+      "BR Class 45/1 BLU",
+      "BR Class 52 BLU",
       "EWS Class 66",
       "BR Class 47/4 BLU"
     ],
@@ -610,8 +624,11 @@
       "EMT Class 125(43) HST",
       "EWS Class 66",
       "LMS Jubilee Class",
+      "LNER Class A3 'Flying Scotsman'",
       "EPX Class 37/7",
-      "BR Class 45/1 BLU"
+      "BR Class 45/1 BLU",
+      "GRN Class 47",
+      "BR Class 52 BLU"
     ],
     "nation": "UK"
   },
@@ -629,8 +646,8 @@
     "locomotives": [
       "NT Class 323",
       "EMT Class 158/0",
-      "RF Class 20",
-      "RF Class 37/5",
+      "BR Class 20 RF",
+      "BR Class 37/5 RF",
       "BLU Class 40",
       "EWS Class 66",
       "LMS Jubilee Class"
@@ -679,7 +696,7 @@
       "BR Class 142 Provincial",
       "BR Class 08",
       "BR Class 101",
-      "LMS Stanier 8F",
+      "LMS Stanier 8F Class",
       "BR Class 20",
       "BR Class 31/1",
       "BR Class 40",
@@ -732,8 +749,8 @@
     "locomotives": [
       "TFL Class 710/2",
       "EWS Class 66",
-      "RF Class 20",
-      "LMS Jubilee",
+      "BR Class 20 RF",
+      "LMS Jubilee Class",
       "GRN Class 33",
       "BR Class 37/7"
     ],
@@ -743,7 +760,10 @@
     "name": "Fife Circle Line",
     "locomotives": [
       "SCR Class 170",
-      "SCR Class 385"
+      "SCR Class 385",
+      "BR Class 40 BLU",
+      "LNER Class A3 'Flying Scotsman'",
+      "LMS Jubilee Class"
     ],
     "nation": "UK"
   },

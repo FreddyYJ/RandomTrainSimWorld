@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.10
+* Add new locomotive 'ScR Class 380' in Cathcart Circle Line
+* Update locomotive lists in West Somerset Railway, Great Western Express(GWR), Cathcart Circle Line, Midland Main Line, Glossop Line, Blackpool Branches, London Overground and fife Circle Line
+
 v1.0.9
 * Add new locomotive 'DB BR 218' and 'DB BR 463.0 Bnrdzf Diesel' at available routes
 
