@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.0.12
+* Add new locomotives 'DB BR 101 Expert' and 'DB BR 286.1 Bpmmbdzf' in suitable routes
+
 v1.0.11
 * Add new locomotive 'ScR Class 158' in Edinburgh Glasgow and Cathcart Circle Line
 
