@@ -30,8 +30,9 @@
       "DB BR 423",
       "DB BR 425",
       "DB BR 101",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -61,8 +62,9 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -126,7 +128,8 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 204",
-      "Railpool BR 193 Vectron"
+      "DB BR 193 Vectron",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -145,8 +148,9 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -165,8 +169,7 @@
       "DB BR 766.2 DBpbzfa",
       "S-Bahn BR 1442 'Talent 2'",
       "DB BR 182",
-      "DB BR 143",
-      "DB BR 767.2 DABpbzfa"
+      "DB BR 143"
     ],
     "nation": "Germany"
   },
@@ -195,9 +198,11 @@
       "DB BR 187",
       "DB BR 767.2 DABpbzfa",
       "DB BR 204",
+      "DB BR 218",
       "DB BR 110",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -218,8 +223,9 @@
       "DB G6",
       "DB BR 204",
       "DB BR 110",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -237,7 +243,7 @@
       "GRN Class 09",
       "GRN Class 47",
       "BR Class 40 BLU",
-      "BR Class 37/5",
+      "BR Class 37/5 RF",
       "BR Class 101 BLG",
       "BR Class 31/1 BLU",
       "BR Class 45/1 BLU",
@@ -306,7 +312,7 @@
       "TGV Duplex 200 CM",
       "LMS Jubilee Class",
       "EWS Class 66 RHTT",
-      "EPX Class 37/7",
+      "EPX Class 37/7 EPX",
       "BR Class 47/4 BLU",
       "GRN Class 33"
     ],
@@ -348,9 +354,9 @@
       "RP BR 185.6",
       "DB BR 204",
       "DBB BR 363",
-      "DB BR 363",
       "DB G6",
-      "Railpool BR 193 Vectron"
+      "DB BR 193 Vectron",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -414,8 +420,9 @@
       "DB BR 155",
       "DB BR 767.2 DABpbzfa",
       "DB BR 110",
-      "Railpool BR 193 Vectron",
-      "DB BR 111"
+      "DB BR 193 Vectron",
+      "DB BR 111",
+      "DB BR 114"
     ],
     "nation": "Germany"
   },
@@ -435,10 +442,10 @@
     "name": "West Cornwall Local",
     "locomotives": [
       "REG Class 150/2",
-      "BR Class 37/5",
+      "BR Class 37/5 RF",
       "BR Class 40 BLU",
       "BR Class 142 Provincial",
-      "BR Class 08",
+      "BR Class 08 BLU",
       "BR Class 45/1 BLU",
       "BR Class 47/4 BLU",
       "BR Class 101 BLG",
@@ -451,7 +458,8 @@
     "locomotives": [
       "UP SD40-2",
       "UP SD70ACe",
-      "UP SD70ACe Heritage"
+      "UP SD70ACe Heritage",
+      "UP AC4400CW"
     ],
     "nation": "USA"
   },
@@ -463,7 +471,6 @@
       "RP BR 185.6",
       "DB BR 766.2 DBpbzfa",
       "DBB BR 363",
-      "DB BR 363",
       "DB BR 101 Expert",
       "MRCE BR 185.5",
       "DB BR 182",
@@ -476,7 +483,8 @@
       "DB BR 155",
       "S-Bahn BR 1442 'Talent 2'",
       "DB BR 767.2 DABpbzfa",
-      "Railpool BR 193 Vectron"
+      "FT BR 193 Vectron",
+      "\u00d6BB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -500,7 +508,6 @@
     "locomotives": [
       "NS ES44AC",
       "NS GP38-2",
-      "UP GP38-2",
       "NS ES44AC Heritage"
     ],
     "nation": "USA"
@@ -525,6 +532,7 @@
     "locomotives": [
       "ES44C4 BNSF",
       "SD40-2 BNSF",
+      "SD70ACe BNSF",
       "F7 Santa Fe"
     ],
     "nation": "USA"
@@ -546,7 +554,7 @@
       "DB BR 185.2",
       "DB BR 187",
       "Dispolok ES-64 U2",
-      "Railpool BR 193 Vectron"
+      "DB BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -575,10 +583,14 @@
       "DB BR 204",
       "DBB BR 363",
       "DB BR 612",
+      "DB BR 642",
+      "MRCE BR 185.5",
+      "MRCE ES-64 U2",
+      "RP BR 185.6",
       "DB G6",
       "DB BR 401 ICE 1",
       "DB BR 103",
-      "Railpool BR 193 Vectron"
+      "DB BR 193 Vectron"
     ],
     "nation": "Germany"
   },
@@ -668,7 +680,8 @@
       "MRCE ES-64 U2",
       "SBB RABe 523",
       "DB BR 185",
-      "Railpool BR 193 Vectron"
+      "DB BR 193 Vectron",
+      "\u00d6BB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -678,8 +691,8 @@
       "Metrolink F125",
       "Metrolink Rotem Bi-Level Cab Car",
       "UP AC4400CW",
-      "BNSF ES44C4",
-      "BNSF SD70ACe",
+      "ES44C4 BNSF",
+      "SD70ACe BNSF",
       "CJP F7"
     ],
     "nation": "USA"
@@ -747,9 +760,12 @@
       "DB BR 182",
       "DB BR 185",
       "DB BR 187",
-      "Railpool BR 193 Vectron",
+      "DB BR 193 Vectron",
+      "MRCE ES-64 U2",
+      "MRCE BR 185.5",
+      "RP BR 185.6",
       "DB G6",
-      "\u00d6BB 1116"
+      "\u00d6BB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -761,7 +777,7 @@
       "BR Class 20 RF",
       "LMS Jubilee Class",
       "GRN Class 33",
-      "BR Class 37/7"
+      "BR Class 37/7 EPX"
     ],
     "nation": "UK"
   },
@@ -795,5 +811,55 @@
       "M3 LIRR"
     ],
     "nation": "USA"
+  },
+  "KZB": {
+    "name": "Kinzigtalbahn",
+    "locomotives": [
+      "DB BR 411 ICE-T",
+      "DB BR 642",
+      "DB BR 423",
+      "DB BR 403 ICE 3",
+      "DB BR 425",
+      "DB BR 401 ICE 1",
+      "DB BR 766.2 DBpbzfa",
+      "DB BR 103",
+      "DB BR 114",
+      "FT BR 193 Vectron",
+      "DB BR 101",
+      "DB BR 146.2",
+      "DB BR 155",
+      "MRCE ES-64 U2",
+      "MRCE BR 185.5",
+      "RP BR 185.6",
+      "DB BR 185.2",
+      "DB BR 187",
+      "DBB BR 363",
+      "DB G6",
+      "\u00d6BB 1116 'Taurus'"
+    ],
+    "nation": "Germany"
+  },
+  "SBL": {
+    "name": "San Bernardino Line",
+    "locomotives": [
+      "Metrolink F125",
+      "Metrolink Rotem Bi-Level Cab Car",
+      "Metrolink MP36PH-3C",
+      "ES44C4 BNSF",
+      "SD40-2 BNSF",
+      "SD70ACe BNSF"
+    ],
+    "nation": "USA"
+  },
+  "WCMLS": {
+    "name": "West Coast Mainline South",
+    "locomotives": [
+      "NWN BR Class 350/1",
+      "1972 Mk.II Tube Stock",
+      "SN Class 377/2",
+      "AWC Class 390 Pendolino",
+      "TFL Class 710",
+      "EWS/DBS Class 66"
+    ]
   }
 }

@@ -29,6 +29,12 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.1.0
+* Update to Train Sim World 5
+* Add three new routes
+* Add new locomotives
+* Update some locmotive lists in some routes
+
 v1.0.12
 * Add new locomotives 'DB BR 101 Expert' and 'DB BR 286.1 Bpmmbdzf' in suitable routes
 
