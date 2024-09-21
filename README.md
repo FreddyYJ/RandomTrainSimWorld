@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.1.1
+* Fix error in locomotive list
+
 v1.1.0
 * Update to Train Sim World 5
 * Add three new routes

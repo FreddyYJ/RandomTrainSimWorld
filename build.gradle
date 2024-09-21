@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.github.freddyyj'
-version '1.1.0'
+version '1.1.1'
 
 repositories {
     mavenCentral()
@@ -23,6 +23,18 @@ dependencies {
 }
 
 mainClassName = "com.github.freddyyj.randomtrainsimworld.Main"
+
+application {
+    mainClass="com.github.freddyyj.randomtrainsimworld.Main"
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    manifest {
+        attributes 'Main-Class': "com.github.freddyyj.randomtrainsimworld.Main"
+    }
+}
+
 javafx {
     version = "18"
     modules = [ 'javafx.controls' ,'javafx.fxml']
