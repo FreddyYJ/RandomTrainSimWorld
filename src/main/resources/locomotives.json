@@ -862,5 +862,22 @@
       "EWS/DBS Class 66"
     ],
     "nation": "UK"
+  },
+  "BW": {
+    "name": "Boston Worcester",
+    "locomotives": [
+      "MBTA F40PH-3C",
+      "MBTA CTC-3",
+      "MBTA HSP46",
+      "MBTA Rotem CTC-5",
+      "Acela Express",
+      "ACS-64",
+      "AC4400CW CSX",
+      "C40-8W CSX",
+      "GP38-2 CSX",
+      "SD40 CSX",
+      "SD40-2 CSX"
+    ],
+    "nation": "USA"
   }
 }
