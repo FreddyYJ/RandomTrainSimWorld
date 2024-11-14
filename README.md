@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.1.2
+* Add new route 'Boston Worcester'
+* Add new locomotives 'MBTA HSP46' and 'MBTA Rotem CTC-5'
+* Add proper locomotives to Boston Worcester
+
 v1.1.1
 * Fix error in locomotive list
 
