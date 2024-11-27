@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.1.3
+* Add new route 'East Coast Main Line'
+* Add new locomotive 'BR Class 87'
+* Add BR Class 87 to Great Western Express(BR) and East Coastway
 v1.1.2
 * Add new route 'Boston Worcester'
 * Add new locomotives 'MBTA HSP46' and 'MBTA Rotem CTC-5'
