@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.1.4
+* Add locomotives 'DB BR 111' and 'DB BR 463.0 Bnrdzf' in Kinzigtalbahn
+* Add a locomotive 'Metrolink F125 Christmas' in San Bernardino Line
+
 v1.1.3
 * Add new route 'East Coast Main Line'
 * Add new locomotive 'BR Class 87'

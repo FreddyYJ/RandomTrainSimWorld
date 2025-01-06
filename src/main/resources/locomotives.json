@@ -820,6 +820,8 @@
       "DB BR 411 ICE-T",
       "DB BR 642",
       "DB BR 423",
+      "DB BR 111",
+      "DB BR 463.0 Bnrdzf",
       "DB BR 403 ICE 3",
       "DB BR 425",
       "DB BR 401 ICE 1",
@@ -845,6 +847,7 @@
     "name": "San Bernardino Line",
     "locomotives": [
       "Metrolink F125",
+      "Metrolink F125 Christmas",
       "Metrolink Rotem Bi-Level Cab Car",
       "Metrolink MP36PH-3C",
       "ES44C4 BNSF",
