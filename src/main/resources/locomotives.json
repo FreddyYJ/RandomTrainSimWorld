@@ -902,5 +902,29 @@
       "BR Class 47/4"
     ],
     "nation": "UK"
+  },
+  "LWB": {
+    "name": "Ludwigsbahn",
+    "locomotives": [
+      "DB BR 406 ICE 3M",
+      "DB BR 425",
+      "DB BR 111",
+      "DB BR 185.2",
+      "DB BR 766.2 DBpbzfa",
+      "DB BR 411 ICE-T",
+      "DB BR 628.2",
+      "DB BR 612",
+      "TGV Duplex 200 CM",
+      "DB BR 193 Vectron",
+      "DB BR 101",
+      "DB BR 155",
+      "MRCE ES-64 U2",
+      "MRCE BR 185.5",
+      "RP BR 185.6",
+      "DB BR 187",
+      "DBB BR 363",
+      "DB G6"
+    ],
+    "nation": "Germany"
   }
 }
