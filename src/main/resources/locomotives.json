@@ -926,5 +926,15 @@
       "DB G6"
     ],
     "nation": "Germany"
+  },
+  "MWB": {
+    "name": "Mittenwaldbahn",
+    "locomotives": [
+      "\u00d6BB 1020",
+      "DBB BR 111",
+      "DB BR 103",
+      "DBB BR 365"
+    ],
+    "nation": "Austria"
   }
 }
