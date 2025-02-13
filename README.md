@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.0
+* Upgrade JDK version to 21
+* Update every plugins and dependencies
+* Update Gradle wrapper
+
 v1.1.6
 * Add new route 'Mittenwaldbahn'
 * Add new locomotive 'ÖBB 1020' in Mittenwaldbahn
