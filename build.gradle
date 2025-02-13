@@ -1,8 +1,9 @@
 plugins {
+    id 'application'
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
-    id "org.beryx.jlink" version "2.25.0"
+    id 'com.gradleup.shadow' version '8.3.6'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+    id "org.beryx.jlink" version "3.1.1"
     id 'jacoco'
 }
 
@@ -14,12 +15,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
-    implementation 'org.openjfx:javafx-controls:18'
-    implementation 'com.google.code.gson:gson:2.10.1'
-    implementation 'org.openjfx:javafx-fxml:18'
-    implementation 'commons-io:commons-io:2.11.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'com.google.code.gson:gson:2.12.1'
+    implementation 'org.openjfx:javafx-fxml:21'
+    implementation 'commons-io:commons-io:2.18.0'
 }
 
 mainClassName = "com.github.freddyyj.randomtrainsimworld.Main"
@@ -36,13 +37,16 @@ shadowJar {
 }
 
 javafx {
-    version = "18"
+    version = "21"
     modules = [ 'javafx.controls' ,'javafx.fxml']
 }
 
 test {
     useJUnitPlatform()
-    moduleOptions{
-        runOnClasspath=true
+}
+
+jlink {
+    jpackage {
+        icon = 'src/main/resources/icon.png'
     }
 }
