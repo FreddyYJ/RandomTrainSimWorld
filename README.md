@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.1
+* Add new locomotive 'Metrolink F59PHR' in Antelope Valley Line and San Bernardino Line
+
 v1.2.0
 * Upgrade JDK version to 21
 * Update every plugins and dependencies
