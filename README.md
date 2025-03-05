@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.2
+* Add new route 'London Overground: Mildmay Line'
+* Add new locomotive 'TFL Class 378' to London Overground: Mildmay Line and West Coast Mainline South
+
 v1.2.1
 * Add new locomotive 'Metrolink F59PHR' in Antelope Valley Line and San Bernardino Line
 

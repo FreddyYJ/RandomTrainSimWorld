@@ -866,6 +866,7 @@
       "SN Class 377/2",
       "AWC Class 390 Pendolino",
       "TFL Class 710",
+      "TFL Class 378",
       "EWS/DBS Class 66"
     ],
     "nation": "UK"
@@ -938,5 +939,14 @@
       "DBB BR 365"
     ],
     "nation": "Austria"
+  },
+  "LOGML": {
+    "name": "London Overground: Mildmay Line",
+    "locomotives": [
+      "TFL Class 378",
+      "TFL Class 710",
+      "EWS Class 66"
+    ],
+    "nation": "UK"
   }
 }
