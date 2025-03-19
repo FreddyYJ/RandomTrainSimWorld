@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.3
+* Add new route 'Cardiff City Network'
+* Add new locomotives 'TFW Class 150/2' and 'TFW Class 153' to Cardiff City Network
+
 v1.2.2
 * Add new route 'London Overground: Mildmay Line'
 * Add new locomotive 'TFL Class 378' to London Overground: Mildmay Line and West Coast Mainline South

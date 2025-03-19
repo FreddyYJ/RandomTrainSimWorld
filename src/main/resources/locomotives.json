@@ -948,5 +948,15 @@
       "EWS Class 66"
     ],
     "nation": "UK"
+  },
+  "CCN": {
+    "name": "Cardiff City Network",
+    "locomotives": [
+      "TFW Class 150/2",
+      "TFW Class 153",
+      "EWS/DB Class 66",
+      "GWR Class 43(125) HST"
+    ],
+    "nation": "UK"
   }
 }
