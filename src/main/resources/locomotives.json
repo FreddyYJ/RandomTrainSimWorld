@@ -958,5 +958,15 @@
       "GWR Class 43(125) HST"
     ],
     "nation": "UK"
+  },
+  "SZG": {
+    "name": "Spoorlijn Zwolle-Groningen",
+    "locomotives": [
+      "NS SNG3-mABk",
+      "NS ICMm3-mBfk",
+      "DB BR 193 'Vectron'",
+      "DB G6"
+    ],
+    "nation": "Netherland"
   }
 }

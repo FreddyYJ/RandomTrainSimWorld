@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.4
+* Add new route 'Spoorlijn Zwolle-Groningen'
+* Add new locomotives 'NS SNG3-mABk' and 'NS ICMm3-mBfk' to Spoorlijn Zwolle-Groningen
+
 v1.2.3
 * Add new route 'Cardiff City Network'
 * Add new locomotives 'TFW Class 150/2' and 'TFW Class 153' to Cardiff City Network
