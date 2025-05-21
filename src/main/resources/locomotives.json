@@ -968,5 +968,23 @@
       "DB G6"
     ],
     "nation": "Netherland"
+  },
+  "FSB": {
+    "name": "Frankfurt S-bahn",
+    "locomotives": [
+      "DB BR 430.1",
+      "DB BR 143",
+      "DB BR 423",
+      "DB BR 425",
+      "DB BR 766.2 DBpbzfa",
+      "DB BR 411 ICE-T",
+      "DB BR 403 ICE 3",
+      "DB BR 401 ICE 1",
+      "DB BR 642",
+      "DB BR 193 'Vectron'",
+      "DB BR 101",
+      "DBB BR 363",
+      "DB G6"
+    ]
   }
 }

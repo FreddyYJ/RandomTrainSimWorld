@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.5
+* Add new route 'Frankfurt S-bahn'
+* Add a new locomotive 'DB BR 430.1' to Frankfurt S-bahn
+* Add proper locomotives to Frankfurt S-bahn
+
 v1.2.4
 * Add new route 'Spoorlijn Zwolle-Groningen'
 * Add new locomotives 'NS SNG3-mABk' and 'NS ICMm3-mBfk' to Spoorlijn Zwolle-Groningen
