@@ -987,5 +987,20 @@
       "DB G6"
     ],
     "nation": "Germany"
+  },
+  "MAC": {
+    "name": "Manchester Airport Commuter",
+    "locomotives": [
+      "NTR Class 323",
+      "TFW Class 150/2",
+      "TFW Class 153",
+      "EMT Class 158",
+      "NWN BR Class 350/1",
+      "AWC Class 390 Pendolino",
+      "SCR Class 158",
+      "DBS/EWS Class 66",
+      "IC Class 87"
+    ],
+    "nation": "UK"
   }
 }

@@ -28,7 +28,12 @@ An installer will be stored in `build/jpackage`.
 ## Docs
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
-## Changelog
+## Chagelog
+v1.2.6
+* Add new route 'Manchester Airport Commuter'
+* Add a new locomotive 'NTR Class 323' in Manchester Airport Commuter
+* Add proper locomotives to Manchester Airport Commuter
+
 v1.2.5
 * Add new route 'Frankfurt S-bahn'
 * Add a new locomotive 'DB BR 430.1' to Frankfurt S-bahn
