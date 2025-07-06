@@ -28,7 +28,10 @@ An installer will be stored in `build/jpackage`.
 ## Docs
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
-## Chagelog
+## Changelog
+v1.2.7
+* Add a locomotive 'MBTA HSP46' in Northeast Corridor
+
 v1.2.6
 * Add new route 'Manchester Airport Commuter'
 * Add a new locomotive 'NTR Class 323' in Manchester Airport Commuter
