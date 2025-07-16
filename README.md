@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.8
+* Add a new locomotive 'BR Class 86/2' in West Coast Main Line
+
 v1.2.7
 * Add a locomotive 'MBTA HSP46' in Northeast Corridor
 
