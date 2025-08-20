@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.2.9 
+* Add a new locomotive WMR/XC Class 170' in Birmingham Cross-City
+
 v1.2.8
 * Add a new locomotive 'BR Class 86/2' in West Coast Main Line
 
