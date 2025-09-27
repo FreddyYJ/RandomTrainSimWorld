@@ -29,6 +29,12 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.0
+* Update to Train Sim World 6
+* Add new routes 'Bahnstrecke Leipzig-Dresden', 'Morristown Line' and 'Riviera Line'
+* Add new locomotives '"DB BR 294', 'Arrow III', 'ALP-45DP', 'XC Voyager Class 220' and 'GWR Class 802 'Javelin'
+* Add proper locomotives for each routes
+
 v1.2.9 
 * Add a new locomotive WMR/XC Class 170' in Birmingham Cross-City
 

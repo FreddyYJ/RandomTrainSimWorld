@@ -32,7 +32,8 @@
       "DB BR 101",
       "DB BR 193 Vectron",
       "DB BR 111",
-      "DB BR 114"
+      "DB BR 114",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -130,7 +131,8 @@
       "DB BR 767.2 DABpbzfa",
       "DB BR 204",
       "DB BR 193 Vectron",
-      "DB BR 114"
+      "DB BR 114",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -203,7 +205,8 @@
       "DB BR 110",
       "DB BR 193 Vectron",
       "DB BR 111",
-      "DB BR 114"
+      "DB BR 114",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -226,7 +229,8 @@
       "DB BR 110",
       "DB BR 193 Vectron",
       "DB BR 111",
-      "DB BR 114"
+      "DB BR 114",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -358,7 +362,8 @@
       "DBB BR 363",
       "DB G6",
       "DB BR 193 Vectron",
-      "DB BR 114"
+      "DB BR 114",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -593,7 +598,8 @@
       "DB G6",
       "DB BR 401 ICE 1",
       "DB BR 103",
-      "DB BR 193 Vectron"
+      "DB BR 193 Vectron",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -770,7 +776,8 @@
       "MRCE BR 185.5",
       "RP BR 185.6",
       "DB G6",
-      "\u00d6BB 1116 'Taurus'"
+      "\u00d6BB 1116 'Taurus'",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -929,7 +936,8 @@
       "RP BR 185.6",
       "DB BR 187",
       "DBB BR 363",
-      "DB G6"
+      "DB G6",
+      "DB BR 294"
     ],
     "nation": "Germany"
   },
@@ -1003,6 +1011,70 @@
       "SCR Class 158",
       "DBS/EWS Class 66",
       "IC Class 87"
+    ],
+    "nation": "UK"
+  },
+  "BLD": {
+    "name": "Bahnstrecke Leipzig-Dresden",
+    "locomotives": [
+      "DB BR 294",
+      "DB BR 143",
+      "DB BR 411 ICE-T",
+      "DB BR 642",
+      "DB BR 442 'Talent 2'",
+      "DB BR 766.2 DBpbzfa",
+      "S-Bahn BR 1442 'Talent 2'",
+      "DB BR 103",
+      "DB BR 612",
+      "DB BR 103",
+      "DB BR 193 Vectron",
+      "DB BR 101",
+      "DB BR 155",
+      "MRCE ES-64 U2",
+      "MRCE BR 185.5",
+      "RP BR 185.6",
+      "DB BR 187",
+      "DBB BR 363",
+      "DB G6",
+      "DB BR 112.1",
+      "DB BR 146.2",
+      "DB BR 218",
+      "DB BR 463.0 Bnrdzf Diesel",
+      "\u00d6BB 1116 'Taurus'"
+    ],
+    "nation": "Germany"
+  },
+  "ML": {
+    "name": "Morristown Line",
+    "locomotives": [
+      "Arrow III",
+      "ALP-46",
+      "ALP-45DP",
+      "Multi-Level Commuter Cab Car",
+      "ACS-64",
+      "Amfleet Cab Car",
+      "Acela Express"
+    ],
+    "nation": "USA"
+  },
+  "RL": {
+    "name": "Riviera Line",
+    "locomotives": [
+      "XC Voyager Class 220",
+      "GWR Class 150/2",
+      "GWR Class 802 'Javelin'",
+      "GWR Class 166",
+      "GWR Class 125(43) HST",
+      "EMT Class 158",
+      "LNER Class A3 'Flying Scotsman'",
+      "LMS Jubilee Class",
+      "LMS Stanier 8F Class",
+      "DBS/EWS Class 66",
+      "BR Class 08",
+      "BR Class 37/5 RSR",
+      "BR Class 40 BLU",
+      "BR Class 47/4",
+      "BR Class 52 'Western'"
     ],
     "nation": "UK"
   }
