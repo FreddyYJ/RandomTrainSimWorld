@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.1
+* Add a new route WCML: Birmingham to Crewe
+* Add new locomotives 'BR Class 350-1', 'BR Class 350-2' and 'BR Class 350-3'
+* Add proper locomotives to WCML: Birmingham to Crewe
+
 v1.3.0
 * Update to Train Sim World 6
 * Add new routes 'Bahnstrecke Leipzig-Dresden', 'Morristown Line' and 'Riviera Line'

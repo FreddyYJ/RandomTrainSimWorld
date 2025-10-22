@@ -1077,5 +1077,26 @@
       "BR Class 52 'Western'"
     ],
     "nation": "UK"
+  },
+  "WCML-BC": {
+    "name": "WCML: Birmingham to Crewe",
+    "locomotives": [
+      "BR Class 350-1",
+      "BR Class 350-2",
+      "BR Class 350-3",
+      "TFW Class 150/2",
+      "TFW Class 153",
+      "EMT Class 158",
+      "LNER Class A3 'Flying Scotsman'",
+      "LMS Jubilee Class",
+      "WMT Class 170/6",
+      "DBS/EWS Class 66",
+      "WMR Class 323",
+      "AWC Class 390 Pendolino",
+      "XC Voyager Class 220",
+      "IC Class 87",
+      "IC Class 86/2"
+    ],
+    "nation": "UK"
   }
 }
