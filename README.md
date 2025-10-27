@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.2
+* Add new locomotives 'DB BR 194' and 'E94 088' in Linke Rheinstrecke
+
 v1.3.1
 * Add a new route WCML: Birmingham to Crewe
 * Add new locomotives 'BR Class 350-1', 'BR Class 350-2' and 'BR Class 350-3'
