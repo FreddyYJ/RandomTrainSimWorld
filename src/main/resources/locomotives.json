@@ -878,7 +878,10 @@
       "AWC Class 390 Pendolino",
       "TFL Class 710",
       "TFL Class 378",
-      "EWS/DBS Class 66"
+      "EWS/DBS Class 66",
+      "DRU Class 20",
+      "BR Class 47",
+      "BR Class 52 BLU"
     ],
     "nation": "UK"
   },
@@ -968,7 +971,8 @@
       "TFW Class 150/2",
       "TFW Class 153",
       "EWS/DB Class 66",
-      "GWR Class 43(125) HST"
+      "GWR Class 43(125) HST",
+      "Ex-ATW Class 142"
     ],
     "nation": "UK"
   },

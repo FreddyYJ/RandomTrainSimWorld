@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.3
+* Add new locomotive 'DRU Class 20' in West Coast Main Line South
+* Add new locomotive 'Ex-ATW Class 142' in Cardiff City Network
+
 v1.3.2
 * Add new locomotives 'DB BR 194' and 'E94 088' in Linke Rheinstrecke
 
