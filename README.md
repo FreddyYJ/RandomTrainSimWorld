@@ -31,7 +31,7 @@ Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 ## Changelog
 v1.3.4
 * Add new route 'Frankenbahn'
-* Add new locomotive 'DB BR 140' in proper routes
+* Add new locomotives 'DB BR 140' and 'DB BR 483.0 Bnrdzf' in proper routes
 * Add proper locomotives in Frankenbahn
 
 v1.3.3
