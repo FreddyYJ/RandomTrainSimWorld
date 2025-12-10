@@ -33,6 +33,7 @@
       "DB BR 193 Vectron",
       "DB BR 111",
       "DB BR 114",
+      "DB BR 140",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -65,6 +66,7 @@
       "DB BR 110",
       "DB BR 193 Vectron",
       "DB BR 111",
+      "DB BR 140",
       "DB BR 114"
     ],
     "nation": "Germany"
@@ -132,6 +134,7 @@
       "DB BR 204",
       "DB BR 193 Vectron",
       "DB BR 114",
+      "DB BR 140",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -153,6 +156,7 @@
       "DB BR 110",
       "DB BR 193 Vectron",
       "DB BR 111",
+      "DB BR 140",
       "DB BR 114"
     ],
     "nation": "Germany"
@@ -206,6 +210,7 @@
       "DB BR 193 Vectron",
       "DB BR 111",
       "DB BR 114",
+      "DB BR 140",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -230,6 +235,7 @@
       "DB BR 193 Vectron",
       "DB BR 111",
       "DB BR 114",
+      "DB BR 140",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -942,6 +948,7 @@
       "DB BR 187",
       "DBB BR 363",
       "DB G6",
+      "DB BR 140",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -1046,7 +1053,8 @@
       "DB BR 146.2",
       "DB BR 218",
       "DB BR 463.0 Bnrdzf Diesel",
-      "\u00d6BB 1116 'Taurus'"
+      "\u00d6BB 1116 'Taurus'",
+      "DB BR 140"
     ],
     "nation": "Germany"
   },
@@ -1104,5 +1112,26 @@
       "IC Class 86/2"
     ],
     "nation": "UK"
+  },
+  "FKB": {
+    "name": "Frankenbahn",
+    "locomotives": [
+      "DB BR 140",
+      "DB BR 463.0 Bnrdzf",
+      "DB BR 111",
+      "DB BR 423",
+      "DB BR 425",
+      "DB BR 766.2 DBpbzfa",
+      "DB BR 411 ICE-T",
+      "DB BR 628.2 VR",
+      "DB BR 218",
+      "DB BR 294",
+      "DB BR 110",
+      "DB BR 155",
+      "DB BR 101",
+      "DBB BR 363",
+      "DB G6"
+    ],
+    "nation": "Germany"
   }
 }
