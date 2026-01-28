@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.5
+* Add new locomotive 'PBD Class 805 'Evero'' in proper routes
+
 v1.3.4
 * Add new route 'Frankenbahn'
 * Add new locomotives 'DB BR 140' and 'DB BR 483.0 Bnrdzf' in proper routes
