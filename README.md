@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.6
+* Add new locomotive 'SN Class 171' in East Coastway
+
 v1.3.5
 * Add new locomotive 'PBD Class 805 'Evero'' in proper routes
 
