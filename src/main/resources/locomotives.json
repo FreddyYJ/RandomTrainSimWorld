@@ -11,7 +11,7 @@
     "nation": "USA"
   },
   "SFK": {
-    "name": "Schnellfahrstrecke K\u00f6ln",
+    "name": "Schnellfahrstrecke Köln",
     "locomotives": [
       "DB BR 442 'Talent 2'",
       "DB BR 406 ICE 3M",
@@ -189,7 +189,7 @@
     "nation": "UK"
   },
   "HMA": {
-    "name": "Hauptstrecke M\u00fcnchen-Augsburg",
+    "name": "Hauptstrecke München-Augsburg",
     "locomotives": [
       "DB BR 425",
       "DB BR 423",
@@ -308,7 +308,7 @@
     "nation": "UK"
   },
   "LGV": {
-    "name": "LGV M\u00e9diterran\u00e9e",
+    "name": "LGV Méditerranée",
     "locomotives": [
       "TGV Duplex 200 CM"
     ],
@@ -348,7 +348,7 @@
     "nation": "USA"
   },
   "HHL": {
-    "name": "Hauptstrecke Hamburg-L\u00fcbeck",
+    "name": "Hauptstrecke Hamburg-Lübeck",
     "locomotives": [
       "DB BR 185.2",
       "MRCE BR 185.5",
@@ -498,7 +498,7 @@
       "S-Bahn BR 1442 'Talent 2'",
       "DB BR 767.2 DABpbzfa",
       "FT BR 193 Vectron",
-      "\u00d6BB 1116 'Taurus'"
+      "ÖBB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -695,12 +695,12 @@
   "SBV": {
     "name": "S-Bahn Vorarlberg",
     "locomotives": [
-      "\u00d6BB 4024 S-Bahn",
+      "ÖBB 4024 S-Bahn",
       "MRCE ES-64 U2",
       "SBB RABe 523",
       "DB BR 185",
       "DB BR 193 Vectron",
-      "\u00d6BB 1116 'Taurus'"
+      "ÖBB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -768,7 +768,7 @@
     "name": "BahnStrecke Salzburg-Rosenheim",
     "locomotives": [
       "DB BR 111",
-      "\u00d6BB 4024",
+      "ÖBB 4024",
       "DB BR 628.2",
       "DB BR 766.2 DBpbzfa",
       "DBB BR 363",
@@ -785,7 +785,7 @@
       "MRCE BR 185.5",
       "RP BR 185.6",
       "DB G6",
-      "\u00d6BB 1116 'Taurus'",
+      "ÖBB 1116 'Taurus'",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -816,8 +816,8 @@
   "SMB": {
     "name": "Semmeringbahn",
     "locomotives": [
-      "\u00d6BB 4024",
-      "\u00d6BB 1116 'Taurus'",
+      "ÖBB 4024",
+      "ÖBB 1116 'Taurus'",
       "DB BR 103",
       "BR Class 47/4 BLU",
       "Railpool BR 193 Vectron"
@@ -858,7 +858,7 @@
       "DB BR 187",
       "DBB BR 363",
       "DB G6",
-      "\u00d6BB 1116 'Taurus'"
+      "ÖBB 1116 'Taurus'"
     ],
     "nation": "Germany"
   },
@@ -958,7 +958,7 @@
   "MWB": {
     "name": "Mittenwaldbahn",
     "locomotives": [
-      "\u00d6BB 1020",
+      "ÖBB 1020",
       "DBB BR 111",
       "DB BR 103",
       "DBB BR 365"
@@ -1055,7 +1055,7 @@
       "DB BR 146.2",
       "DB BR 218",
       "DB BR 463.0 Bnrdzf Diesel",
-      "\u00d6BB 1116 'Taurus'",
+      "ÖBB 1116 'Taurus'",
       "DB BR 140"
     ],
     "nation": "Germany"
@@ -1137,5 +1137,14 @@
       "DB G6"
     ],
     "nation": "Germany"
+  },
+  "LSP": {
+    "name": "Liberec - Stará Paka",
+    "locomotives": [
+      "CD Class 750",
+      "CD Class 843",
+      "DB BR 642"
+    ],
+    "nation": "Czech"
   }
 }

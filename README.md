@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.7
+* Add new route Liberec - Stará Paka
+* Add new locomotives 'CD Class 750' and 'CD Class 843' in Liberec - Stará Paka
+* Add proper locomotives in Liberec - Stará Paka
+
 v1.3.6
 * Add new locomotive 'SN Class 171' in East Coastway
 
