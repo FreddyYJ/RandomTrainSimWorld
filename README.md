@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.8
+* Add new locomotive 'DB BR 145 Expert' to proper routes
+
 v1.3.7
 * Add new route Liberec - Stará Paka
 * Add new locomotives 'CD Class 750' and 'CD Class 843' in Liberec - Stará Paka

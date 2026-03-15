@@ -34,6 +34,7 @@
       "DB BR 111",
       "DB BR 114",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -67,6 +68,7 @@
       "DB BR 193 Vectron",
       "DB BR 111",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 114"
     ],
     "nation": "Germany"
@@ -136,6 +138,7 @@
       "DB BR 193 Vectron",
       "DB BR 114",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -158,6 +161,7 @@
       "DB BR 193 Vectron",
       "DB BR 111",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 114"
     ],
     "nation": "Germany"
@@ -212,6 +216,7 @@
       "DB BR 111",
       "DB BR 114",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -237,6 +242,7 @@
       "DB BR 111",
       "DB BR 114",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -370,6 +376,7 @@
       "DB G6",
       "DB BR 193 Vectron",
       "DB BR 114",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -436,6 +443,7 @@
       "DB BR 110",
       "DB BR 193 Vectron",
       "DB BR 111",
+      "DB BR 145 Expert",
       "DB BR 114"
     ],
     "nation": "Germany"
@@ -498,6 +506,7 @@
       "S-Bahn BR 1442 'Talent 2'",
       "DB BR 767.2 DABpbzfa",
       "FT BR 193 Vectron",
+      "DB BR 145 Expert",
       "ÖBB 1116 'Taurus'"
     ],
     "nation": "Germany"
@@ -568,6 +577,7 @@
       "DB BR 185.2",
       "DB BR 187",
       "Dispolok ES-64 U2",
+      "DB BR 145 Expert",
       "DB BR 193 Vectron"
     ],
     "nation": "Germany"
@@ -606,6 +616,7 @@
       "DB BR 401 ICE 1",
       "DB BR 103",
       "DB BR 193 Vectron",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -786,6 +797,7 @@
       "RP BR 185.6",
       "DB G6",
       "ÖBB 1116 'Taurus'",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -858,6 +870,7 @@
       "DB BR 187",
       "DBB BR 363",
       "DB G6",
+      "DB BR 145 Expert",
       "ÖBB 1116 'Taurus'"
     ],
     "nation": "Germany"
@@ -951,6 +964,7 @@
       "DBB BR 363",
       "DB G6",
       "DB BR 140",
+      "DB BR 145 Expert",
       "DB BR 294"
     ],
     "nation": "Germany"
@@ -1010,6 +1024,7 @@
       "DB BR 193 'Vectron'",
       "DB BR 101",
       "DBB BR 363",
+      "DB BR 145 Expert",
       "DB G6"
     ],
     "nation": "Germany"
@@ -1038,6 +1053,7 @@
       "DB BR 642",
       "DB BR 442 'Talent 2'",
       "DB BR 766.2 DBpbzfa",
+      "DB BR 145 Expert",
       "S-Bahn BR 1442 'Talent 2'",
       "DB BR 103",
       "DB BR 612",
