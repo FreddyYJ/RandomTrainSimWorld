@@ -1162,5 +1162,19 @@
       "DB BR 642"
     ],
     "nation": "Czech"
+  },
+  "NECMN": {
+    "name": "NEC Metro-North",
+    "locomotives": [
+      "MNR M8",
+      "ALP-46",
+      "Acela Express",
+      "ACS-64",
+      "M3A MTA",
+      "M7A MTA",
+      "Multi-Level Commuter Cab Car",
+      "SD40-2 CSX"
+    ],
+    "nation": "USA"
   }
 }

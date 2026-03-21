@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.9
+* Add new route NEC Metro-North
+* Add a new locomotive 'MNR M8' in NEC Metro-North
+* Add proper locomotives in NEC Metro-North
+
 v1.3.8
 * Add new locomotive 'DB BR 145 Expert' to proper routes
 
