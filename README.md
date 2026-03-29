@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.10
+* Add new route 'Medway Valley Line'
+* Add new locomotives 'SEB Class 375/3' and 'SEB Class 375/6' in Medway Valley Line
+* Add proper locomotives in Medway Valley Line
+
 v1.3.9
 * Add new route NEC Metro-North
 * Add a new locomotive 'MNR M8' in NEC Metro-North

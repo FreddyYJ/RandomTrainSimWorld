@@ -1176,5 +1176,20 @@
       "SD40-2 CSX"
     ],
     "nation": "USA"
+  },
+    "MVL": {
+    "name": "Medway Valley Line",
+    "locomotives": [
+      "SEB Class 375/3",
+      "SEB Class 375/6",
+      "SEB Class 395",
+      "SEW Class 465/9",
+      "TL Class 700/0",
+      "EWS/DBS Class 66",
+      "GRN Class 33",
+      "GRN Class 47",
+      "LNER Class A3 'Flying Scotsman'"
+    ],
+    "nation": "UK"
   }
 }
