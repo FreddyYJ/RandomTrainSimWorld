@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.11
+* Add new locomotive 'BR Class 90' in WCML South
+
 v1.3.10
 * Add new route 'Medway Valley Line'
 * Add new locomotives 'SEB Class 375/3' and 'SEB Class 375/6' in Medway Valley Line
