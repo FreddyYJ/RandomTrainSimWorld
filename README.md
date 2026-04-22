@@ -29,6 +29,10 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.12
+* Add a new locomotive 'DB BR 147' to proper routes
+* Add 'GWR Class 125(43) HST' to proper routes
+
 v1.3.11
 * Add new locomotive 'BR Class 90' in WCML South
 
