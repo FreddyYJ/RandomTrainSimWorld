@@ -736,6 +736,7 @@
     "name": "East Coast Main Line",
     "locomotives": [
       "LNER Class 801",
+      "GBR Class 802",
       "LNER Class A3 'Flying Scotsman'",
       "EWS Class 66",
       "EMT Class 158/0",
@@ -1101,6 +1102,7 @@
       "XC Voyager Class 220",
       "GWR Class 150/2",
       "GWR Class 802 'Javelin'",
+      "GBR Class 802",
       "GWR Class 166",
       "GWR Class 125(43) HST",
       "EMT Class 158",

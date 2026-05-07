@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.13
+* Add 'GBR Class 802' to Riviera Line and East Coast Main Line
+
 v1.3.12
 * Add a new locomotive 'DB BR 147' to proper routes
 * Add 'GWR Class 125(43) HST' to proper routes
