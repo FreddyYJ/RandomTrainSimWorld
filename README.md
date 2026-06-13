@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.14
+* Add a new route 'WCML: Crewe to Milton Keynes'
+* Add a new locomotive 'AWC Class 807 'Evero'' to WCML: Crewe to Milton Keynes
+* Add proper locomotives in WCML: Crewe to Milton Keynes
+
 v1.3.13
 * Add 'GBR Class 802' to Riviera Line and East Coast Main Line
 

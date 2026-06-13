@@ -1200,5 +1200,25 @@
       "LNER Class A3 'Flying Scotsman'"
     ],
     "nation": "UK"
+  },
+    "WCMLCMK": {
+    "name": "WCML: Crewe to Milton Keynes",
+    "locomotives": [
+      "AWC Class 807 'Evero'",
+      "BR Class 350-4",
+      "NWN BR Class 350/1",
+      "EMT Class 158",
+      "AWC Class 390 Pendolino",
+      "PBD Class 805 'Evero'",
+      "EWS/DBS Class 66",
+      "EPX Class 37/7",
+      "TFW Class 150/2",
+      "TFW Class 153",
+      "NT Class 323",
+      "BR Class 350-2",
+      "BR Class 350-3",
+      "XC Voyager Class 220"
+    ],
+    "nation": "UK"
   }
 }
