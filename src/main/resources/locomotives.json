@@ -558,6 +558,7 @@
       "ES44C4 BNSF",
       "SD40-2 BNSF",
       "SD70ACe BNSF",
+      "GP60M BNSF",
       "F7 Santa Fe"
     ],
     "nation": "USA"
@@ -1218,6 +1219,19 @@
       "BR Class 350-2",
       "BR Class 350-3",
       "XC Voyager Class 220"
+    ],
+    "nation": "UK"
+  },
+  "WCMLPC": {
+    "name": "WCML: Preston to Crewe",
+    "locomotives": [
+      "BR Class 86/2",
+      "BR Class 47/3",
+      "BR Class 20",
+      "BR Class 08",
+      "BR Class 142",
+      "BR Class 101",
+      "BR Class 87"
     ],
     "nation": "UK"
   }

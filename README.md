@@ -29,6 +29,11 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.3.15
+* Add a new route 'WCML: Preston to Crewe'
+* Add proper locomotives in WCML: Preston to Crewe
+* Add a new locomotive 'GP60M BNSF' in Cajon Pass
+
 v1.3.14
 * Add a new route 'WCML: Crewe to Milton Keynes'
 * Add a new locomotive 'AWC Class 807 'Evero'' to WCML: Crewe to Milton Keynes

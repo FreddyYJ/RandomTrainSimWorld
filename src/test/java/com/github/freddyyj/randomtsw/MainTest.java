@@ -21,7 +21,7 @@ public class MainTest {
     @Test
     @Order(2)
     public void getRoutesTest() {
-        Assertions.assertEquals(core.getRoutes().size(),80);
+        Assertions.assertEquals(core.getRoutes().size(),81);
     }
     @Test
     @Order(2)
