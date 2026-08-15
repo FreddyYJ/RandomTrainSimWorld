@@ -1234,5 +1234,22 @@
       "BR Class 87"
     ],
     "nation": "UK"
+  },
+    "SNI": {
+    "name": "Schnellfahrstrecke Nürnberg-Ingolstadt",
+    "locomotives": [
+      "DB BR 101",
+      "DB BR 286.3 Bpmmbdzf",
+      "DB BR 403 ICE 3",
+      "DB BR 463.0 Bnrdzf",
+      "DB BR 101 Expert",
+      "DB BR 294",
+      "DB BR 411 ICE-T",
+      "DB BR 401 ICE 1",
+      "DB BR 185",
+      "DB BR 111",
+      "DB BR 442 'Talent 2'"
+    ],
+    "nation": "Germany"
   }
 }
