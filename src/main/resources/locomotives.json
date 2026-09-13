@@ -1235,7 +1235,7 @@
     ],
     "nation": "UK"
   },
-    "SNI": {
+  "SNI": {
     "name": "Schnellfahrstrecke Nürnberg-Ingolstadt",
     "locomotives": [
       "DB BR 101",
@@ -1251,5 +1251,65 @@
       "DB BR 442 'Talent 2'"
     ],
     "nation": "Germany"
+  },
+  "BNW": {
+    "name": "BahnStrecke Nürnberg-Würzburg",
+    "locomotives": [
+      "DB BR 440",
+      "DB BR 412 ICE 4",
+      "DB BR 442 'Talent 2'",
+      "DB BR 401 ICE 1",
+      "DB BR 193 Vectron",
+      "DB BR 218",
+      "DB BR 411 ICE-T",
+      "DB BR 403 ICE 3",
+      "ÖBB 1116 'Taurus'",
+      "Press BR 155",
+      "DB BR 182",
+      "DB BR 185.2",
+      "DB BR 187",
+      "DBB BR 363",
+      "DB BR 642",
+      "MRCE BR 185.5",
+      "DB G6",
+      "DB BR 103",
+      "DB BR 145 Expert",
+      "DB BR 294"
+    ],
+    "nation": "Germany"
+  },
+  "AWL": {
+    "name": "Airedale & Wharfedale Lines",
+    "locomotives": [
+      "BR Class 333",
+      "BR Class 66",
+      "BR Class 331",
+      "BR Class 801",
+      "BR Class 158",
+      "BR Class 37/5",
+      "BR Class 40",
+      "BR Class 43 HST",
+      "BR Class 47/3",
+      "BR Class 20",
+      "BR Class 08",
+      "GBR Class 802",
+      "LNER Class A3 'Flying Scotsman'",
+      "LMS Jubilee Class"
+    ],
+    "nation": "UK"
+  },
+  "FTR": {
+    "name": "Florida Tri-Rail",
+    "locomotives": [
+      "TR GP49PH-3",
+      "TR F40PH-3C",
+      "TR BL36PH",
+      "TR Rotem Bi-Level Cab Car",
+      "GP38-2 CSX",
+      "SD40-2 CSX",
+      "AC4400CW CSX",
+      "C40-8W CSX"
+    ],
+    "nation": "USA"
   }
 }
