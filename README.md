@@ -29,8 +29,13 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v1.4.1
+* Add a new route 'Tadami Line'
+* Add a new locomotive 'Kiha 40-500'
+
 v1.4.0
 * Add new Train Sim World 7 routes (BahnStrecke Nürnberg-Würzburg, Airedale & Wharfedale Lines and Florida Tri-Rail)
+
 v1.3.16
 * Add a new route 'Schnellfahrstrecke Nürnberg-Ingolstadt'
 * Add proper locomotives in Schnellfahrstrecke Nürnberg-Ingolstadt

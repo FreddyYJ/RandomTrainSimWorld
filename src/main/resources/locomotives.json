@@ -1311,5 +1311,12 @@
       "C40-8W CSX"
     ],
     "nation": "USA"
+  },
+  "TL": {
+    "name": "Tadami Line",
+    "locomotives": [
+      "Kiha 40-500"
+    ],
+    "nation": "Japan"
   }
 }
