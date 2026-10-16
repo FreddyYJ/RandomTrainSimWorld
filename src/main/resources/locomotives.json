@@ -86,7 +86,8 @@
       "BR Class 45/1 BLU",
       "BR Class 40 BLU",
       "BR Class 52 BLU",
-      "BR Class 87"
+      "BR Class 87",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -296,7 +297,8 @@
       "GWR Class 125(43) HST",
       "GWR Class 166",
       "GRN Class 47",
-      "BR Class 52 BLU"
+      "BR Class 52 BLU",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -333,7 +335,8 @@
       "EWS Class 66 RHTT",
       "EPX Class 37/7 EPX",
       "BR Class 47/4 BLU",
-      "GRN Class 33"
+      "GRN Class 33",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -398,7 +401,8 @@
       "BR Class 45/1 BLU",
       "BR Class 52 BLU",
       "EWS Class 66",
-      "BR Class 47/4 BLU"
+      "BR Class 47/4 BLU",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -458,7 +462,8 @@
       "GWR Class 166",
       "GX Class 387/2",
       "SEB Class 375/9",
-      "SN Class 313/2"
+      "SN Class 313/2",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -592,7 +597,8 @@
       "WMR/XC Class 170",
       "GWR Class 125(43) HST",
       "EWS Class 66",
-      "BR Class 37/5 RF"
+      "BR Class 37/5 RF",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -677,6 +683,7 @@
       "EMT Class 158/0",
       "EMT Class 125(43) HST",
       "EWS Class 66",
+      "FL Class 70",
       "LMS Jubilee Class",
       "LNER Class A3 'Flying Scotsman'",
       "EPX Class 37/7",
@@ -704,7 +711,8 @@
       "BR Class 37/5 RF",
       "BLU Class 40",
       "EWS Class 66",
-      "LMS Jubilee Class"
+      "LMS Jubilee Class",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -743,7 +751,8 @@
       "EMT Class 158/0",
       "GRN Class 47",
       "TL Class 700/0",
-      "GWR Class 43(125) HST"
+      "GWR Class 43(125) HST",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -816,7 +825,8 @@
       "BR Class 20 RF",
       "LMS Jubilee Class",
       "GRN Class 33",
-      "BR Class 37/7 EPX"
+      "BR Class 37/7 EPX",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -909,7 +919,8 @@
       "EWS/DBS Class 66",
       "DRU Class 20",
       "BR Class 47",
-      "BR Class 52 BLU"
+      "BR Class 52 BLU",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -991,7 +1002,8 @@
     "locomotives": [
       "TFL Class 378",
       "TFL Class 710",
-      "EWS Class 66"
+      "EWS Class 66",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -1137,7 +1149,8 @@
       "AWC Class 390 Pendolino",
       "XC Voyager Class 220",
       "IC Class 87",
-      "IC Class 86/2"
+      "IC Class 86/2",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -1218,7 +1231,8 @@
       "NT Class 323",
       "BR Class 350-2",
       "BR Class 350-3",
-      "XC Voyager Class 220"
+      "XC Voyager Class 220",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -1231,7 +1245,8 @@
       "BR Class 08",
       "BR Class 142",
       "BR Class 101",
-      "BR Class 87"
+      "BR Class 87",
+      "FL Class 70"
     ],
     "nation": "UK"
   },
@@ -1285,6 +1300,7 @@
       "BR Class 66",
       "BR Class 331",
       "BR Class 801",
+      "FL Class 70",
       "BR Class 158",
       "BR Class 37/5",
       "BR Class 40",
@@ -1318,5 +1334,15 @@
       "Kiha 40-500"
     ],
     "nation": "Japan"
+  },
+  "ThVL": {
+    "name": "Thames Valley Line",
+    "locomotives": [
+      "GWR Class 165",
+      "FGB Class 166",
+      "BR Class 37/5 RSR",
+      "FL Class 70"
+    ],
+    "nation": "UK"
   }
 }
