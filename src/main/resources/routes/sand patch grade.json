@@ -1,0 +1,23 @@
+{
+  "name": "Sand Patch Grade",
+  "locomotives": {
+    "gp38-2": [
+      "CSX"
+    ],
+    "sd40-2": [
+      "CSX",
+      "BNSF"
+    ],
+    "ac4400cw": [
+      "CSX"
+    ],
+    "c40-8w": [
+      "CSX"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Sand Patch Grade"
+  ],
+  "description": "Sand Patch Grade is a famous US freight route owned by CSX."
+}

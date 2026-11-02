@@ -2,9 +2,7 @@ package com.github.freddyyj.randomtrainsimworld.gui;
 
 import com.github.freddyyj.randomtrainsimworld.*;
 import com.github.freddyyj.randomtrainsimworld.Main;
-import com.github.freddyyj.randomtrainsimworld.Random;
 import com.github.freddyyj.randomtrainsimworld.config.Config;
-import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
 import com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException;
 import com.github.freddyyj.randomtrainsimworld.exception.PermissionDeniedException;
 import javafx.collections.ObservableList;

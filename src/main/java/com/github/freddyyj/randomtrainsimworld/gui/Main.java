@@ -38,7 +38,7 @@ public class Main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		FXMLLoader loader=new FXMLLoader(getClass().getClassLoader().getResource("MainDoc.fxml"));
-		scene=new Scene(loader.load(),250,75);
+		scene=new Scene(loader.load(),500,200);
 		stage=primaryStage;
 		primaryStage.setTitle("Random Train Sim World");
 		primaryStage.setScene(scene);

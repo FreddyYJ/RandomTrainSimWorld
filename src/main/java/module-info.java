@@ -14,5 +14,6 @@ module RandomTrainSimWorld.main {
     requires com.google.gson;
     requires java.desktop;
     requires org.apache.commons.io;
+    requires com.google.common;
     opens com.github.freddyyj.randomtrainsimworld.gui to javafx.fxml;
 }

@@ -2,7 +2,6 @@ package com.github.freddyyj.randomtsw.config;
 
 import com.github.freddyyj.randomtrainsimworld.Locomotive;
 import com.github.freddyyj.randomtrainsimworld.Route;
-import com.github.freddyyj.randomtrainsimworld.config.RouteReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

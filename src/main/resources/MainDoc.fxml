@@ -1,65 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="500.0"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+<!--
+    Layout:
+      [Route | Locomotive | Livery | Journey]   <- horizontal SplitPane, dividers draggable
+      Route and Locomotive panes each contain a vertical SplitPane:
+        [checkbox list]
+        [description]                           <- divider draggable
+      Each pane: picked result + "Pick ..." button. "Pick All" at the bottom.
+-->
+<AnchorPane fx:id="anchorPane" minHeight="400.0" minWidth="700.0" prefHeight="600.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.github.freddyyj.randomtrainsimworld.gui.MainController">
-   <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-            AnchorPane.topAnchor="0.0">
-      <Menu mnemonicParsing="false" text="File">
-         <MenuItem fx:id="itemSave" mnemonicParsing="false" onAction="#onSave" text="Save"/>
-         <MenuItem fx:id="itemSaveAs" mnemonicParsing="false" onAction="#onSaveAs" text="Save As..."/>
-         <MenuItem fx:id="itemLoad" mnemonicParsing="false" onAction="#onLoad" text="Load..."/>
-         <MenuItem fx:id="itemClose" mnemonicParsing="false" onAction="#onClose" text="Close"/>
-      </Menu>
-      <Menu mnemonicParsing="false" text="Help">
-         <MenuItem fx:id="itemAbout" mnemonicParsing="false" onAction="#onHelp" text="About"/>
-      </Menu>
-   </MenuBar>
-   <GridPane layoutY="27.0" prefHeight="273.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0"
-             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
-      <columnConstraints>
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
-         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
-         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
-      </rowConstraints>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0">
-         <VBox fx:id="boxRoute" prefHeight="273.0">
+   <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+         AnchorPane.topAnchor="0.0">
+      <MenuBar>
+         <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="itemSave" mnemonicParsing="false" onAction="#onSave" text="Save"/>
+            <MenuItem fx:id="itemSaveAs" mnemonicParsing="false" onAction="#onSaveAs" text="Save As..."/>
+            <MenuItem fx:id="itemLoad" mnemonicParsing="false" onAction="#onLoad" text="Load..."/>
+            <MenuItem fx:id="itemClose" mnemonicParsing="false" onAction="#onClose" text="Close"/>
+         </Menu>
+         <Menu mnemonicParsing="false" text="Help">
+            <MenuItem fx:id="itemAbout" mnemonicParsing="false" onAction="#onHelp" text="About"/>
+         </Menu>
+      </MenuBar>
+
+      <SplitPane fx:id="splitMain" dividerPositions="0.25, 0.5, 0.75" VBox.vgrow="ALWAYS">
+         <!-- Route pane -->
+         <VBox minWidth="120.0" spacing="5.0">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+            <Label style="-fx-font-weight: bold;" text="Route"/>
+            <SplitPane fx:id="splitRoute" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+               <ScrollPane fitToWidth="true" minHeight="50.0">
+                  <VBox fx:id="boxRoute"/>
+               </ScrollPane>
+               <TextArea fx:id="textRouteDescription" editable="false" minHeight="40.0"
+                         promptText="Route description" wrapText="true"/>
+            </SplitPane>
+            <TextField fx:id="textPickedRoute" editable="false" promptText="Picked route"/>
+            <Button fx:id="buttonRandomRoute" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomRoute" text="Pick Route"/>
          </VBox>
-      </ScrollPane>
-      <ScrollPane fx:id="boxLoco" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-      </ScrollPane>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-         <VBox fx:id="boxWeather" prefHeight="200.0"/>
-      </ScrollPane>
-      <Button fx:id="buttonRandomRoute" mnemonicParsing="false" onAction="#onRandomRoute" text="Pick Route"
-              GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-      <Button fx:id="buttonRandomLoco" mnemonicParsing="false" onAction="#onRandomLoco" text="Pick Locomotive"
-              GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-      <Button fx:id="buttonRandomWeather" mnemonicParsing="false" onAction="#onRandomWeather" text="Pick Weather"
-              GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-      <Button fx:id="buttonRandomAll" defaultButton="true" mnemonicParsing="false" onAction="#onRandomAll"
-              text="Pick All" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
-      <TextField fx:id="textPickedRoute" disable="true" GridPane.rowIndex="1"/>
-      <TextField fx:id="textPickedLoco" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-      <TextField fx:id="textPickedWeather" disable="true" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-   </GridPane>
+
+         <!-- Locomotive pane: content (VBox of checkboxes) is set per route by the controller -->
+         <VBox minWidth="120.0" spacing="5.0">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+            <Label style="-fx-font-weight: bold;" text="Locomotive"/>
+            <SplitPane fx:id="splitLoco" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+               <ScrollPane fx:id="boxLoco" fitToWidth="true" minHeight="50.0"/>
+               <TextArea fx:id="textLocoDescription" editable="false" minHeight="40.0"
+                         promptText="Locomotive description" wrapText="true"/>
+            </SplitPane>
+            <TextField fx:id="textPickedLoco" editable="false" promptText="Picked locomotive"/>
+            <Button fx:id="buttonRandomLoco" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomLoco" text="Pick Locomotive"/>
+         </VBox>
+
+         <!-- Livery pane: content is set per locomotive by the controller -->
+         <VBox minWidth="120.0" spacing="5.0">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+            <Label style="-fx-font-weight: bold;" text="Livery"/>
+            <ScrollPane fx:id="boxLivery" fitToWidth="true" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="textPickedLivery" editable="false" promptText="Picked livery"/>
+            <Button fx:id="buttonRandomLivery" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomLivery" text="Pick Livery"/>
+         </VBox>
+
+         <!-- Journey pane: content is set per route by the controller -->
+         <VBox minWidth="120.0" spacing="5.0">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+            <Label style="-fx-font-weight: bold;" text="Journey"/>
+            <ScrollPane fx:id="boxJourney" fitToWidth="true" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="textPickedJourney" editable="false" promptText="Picked journey"/>
+            <Button fx:id="buttonRandomJourney" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomJourney" text="Pick Journey"/>
+         </VBox>
+      </SplitPane>
+
+      <HBox alignment="CENTER">
+         <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+         <Button fx:id="buttonRandomAll" defaultButton="true" mnemonicParsing="false"
+                 onAction="#onRandomAll" prefWidth="150.0" text="Pick All"/>
+      </HBox>
+   </VBox>
 </AnchorPane>

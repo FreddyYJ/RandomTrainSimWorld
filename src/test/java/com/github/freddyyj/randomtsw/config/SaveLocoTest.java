@@ -2,8 +2,6 @@ package com.github.freddyyj.randomtsw.config;
 
 import com.github.freddyyj.randomtrainsimworld.Locomotive;
 import com.github.freddyyj.randomtrainsimworld.Route;
-import com.github.freddyyj.randomtrainsimworld.Weather;
-import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
