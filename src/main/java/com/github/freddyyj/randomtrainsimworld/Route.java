@@ -7,7 +7,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.github.freddyyj.randomtrainsimworld.util.JsonUtils;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -79,6 +78,6 @@ public class Route {
 
 	// Reads a bundled route from resources/routes/<routeName>.json (e.g. "sand patch grade")
 	public Route(final String routeName) {
-		this(JsonUtils.getResourcePath("/routes/" + routeName + ".json"));
+		this(Utils.getResourcePath("/routes/" + routeName + ".json"));
 	}
 }

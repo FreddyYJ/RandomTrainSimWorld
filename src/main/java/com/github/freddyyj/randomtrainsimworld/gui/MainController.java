@@ -69,13 +69,7 @@ public class MainController {
     @FXML
     private void initialize() {
         Main core= null;
-        try {
-            core = Main.getInstance();
-        } catch (IOException e) {
-            System.out.println("Error occurred at initializing JavaFX!");
-            e.printStackTrace();
-            System.exit(1);
-        }
+        core = Main.getInstance();
 
         // create UI elements depend on JSON file
         for(int i=0;i<core.getRoutes().size();i++){
@@ -106,15 +100,6 @@ public class MainController {
             }
 
             locomotiveVBoxs.put(core.getRoutes().get(i).getName(),locoOfRoute);
-        }
-
-        // add weather checkbox
-        for (int i=0;i<core.getWeathers().size();i++){
-            CheckBox weather=new CheckBox(core.getWeathers().get(i).getName());
-            weather.setSelected(true);
-            weather.setOnAction(this::onCheckWeatherSelect);
-            weather.setPadding(new Insets(5.,0.,0.,5.));
-            boxWeather.getChildren().add(weather);
         }
 
         anchorPane.sceneProperty().addListener((observableScene, oldScene, newScene) -> {
@@ -150,7 +135,7 @@ public class MainController {
         if (e.getSource() instanceof CheckBox) {
             currentBox = (CheckBox) e.getSource();
         }
-        if( currentRoute!=null){
+        if(currentRoute!=null){
             currentRoute.setVisible(false);
             currentRoute.setDisable(true);
         }

@@ -1,4 +1,4 @@
-package com.github.freddyyj.randomtrainsimworld.util;
+package com.github.freddyyj.randomtrainsimworld;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -21,31 +21,7 @@ import java.util.Map;
  * @author FreddyYJ_
  * @version 0.2.0
  */
-public class JsonUtils {
-    /**
-     * write {@link JsonObject} to file.
-     * @param object JsonObject that want to write
-     * @param targetFile target file
-     * @throws IOException If output error occurred
-     */
-    public static void write(JsonObject object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile, StandardCharsets.UTF_16);
-        writer.write(object.toString());
-        writer.close();
-    }
-
-    /**
-     * write {@link JsonArray} to file.
-     * @param object JsonArray that want to write
-     * @param targetFile target file
-     * @throws IOException If output error occurred
-     */
-    public static void write(JsonArray object, File targetFile) throws IOException {
-        FileWriter writer=new FileWriter(targetFile,StandardCharsets.UTF_16);
-        writer.write(object.toString());
-        writer.close();
-    }
-
+public class Utils {
     /**
      * Converts a bundled resource to a {@link Path}. Works whether the resource is a plain file (IDE/Gradle run),
      * inside a jar file ({@code jar:} URI), or inside a jlink/jpackage runtime image ({@code jrt:} URI).
@@ -55,7 +31,7 @@ public class JsonUtils {
      * @throws UncheckedIOException if the jar file system cannot be opened
      */
     public static Path getResourcePath(final String resourceName) {
-        final URL url = JsonUtils.class.getResource(resourceName);
+        final URL url = Utils.class.getResource(resourceName);
         if (url == null) {
             throw new IllegalArgumentException("Resource " + resourceName + " not found.");
         }

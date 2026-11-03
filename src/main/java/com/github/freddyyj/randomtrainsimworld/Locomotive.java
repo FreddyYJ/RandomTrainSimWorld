@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.github.freddyyj.randomtrainsimworld.util.JsonUtils;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -13,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * A locomotive class
@@ -82,6 +80,6 @@ public class Locomotive {
 	 * @param locomotiveName file name of the locomotive without {@code .json} (e.g. {@code "gp38-2"})
 	 */
 	public Locomotive(final String locomotiveName) {
-		this(JsonUtils.getResourcePath("/locomotives/" + locomotiveName + ".json"));
+		this(Utils.getResourcePath("/locomotives/" + locomotiveName + ".json"));
 	}
 }
