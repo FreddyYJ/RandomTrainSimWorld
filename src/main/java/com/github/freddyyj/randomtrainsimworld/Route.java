@@ -43,8 +43,8 @@ public class Route {
 		this.description = description;
 	}
 
-	// Reads a route from a JSON file (e.g. resources/routes/sand patch grade.json)
-	public Route(final Path jsonFilePath) {
+	// Reads a route from a JSON file (e.g. resources/routes/usa/sand patch grade.json)
+	public Route(final Path jsonFilePath, final Map<String, Locomotive> loadedLocomotives) {
 		final JsonObject json;
 		try (Reader reader = Files.newBufferedReader(jsonFilePath, StandardCharsets.UTF_8)) {
 			json = JsonParser.parseReader(reader).getAsJsonObject();
@@ -52,15 +52,17 @@ public class Route {
 			throw new UncheckedIOException("Failed to read route file " + jsonFilePath, e);
 		}
 
-		// Each key is a locomotive file name, each value is the liveries used on this route
-		// ImmutableMap keeps the order from the JSON file
 		final ImmutableMap.Builder<Locomotive, ImmutableList<String>> locomotives = ImmutableMap.builder();
 		for (final Map.Entry<String, JsonElement> entry : json.getAsJsonObject("locomotives").entrySet()) {
 			final ImmutableList.Builder<String> liveries = ImmutableList.builder();
 			for (final JsonElement livery : entry.getValue().getAsJsonArray()) {
 				liveries.add(livery.getAsString());
 			}
-			locomotives.put(new Locomotive(entry.getKey()), liveries.build());
+			final Locomotive locomotive = loadedLocomotives.get(entry.getKey());
+			if (locomotive == null) {
+				throw new IllegalArgumentException("Unknown locomotive " + entry.getKey() + " in route file " + jsonFilePath);
+			}
+			locomotives.put(locomotive, liveries.build());
 		}
 
 		final ImmutableList.Builder<String> journeys = ImmutableList.builder();
@@ -74,10 +76,5 @@ public class Route {
 		this.nation = Nation.fromString(json.get("nation").getAsString());
 		this.journeys = journeys.build();
 		this.description = json.get("description").getAsString();
-	}
-
-	// Reads a bundled route from resources/routes/<routeName>.json (e.g. "sand patch grade")
-	public Route(final String routeName) {
-		this(Utils.getResourcePath("/routes/" + routeName + ".json"));
 	}
 }

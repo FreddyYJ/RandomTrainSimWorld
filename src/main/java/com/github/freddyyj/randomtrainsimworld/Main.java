@@ -30,15 +30,26 @@ public class Main {
 	}
 
 	public Main() {
-		// Load every bundled route and locomotive file
+		// Load every bundled route and locomotive file, including subdirectories (e.g. usa/)
 		final ImmutableList.Builder<Route> routeBuilder = ImmutableList.builder();
 		final ImmutableList.Builder<Locomotive> locomotiveBuilder = ImmutableList.builder();
-		try (Stream<Path> routeFiles = Files.list(Utils.getResourcePath("/routes"));
-			 Stream<Path> locomotiveFiles = Files.list(Utils.getResourcePath("/locomotives"))) {
-			routeFiles.filter(path -> path.toString().endsWith(".json")).sorted()
-					.forEach(path -> routeBuilder.add(new Route(path)));
-			locomotiveFiles.filter(path -> path.toString().endsWith(".json")).sorted()
-					.forEach(path -> locomotiveBuilder.add(new Locomotive(path)));
+		// One shared object per locomotive, keyed by its path under locomotives/ without .json (e.g. "usa/gp38-2")
+		final Map<String, Locomotive> locomotivesByPath = new HashMap<>();
+		final Path locomotiveDirectory = Utils.getResourcePath("/locomotives");
+		try (Stream<Path> routeFiles = Files.walk(Utils.getResourcePath("/routes"));
+			 Stream<Path> locomotiveFiles = Files.walk(locomotiveDirectory)) {
+			// Locomotives first, since routes refer to them
+			locomotiveFiles.filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".json")).sorted()
+					.forEach(path -> {
+						final Locomotive locomotive = new Locomotive(path);
+						locomotiveBuilder.add(locomotive);
+						// Always use "/" as separator, same as route JSON keys
+						final Path relativePath = locomotiveDirectory.relativize(path);
+						final String key = relativePath.toString().replace(relativePath.getFileSystem().getSeparator(), "/");
+						locomotivesByPath.put(key.substring(0, key.length() - ".json".length()), locomotive);
+					});
+			routeFiles.filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".json")).sorted()
+					.forEach(path -> routeBuilder.add(new Route(path, locomotivesByPath)));
 		} catch (IOException e) {
 			throw new UncheckedIOException("Failed to list route or locomotive files", e);
 		}

@@ -47,7 +47,7 @@ public class Locomotive {
 	}
 
 	/**
-	 * Reads a locomotive from a JSON file (see {@code resources/locomotives/gp38-2.json}).
+	 * Reads a locomotive from a JSON file (see {@code resources/locomotives/usa/gp38-2.json}).
 	 * @param jsonFilePath path to the locomotive JSON file
 	 */
 	public Locomotive(final Path jsonFilePath) {
@@ -73,13 +73,5 @@ public class Locomotive {
 		this.gauge = json.get("gauge").getAsString();
 		this.totalProduced = json.get("total").getAsInt();
 		this.description = json.get("description").getAsString();
-	}
-
-	/**
-	 * Reads a bundled locomotive from {@code resources/locomotives/<locomotiveName>.json}.
-	 * @param locomotiveName file name of the locomotive without {@code .json} (e.g. {@code "gp38-2"})
-	 */
-	public Locomotive(final String locomotiveName) {
-		this(Utils.getResourcePath("/locomotives/" + locomotiveName + ".json"));
 	}
 }

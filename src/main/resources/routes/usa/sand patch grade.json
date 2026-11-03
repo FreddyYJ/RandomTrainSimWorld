@@ -1,17 +1,17 @@
 {
   "name": "Sand Patch Grade",
   "locomotives": {
-    "gp38-2": [
+    "usa/gp38-2": [
       "CSX"
     ],
-    "sd40-2": [
+    "usa/sd40-2": [
       "CSX",
       "BNSF"
     ],
-    "ac4400cw": [
+    "usa/ac4400cw": [
       "CSX"
     ],
-    "c40-8w": [
+    "usa/c40-8w": [
       "CSX"
     ]
   },
