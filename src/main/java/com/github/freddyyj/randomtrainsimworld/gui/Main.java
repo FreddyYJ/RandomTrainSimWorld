@@ -38,12 +38,12 @@ public class Main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		FXMLLoader loader=new FXMLLoader(getClass().getClassLoader().getResource("MainDoc.fxml"));
-		scene=new Scene(loader.load(),500,200);
+		scene=new Scene(loader.load(),1200,750);
 		stage=primaryStage;
 		primaryStage.setTitle("Random Train Sim World");
 		primaryStage.setScene(scene);
-		primaryStage.setWidth(500);
-		primaryStage.setHeight(400);
+		primaryStage.setWidth(1200);
+		primaryStage.setHeight(750);
 
 		if(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png")!=null)
 			primaryStage.getIcons().add(new Image(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png"))));
@@ -60,15 +60,14 @@ public class Main extends Application{
 						alert.setTitle("Save File");
 						Optional<ButtonType> result = alert.showAndWait();
 
+						// Yes: save and close, No: close without saving, Cancel: keep the window open
 						if (result.isPresent() && result.get() == ButtonType.YES) {
-							controller.onSave(null);
-							core.saveConfig();
-							core.close();
-						} else event.consume();
+							core.save();
+						} else if (result.isEmpty() || result.get() == ButtonType.CANCEL) {
+							event.consume();
+						}
 					}
-					core.saveConfig();
-					primaryStage.close();
-				}catch (IOException e){
+				} catch (IOException e){
 					System.out.println("Error occurred at initializing JavaFX!");
 					e.printStackTrace();
 					System.exit(1);

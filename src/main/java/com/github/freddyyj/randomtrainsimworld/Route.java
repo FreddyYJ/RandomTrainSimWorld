@@ -31,15 +31,17 @@ public class Route {
 	public final ImmutableMap<Locomotive, ImmutableList<String>> locomotives;
 	public final Nation nation;
 	public final ImmutableList<String> journeys;
+	public final ImmutableList<Scenario> scenarios;
 	public final String description;
 
 	public Route(final String name, final Map<Locomotive,List<String>> locomotives, final Nation nation,
-				 final List<String> journeys, final String description) {
+				 final List<String> journeys, final List<Scenario> scenarios, final String description) {
 		this.name = name;
 		// Read-only copies, including each liveries list (ImmutableMap keeps the order)
 		this.locomotives = ImmutableMap.copyOf(Maps.transformValues(locomotives, ImmutableList::copyOf));
 		this.nation = nation;
 		this.journeys = ImmutableList.copyOf(journeys);
+		this.scenarios = ImmutableList.copyOf(scenarios);
 		this.description = description;
 	}
 
@@ -71,10 +73,17 @@ public class Route {
 			journeys.add(journey.getAsString());
 		}
 
+		// Scenarios are keyed by their names in the "scenario" object
+		final ImmutableList.Builder<Scenario> scenarios = ImmutableList.builder();
+		for (final Map.Entry<String, JsonElement> entry : json.getAsJsonObject("scenario").entrySet()) {
+			scenarios.add(new Scenario(entry.getKey(), entry.getValue().getAsJsonObject()));
+		}
+
 		this.name = json.get("name").getAsString();
 		this.locomotives = locomotives.build();
 		this.nation = Nation.fromString(json.get("nation").getAsString());
 		this.journeys = journeys.build();
+		this.scenarios = scenarios.build();
 		this.description = json.get("description").getAsString();
 	}
 }

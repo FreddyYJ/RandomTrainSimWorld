@@ -16,8 +16,8 @@
 
 <!--
     Layout:
-      [Route | Locomotive | Livery | Journey]   <- horizontal SplitPane, dividers draggable
-      Route and Locomotive panes each contain a vertical SplitPane:
+      [Route | Locomotive | Livery | Journey | Scenario]   <- horizontal SplitPane, dividers draggable
+      Route, Locomotive and Scenario panes each contain a vertical SplitPane:
         [checkbox list]
         [description]                           <- divider draggable
       Each pane: picked result + "Pick ..." button. "Pick All" at the bottom.
@@ -30,7 +30,7 @@
          AnchorPane.topAnchor="0.0">
       <MenuBar>
          <Menu mnemonicParsing="false" text="File">
-            <MenuItem fx:id="itemSave" mnemonicParsing="false" onAction="#onSave" text="Save"/>
+            <MenuItem fx:id="itemSave" mnemonicParsing="false" onAction="#onSave" text="Save" accelerator="Shortcut+S"/>
             <MenuItem fx:id="itemSaveAs" mnemonicParsing="false" onAction="#onSaveAs" text="Save As..."/>
             <MenuItem fx:id="itemLoad" mnemonicParsing="false" onAction="#onLoad" text="Load..."/>
             <MenuItem fx:id="itemClose" mnemonicParsing="false" onAction="#onClose" text="Close"/>
@@ -40,21 +40,22 @@
          </Menu>
       </MenuBar>
 
-      <SplitPane fx:id="splitMain" dividerPositions="0.25, 0.5, 0.75" VBox.vgrow="ALWAYS">
+      <SplitPane fx:id="splitMain" dividerPositions="0.2, 0.4, 0.6, 0.8" VBox.vgrow="ALWAYS">
          <!-- Route pane -->
          <VBox minWidth="120.0" spacing="5.0">
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Route"/>
             <SplitPane fx:id="splitRoute" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
                <ScrollPane fitToWidth="true" minHeight="50.0">
-                  <VBox fx:id="boxRoute"/>
-                  <!-- Dummy route element, remove later -->
-                  <CheckBox fx:id="dummyRouteCheckBox" text="Dummy Route"/>
+                  <VBox fx:id="boxRoute">
+                     <!-- Dummy route element, remove later -->
+                     <CheckBox fx:id="dummyRouteCheckBox" text="Dummy Route"/>
+                  </VBox>
                </ScrollPane>
                <TextArea fx:id="textRouteDescription" editable="false" minHeight="40.0"
                          promptText="Route description" wrapText="true"/>
             </SplitPane>
-            <TextField fx:id="textPickedRoute" editable="false" promptText="Picked route"/>
+            <TextField fx:id="textPickedRoute" editable="false"/>
             <Button fx:id="buttonRandomRoute" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomRoute" text="Pick Route"/>
          </VBox>
@@ -68,7 +69,7 @@
                <TextArea fx:id="textLocoDescription" editable="false" minHeight="40.0"
                          promptText="Locomotive description" wrapText="true"/>
             </SplitPane>
-            <TextField fx:id="textPickedLoco" editable="false" promptText="Picked locomotive"/>
+            <TextField fx:id="textPickedLoco" editable="false"/>
             <Button fx:id="buttonRandomLoco" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomLoco" text="Pick Locomotive"/>
          </VBox>
@@ -78,7 +79,7 @@
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Livery"/>
             <ScrollPane fx:id="boxLivery" fitToWidth="true" VBox.vgrow="ALWAYS"/>
-            <TextField fx:id="textPickedLivery" editable="false" promptText="Picked livery"/>
+            <TextField fx:id="textPickedLivery" editable="false"/>
             <Button fx:id="buttonRandomLivery" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomLivery" text="Pick Livery"/>
          </VBox>
@@ -88,9 +89,23 @@
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Journey"/>
             <ScrollPane fx:id="boxJourney" fitToWidth="true" VBox.vgrow="ALWAYS"/>
-            <TextField fx:id="textPickedJourney" editable="false" promptText="Picked journey"/>
+            <TextField fx:id="textPickedJourney" editable="false"/>
             <Button fx:id="buttonRandomJourney" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomJourney" text="Pick Journey"/>
+         </VBox>
+
+         <!-- Scenario pane: content (VBox of checkboxes) is set per route by the controller -->
+         <VBox minWidth="120.0" spacing="5.0">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
+            <Label style="-fx-font-weight: bold;" text="Scenario"/>
+            <SplitPane fx:id="splitScenario" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+               <ScrollPane fx:id="boxScenario" fitToWidth="true" minHeight="50.0"/>
+               <TextArea fx:id="textScenarioDescription" editable="false" minHeight="40.0"
+                         promptText="Scenario description" wrapText="true"/>
+            </SplitPane>
+            <TextField fx:id="textPickedScenario" editable="false"/>
+            <Button fx:id="buttonRandomScenario" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomScenario" text="Pick Scenario"/>
          </VBox>
       </SplitPane>
 

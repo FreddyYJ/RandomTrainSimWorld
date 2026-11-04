@@ -1,6 +1,5 @@
-package com.github.freddyyj.randomtrainsimworld.config;
+package com.github.freddyyj.randomtrainsimworld;
 
-import com.github.freddyyj.randomtrainsimworld.Utils;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
@@ -140,7 +139,9 @@ public class Config {
 		}
 		root.add("ignoredLocomotives", locomotivesByRoute);
 
-		Utils.write(root, configFile);
+		try (Writer writer = new FileWriter(configFile, StandardCharsets.UTF_8)) {
+			writer.write(root.toString());
+		}
 
 		// The file now has the current ignores
 		initialIgnoredRoutes = ImmutableSet.copyOf(ignoredRoutes);

@@ -1,7 +1,7 @@
 package com.github.freddyyj.randomtrainsimworld;
 
-import com.github.freddyyj.randomtrainsimworld.config.Config;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import javafx.application.Application;
 
 import java.io.IOException;
@@ -17,10 +17,21 @@ import java.util.stream.Stream;
  * @author FreddyYJ_
  */
 public class Main {
-	public final ImmutableList<Route> routes;
+	public final ImmutableMap<String, Route> routes;
 	public final ImmutableList<Locomotive> locomotives;
-	private Map<Route,Set<String>> selectedLocomotives;
-	private Set<String> selectedRoutes;
+	// Included items to pick from, changed only by the include/exclude methods below
+	private final Set<Route> routeInclusion = new HashSet<>();
+	private final Map<Route,Set<Locomotive>> locomotiveInclusion = new HashMap<>();
+	// Included livery names for each locomotive on each route
+	private final Map<Route,Map<Locomotive,Set<String>>> liveryInclusion = new HashMap<>();
+	private final Map<Route,Set<String>> journeyInclusion = new HashMap<>();
+	private final Map<Route,Set<Scenario>> scenarioInclusion = new HashMap<>();
+	// Read-only views of the inclusions above, they show the changes made by the include/exclude methods
+	public final Set<Route> includedRoutes = Collections.unmodifiableSet(routeInclusion);
+	public final Map<Route,Set<Locomotive>> includedLocomotives;
+	public final Map<Route,Map<Locomotive,Set<String>>> includedLiveries;
+	public final Map<Route,Set<String>> includedJourneys;
+	public final Map<Route,Set<Scenario>> includedScenarios;
 	private Config config;
 	private static Main core=null;
 
@@ -31,7 +42,8 @@ public class Main {
 
 	public Main() {
 		// Load every bundled route and locomotive file, including subdirectories (e.g. usa/)
-		final ImmutableList.Builder<Route> routeBuilder = ImmutableList.builder();
+		// Routes are keyed by their names (ImmutableMap keeps the file order)
+		final ImmutableMap.Builder<String, Route> routeBuilder = ImmutableMap.builder();
 		final ImmutableList.Builder<Locomotive> locomotiveBuilder = ImmutableList.builder();
 		// One shared object per locomotive, keyed by its path under locomotives/ without .json (e.g. "usa/gp38-2")
 		final Map<String, Locomotive> locomotivesByPath = new HashMap<>();
@@ -49,24 +61,49 @@ public class Main {
 						locomotivesByPath.put(key.substring(0, key.length() - ".json".length()), locomotive);
 					});
 			routeFiles.filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".json")).sorted()
-					.forEach(path -> routeBuilder.add(new Route(path, locomotivesByPath)));
+					.forEach(path -> {
+						final Route route = new Route(path, locomotivesByPath);
+						routeBuilder.put(route.name, route);
+					});
 		} catch (IOException e) {
 			throw new UncheckedIOException("Failed to list route or locomotive files", e);
 		}
 		routes = routeBuilder.build();
 		locomotives = locomotiveBuilder.build();
 
-		// Select everything at first
-		selectedRoutes = new HashSet<>();
-		selectedLocomotives = new HashMap<>();
-		for (final Route route : routes) {
-			selectedRoutes.add(route.name);
-			final Set<String> routeLocomotives = new HashSet<>();
-			for (final Locomotive locomotive : route.locomotives.keySet()) {
-				routeLocomotives.add(locomotive.name);
+		// Include everything at first
+		final ImmutableMap.Builder<Route, Set<Locomotive>> locomotiveViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Map<Locomotive, Set<String>>> liveryViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Set<String>> journeyViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Set<Scenario>> scenarioViews = ImmutableMap.builder();
+		for (final Route route : routes.values()) {
+			routeInclusion.add(route);
+			final Set<Locomotive> routeLocomotives = new HashSet<>(route.locomotives.keySet());
+			final Map<Locomotive, Set<String>> routeLiveries = new HashMap<>();
+			final ImmutableMap.Builder<Locomotive, Set<String>> routeLiveryViews = ImmutableMap.builder();
+			for (final Map.Entry<Locomotive, ImmutableList<String>> entry : route.locomotives.entrySet()) {
+				// Liveries of this locomotive on this route
+				final Set<String> liveries = new HashSet<>(entry.getValue());
+				routeLiveries.put(entry.getKey(), liveries);
+				routeLiveryViews.put(entry.getKey(), Collections.unmodifiableSet(liveries));
 			}
-			selectedLocomotives.put(route, routeLocomotives);
+			final Set<String> routeJourneys = new HashSet<>(route.journeys);
+			final Set<Scenario> routeScenarios = new HashSet<>(route.scenarios);
+			locomotiveInclusion.put(route, routeLocomotives);
+			liveryInclusion.put(route, routeLiveries);
+			journeyInclusion.put(route, routeJourneys);
+			scenarioInclusion.put(route, routeScenarios);
+
+			// Wrap the inner sets too, so nothing inside the views can be changed
+			locomotiveViews.put(route, Collections.unmodifiableSet(routeLocomotives));
+			liveryViews.put(route, routeLiveryViews.build());
+			journeyViews.put(route, Collections.unmodifiableSet(routeJourneys));
+			scenarioViews.put(route, Collections.unmodifiableSet(routeScenarios));
 		}
+		includedLocomotives = locomotiveViews.build();
+		includedLiveries = liveryViews.build();
+		includedJourneys = journeyViews.build();
+		includedScenarios = scenarioViews.build();
 
 		try {
 			config = new Config();
@@ -82,6 +119,46 @@ public class Main {
 	public static Main getInstance() {
 		if (core==null) core=new Main();
 		return core;
+	}
+
+	public void includeRoute(final Route route) {
+		routeInclusion.add(route);
+	}
+
+	public void excludeRoute(final Route route) {
+		routeInclusion.remove(route);
+	}
+
+	public void includeLocomotive(final Route route, final Locomotive locomotive) {
+		locomotiveInclusion.get(route).add(locomotive);
+	}
+
+	public void excludeLocomotive(final Route route, final Locomotive locomotive) {
+		locomotiveInclusion.get(route).remove(locomotive);
+	}
+
+	public void includeLivery(final Route route, final Locomotive locomotive, final String livery) {
+		liveryInclusion.get(route).get(locomotive).add(livery);
+	}
+
+	public void excludeLivery(final Route route, final Locomotive locomotive, final String livery) {
+		liveryInclusion.get(route).get(locomotive).remove(livery);
+	}
+
+	public void includeJourney(final Route route, final String journey) {
+		journeyInclusion.get(route).add(journey);
+	}
+
+	public void excludeJourney(final Route route, final String journey) {
+		journeyInclusion.get(route).remove(journey);
+	}
+
+	public void includeScenario(final Route route, final Scenario scenario) {
+		scenarioInclusion.get(route).add(scenario);
+	}
+
+	public void excludeScenario(final Route route, final Scenario scenario) {
+		scenarioInclusion.get(route).remove(scenario);
 	}
 
 	/**
@@ -110,10 +187,16 @@ public class Main {
 	}
 
 	/**
-	 * Get routes, locos or weathers selection are changed.
-	 * @return true if selection changed
+	 * Get whether included routes or locos are changed.
+	 * @return true if inclusion changed
 	 */
 	public boolean isSaveChanged() {
 		return config.isChanged();
+	}
+
+	public static class RouteNotFoundException extends RuntimeException {
+		public RouteNotFoundException(final String routeName) {
+			super("Route " + routeName + " not found in the pool");
+		}
 	}
 }
