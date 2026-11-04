@@ -1,0 +1,15 @@
+{
+  "name": "SD40",
+  "nation": "USA",
+  "liveries": [
+    "CSX",
+    "Clinchfield Railroad"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Diesel (EMD)",
+  "power": "2000 hp/1490 kW",
+  "manufactured_year": "1972-1986",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 2264,
+  "description": "A famous diesel electric locomotive in US."
+}

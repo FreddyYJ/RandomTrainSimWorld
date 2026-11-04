@@ -22,6 +22,7 @@
         [description]                           <- divider draggable
       Each pane: picked result + "Pick ..." button. "Pick All" at the bottom.
 -->
+<?import javafx.scene.control.CheckBox?>
 <AnchorPane fx:id="anchorPane" minHeight="400.0" minWidth="700.0" prefHeight="600.0" prefWidth="1000.0"
             xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.github.freddyyj.randomtrainsimworld.gui.MainController">
@@ -47,6 +48,8 @@
             <SplitPane fx:id="splitRoute" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
                <ScrollPane fitToWidth="true" minHeight="50.0">
                   <VBox fx:id="boxRoute"/>
+                  <!-- Dummy route element, remove later -->
+                  <CheckBox fx:id="dummyRouteCheckBox" text="Dummy Route"/>
                </ScrollPane>
                <TextArea fx:id="textRouteDescription" editable="false" minHeight="40.0"
                          promptText="Route description" wrapText="true"/>

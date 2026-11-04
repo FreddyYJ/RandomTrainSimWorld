@@ -3,12 +3,14 @@
   "nation": "USA",
   "liveries": [
     "CSX",
-    "UP",
-    "BNSF"
+    "CSX YN2",
+    "Norfolk Southern",
+    "Union Pacific",
+    "Canadian National"
   ],
   "type": "Diesel Electric Locomotive",
   "manufacturer": "Electro-Motive Diesel (EMD)",
-  "power": "2000 hp/1490 kW",
+  "power": "2,000 hp/1,490 kW",
   "manufactured_year": "1972-1986",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 2264,

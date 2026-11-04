@@ -1,0 +1,118 @@
+{
+  "name": "Bahnstrecke Nürnberg-Würzburg",
+  "locomotives": {
+    "germany/br412": [
+      "DB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br440": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br403": [
+      "DB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "The Big Time",
+    "ICE'd out"
+  ],
+  "scenario": {
+    "Point Break": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 412 ICE4"]
+    },
+    "ICE Skates": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 412 ICE4"]
+    },
+    "Then and Now": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 412 ICE4"]
+    },
+    "Track Works Ahead": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 440 DB"]
+    },
+    "Put it on ICE": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 401 ICE1"]
+    },
+    "Square Dance": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 193 DB Vectron"]
+    },
+    "Back on Track": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 440 DB"]
+    },
+    "Nighty Night": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["BR 440 DB"]
+    }
+  },
+  "description": "Various type of trains between Nürnberg and Würzburg."
+}

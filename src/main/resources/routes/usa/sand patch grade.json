@@ -2,22 +2,104 @@
   "name": "Sand Patch Grade",
   "locomotives": {
     "usa/gp38-2": [
-      "CSX"
+      "CSX",
+      "CSX YN2"
     ],
     "usa/sd40-2": [
       "CSX",
-      "BNSF"
+      "CSX YN2",
+      "BNSF",
+      "ATSF"
     ],
     "usa/ac4400cw": [
-      "CSX"
+      "CSX",
+      "CSX YN2"
     ],
     "usa/c40-8w": [
+      "CSX",
+      "ATSF"
+    ],
+    "usa/sd40": [
       "CSX"
     ]
   },
   "nation": "USA",
   "journey": [
-    "Sand Patch Grade"
+    "Sand Patch Grade Journey",
+    "CSX C40-8W",
+    "Patch Work"
   ],
+  "scenario": {
+    "Stripey Rescue": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["SD40 CSX"]
+    },
+    "Earning your Stripes": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["SD40 CSX"]
+    },
+    "Stars and Stripes": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["SD40 CSX"]
+    },
+    "A Helping Hand": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["SD40-2 CSX"]
+    },
+    "Clear Cut": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["SD40-2 CSX", "GP38-2 CSX", "AC4400CW CSX"]
+    },
+    "Fully Fuelled": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["SD40-2 CSX", "GP38-2 CSX"]
+    },
+    "Cumberland Charge": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["GP38-2 CSX"]
+    },
+    "Ice and Snow": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["SD40-2 CSX", "GP38-2 CSX", "AC4400CW CSX"]
+    },
+    "Powering America (Part 1)": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["AC4400CW CSX"]
+    },
+    "Powering America (Part 2)": {
+      "difficulty": 5,
+      "length": "2:00",
+      "locomotive": ["AC4400CW CSX"]
+    },
+    "Cumberland Switchback": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["SD40-2 CSX", "GP38-2 CSX", "AC4400CW CSX"]
+    },
+    "Eastbound Coal": {
+      "difficulty": 3,
+      "length": "1:40",
+      "locomotive": ["C40-8W CSX"]
+    },
+    "Westbound Climb": {
+      "difficulty": 5,
+      "length": "1:00",
+      "locomotive": ["C40-8W CSX"]
+    },
+    "Slippy Descent": {
+      "difficulty": 5,
+      "length": "1:00",
+      "locomotive": ["C40-8W CSX"]
+    }
+  },
   "description": "Sand Patch Grade is a famous US freight route owned by CSX."
 }
