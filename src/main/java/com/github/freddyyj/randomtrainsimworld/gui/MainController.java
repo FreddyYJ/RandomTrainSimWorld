@@ -469,6 +469,11 @@ public class MainController {
 
     @FXML
     private void onHelp(ActionEvent event) {
+        new Alert(AlertType.INFORMATION, "Random Train Sim World is the simple tool to show" +
+                "the information of the routes, locomotives, etc. included in Train Sim World." +
+                "Also, it provides simple features to pick them randomly, to help you to decide which content to " +
+                "play. This tool is being updated actively, when a new DLC is released." +
+                "This project is maintained under MIT License.").show();
     }
 
     @FXML

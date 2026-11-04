@@ -1,5 +1,7 @@
-1. Add `onHelp`
-2. Finish description formats in routes, locos and scenarios
-3. Add filter in route. Optionally, for loco
-4. Add search features (Ctrl+F)
-5. Long term: add all data
+* Finish description formats in routes, locos and scenarios
+* Add junit tests
+* Add Javadocs
+* Update dependencies version
+* Add filter in route. Optionally, for loco
+* Add search features (Ctrl+F)
+* Long term: add all data
