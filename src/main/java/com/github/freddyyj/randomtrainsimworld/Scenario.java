@@ -32,4 +32,11 @@ public class Scenario {
         this.length = json.get("length").getAsString();
         this.locomotives = locomotives.build();
     }
+
+    public String getDescriptionString() {
+        return "Name: " + name + "\n" +
+                "Difficulty: " + "█".repeat(difficulty) + "░".repeat(5 - difficulty) + "\n" +
+                "Length: " + length + "\n" +
+                "Locomotive Used: " + String.join(", ",locomotives) + "\n";
+    }
 }

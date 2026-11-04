@@ -74,4 +74,17 @@ public class Locomotive {
 		this.totalProduced = json.get("total").getAsInt();
 		this.description = json.get("description").getAsString();
 	}
+
+	public String getDescriptionString() {
+		return "Name: " + name + "\n" +
+				"Nation: " + nation + "\n" +
+				"Supported Liveries: " + String.join(", ", liveries) + "\n" +
+				"Type: " + type + "\n" +
+				"Manufacturer: " + manufacturer + "\n" +
+				"Manufactured Year: " + manufacturedYear + "\n" +
+				"Power: " + power + "\n" +
+				"Gauge: " + gauge + "\n" +
+				"Total Produced: " + totalProduced + "\n" +
+				"\n" + description + "\n";
+	}
 }

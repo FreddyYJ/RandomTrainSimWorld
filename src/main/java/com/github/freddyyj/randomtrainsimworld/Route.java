@@ -86,4 +86,10 @@ public class Route {
 		this.scenarios = scenarios.build();
 		this.description = json.get("description").getAsString();
 	}
+
+	public String getDescriptionString() {
+		return "Name: " + name + "\n" +
+				"Nation: " + nation + "\n" +
+				"\n" + description + "\n";
+	}
 }

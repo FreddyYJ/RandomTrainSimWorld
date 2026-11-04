@@ -188,6 +188,7 @@ public class MainController {
                 journeyCheckBox.setSelected(Main.getInstance().includedJourneys.get(route).contains(journey));
                 journeyCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                 journeyCheckBox.setOnAction(this::onCheckJourneyInclude);
+                journeyCheckBox.setOnMouseClicked(this::onCheckJourneyClick);
                 journeyBox.getChildren().add(journeyCheckBox);
             }
             journeyBoxes.put(route, journeyBox);
@@ -212,6 +213,7 @@ public class MainController {
                 scenarioCheckBox.setUserData(scenario); // Keep the scenario to find it from the checkbox
                 scenarioCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                 scenarioCheckBox.setOnAction(this::onCheckScenarioInclude);
+                scenarioCheckBox.setOnMouseClicked(this::onCheckScenarioClick);
                 scenarioBox.getChildren().add(scenarioCheckBox);
             }
             scenarioBoxes.put(route, scenarioBox);
@@ -238,6 +240,7 @@ public class MainController {
                     liveryCheckBox.setUserData(locomotive); // Keep the locomotive this livery belongs to
                     liveryCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                     liveryCheckBox.setOnAction(this::onCheckLiveryInclude);
+                    liveryCheckBox.setOnMouseClicked(this::onCheckLiveryClick);
                     liveryBox.getChildren().add(liveryCheckBox);
                 }
             }
@@ -264,7 +267,7 @@ public class MainController {
         // Show the clicked route and refill the other panes for it
         pickedRoute = route;
         textPickedRoute.setText(route.name);
-        textRouteDescription.setText(route.description);
+        textRouteDescription.setText(route.getDescriptionString());
         updateLocoPane(route);
         updateJourneyPane(route);
         updateScenarioPane(route);
@@ -313,7 +316,7 @@ public class MainController {
 
         // Show the clicked loco and refill the other panes for it
         textPickedLoco.setText(loco.name);
-        textLocoDescription.setText(loco.description);
+        textLocoDescription.setText(loco.getDescriptionString());
         updateLiveryPane(pickedRoute, loco);
         pickedLoco = loco; // After updateLiveryPane, which resets the picked livery only
     }
@@ -340,6 +343,22 @@ public class MainController {
         }
     }
 
+    @FXML
+    private void onCheckLiveryClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final String livery = checkBox.getText();
+
+        textPickedLivery.setText(livery);
+        pickedLivery = livery;
+    }
+
     /**
      * An event handler when a livery checkbox is ticked or unticked.
      * Include or exclude the livery with the checkbox state.
@@ -363,6 +382,22 @@ public class MainController {
     }
 
     @FXML
+    private void onCheckJourneyClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final String journey = checkBox.getText();
+
+        textPickedJourney.setText(journey);
+        pickedJourney = journey;
+    }
+
+    @FXML
     private void onCheckJourneyInclude(ActionEvent event) {
         CheckBox checkBox = (CheckBox) event.getSource();
         final Main main = Main.getInstance();
@@ -376,6 +411,23 @@ public class MainController {
             // Included
             main.includeJourney(route, checkBox.getText());
         }
+    }
+
+    @FXML
+    private void onCheckScenarioClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Scenario scenario = (Scenario) checkBox.getUserData(); // Set in updateLocoPane
+
+        textPickedScenario.setText(scenario.name);
+        textScenarioDescription.setText(scenario.getDescriptionString());
+        pickedScenario = scenario;
     }
 
     @FXML
@@ -489,7 +541,7 @@ public class MainController {
 
         pickedRoute = route;
         textPickedRoute.setText(route.name);
-        textRouteDescription.setText(route.description);
+        textRouteDescription.setText(route.getDescriptionString());
         updateLocoPane(route);
         updateJourneyPane(route);
         updateScenarioPane(route);
@@ -511,7 +563,7 @@ public class MainController {
         final Locomotive loco = includedLocos.get(random.nextInt(includedLocos.size()));
 
         textPickedLoco.setText(loco.name);
-        textLocoDescription.setText(loco.description);
+        textLocoDescription.setText(loco.getDescriptionString());
         updateLiveryPane(pickedRoute, loco);
         pickedLoco = loco; // After updateLiveryPane, which resets the picked livery only
     }
@@ -565,9 +617,7 @@ public class MainController {
         }
         pickedScenario = includedScenarios.get(random.nextInt(includedScenarios.size()));
         textPickedScenario.setText(pickedScenario.name);
-        // Scenarios have no description, so show their details instead
-        textScenarioDescription.setText("Difficulty: " + pickedScenario.difficulty + "\nLength: " + pickedScenario.length
-                + "\nLocomotives: " + String.join(", ", pickedScenario.locomotives));
+        textScenarioDescription.setText(pickedScenario.getDescriptionString());
     }
 
     @FXML
