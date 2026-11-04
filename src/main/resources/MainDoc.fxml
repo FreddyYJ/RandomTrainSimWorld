@@ -33,7 +33,6 @@
             <MenuItem fx:id="itemSave" mnemonicParsing="false" onAction="#onSave" text="Save" accelerator="Shortcut+S"/>
             <MenuItem fx:id="itemSaveAs" mnemonicParsing="false" onAction="#onSaveAs" text="Save As..."/>
             <MenuItem fx:id="itemLoad" mnemonicParsing="false" onAction="#onLoad" text="Load..."/>
-            <MenuItem fx:id="itemClose" mnemonicParsing="false" onAction="#onClose" text="Close"/>
          </Menu>
          <Menu mnemonicParsing="false" text="Help">
             <MenuItem fx:id="itemAbout" mnemonicParsing="false" onAction="#onHelp" text="About"/>

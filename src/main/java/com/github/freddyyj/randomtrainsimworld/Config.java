@@ -1,163 +1,209 @@
 package com.github.freddyyj.randomtrainsimworld;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 
-import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-
+// Reads and writes the excluded routes, locomotives, liveries, journeys and scenarios.
+// Main keeps the inclusions, this class only stores what is excluded, by name.
+// Excluded items are kept, so new routes or locomotives are included by default.
 public class Config {
-	// Config file in the system's document directory
-	public static final File FILE_NAME = new File(
-			FileSystemView.getFileSystemView().getDefaultDirectory(), "randomtsw.json");
-	private final File configFile;
-	private Set<String> ignoredRoutes;
-	private Map<String, Set<String>> ignoredLocomotives;
-	// Ignores stored in the config file, used to check changes
-	private ImmutableSet<String> initialIgnoredRoutes;
-	private ImmutableMap<String, Set<String>> initialIgnoredLocomotives;
+	private static final int VERSION = 2;
 
-	public Config(final File configFile) throws IOException{
+	// null if not saved or loaded yet, then nothing is excluded
+	public final File configFile;
+	// Excluded names read from the file, or written by the last save
+	private final Set<String> excludedRoutes = new HashSet<>();
+	// Route name -> locomotive names
+	private final Map<String, Set<String>> excludedLocomotives = new HashMap<>();
+	// Route name -> locomotive name -> livery names
+	private final Map<String, Map<String, Set<String>>> excludedLiveries = new HashMap<>();
+	// Route name -> journey names
+	private final Map<String, Set<String>> excludedJourneys = new HashMap<>();
+	// Route name -> scenario names
+	private final Map<String, Set<String>> excludedScenarios = new HashMap<>();
+
+	// Does not read the file, call load() for it
+	public Config(final File configFile) {
 		this.configFile = configFile;
-		reloadConfig();
 	}
 
-	public Config(final String configFilePath) throws IOException {
+	public Config(final String configFilePath) {
 		this(new File(configFilePath));
 	}
 
-	public Config() throws IOException {
-		this(Config.FILE_NAME);
+	// Config without a file, save() needs a file so use Main.saveAs() first
+	public Config() {
+		this((File) null);
 	}
 
-	public Config(final File configFile, final Config oldConfig) throws IOException {
-		// Read the file first to set initial ignores
-		this(configFile);
+	// Reads the file, nothing is excluded if the file does not exist
+	public void load() throws IOException {
+		excludedRoutes.clear();
+		excludedLocomotives.clear();
+		excludedLiveries.clear();
+		excludedJourneys.clear();
+		excludedScenarios.clear();
+		if (configFile == null || !configFile.exists()) return;
 
-		// Copy each set too, so changes here don't affect oldConfig
-		this.ignoredRoutes = new HashSet<>(oldConfig.ignoredRoutes);
-		this.ignoredLocomotives = new HashMap<>();
-		for (Map.Entry<String, Set<String>> entry : oldConfig.ignoredLocomotives.entrySet()) {
-			ignoredLocomotives.put(entry.getKey(), new HashSet<>(entry.getValue()));
-		}
-	}
+		try (Reader reader = new FileReader(configFile, StandardCharsets.UTF_8)) {
+			final JsonObject root = JsonParser.parseReader(reader).getAsJsonObject();
 
-	public Config(final String configFilePath, final Config oldConfig) throws IOException {
-		this(new File(configFilePath), oldConfig);
-	}
-
-	public void addRouteIgnore(final String route) {
-		ignoredRoutes.add(route);
-	}
-
-	public void addLocomotiveIgnore(final String route, final String locomotive) {
-		if (!ignoredLocomotives.containsKey(route)) {
-			// Add new route if not exist
-			ignoredLocomotives.put(route, new HashSet<>());
-		}
-		ignoredLocomotives.get(route).add(locomotive);
-	}
-
-	public boolean isRouteIgnored(final String route) {
-		return ignoredRoutes.contains(route);
-	}
-
-	public boolean isLocomotiveIgnored(final String route, final String locomotive) {
-		if (ignoredRoutes.contains(route)) return true; // Route is ignored
-		if (!ignoredLocomotives.containsKey(route)) return false; // Entire route is not ignored
-		return ignoredLocomotives.get(route).contains(locomotive);
-	}
-
-	public void reloadConfig() throws IOException {
-		ignoredRoutes = new HashSet<>();
-		ignoredLocomotives = new HashMap<>();
-
-		// No config file yet, keep it empty
-		if (configFile.exists()) {
-			if (!configFile.canRead()) {
-				throw new IOException("Cannot read config file " + configFile.getPath());
-			}
-
-			try (Reader reader = new FileReader(configFile, StandardCharsets.UTF_8)) {
-				JsonObject root = JsonParser.parseReader(reader).getAsJsonObject();
-
-				// Routes ignored as a whole
-				if (root.has("ignoredRoutes")) {
-					for (JsonElement route : root.getAsJsonArray("ignoredRoutes")) {
-						ignoredRoutes.add(route.getAsString());
-					}
-				}
-
-				// Locomotives ignored in each route
-				if (root.has("ignoredLocomotives")) {
-					for (Map.Entry<String, JsonElement> entry : root.getAsJsonObject("ignoredLocomotives").entrySet()) {
-						Set<String> locomotives = new HashSet<>();
-						for (JsonElement locomotive : entry.getValue().getAsJsonArray()) {
-							locomotives.add(locomotive.getAsString());
-						}
-						ignoredLocomotives.put(entry.getKey(), locomotives);
-					}
+			if (root.has("excludedRoutes")) {
+				for (final JsonElement route : root.getAsJsonArray("excludedRoutes")) {
+					excludedRoutes.add(route.getAsString());
 				}
 			}
+			readNamesByRoute(root, "excludedLocomotives", excludedLocomotives);
+			readNamesByRoute(root, "excludedJourneys", excludedJourneys);
+			readNamesByRoute(root, "excludedScenarios", excludedScenarios);
+			if (root.has("excludedLiveries")) {
+				for (final Map.Entry<String, JsonElement> route : root.getAsJsonObject("excludedLiveries").entrySet()) {
+					final Map<String, Set<String>> liveriesByLocomotive = new HashMap<>();
+					for (final Map.Entry<String, JsonElement> locomotive : route.getValue().getAsJsonObject().entrySet()) {
+						liveriesByLocomotive.put(locomotive.getKey(), readNames(locomotive.getValue().getAsJsonArray()));
+					}
+					excludedLiveries.put(route.getKey(), liveriesByLocomotive);
+				}
+			}
+		} catch (JsonParseException | IllegalStateException | UnsupportedOperationException e) {
+			// Not a JSON file, or the structure is different
+			throw new IOException("Invalid config file " + configFile.getPath(), e);
 		}
-
-		// Remember what the file has
-		initialIgnoredRoutes = ImmutableSet.copyOf(ignoredRoutes);
-		initialIgnoredLocomotives = ImmutableMap.copyOf(Maps.transformValues(ignoredLocomotives, ImmutableSet::copyOf));
 	}
 
-	public void save() throws IOException {
-		JsonObject root = new JsonObject();
-		root.addProperty("version", 1);
+	public boolean isRouteExcluded(final Route route) {
+		return excludedRoutes.contains(route.name);
+	}
 
-		JsonArray routes = new JsonArray();
-		for (String route : ignoredRoutes) {
-			routes.add(route);
+	public boolean isLocomotiveExcluded(final Route route, final Locomotive locomotive) {
+		return excludedLocomotives.getOrDefault(route.name, Set.of()).contains(locomotive.name);
+	}
+
+	public boolean isLiveryExcluded(final Route route, final Locomotive locomotive, final String livery) {
+		return excludedLiveries.getOrDefault(route.name, Map.of()).getOrDefault(locomotive.name, Set.of()).contains(livery);
+	}
+
+	public boolean isJourneyExcluded(final Route route, final String journey) {
+		return excludedJourneys.getOrDefault(route.name, Set.of()).contains(journey);
+	}
+
+	public boolean isScenarioExcluded(final Route route, final Scenario scenario) {
+		return excludedScenarios.getOrDefault(route.name, Set.of()).contains(scenario.name);
+	}
+
+	// Writes everything not included in main, then they become the excluded names of this config
+	public void save(final Main main) throws IOException {
+		if (configFile == null) {
+			throw new IllegalStateException("Config file path is not set");
 		}
-		root.add("ignoredRoutes", routes);
-
-		// Skip routes with no ignored locomotives
-		JsonObject locomotivesByRoute = new JsonObject();
-		for (Map.Entry<String, Set<String>> entry : ignoredLocomotives.entrySet()) {
-			if (entry.getValue().isEmpty()) continue;
-			JsonArray locomotives = new JsonArray();
-			for (String locomotive : entry.getValue()) {
-				locomotives.add(locomotive);
+		excludedRoutes.clear();
+		excludedLocomotives.clear();
+		excludedLiveries.clear();
+		excludedJourneys.clear();
+		excludedScenarios.clear();
+		for (final Route route : main.routes.values()) {
+			if (!main.includedRoutes.contains(route)) excludedRoutes.add(route.name);
+			for (final Map.Entry<Locomotive, ? extends List<String>> entry : route.locomotives.entrySet()) {
+				final Locomotive locomotive = entry.getKey();
+				if (!main.includedLocomotives.get(route).contains(locomotive)) {
+					excludedLocomotives.computeIfAbsent(route.name, r -> new HashSet<>()).add(locomotive.name);
+				}
+				for (final String livery : entry.getValue()) {
+					if (!main.includedLiveries.get(route).get(locomotive).contains(livery)) {
+						excludedLiveries.computeIfAbsent(route.name, r -> new HashMap<>())
+								.computeIfAbsent(locomotive.name, l -> new HashSet<>()).add(livery);
+					}
+				}
 			}
-			locomotivesByRoute.add(entry.getKey(), locomotives);
+			for (final String journey : route.journeys) {
+				if (!main.includedJourneys.get(route).contains(journey)) {
+					excludedJourneys.computeIfAbsent(route.name, r -> new HashSet<>()).add(journey);
+				}
+			}
+			for (final Scenario scenario : route.scenarios) {
+				if (!main.includedScenarios.get(route).contains(scenario)) {
+					excludedScenarios.computeIfAbsent(route.name, r -> new HashSet<>()).add(scenario.name);
+				}
+			}
 		}
-		root.add("ignoredLocomotives", locomotivesByRoute);
+
+		final JsonObject root = new JsonObject();
+		root.addProperty("version", VERSION);
+		root.add("excludedRoutes", toSortedArray(excludedRoutes));
+		root.add("excludedLocomotives", namesByRouteToJson(excludedLocomotives));
+		final JsonObject liveries = new JsonObject();
+		for (final Map.Entry<String, Map<String, Set<String>>> route : new TreeMap<>(excludedLiveries).entrySet()) {
+			liveries.add(route.getKey(), namesByRouteToJson(route.getValue()));
+		}
+		root.add("excludedLiveries", liveries);
+		root.add("excludedJourneys", namesByRouteToJson(excludedJourneys));
+		root.add("excludedScenarios", namesByRouteToJson(excludedScenarios));
 
 		try (Writer writer = new FileWriter(configFile, StandardCharsets.UTF_8)) {
 			writer.write(root.toString());
 		}
-
-		// The file now has the current ignores
-		initialIgnoredRoutes = ImmutableSet.copyOf(ignoredRoutes);
-		initialIgnoredLocomotives = ImmutableMap.copyOf(Maps.transformValues(ignoredLocomotives, ImmutableSet::copyOf));
 	}
 
-	public boolean isChanged() {
-		if (!ignoredRoutes.equals(initialIgnoredRoutes)) return true;
-
-		// Check both sides, an empty set is same as no entry
-		for (Map.Entry<String, Set<String>> entry : ignoredLocomotives.entrySet()) {
-			if (!entry.getValue().equals(initialIgnoredLocomotives.getOrDefault(entry.getKey(), Set.of()))) return true;
-		}
-		for (Map.Entry<String, Set<String>> entry : initialIgnoredLocomotives.entrySet()) {
-			if (!entry.getValue().equals(ignoredLocomotives.getOrDefault(entry.getKey(), Set.of()))) return true;
+	// True if main includes or excludes something differently from this config
+	// Names in the file that no longer exist in the data are not counted
+	public boolean isChanged(final Main main) {
+		for (final Route route : main.routes.values()) {
+			if (main.includedRoutes.contains(route) == isRouteExcluded(route)) return true;
+			for (final Map.Entry<Locomotive, ? extends List<String>> entry : route.locomotives.entrySet()) {
+				final Locomotive locomotive = entry.getKey();
+				if (main.includedLocomotives.get(route).contains(locomotive) == isLocomotiveExcluded(route, locomotive)) return true;
+				for (final String livery : entry.getValue()) {
+					if (main.includedLiveries.get(route).get(locomotive).contains(livery)
+							== isLiveryExcluded(route, locomotive, livery)) return true;
+				}
+			}
+			for (final String journey : route.journeys) {
+				if (main.includedJourneys.get(route).contains(journey) == isJourneyExcluded(route, journey)) return true;
+			}
+			for (final Scenario scenario : route.scenarios) {
+				if (main.includedScenarios.get(route).contains(scenario) == isScenarioExcluded(route, scenario)) return true;
+			}
 		}
 		return false;
+	}
+
+	// Reads {"route name": ["name", ...], ...} into the given map
+	private static void readNamesByRoute(final JsonObject root, final String key, final Map<String, Set<String>> target) {
+		if (!root.has(key)) return;
+		for (final Map.Entry<String, JsonElement> entry : root.getAsJsonObject(key).entrySet()) {
+			target.put(entry.getKey(), readNames(entry.getValue().getAsJsonArray()));
+		}
+	}
+
+	private static Set<String> readNames(final JsonArray array) {
+		final Set<String> names = new HashSet<>();
+		for (final JsonElement name : array) {
+			names.add(name.getAsString());
+		}
+		return names;
+	}
+
+	// Writes {"key": ["name", ...], ...}, sorted so the file does not change without real changes
+	private static JsonObject namesByRouteToJson(final Map<String, Set<String>> namesByKey) {
+		final JsonObject json = new JsonObject();
+		for (final Map.Entry<String, Set<String>> entry : new TreeMap<>(namesByKey).entrySet()) {
+			json.add(entry.getKey(), toSortedArray(entry.getValue()));
+		}
+		return json;
+	}
+
+	private static JsonArray toSortedArray(final Set<String> names) {
+		final JsonArray array = new JsonArray();
+		for (final String name : new TreeSet<>(names)) {
+			array.add(name);
+		}
+		return array;
 	}
 }

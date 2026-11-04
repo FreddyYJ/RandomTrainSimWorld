@@ -133,7 +133,7 @@ public class MainController {
         boxRoute.getChildren().clear(); // Removes the dummy route
         for (final String routeName : core.routes.keySet()) {
             final CheckBox routeCheckBox = new CheckBox(routeName); // Route is found by this name later
-            routeCheckBox.setSelected(true); // Everything is included at first
+            routeCheckBox.setSelected(core.includedRoutes.contains(core.routes.get(routeName))); // Ticks from the config
             routeCheckBox.setPadding(new Insets(5., 0., 0., 5.));
             routeCheckBox.setOnAction(this::onCheckRouteInclude);
             routeCheckBox.setOnMouseClicked(this::onCheckRouteClick);
@@ -154,7 +154,7 @@ public class MainController {
             locoBox = new VBox();
             for (final Locomotive locomotive : route.locomotives.keySet()) {
                 final CheckBox locoCheckBox = new CheckBox(locomotive.name);
-                locoCheckBox.setSelected(true);
+                locoCheckBox.setSelected(Main.getInstance().includedLocomotives.get(route).contains(locomotive));
                 locoCheckBox.setUserData(locomotive); // Keep the locomotive to find it from the checkbox
                 locoCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                 locoCheckBox.setOnAction(this::onCheckLocoInclude);
@@ -185,7 +185,7 @@ public class MainController {
             journeyBox = new VBox();
             for (final String journey : route.journeys) {
                 final CheckBox journeyCheckBox = new CheckBox(journey);
-                journeyCheckBox.setSelected(true);
+                journeyCheckBox.setSelected(Main.getInstance().includedJourneys.get(route).contains(journey));
                 journeyCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                 journeyCheckBox.setOnAction(this::onCheckJourneyInclude);
                 journeyBox.getChildren().add(journeyCheckBox);
@@ -208,7 +208,7 @@ public class MainController {
             scenarioBox = new VBox();
             for (final Scenario scenario : route.scenarios) {
                 final CheckBox scenarioCheckBox = new CheckBox(scenario.name);
-                scenarioCheckBox.setSelected(true);
+                scenarioCheckBox.setSelected(Main.getInstance().includedScenarios.get(route).contains(scenario));
                 scenarioCheckBox.setUserData(scenario); // Keep the scenario to find it from the checkbox
                 scenarioCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                 scenarioCheckBox.setOnAction(this::onCheckScenarioInclude);
@@ -234,7 +234,7 @@ public class MainController {
             if (liveries != null) {
                 for (final String livery : liveries) {
                     final CheckBox liveryCheckBox = new CheckBox(livery);
-                    liveryCheckBox.setSelected(true);
+                    liveryCheckBox.setSelected(Main.getInstance().includedLiveries.get(route).get(locomotive).contains(livery));
                     liveryCheckBox.setUserData(locomotive); // Keep the locomotive this livery belongs to
                     liveryCheckBox.setPadding(new Insets(5., 0., 0., 5.));
                     liveryCheckBox.setOnAction(this::onCheckLiveryInclude);
@@ -397,18 +397,74 @@ public class MainController {
 
     @FXML
     private void onSave(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (!main.hasConfigFile()) {
+            // No config file yet, ask where to save it
+            onSaveAs(event);
+            return;
+        }
+        try {
+            main.save();
+        } catch (IOException e) {
+            new Alert(AlertType.ERROR, "Failed to save the config file:\n" + e.getMessage()).show();
+        }
     }
 
     @FXML
     private void onSaveAs(ActionEvent event) {
+        final FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save Config File");
+        chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
+        if (Settings.DOCUMENT_DIRECTORY.isDirectory()) {
+            chooser.setInitialDirectory(Settings.DOCUMENT_DIRECTORY);
+        }
+        chooser.setInitialFileName("randomtsw.json");
+        final File file = chooser.showSaveDialog(anchorPane.getScene().getWindow());
+        if (file == null) return; // Cancelled
+
+        try {
+            Main.getInstance().saveAs(file.getPath()); // Also remembered for the next startup
+        } catch (IOException e) {
+            new Alert(AlertType.ERROR, "Failed to save " + file.getPath() + ":\n" + e.getMessage()).show();
+        }
     }
 
     @FXML
     private void onLoad(ActionEvent event) {
-    }
+        final FileChooser chooser = new FileChooser();
+        chooser.setTitle("Load Config File");
+        chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
+        if (Settings.DOCUMENT_DIRECTORY.isDirectory()) {
+            chooser.setInitialDirectory(Settings.DOCUMENT_DIRECTORY);
+        }
+        final File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
+        if (file == null) return; // Cancelled
 
-    @FXML
-    private void onClose(ActionEvent event) {
+        final Main main = Main.getInstance();
+        try {
+            main.reload(file.getPath());
+        } catch (IOException e) {
+            new Alert(AlertType.ERROR, "Failed to load " + file.getPath() + ":\n" + e.getMessage()).show();
+            return;
+        }
+
+        // Update the route ticks, they are kept by the route pane
+        for (final Node node : boxRoute.getChildren()) {
+            final CheckBox routeCheckBox = (CheckBox) node;
+            routeCheckBox.setSelected(main.includedRoutes.contains(main.routes.get(routeCheckBox.getText())));
+        }
+
+        // Drop the cached checkboxes, they are built again with the loaded ticks
+        locoBoxes.clear();
+        journeyBoxes.clear();
+        scenarioBoxes.clear();
+        liveryBoxes.clear();
+        if (pickedRoute != null) {
+            // Show the picked route again, this resets the other picks
+            updateLocoPane(pickedRoute);
+            updateJourneyPane(pickedRoute);
+            updateScenarioPane(pickedRoute);
+        }
     }
 
     @FXML

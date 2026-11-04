@@ -33,10 +33,11 @@ public class Main {
 	public final Map<Route,Set<String>> includedJourneys;
 	public final Map<Route,Set<Scenario>> includedScenarios;
 	private Config config;
+	private Settings settings;
 	private static Main core=null;
 
 	public static void main(String[] args) {
-		Main main = Main.getInstance();
+		// Main is created in the GUI, so errors while loading data can be shown in an alert
 		Application.launch(com.github.freddyyj.randomtrainsimworld.gui.Main.class);
 	}
 
@@ -105,10 +106,22 @@ public class Main {
 		includedJourneys = journeyViews.build();
 		includedScenarios = scenarioViews.build();
 
+		// Settings remember the config file of the last run
 		try {
-			config = new Config();
-		} catch (Exception e) {
+			settings = Settings.load(); // Creates the settings file at the first run
+		} catch (IOException e) {
+			System.err.println("Failed to read settings file: " + e.getMessage());
+			settings = new Settings();
+		}
 
+		// Exclude what the last config file has, or keep everything included without one
+		config = new Config();
+		if (!settings.configFilePath.isEmpty()) {
+			try {
+				reload(settings.configFilePath);
+			} catch (IOException e) {
+				System.err.println("Failed to read config file: " + e.getMessage());
+			}
 		}
 	}
 
@@ -165,7 +178,7 @@ public class Main {
 	 * Save and close save file.
 	 */
 	public void save() throws IOException {
-		config.save();
+		config.save(this);
 	}
 
 	/**
@@ -173,9 +186,13 @@ public class Main {
 	 * @param path file path
 	 */
 	public void saveAs(String path) throws IOException {
-		Config oldConfig = config;
-		config = new Config(path, oldConfig);
-		config.save();
+		final Config newConfig = new Config(path);
+		newConfig.save(this);
+		config = newConfig; // Save to this file from now on
+
+		// Load this file at the next startup
+		settings.configFilePath = path;
+		settings.save();
 	}
 
 	/**
@@ -183,7 +200,45 @@ public class Main {
 	 * @param path file path
 	 */
 	public void reload(String path) throws IOException {
-		config = new Config(path);
+		final Config newConfig = new Config(path);
+		newConfig.load(); // Keep the current config if this fails
+		config = newConfig;
+		// Load this file at the next startup, skip writing if it is already there
+		if (!path.equals(settings.configFilePath)) {
+			settings.configFilePath = path;
+			settings.save();
+		}
+
+		// Refill the inclusions in place, so the read-only views keep showing them
+		for (final Route route : routes.values()) {
+			if (config.isRouteExcluded(route)) routeInclusion.remove(route);
+			else routeInclusion.add(route);
+
+			final Set<Locomotive> locomotives = locomotiveInclusion.get(route);
+			locomotives.clear();
+			for (final Map.Entry<Locomotive, ImmutableList<String>> entry : route.locomotives.entrySet()) {
+				final Locomotive locomotive = entry.getKey();
+				if (!config.isLocomotiveExcluded(route, locomotive)) locomotives.add(locomotive);
+
+				final Set<String> liveries = liveryInclusion.get(route).get(locomotive);
+				liveries.clear();
+				for (final String livery : entry.getValue()) {
+					if (!config.isLiveryExcluded(route, locomotive, livery)) liveries.add(livery);
+				}
+			}
+
+			final Set<String> journeys = journeyInclusion.get(route);
+			journeys.clear();
+			for (final String journey : route.journeys) {
+				if (!config.isJourneyExcluded(route, journey)) journeys.add(journey);
+			}
+
+			final Set<Scenario> scenarios = scenarioInclusion.get(route);
+			scenarios.clear();
+			for (final Scenario scenario : route.scenarios) {
+				if (!config.isScenarioExcluded(route, scenario)) scenarios.add(scenario);
+			}
+		}
 	}
 
 	/**
@@ -191,7 +246,12 @@ public class Main {
 	 * @return true if inclusion changed
 	 */
 	public boolean isSaveChanged() {
-		return config.isChanged();
+		return config.isChanged(this);
+	}
+
+	// False until a config file is saved or loaded, then save() can be used
+	public boolean hasConfigFile() {
+		return config.configFile != null;
 	}
 
 	public static class RouteNotFoundException extends RuntimeException {
