@@ -1,14 +1,15 @@
 {
-  "name": "ÖBB 1116",
+  "name": "ÖBB 1116 Taurus",
   "nation": "Austria",
   "liveries": [
     "ÖBB"
   ],
   "type": "Electric Locomotive",
-  "manufacturer": "Siemens",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "manufacturer": "Siemens, Krauss-Maffei",
+  "power": "8,580 hp/6,400 kW",
+  "max_speed": "230 km/h (143 mph)",
+  "manufactured_year": "2000-",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 360,
+  "description": "The EuroSprinter family of electric locomotives is a modular concept of locomotives for the European market built by Siemens Mobility. The internal Siemens product name is ES 64, with ES for EuroSprinter and the number 64 indicating the 6,400 kW power at rail.\n\nAdditional information is given in the name on the usage (U as universal, P as prototype and F as freight) and on the number of electric power systems supported (e. g. 2 as two types, 4 as all four systems commonly used in Europe)."
 }

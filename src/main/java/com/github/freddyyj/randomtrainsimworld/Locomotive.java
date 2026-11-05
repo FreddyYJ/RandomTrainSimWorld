@@ -24,6 +24,7 @@ public class Locomotive {
 	public final String type;
 	public final String manufacturer;
 	public final String power;
+	public final String maxSpeed;
 	public final String manufacturedYear;
 	public final String gauge;
 	public final Integer totalProduced;
@@ -31,7 +32,7 @@ public class Locomotive {
 
 	public Locomotive(final String name, final Nation nation, final List<String> liveries,
 					  final String type, final String manufacturer, final String power,
-					  final String manufacturedYear, final String gauge, final Integer totalProduced,
+					  final String maxSpeed, final String manufacturedYear, final String gauge, final Integer totalProduced,
 					  final String description) {
 		this.name = name;
 		this.nation = nation;
@@ -40,6 +41,7 @@ public class Locomotive {
 		this.type = type;
 		this.manufacturer = manufacturer;
 		this.power = power;
+		this.maxSpeed = maxSpeed;
 		this.manufacturedYear = manufacturedYear;
 		this.gauge = gauge;
 		this.totalProduced = totalProduced;
@@ -69,6 +71,7 @@ public class Locomotive {
 		this.type = json.get("type").getAsString();
 		this.manufacturer = json.get("manufacturer").getAsString();
 		this.power = json.get("power").getAsString();
+		this.maxSpeed = json.get("max_speed").getAsString();
 		this.manufacturedYear = json.get("manufactured_year").getAsString();
 		this.gauge = json.get("gauge").getAsString();
 		this.totalProduced = json.get("total").getAsInt();
@@ -83,6 +86,7 @@ public class Locomotive {
 				"Manufacturer: " + manufacturer + "\n" +
 				"Manufactured Year: " + manufacturedYear + "\n" +
 				"Power: " + power + "\n" +
+				"Max Speed: " + maxSpeed + "\n" +
 				"Gauge: " + gauge + "\n" +
 				"Total Produced: " + totalProduced + "\n" +
 				"\n" + description + "\n";

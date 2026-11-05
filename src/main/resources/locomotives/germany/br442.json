@@ -8,6 +8,7 @@
   "type": "Electric Multiple Unit",
   "manufacturer": "Bombardier",
   "power": "2,040-4,080 hp/1,520-3,040 kW",
+  "max_speed": "160 km/h (99 mph)",
   "manufactured_year": "2011-",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 453,

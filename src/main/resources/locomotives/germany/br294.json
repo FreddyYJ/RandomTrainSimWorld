@@ -7,6 +7,7 @@
   "type": "Diesel Hydraulic Locomotive",
   "manufacturer": "MaK",
   "power": "1,100-1,500 hp/820-1,100 kW",
+  "max_speed": "70-80 km/h (43-50 mph)",
   "manufactured_year": "1963-1974",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 100,

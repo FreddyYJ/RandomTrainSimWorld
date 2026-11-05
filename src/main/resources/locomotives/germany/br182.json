@@ -9,6 +9,7 @@
   "type": "Electric Locomotive",
   "manufacturer": "Siemens, Krauss-Maffei",
   "power": "8,580 hp/6,400 kW",
+  "max_speed": "230 km/h (143 mph)",
   "manufactured_year": "2000-",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 360,

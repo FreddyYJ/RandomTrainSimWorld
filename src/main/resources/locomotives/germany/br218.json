@@ -8,6 +8,7 @@
   "type": "Diesel Hydraulic Locomotive",
   "manufacturer": "Krauss-Maffei, Krupp, Henschel, MaK",
   "power": "2,470-2,764 hp/1,840-2,061 kW",
+  "max_speed": "100-140 km/h (62-87 mph)",
   "manufactured_year": "1968, 1971-1979",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 398,

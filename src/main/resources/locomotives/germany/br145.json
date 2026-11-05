@@ -8,6 +8,7 @@
   "type": "Electric Locomotive",
   "manufacturer": "ADtranz",
   "power": "5,632 hp/4,200 kW",
+  "max_speed": "140 km/h (87 mph)",
   "manufactured_year": "1997-2002",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 134,

@@ -8,6 +8,7 @@
   "type": "Electric Multiple Unit",
   "manufacturer": "Siemens, ADtranz, Bombardier",
   "power": "10,728 hp/8,000 kW",
+  "max_speed": "330 km/h (205 mph)",
   "manufactured_year": "2000-",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 50,

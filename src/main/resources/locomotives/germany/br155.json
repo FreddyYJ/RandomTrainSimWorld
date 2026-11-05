@@ -8,6 +8,7 @@
   "type": "Electric Locomotive",
   "manufacturer": "LEW Hennigsdorf",
   "power": "7,200 hp/5,400 kW",
+  "max_speed": "120 km/h (75 mph)",
   "manufactured_year": "1977-1984",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 273,

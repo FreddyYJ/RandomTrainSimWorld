@@ -8,6 +8,7 @@
   "type": "Diesel Hydraulic Locomotive",
   "manufacturer": "MaK, Krupp, Henschel & Sohn, Krauss-Maffei, Jung, Esslingen, Klöckner-Humboldt-Deutz, Gmeinder",
   "power": "641 hp/478 kW",
+  "max_speed": "30 (shunt), 60 (line) km/h (19/37 mph)",
   "manufactured_year": "1956-1964",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 942,

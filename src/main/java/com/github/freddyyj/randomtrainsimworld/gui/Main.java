@@ -46,6 +46,8 @@ public class Main extends Application{
 	static MainController controller;
 	// Set when an error alert is shown, other errors after it are only printed
 	private static final AtomicBoolean errorShown = new AtomicBoolean(false);
+	private static final int WIDTH = 1500;
+	private static final int HEIGHT = 1000;
 
 	/**
 	 * Overrides {@link Application#start(Stage)}.
@@ -91,12 +93,12 @@ public class Main extends Application{
 			}
 
 			FXMLLoader loader=new FXMLLoader(getClass().getClassLoader().getResource("MainDoc.fxml"));
-			scene=new Scene(loader.load(),1200,750);
+			scene=new Scene(loader.load(),WIDTH,HEIGHT);
 			stage=primaryStage;
 			primaryStage.setTitle("Random Train Sim World");
 			primaryStage.setScene(scene);
-			primaryStage.setWidth(1200);
-			primaryStage.setHeight(750);
+			primaryStage.setWidth(WIDTH);
+			primaryStage.setHeight(HEIGHT);
 
 			if(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png")!=null)
 				primaryStage.getIcons().add(new Image(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("icon.png"))));

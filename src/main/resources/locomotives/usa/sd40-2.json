@@ -11,6 +11,7 @@
   "type": "Diesel Electric Locomotive",
   "manufacturer": "Electro-Motive Division (EMD), General Motors Diesel (GMD)",
   "power": "3,000 hp/2,200 kW",
+  "max_speed": "65 mph (105 km/h)",
   "manufactured_year": "1972-1989",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 4036,

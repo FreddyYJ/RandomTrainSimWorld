@@ -8,6 +8,7 @@
   "type": "Diesel Electric Locomotive",
   "manufacturer": "General Electric (GE)",
   "power": "4,000 hp/3,000 kW",
+  "max_speed": "70 mph (113 km/h)",
   "manufactured_year": "1989-1994",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 1531,

@@ -7,6 +7,7 @@
   "type": "Electric Multiple Unit",
   "manufacturer": "Siemens, Alstom",
   "power": "N/A",
+  "max_speed": "230 km/h (145 mph)",
   "manufactured_year": "1999-",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 60,

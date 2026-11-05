@@ -7,6 +7,7 @@
   "type": "Electric Multiple Unit",
   "manufacturer": "Siemens, Alstom",
   "power": "6,638-15,489 hp/4,950-11,550 kW",
+  "max_speed": "250-265 km/h (155-165 mph)",
   "manufactured_year": "2015-2024",
   "gauge": "Standard Gauge (1,435 mm)",
   "total": 137,
