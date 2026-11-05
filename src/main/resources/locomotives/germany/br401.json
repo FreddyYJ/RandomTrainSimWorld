@@ -5,10 +5,10 @@
     "DB"
   ],
   "type": "Electric Locomotive",
-  "manufacturer": "ABB, AEG, Siemens",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "manufacturer": "ABB, AEG, Siemens, Henschel, Krauss-Maffei, Krupp",
+  "power": "10,192-12,874 hp/7,600-9,600 kW",
+  "manufactured_year": "1989-1993",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 60,
+  "description": "The ICE 1 is the first batch-produced German high-speed train and the first of now several within the Intercity Express family. Revenue service at speeds up to 250 km/h (155 mph) started in 1991, it was raised to 280 km/h (175 mph) in May 1995.\n\nTrainsets consist of two power cars (Class 401) and up to 14 intermediate cars (Classes 801 to 804). Occasionally, power cars and intermediate cars of the ICE 2 are used as well (Classes 402, 805 to 808). Trainsets always operate as a whole train and cars cannot be coupled in regular service.\n\nOne of the 60 trainsets (trainset 51) was destroyed in the 1998 Eschede train disaster, which also led to a temporary speed reduction to 250 km/h (155 mph) again. The others were refurbished between 2005 and 2008 and will remain in service for ten to fifteen additional years. Another refurbishment program started in 2019, extending their lifespan to approximately 2030."
 }

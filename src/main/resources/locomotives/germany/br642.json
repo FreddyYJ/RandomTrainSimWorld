@@ -4,11 +4,11 @@
   "liveries": [
     "DB"
   ],
-  "type": "Diesel Multiple Unit",
+  "type": "Diesel Mechanical Multiple Unit",
   "manufacturer": "Siemens",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "power": "738-844 hp/550-630 kW",
+  "manufactured_year": "2000-",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 234,
+  "description": "The Siemens Desiro is a family of diesel or electric multiple unit passenger trains developed by Siemens Mobility, a division of the German Siemens AG conglomerate.[2] The main variants are the Desiro Classic, Desiro ML, Desiro UK and the later Desiro City, Desiro HC and Desiro RUS. The trains are mostly used for commuter and regional services,[2] and their rapid acceleration makes them suitable for services with short distances between stations. The design is flexible, and has become common in many European countries. The trainsets have modern equipment such as toilet waste retention tanks, ergonomic seats, and automated information displays with spoken announcements."
 }

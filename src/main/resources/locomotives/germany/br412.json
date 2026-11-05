@@ -5,10 +5,10 @@
     "DB"
   ],
   "type": "Electric Multiple Unit",
-  "manufacturer": "Siemens",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "manufacturer": "Siemens, Alstom",
+  "power": "6,638-15,489 hp/4,950-11,550 kW",
+  "manufactured_year": "2015-2024",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 137,
+  "description": "ICE 4 is a brand name for long-distance Intercity-Express high-speed trains being procured for Deutsche Bahn.\n\nProcurement started around 2008 for replacements for locomotive-hauled InterCity and EuroCity train services, and was later expanded to include replacements for ICE 1 and ICE 2 high-speed trainsets. In 2011 Siemens Mobility was awarded the contract for 130 seven-car intercity train replacements, and 90 ten-car ICE train replacements, plus further options – the contract for the ten-car sets was modified in 2013 to expand the trainset length to twelve vehicles. The name ICx was used for the trains during the initial stages of the procurement; in late 2015 the trains were rebranded 'ICE 4', at the unveiling of the first train set, and given the class designation 412 by Deutsche Bahn.\n\nTwo pre-production trainsets had been manufactured by 2016, and were used for testing later that year, prior to the introduction of the main series in late 2017."
 }

@@ -6,10 +6,10 @@
     "DB Rainbow"
   ],
   "type": "Electric Multiple Unit",
-  "manufacturer": "Siemens",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "manufacturer": "Siemens, ADtranz, Bombardier",
+  "power": "10,728 hp/8,000 kW",
+  "manufactured_year": "2000-",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 50,
+  "description": "ICE 3 (standing for Intercity-Express) is a family of high-speed electric multiple unit trains operated by Deutsche Bahn. It currently includes classes 403, 407 and 408 which are additionally specified as ICE 3, New ICE 3 and ICE 3neo respectively and formerly the retired class 406 or ICE 3M. ICE 3 trains have a maximum speed of 300 km/h (186 mph) in Germany, 320 km/h (200 mph) when travelling on the French high-speed rail lines. Class 403 are theoretically permitted to go up to a maximum speed of 330 km/h (210 mph) when travelling on the high-speed route between Frankfurt and Cologne.\n\nBased on the ICE 3M/F, Siemens developed its Siemens Velaro train family with versions used in Germany, Belgium, France, the United Kingdom, the Netherlands, Spain, China, Russia and Turkey."
 }

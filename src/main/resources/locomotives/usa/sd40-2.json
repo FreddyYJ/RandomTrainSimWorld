@@ -9,10 +9,10 @@
     "BNSF"
   ],
   "type": "Diesel Electric Locomotive",
-  "manufacturer": "Electro-Motive Diesel (EMD)",
-  "power": "2000 hp/1490 kW",
-  "manufactured_year": "1972-1986",
+  "manufacturer": "Electro-Motive Division (EMD), General Motors Diesel (GMD)",
+  "power": "3,000 hp/2,200 kW",
+  "manufactured_year": "1972-1989",
   "gauge": "Standard Gauge (1,435 mm)",
-  "total": 2264,
-  "description": "A famous diesel electric locomotive in US."
+  "total": 4036,
+  "description": "The EMD SD40-2 is a 3,000-horsepower (2,200 kW) C-C diesel–electric locomotive built by EMD from 1972 to 1997.\n\nThe SD40-2 was introduced in January 1972 as part of EMD's Dash 2 series, competing against the GE U30C. Although higher-horsepower locomotives were available, including EMD's own SD45-2, the reliability and versatility of the 3,000-horsepower (2,200 kW) SD40-2 made it one of the best-selling models in EMD's history, edged out only by the GP9, and was the standard of the industry for several decades after its introduction. The SD40-2 was an improvement over the SD40, with modular electronic control systems similar to those of the experimental DDA40X.\n\nPeak production of the SD40-2 was in the mid-1970s. Sales of the SD40-2 began to diminish after 1981 due to the oil crisis, increased competition from GE's Dash-7 series and the introduction of the EMD SD50, which was available concurrently to late SD40-2 production. The last SD40-2 delivered to a United States railroad was built in July 1980, with production continuing for railroads in Canada until 1979, Mexico until February 1979, and Brazil until October 1980. The last SD40-2 built was a SDL40-2 made for export to Mauritania in 1997. A total of 4,036 units were known to have been produced.\n\nTo suit export country specifications, General Motors designed a number of SD40 variants, including the JT26CW-SS (British Rail Class 59) for Great Britain, the GT26CW-2 for Yugoslavia, South Korea, Iran, Morocco, Peru and Pakistan, the GT26CU-2 for to Zimbabwe and Brazil, the GT26HCW-2 for Algeria, and the SDL40-2 for Mauritania."
 }
