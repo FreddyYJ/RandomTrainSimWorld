@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.Collator;
 import java.util.*;
 
 /**
@@ -51,6 +52,8 @@ public class MainController {
     private SplitPane splitRoute;
     @FXML
     private VBox boxRoute;
+    @FXML
+    private ComboBox<String> comboNation;
     @FXML
     private CheckBox dummyRouteCheckBox; // Dummy, remove later
     @FXML
@@ -131,7 +134,10 @@ public class MainController {
 
         // Fill the route pane only, other panes are filled when a route is picked
         boxRoute.getChildren().clear(); // Removes the dummy route
-        for (final String routeName : core.routes.keySet()) {
+        // Routes in A-Z order, ignoring case and accents (e.g. ü is sorted as u)
+        final List<String> routeNames = new ArrayList<>(core.routes.keySet());
+        routeNames.sort(Collator.getInstance(Locale.ENGLISH));
+        for (final String routeName : routeNames) {
             final CheckBox routeCheckBox = new CheckBox(routeName); // Route is found by this name later
             routeCheckBox.setSelected(core.includedRoutes.contains(core.routes.get(routeName))); // Ticks from the config
             routeCheckBox.setPadding(new Insets(5., 0., 0., 5.));
@@ -139,6 +145,26 @@ public class MainController {
             routeCheckBox.setOnMouseClicked(this::onCheckRouteClick);
             boxRoute.getChildren().add(routeCheckBox);
         }
+
+        // Nation filter: "All" and the nations which have at least one route
+        final Set<Nation> nations = EnumSet.noneOf(Nation.class);
+        for (final Route route : core.routes.values()) {
+            nations.add(route.nation);
+        }
+        comboNation.getItems().add("All");
+        for (final Nation nation : nations) {
+            comboNation.getItems().add(nation.toString());
+        }
+        comboNation.setValue("All");
+        comboNation.setOnAction(event -> {
+            final String selected = comboNation.getValue();
+            for (final Node node : boxRoute.getChildren()) {
+                final Route route = core.routes.get(((CheckBox) node).getText());
+                final boolean shown = "All".equals(selected) || route.nation.toString().equals(selected);
+                node.setVisible(shown);
+                node.setManaged(shown); // Hidden ones take no space
+            }
+        });
 
         random = new Random();
     }
