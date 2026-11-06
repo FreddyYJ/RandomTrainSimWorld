@@ -1,0 +1,15 @@
+{
+  "name": "BR 425",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier, Siemens, DWA",
+  "power": "3,150 hp/2,350 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1999-2008",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 249,
+  "description": "The Class 425 and Class 426 EMUs are a class of electric multiple units built by a consortium of Siemens, Bombardier and DWA, and are operated by DB Regio in Germany. They are essentially the same vehicle design, but the Class 425 EMU consists of four carriages, whereas the Class 426 EMUs only have two carriages.\n\nThe class 425 has been produced in HO scale by Brawa and N scale by Kato Precision Railroad Models."
+}

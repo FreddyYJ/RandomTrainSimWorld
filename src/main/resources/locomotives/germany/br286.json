@@ -1,0 +1,16 @@
+{
+  "name": "BR 286 Bpmmbdzf",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "DB Expert"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "AW",
+  "power": "N/A",
+  "max_speed": "200 km/h (125 mph)",
+  "manufactured_year": "2002-2004",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 63,
+  "description": "Intercity Cab Car (German:IC Steuerwagen) (Bpmmbdzf) is a German IC cab car. The version Bpmmbdzf 296 is included in Expert DB BR 101 & IC Steuerwagen (in white long-distance livery). The services for the long-distance version can additionally be expanded with the Expert DB BR 101 on Kassel - Würzburg Gameplay Pack. The red-colored München-Nürnberg-Express variant Bpmmbdzf 286.3 comes with Schnellfahrstrecke Nürnberg - Ingolstadt."
+}

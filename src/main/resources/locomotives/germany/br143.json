@@ -1,0 +1,15 @@
+{
+  "name": "BR 143",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "LEW Hennigsdorf",
+  "power": "4,990 hp/3,720 kW",
+  "max_speed": "120 km/h (75 mph)",
+  "manufactured_year": "1984-1991",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 646,
+  "description": "The DR Class 243 is a universal electric locomotive of the Deutsche Reichsbahn which is used for general rail service. Deutsche Bahn lists the locomotive as Class 143. The locomotives of class 143/243 still belong to the most successful class of German electric locomotives."
+}

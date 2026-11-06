@@ -1,0 +1,15 @@
+{
+  "name": "BR 110",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Krauss-Maffei, Krupp, Henschel, Siemems, AEG, BBC",
+  "power": "5,000 hp/3,700 kW",
+  "max_speed": "140-150 km/h (87-93 mph)",
+  "manufactured_year": "1956-1969",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 416,
+  "description": "The class E 10 is an electric locomotive of the Deutsche Bundesbahn, introduced in 1952. It belongs to the Einheits-Elektrolokomotiven (standardised electric locomotives) program and was built for express passenger service. In 1968 the series was redesignated as class 110 (E10) and class 112 (E10.12). In 1988 the last series of class 112 locomotives were designated as class 114, and in 1991 the remaining locomotives of class 112 were designated as class 113. In 2006 38 locomotives were designated as class 115.\n\nUntil 2020, individual locomotives of the 115 series were used for \"special passenger trains\". All locomotives of this series have now been retired from regular service by DB, but some are still in active use by private railway companies."
+}

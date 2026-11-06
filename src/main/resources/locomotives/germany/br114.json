@@ -1,0 +1,15 @@
+{
+  "name": "BR 114",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "LEW Hennigsdorf, AEG",
+  "power": "4,990 hp/3,720 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1990-1994",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 130,
+  "description": "All 38 locomotives of Class 112.0 were reclassified as Class 114 on 1 April 2000 because up to this time these locomotives had been used exclusively for regional trains in Berlin, Brandenburg and Mecklenburg-Vorpommern and there were several differences between these locomotives and the Class 112.1. Following the transfer of the remaining Class 112 locomotives to DB Regio the reason for the different classifications is unnecessary as there are similar differences between locomotives within Class 143."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "BR 463 Bnrdzf",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "DB Mint"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "AW",
+  "power": "N/A",
+  "max_speed": "120-140 km/h (75-87 mph)",
+  "manufactured_year": "1959-1980",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 4820,
+  "description": "The n-Wagen (\"n-coaches\") are a type of passenger coach used by Deutsche Bundesbahn and subsequently Deutsche Bahn. With two double-leafed doors per side to enable a high passenger throughput rate, the coaches were conceived for short dwell times in commuter and regional transit. Succeeding the yl-coaches, 5,000 units were built from 1958 to 1981, with some remaining in service still today."
+}

@@ -1,0 +1,114 @@
+{
+  "name": "Bahnstrecke Bremen-Oldenburg",
+  "locomotives": {
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br463": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br147": [
+      "DB"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br612": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Super Bremen Bros"
+  ],
+  "scenario": {
+    "Delivered in 60 seconds": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 155 Press"]
+    },
+    "Chop and Change": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 155 Press"]
+    },
+    "Stormbringer": {
+      "difficulty": 4,
+      "length": "0:30",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Beats by Bremen": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Stuck in the Middle with Hude": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["BR 110 DB"]
+    },
+    "Sharing is Caring": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["BR 463 Bnrdzf"]
+    }
+  },
+  "description": "Take a trip to the late 2000s and experience frequent regional passenger and heavy freight services, be in control of classic and modern traction as you traverse through the heart of Northern Germany. Electric Containers and n-Wagens await in Train Sim World®: Bahnstrecke Bremen - Oldenburg.\n\nIconic in every right, the aerodynamic DB BR 110.3 makes its debut in Train Sim World®. A 1950s classic, the DB BR 110.3 is a former express passenger locomotive which in more recent times, runs more local and regional traffic. Twinned with the “Crease” is the retro n-Wagen, a single-deck fleet of passenger coaches complete with Karlsruher Kopf cab car, allowing for push and pull duties on the line.\n\nAccompanying the flavourful classic is a taste of modern, with additional services carried out by the sleek DB BR 425 in shiny new condition. Supporting in the role of freight is the unmistakable BR 155, sporting the flashy azure tones of PRESS – a railway company which takes on contracted cargo roles throughout Germany and beyond.\n\nSet in the late 2000s, Bahnstrecke Bremen - Oldenburg is represented before the line became part of the Bremen S-Bahn, recreating services and rolling stock lost to the passage of time. Look out for the towering “Rollklappbrücke” in Oldenburg, a Bascule Bridge which crosses the Hunte river, raising and lowering to allow trains and barges to pass."
+}
