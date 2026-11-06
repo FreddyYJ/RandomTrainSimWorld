@@ -72,7 +72,7 @@ public class Config {
 					excludedLiveries.put(route.getKey(), liveriesByLocomotive);
 				}
 			}
-		} catch (JsonParseException | IllegalStateException | UnsupportedOperationException e) {
+		} catch (JsonParseException | IllegalStateException | UnsupportedOperationException | ClassCastException e) {
 			// Not a JSON file, or the structure is different
 			throw new IOException("Invalid config file " + configFile.getPath(), e);
 		}
