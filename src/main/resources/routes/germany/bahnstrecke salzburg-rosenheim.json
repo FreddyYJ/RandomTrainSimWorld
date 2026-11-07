@@ -1,0 +1,122 @@
+{
+  "name": "Bahnstrecke Salzburg-Rosenheim",
+  "locomotives": {
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "austria/4024": [
+      "ÖBB"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br628": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "E for Expert",
+    "Rural Rail"
+  ],
+  "scenario": {
+    "Touchdown": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["BR 286 Bpmmbdzf Expert"]
+    },
+    "Expert. Simply Delivered.": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["BR 101 Expert"]
+    },
+    "Empty Pipes": {
+      "difficulty": 5,
+      "length": "1:00",
+      "locomotive": ["BR 101 Expert"]
+    },
+    "Take a Cab Back": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["BR 101 Expert"]
+    },
+    "Malfunctioning Madness": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "I'm Not a Mechanic": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Buckets of rain": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "International Aid": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "A Stand Up Stand In": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    }
+  },
+  "description": "Go cross-border and shuttle along the rural, hilly backdrops of Europe in Train Sim World®. Take a trip back to the early 2010s and climb aboard the classic electric BR 111 - tap into Deutsche Bahn regional services between Germany and Austria with Bahnstrecke Salzburg - Rosenheim!\n\nWith a history spanning over 160 years, the Rosenheim - Salzburg railway has long been a line of vital importance between Germany and Austria. Originally envisaged as early as 1828, it took many years of theorising, designing, and funding to construct. Today, the line is a key corridor for all manners of traffic and has been subject to constant improvements over the decades.\n\nA new journey awaits through the German state of Bavaria. From the classic cab of a 1970s legend, the DB BR 111, accelerate out of the city of Rosenheim on regional, yet international services. Wind your way through the countryside and cross the border into Austria, coming to rest in musical Salzburg. Alongside the 111, a medley of motive power accompanies the ranks, including the BR 185.2 and ÖBB 4024 for freight and S-Bahn duty."
+}

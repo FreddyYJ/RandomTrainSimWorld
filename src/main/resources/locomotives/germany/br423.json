@@ -1,0 +1,15 @@
+{
+  "name": "BR 423",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier, Alstom, ADtranz, LHB, ABB",
+  "power": "3,150 hp/2,350 kW",
+  "max_speed": "140 km/h (87 mph)",
+  "manufactured_year": "1998-2007",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 462,
+  "description": "The Deutsche Bahn Class 423 EMU is a light-weight articulated electric railcar for S-Bahn commuter networks in Germany. The train has similar dimensions to its predecessor, the Class 420 EMU, but is significantly lighter and has one large passenger compartment, while that of the 420 is divided into three parts. The 423 additionally has six doors in each carriage (three on each side), which is down from eight on the 420 (four on each side). They are numbered from 423 001 to 423 462.\n\nBoth Munich and Frankfurt ordered Class 423s for their S-Bahn systems; they were delivered between 1999 and 2004. The 423 has spawned a family of slightly modified designs ordered for S-Bahns across Germany: the Class 422, Class 424, Class 425/426 and Class 430."
+}

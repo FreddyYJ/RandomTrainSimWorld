@@ -1,0 +1,134 @@
+{
+  "name": "Frankenbahn: Stuttgart-Heilbronn",
+  "locomotives": {
+    "germany/br147": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br463": [
+      "DB",
+      "DB Mint"
+    ],
+    "germany/br483": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB"
+    ],
+    "germany/br406": [
+      "DB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+
+    "germany/br423": [
+      "DB"
+    ],
+    "germany/br101": [
+      "DB"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "MRCE"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br628": [
+      "DB",
+      "DB Mint"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "On Track",
+    "Trip the Frankenbahn Fantastic"
+  ],
+  "scenario": {
+    "Conga": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 147 DB"]
+    },
+    "Trackside Recovery": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 147 DB"]
+    },
+    "White Grapes": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 147 DB"]
+    },
+    "Steuerwagen Safety": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 111 DB", "BR 463 Bnrdzf"]
+    },
+    "Millennium": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 463 Bnrdzf"]
+    },
+    "Move it Around": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 140 DB"]
+    },
+    "Sort It Out": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 363 DB"]
+    },
+    "Inspect The Uninspected": {
+      "difficulty": 1,
+      "length": "0:15",
+      "locomotive": ["BR 111 DB", "BR 140 DB"]
+    }
+  },
+  "description": "Turn of the millennium traction awaits with the historic and bustling Frankenbahn. Transport freight and passengers along the winding banks of the Neckar and into Baden-Württemberg suburbia. Expect the unexpected with Stuttgart - Heilbronn; a retro arrival for Train Sim World®.\n\nWhat’s now known as the Frankenbahn was originally constructed as several railway lines throughout southwest Germany, the oldest of which was the Nordbahn which weaved out of Stuttgart, then ran north along the Neckar to Heilbronn. Since the 1840s, this line has been of key strategical importance and today sees vital commuter traffic as well as a wide variety of freight services.\n\nIn Train Sim World®, become a driver aboard the mixed-traffic duties of the Frankenbahn. Set in the year 2000, recall the days when the millenium was new. See the classic layout and buildings of Stuttgart before its big rebuild, carefully traverse the Enzbrucke prior to its 2006 replacement, and of course, experience it all from backdated motive power."
+}

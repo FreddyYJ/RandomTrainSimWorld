@@ -1,0 +1,16 @@
+{
+  "name": "BR 111",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "DBB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Krauss-Maffei, Krupp, Henschel, Siemems, AEG, BBC",
+  "power": "4,990 hp/3,720 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1974-1984",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 227,
+  "description": "The Baureihe 111 is a class of electric locomotives built for the Deutsche Bundesbahn, and now owned by Deutsche Bahn."
+}

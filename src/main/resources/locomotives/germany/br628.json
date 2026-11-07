@@ -1,0 +1,16 @@
+{
+  "name": "BR 628",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "DB Mint"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "Bombardier, ADtranz",
+  "power": "650 hp/485 kW",
+  "max_speed": "120 km/h (75 mph)",
+  "manufactured_year": "1974-1995",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 479,
+  "description": "The DB Class 628 is a twin-car, diesel multiple unit operated by the Deutsche Bahn for local passenger rail services."
+}

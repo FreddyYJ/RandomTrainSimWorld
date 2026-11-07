@@ -1,0 +1,15 @@
+{
+  "name": "BR 406 ICE3M",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Siemens, ADtranz, Bombardier",
+  "power": "10,728 hp/8,000 kW",
+  "max_speed": "330 km/h (205 mph)",
+  "manufactured_year": "2000-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 17,
+  "description": "The ICE 3M (Class 406; M for multisystem), which has been retired in April 2025, was developed to operate international services under the four different railway electrification systems in use on Europe's main lines and with support for various train protection systems. The Deutsche Bahn (DB) ordered 13 of these units in 1994, the NS (Nederlandse Spoorwegen) four, making sure that the demands of the Dutch rail network are taken care of. Though these trains carried NS logos, the DB and NS trains together formed a pool and therefore, the NS trains operated DB services as well. In 2007 the train was licensed for operation in the Netherlands, Belgium, and France. On the French LGV Est, some trains reached a regular top speed of 320 km/h (200 mph). The 17 class 406 sets were built by the same consortium as the Class 403."
+}
