@@ -1,45 +1,36 @@
 plugins {
     id 'application'
     id 'java'
-    id 'com.gradleup.shadow' version '8.3.6'
-    id 'org.openjfx.javafxplugin' version '0.1.0'
-    id "org.beryx.jlink" version "3.1.1"
+    id 'com.gradleup.shadow' version '9.6.1'
+    id 'org.panteleyev.javafxplugin' version '2.0.0'
+    id "org.beryx.jlink" version "4.2.0"
     id 'jacoco'
 }
 
-group 'com.github.freddyyj'
-version '2.0.0'
+group = 'com.github.freddyyj'
+version = '2.0.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
-    implementation 'org.openjfx:javafx-controls:21'
-    implementation 'com.google.code.gson:gson:2.12.1'
-    implementation 'org.openjfx:javafx-fxml:21'
-    implementation 'commons-io:commons-io:2.18.0'
-    implementation 'com.google.guava:guava:33.4.0-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:6.1.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:6.1.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.1.3'
+    implementation 'org.openjfx:javafx-controls:21.0.13'
+    implementation 'com.google.code.gson:gson:2.15.0'
+    implementation 'org.openjfx:javafx-fxml:21.0.13'
+    implementation 'commons-io:commons-io:2.22.0'
+    implementation 'com.google.guava:guava:33.8.0-jre'
 }
-
-mainClassName = "com.github.freddyyj.randomtrainsimworld.Main"
 
 application {
     mainClass="com.github.freddyyj.randomtrainsimworld.Main"
 }
 
-shadowJar {
-    archiveClassifier.set('')
-    manifest {
-        attributes 'Main-Class': "com.github.freddyyj.randomtrainsimworld.Main"
-    }
-}
-
 javafx {
-    version = "21"
-    modules = [ 'javafx.controls' ,'javafx.fxml']
+    modules("21.0.13", ['javafx.controls', 'javafx.fxml'])
 }
 
 test {
@@ -47,7 +38,22 @@ test {
 }
 
 jlink {
+    options = ['--strip-debug', '--compress', 'zip-6', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'RandomTrainSimWorld'
+    }
     jpackage {
         icon = 'src/main/resources/icon.png'
+        vendor = 'freddyyj'
+        // Custom installer scripts/templates (postinst, main.wxs, etc.)
+        resourceDir = file('src/jpackage/resources')
+        installerOptions = ['--verbose']
+        if (org.gradle.internal.os.OperatingSystem.current().windows) {
+            installerType = 'msi'
+            installerOptions.addAll(['--win-dir-chooser', '--win-menu', '--win-shortcut'])
+        } else if (org.gradle.internal.os.OperatingSystem.current().linux) {
+            installerType = 'deb'
+            installerOptions.addAll(['--linux-shortcut', '--linux-menu-group', 'Game'])
+        }
     }
 }
