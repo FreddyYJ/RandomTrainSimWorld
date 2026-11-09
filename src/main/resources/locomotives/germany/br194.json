@@ -1,0 +1,15 @@
+{
+  "name": "BR 194",
+  "nation": "Germany",
+  "liveries": [
+    "Green Crocodile"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "AEG, Krauss-Maffei, Lokomotivfabrik Floridsdorf, Henschel, Krupp",
+  "power": "4,020 hp/3,000 kW",
+  "max_speed": "90-100 km/h (56-62 mph)",
+  "manufactured_year": "1940-1956",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 200,
+  "description": "The DRG Class E94 is an electric heavy freight locomotive built for Deutsche Reichsbahn from 1940, with the bulk of deliveries taking place in that year. It was a major evolution of the DRG Class E 93. Railway aficionados still call the type \"Grünes Krokodil\" (Green Crocodile) because of the resemblance to the Swiss locomotive nicknamed \"Crocodile\"."
+}

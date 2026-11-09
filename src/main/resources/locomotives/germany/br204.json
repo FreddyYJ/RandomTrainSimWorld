@@ -1,0 +1,15 @@
+{
+  "name": "BR 204",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Diesel Hydraulic Locomotive",
+  "manufacturer": "LEW Hennigsdorf",
+  "power": "1,500 hp/1,100 kW",
+  "max_speed": "100 km/h (62 mph)",
+  "manufactured_year": "1966-1985",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 68,
+  "description": "The DR Class V 100 (German: DR-Baureihe V 100), redesignated the Class 110 in 1970, was a four-axled diesel locomotive for medium duties operated by the Deutsche Reichsbahn of East Germany. Locomotives of the type were also supplied to railways in China and Czechoslovakia and to various industrial operators."
+}

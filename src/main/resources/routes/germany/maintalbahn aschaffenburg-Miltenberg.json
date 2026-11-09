@@ -1,0 +1,59 @@
+{
+  "name": "Maintalbahn: Aschaffenburg-Miltenberg",
+  "locomotives": {
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB"
+    ],
+    "germany/br612": [
+      "DB"
+    ],
+    "germany/br628": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "On the Main road"
+  ],
+  "scenario": {
+    "Filling Up": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 642 DB", "BR 363 DBB"]
+    },
+    "Running On Vapors": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 642 DB"]
+    },
+    "On Your Bike": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 642 DB"]
+    },
+    "Fetch": {
+      "difficulty": 5,
+      "length": "1:40",
+      "locomotive": ["BR 363 DBB"]
+    },
+    "Getting the Cold Shoulder": {
+      "difficulty": 4,
+      "length": "1:15",
+      "locomotive": ["BR 642 DB"]
+    }
+  },
+  "description": "Modern diesel duty drops anchor in Train Sim World®! Return to the portside town of Aschaffenburg, Germany and embark on Regionalbahn services along the stunning Main Valley. No wires, no fuss, your next adventure awaits aboard the sleek DB BR 642 DMU, wind your way to Miltenberg on the Maintalbahn!\n\nEmbark on single-track service across the picturesque Maintalbahn, characterised by slower running, local towns and villages, and passing loops for oncoming traffic. Between the passenger action, hustle freight from local industries and serve the Main River port.\n\nMany rural lines still retain the need for fuel-powered traction, and since the turn of the century, the DB BR 642 has been a common sight. Ordered in the 1990s, the BR 642 is a 2-car DMU designed to be operated on local routes, featuring an innovative low floor and boarding design for increased accessibility, and mounted upon a shared bogie to improve safety and ride quality. All while, the low floor also gives the 642 its distinctive large windows for ultimate scenic viewing.\n\nAlongside the railcar is another familiar sight on diesel lines, the BR 363 shunter, rolling along with wagons in-tow to deliver all manner of goods."
+}
