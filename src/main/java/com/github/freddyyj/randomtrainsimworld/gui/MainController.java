@@ -55,6 +55,8 @@ public class MainController {
     @FXML
     private ComboBox<String> comboNation;
     @FXML
+    private CheckBox checkAllRoute;
+    @FXML
     private CheckBox dummyRouteCheckBox; // Dummy, remove later
     @FXML
     private TextArea textRouteDescription;
@@ -67,6 +69,8 @@ public class MainController {
     @FXML
     private SplitPane splitLoco;
     @FXML
+    private CheckBox checkAllLoco;
+    @FXML
     private ScrollPane boxLoco;
     @FXML
     private TextArea textLocoDescription;
@@ -77,6 +81,8 @@ public class MainController {
 
     // Livery pane
     @FXML
+    private CheckBox checkAllLivery;
+    @FXML
     private ScrollPane boxLivery;
     @FXML
     private TextField textPickedLivery;
@@ -84,6 +90,8 @@ public class MainController {
     private Button buttonRandomLivery;
 
     // Journey pane
+    @FXML
+    private CheckBox checkAllJourney;
     @FXML
     private ScrollPane boxJourney;
     @FXML
@@ -96,6 +104,8 @@ public class MainController {
     // Scenario pane
     @FXML
     private SplitPane splitScenario;
+    @FXML
+    private CheckBox checkAllScenario;
     @FXML
     private ScrollPane boxScenario;
     @FXML
@@ -168,9 +178,19 @@ public class MainController {
                 node.setVisible(shown);
                 node.setManaged(shown); // Hidden ones take no space
             }
+            // "All" checkbox follows the shown routes only
+            updateCheckAll(checkAllRoute, boxRoute);
         });
+        updateCheckAll(checkAllRoute, boxRoute);
 
         random = new Random();
+    }
+
+    private void updateCheckAll(final CheckBox allCheckBox, final VBox box) {
+        // Ticked only if all shown checkboxes are ticked, routes hidden by the filter are ignored
+        allCheckBox.setSelected(box.getChildren().stream()
+                .filter(Node::isVisible)
+                .allMatch(node -> ((CheckBox) node).isSelected()));
     }
 
     /**
@@ -194,12 +214,16 @@ public class MainController {
             locoBoxes.put(route, locoBox);
         }
         boxLoco.setContent(locoBox);
+        checkAllLoco.setDisable(false);
+        updateCheckAll(checkAllLoco, locoBox);
         textLocoDescription.clear();
         textPickedLoco.clear();
         pickedLoco = null;
 
         // Liveries depend on the locomotive, so reset them until one is picked
         boxLivery.setContent(null);
+        checkAllLivery.setDisable(true);
+        checkAllLivery.setSelected(false);
         textPickedLivery.clear();
         pickedLivery = null;
     }
@@ -224,6 +248,8 @@ public class MainController {
             journeyBoxes.put(route, journeyBox);
         }
         boxJourney.setContent(journeyBox);
+        checkAllJourney.setDisable(false);
+        updateCheckAll(checkAllJourney, journeyBox);
         textPickedJourney.clear();
         pickedJourney = null;
     }
@@ -249,6 +275,8 @@ public class MainController {
             scenarioBoxes.put(route, scenarioBox);
         }
         boxScenario.setContent(scenarioBox);
+        checkAllScenario.setDisable(false);
+        updateCheckAll(checkAllScenario, scenarioBox);
         textScenarioDescription.clear();
         textPickedScenario.clear();
         pickedScenario = null;
@@ -277,6 +305,8 @@ public class MainController {
             routeLiveryBoxes.put(locomotive, liveryBox);
         }
         boxLivery.setContent(liveryBox);
+        checkAllLivery.setDisable(false);
+        updateCheckAll(checkAllLivery, liveryBox);
         textPickedLivery.clear();
         pickedLivery = null;
     }
@@ -325,6 +355,7 @@ public class MainController {
             // Included
             main.includeRoute(route);
         }
+        updateCheckAll(checkAllRoute, boxRoute);
     }
 
     /**
@@ -371,6 +402,7 @@ public class MainController {
             // Included
             main.includeLocomotive(route, loco);
         }
+        updateCheckAll(checkAllLoco, (VBox) checkBox.getParent());
     }
 
     @FXML
@@ -409,6 +441,7 @@ public class MainController {
             // Included
             main.includeLivery(route, loco, checkBox.getText());
         }
+        updateCheckAll(checkAllLivery, (VBox) checkBox.getParent());
     }
 
     @FXML
@@ -441,6 +474,7 @@ public class MainController {
             // Included
             main.includeJourney(route, checkBox.getText());
         }
+        updateCheckAll(checkAllJourney, (VBox) checkBox.getParent());
     }
 
     @FXML
@@ -475,6 +509,31 @@ public class MainController {
             // Included
             main.includeScenario(route, scenario);
         }
+        updateCheckAll(checkAllScenario, (VBox) checkBox.getParent());
+    }
+
+    @FXML
+    private void onCheckAll(ActionEvent event) {
+        final CheckBox allCheckBox = (CheckBox) event.getSource();
+        final boolean include = allCheckBox.isSelected(); // Kept, the handlers below update the "All" checkbox
+
+        // Checkbox list of the pane, only for the picked route (and locomotive)
+        final Node box;
+        if (allCheckBox == checkAllRoute) box = boxRoute;
+        else if (allCheckBox == checkAllLoco) box = boxLoco.getContent();
+        else if (allCheckBox == checkAllLivery) box = boxLivery.getContent();
+        else if (allCheckBox == checkAllJourney) box = boxJourney.getContent();
+        else box = boxScenario.getContent();
+        if (box == null) return;
+
+        for (final Node node : ((VBox) box).getChildren()) {
+            final CheckBox checkBox = (CheckBox) node;
+            // fire() toggles and runs the include/exclude handler; routes hidden by the filter are skipped
+            if (checkBox.isVisible() && checkBox.isSelected() != include) {
+                checkBox.fire();
+            }
+        }
+        allCheckBox.setSelected(include); // e.g. empty list
     }
 
     @FXML
@@ -535,6 +594,7 @@ public class MainController {
             final CheckBox routeCheckBox = (CheckBox) node;
             routeCheckBox.setSelected(main.includedRoutes.contains(main.routes.get(routeCheckBox.getText())));
         }
+        updateCheckAll(checkAllRoute, boxRoute);
 
         // Drop the cached checkboxes, they are built again with the loaded ticks
         locoBoxes.clear();

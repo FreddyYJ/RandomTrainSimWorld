@@ -46,6 +46,7 @@
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Route"/>
             <ComboBox fx:id="comboNation" maxWidth="Infinity"/>
+            <CheckBox fx:id="checkAllRoute" mnemonicParsing="false" onAction="#onCheckAll" text="All"/>
             <SplitPane fx:id="splitRoute" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
                <ScrollPane fitToWidth="true" minHeight="50.0">
                   <VBox fx:id="boxRoute">
@@ -65,6 +66,7 @@
          <VBox minWidth="120.0" spacing="5.0">
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Locomotive"/>
+            <CheckBox fx:id="checkAllLoco" disable="true" mnemonicParsing="false" onAction="#onCheckAll" text="All"/>
             <SplitPane fx:id="splitLoco" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
                <ScrollPane fx:id="boxLoco" fitToWidth="true" minHeight="50.0"/>
                <TextArea fx:id="textLocoDescription" editable="false" minHeight="40.0"
@@ -79,6 +81,7 @@
          <VBox minWidth="120.0" spacing="5.0">
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Livery"/>
+            <CheckBox fx:id="checkAllLivery" disable="true" mnemonicParsing="false" onAction="#onCheckAll" text="All"/>
             <ScrollPane fx:id="boxLivery" fitToWidth="true" VBox.vgrow="ALWAYS"/>
             <TextField fx:id="textPickedLivery" editable="false"/>
             <Button fx:id="buttonRandomLivery" maxWidth="Infinity" mnemonicParsing="false"
@@ -89,6 +92,7 @@
          <VBox minWidth="120.0" spacing="5.0">
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Journey"/>
+            <CheckBox fx:id="checkAllJourney" disable="true" mnemonicParsing="false" onAction="#onCheckAll" text="All"/>
             <ScrollPane fx:id="boxJourney" fitToWidth="true" VBox.vgrow="ALWAYS"/>
             <TextField fx:id="textPickedJourney" editable="false"/>
             <Button fx:id="buttonRandomJourney" maxWidth="Infinity" mnemonicParsing="false"
@@ -101,6 +105,7 @@
          <VBox minWidth="120.0" spacing="5.0">
             <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/></padding>
             <Label style="-fx-font-weight: bold;" text="Scenario"/>
+            <CheckBox fx:id="checkAllScenario" disable="true" mnemonicParsing="false" onAction="#onCheckAll" text="All"/>
             <SplitPane fx:id="splitScenario" dividerPositions="0.65" orientation="VERTICAL" VBox.vgrow="ALWAYS">
                <ScrollPane fx:id="boxScenario" fitToWidth="true" minHeight="50.0"/>
                <TextArea fx:id="textScenarioDescription" editable="false" minHeight="40.0"
