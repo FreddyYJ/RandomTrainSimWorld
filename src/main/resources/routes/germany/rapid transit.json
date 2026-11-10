@@ -1,0 +1,66 @@
+{
+  "name": "Rapid Transit",
+  "locomotives": {
+    "germany/br442": [
+      "Leipzig S-Bahn"
+    ],
+    "germany/br182": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br143": [
+      "DB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Rapid Transit Journey",
+    "Euro Sprinter Journey"
+  ],
+  "scenario": {
+    "Rapid Transit": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 1442 S-Bahn"]
+    },
+    "Metropolitan": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 1442 S-Bahn"]
+    },
+    "North Bound": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 1442 S-Bahn"]
+    },
+    "Leipziger": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 1442 S-Bahn"]
+    },
+    "Cross Town": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 1442 S-Bahn"]
+    },
+    "S-Bahn Sprinter": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["BR 182 DB"]
+    },
+    "City Express": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "The Night Rider": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 182 DB"]
+    }
+  },
+  "description": "You’ve been invited to work for Deutsche Bahn as a driver on one of Germany’s distinctive S-Bahn railways. Navigating the busy S-Bahn will require you to master the layout of the route and the functions and systems of your train as well as Deutsche Bahn’s unique signalling system. With thousands of passengers to transport on-time, your skill, focus and endurance will be tested to the limit!\n\nExperience a full ‘day-in-the-life’ in Service Mode, which features the recreation of an entire 24-hour timetable based on real-world activities. Hop on and off a range of services as they carry out their duties. Take control or ride along, the choice is yours."
+}

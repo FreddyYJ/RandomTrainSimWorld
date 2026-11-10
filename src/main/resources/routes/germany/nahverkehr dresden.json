@@ -1,0 +1,138 @@
+{
+  "name": "Nahverkehr Dresden",
+  "locomotives": {
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br147": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br406": [
+      "DB"
+    ],
+    "germany/br411": [
+      "DB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Welcome to Saxony"
+  ],
+  "scenario": {
+    "Pieschen Predicament": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 146 DB"]
+    },
+    "There and Back Again": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Doppelstockwagen DB", "BR 143 DB"]
+    },
+    "Follow the Leader": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 442 DB"]
+    },
+    "Towing the Line": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 185 MRCE"]
+    },
+    "Chemical Plant Zone": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 185 MRCE", "BR 363 DBB"]
+    },
+    "Wrong Road": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 442 DB"]
+    },
+    "Dresden Diversion": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 193 Vectron Railpool"]
+    },
+    "Ballast Boogie": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 193 Vectron Railpool"]
+    },
+    "Special Delivery": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 193 Vectron Railpool"]
+    },
+    "Labouring Home": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 193 Vectron Railpool"]
+    }
+  },
+  "description": "Experience complex operations out of the iconic Dresden Hbf, with passengers converging to make a hustle and bustle mix of S-Bahn, regional, inter-city, and freight traffic. Be in control of modern traction and explore the countryside of Train Sim World®: Nahverkehr Dresden - Riesa.\n\nDating back to the 1830s, the line between Dresden and Riesa was one of Germany’s first long-distance railways. Today the line’s importance keeps it busy, fast services beat the regional traffic through the use of separate fast and slow lines that each take a different path through the Saxony countryside, and the outskirts of Dresden are served by frequent commuter services."
+}

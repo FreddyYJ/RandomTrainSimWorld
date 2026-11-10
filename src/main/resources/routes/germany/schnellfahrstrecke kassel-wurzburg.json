@@ -1,0 +1,162 @@
+{
+  "name": "Schnellfahrstrecke Kassel-Würzburg",
+  "locomotives": {
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br403": [
+      "DB",
+      "DB Rainbow"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE",
+      "Railpool"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "The 101st Kilometer",
+    "Think 182",
+    "ICE in your veins",
+    "Vectron Legacy",
+    "King of the Kassel"
+  ],
+  "scenario": {
+    "Diversion": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["BR 286 Bpmmbdzf Expert"]
+    },
+    "Interference": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 101 Expert (MFD)"]
+    },
+    "Keep Running": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["BR 286 Bpmmbdzf Expert"]
+    },
+    "Rescue": {
+      "difficulty": 5,
+      "length": "2:00",
+      "locomotive": ["BR 101 Expert"]
+    },
+    "Evacuation": {
+      "difficulty": 5,
+      "length": "0:50",
+      "locomotive": ["BR 101 Expert"]
+    },
+    "Night Crawler": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 182 Dispolok"]
+    },
+    "Gaining Mass": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["BR 182 Dispolok"]
+    },
+    "Tunnel Vision": {
+      "difficulty": 2,
+      "length": "1:20",
+      "locomotive": ["BR 182 Dispolok"]
+    },
+    "Going Green": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 401 ICE1"]
+    },
+    "Pride Parade": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["BR 403 ICE3 Rainbow"]
+    },
+    "Eco Pride": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["BR 401 ICE1", "BR 403 ICE3 Rainbow"]
+    },
+    "ICE Breaker": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["BR 401 ICE1"]
+    },
+    "Prep Work": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Lonely Road": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["BR 401 ICE1"]
+    },
+    "Next Day Delivery": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Fast Track to Fulda": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "Leapfrogging": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Kassel Run": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["BR 401 ICE1", "BR 403 ICE3"]
+    },
+    "Würz Winter": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["BR 401 ICE1"]
+    }
+  },
+  "description": "Experience the thrill of racing through dense, forested valleys, over awe-inspiring viaducts and deep into swooping tunnels. Germany’s classic Inter City Express awaits on our longest route yet with Train Sim World®: Schnellfahrstrecke Kassel - Würzburg.\n\nClimb aboard the first true high-speed train in Germany, the ICE 1, and accelerate up to 280 km/h through Hesse and Bavaria countryside. The eloquent mix of tunnels and viaducts offering a unique view as you punch through landscape, and unique challenge as you stay on top of the forever changing speed limits, master LZB and PZB to stay on schedule.\n\nGo for a modern twist and drive the sleek and refined ICE 3. State-of-the-art, the ICE 3 features unrivalled power and speed, but its efficiency comes at a cost; manage your speed to ensure you don’t give passengers a rough ride, the train is so light, the forces of nature could otherwise take control!\n\nWeave between the super-fast passenger services and run under moonlit skies in the DB BR 185.2. High-speed lines and freight traffic are no strangers, with cargo haulage taking place in twilight hours, as well as gaps throughout the day. Refine your braking aboard heavy trains as you could be put into any passing loop for an ICE to rocket by."
+}

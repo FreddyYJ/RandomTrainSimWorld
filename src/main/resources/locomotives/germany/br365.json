@@ -1,0 +1,15 @@
+{
+  "name": "BR 365",
+  "nation": "Germany",
+  "liveries": [
+    "DBB"
+  ],
+  "type": "Diesel Hydraulic Locomotive",
+  "manufacturer": "MaK, Krupp, Henschel & Sohn, Krauss-Maffei, Jung, Esslingen, Klöckner-Humboldt-Deutz, Gmeinder",
+  "power": "641 hp/478 kW",
+  "max_speed": "30 (shunt), 60 (line) km/h (19/37 mph)",
+  "manufactured_year": "1956-1964",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 942,
+  "description": "The DB Class V 60 is a German diesel locomotive operated by the Deutsche Bundesbahn (DB) and later, the Deutsche Bahn AG (DB AG), which is used particularly for shunting duties, but also for hauling light goods trains. Seventeen locomotives were bought used by the Norwegian State Railways and designated NSB Di 5. Also the Yugoslav Railways bought used units, and designated them JŽ 734; they were subsequently designated Series 2133 by the Croatian Railways."
+}

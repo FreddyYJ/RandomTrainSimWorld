@@ -101,7 +101,7 @@
     "Square Dance": {
       "difficulty": 2,
       "length": "0:30",
-      "locomotive": ["BR 193 DB Vectron"]
+      "locomotive": ["BR 193 Vectron DB"]
     },
     "Back on Track": {
       "difficulty": 3,

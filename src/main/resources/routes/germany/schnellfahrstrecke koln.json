@@ -1,0 +1,164 @@
+{
+  "name": "Schnellfahrstrecke Köln",
+  "locomotives": {
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB"
+    ],
+    "germany/br406": [
+      "DB"
+    ],
+    "germany/br423": [
+      "DB"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE",
+      "Railpool"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br422": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Freightful Endeavours",
+    "A Highspeed Connection",
+    "Super Bahn"
+  ],
+  "scenario": {
+    "Drop and Go": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["BR 187 DB"]
+    },
+    "A Trip to Aachen": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 187 DB"]
+    },
+    "Pickup Service": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 187 DB"]
+    },
+    "From Aachen to Ehrenfeld": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["BR 187 DB"]
+    },
+    "Talented Takeover": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 442 DB"]
+    },
+    "ICE To Meet You": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["BR 406 ICE3M"]
+    },
+    "ICE and Rain": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["BR 406 ICE3M"]
+    },
+    "Aachen Turnaround": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 442 DB"]
+    },
+    "Snow And ICE": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 406 ICE3M"]
+    },
+    "Düren Düren": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 423 DB"]
+    },
+    "Snowblind": {
+      "difficulty": 4,
+      "length": "0:30",
+      "locomotive": ["BR 423 DB"]
+    },
+    "Reverse Charge": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 423 DB"]
+    }
+  },
+  "description": "Re-experience the thrill of high-speed inter-city rail as you push the throttle through bustling German Metropolis, the rolling open countryside awaits in the exquisite Train Sim World®: Schnellfahrstrecke Köln - Aachen, now fully remastered in a free update! Operate mixed-traffic services and take in the new volumetric skies, enhanced foliage and more, brought to you by FolezzWorld.\n\nThe Köln - Aachen high speed railway is part of the Trans-European transport network with line speeds up to 250 km/h. The route is steeped in history, from its heavily debated original concept to the landmarks and bridges making up the surrounding landscape. Explore the wonderful Burtscheid Viaduct, historic triangle truss Dreigurtbrücke, and the Köln skyline including the beautiful cathedral."
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Niddertalbahn",
+  "locomotives": {
+    "germany/br628": [
+      "DB Mint"
+    ],
+    "germany/br365": [
+      "DBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Decelerating Niddertal"
+  ],
+  "scenario": {
+    "Hugging Trees": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 628 DB"]
+    },
+    "Prep Work": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 628 DB"]
+    },
+    "Manual Labour": {
+      "difficulty": 2,
+      "length": "1:50",
+      "locomotive": ["BR 628 DB"]
+    },
+    "Glimpse Into the Future": {
+      "difficulty": 5,
+      "length": "0:30",
+      "locomotive": ["BR 365 DBB"]
+    },
+    "373 Sugar Beets": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["BR 365 DBB"]
+    }
+  },
+  "description": "Take to the rails of Germany with no wires in sight! Experience the iconic BR 628.2 and shuttle along the picturesque fields and rivers of Hesse in Train Sim Germany’s authentic 1990s recreation of Niddertalbahn: Bad Vilbel - Stockheim for Train Sim World®!\n\nPropel along the quaint, single track branch line (Nebenbahn) in style aboard the iconic BR 628.2, sporting the nostalgic mint accents of the Deutsche Bundesbahn. Built in the 1980s, the BR 628.2, despite being built for rural lines, is first class-equipped and offers open views of the landscape through its large windows and windscreen. Trundle between stations at a leisurely pace before their early 2000s rebuilds and renaming took place.\n\nSweeten the deal with the Deutsche Bundesbahn’s classic BR 365 diesel shunter, a heavy class derivative of the V60. Used through the Nidder Valley as a mainline locomotive, the BR 365 hauled sugar beet trains from the region onward to Friedberg’s sugar factory. Don’t get distracted by the eye candy scenery, step up to the challenge and transport this vital commodity without being choco-late!"
+}
