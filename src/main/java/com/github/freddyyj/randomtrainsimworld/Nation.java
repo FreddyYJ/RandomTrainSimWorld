@@ -1,5 +1,8 @@
 package com.github.freddyyj.randomtrainsimworld;
 
+/**
+ * Nation enum used in {@link Route} and {@link Locomotive}
+ */
 public enum Nation {
     USA("USA"),
     UK("UK"),
@@ -12,6 +15,9 @@ public enum Nation {
     Czech("Czech"),
     Canada("Canada");
 
+    /**
+     * Name to show in the UI
+     */
     private final String displayName;
 
     Nation(final String displayName) {
@@ -44,6 +50,9 @@ public enum Nation {
         throw new NationNotFoundException(nation);
     }
 
+    /**
+     * Exception when a given name is not in the enum
+     */
     static class NationNotFoundException extends RuntimeException {
         private final String unknownNation;
         public NationNotFoundException(String unknownNation) {

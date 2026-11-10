@@ -17,13 +17,14 @@ import java.nio.file.Path;
 import java.util.Map;
 
 /**
- * utilities related with Json
+ * Utilities, defined in static
  * @author FreddyYJ_
- * @version 0.2.0
  */
 public class Utils {
     /**
-     * Converts a bundled resource to a {@link Path}. Works whether the resource is a plain file (IDE/Gradle run),
+     * Converts a resource directory depends on the bundle
+     *
+     * Works whether the resource is a plain file (IDE/Gradle run),
      * inside a jar file ({@code jar:} URI), or inside a jlink/jpackage runtime image ({@code jrt:} URI).
      * @param resourceName absolute resource name (e.g. {@code "/locomotives/gp38-2.json"})
      * @return path to the resource

@@ -8,16 +8,29 @@ import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-// Small settings file that remembers the config file to load at startup
+/**
+ * Settings of the Random TSW
+ */
 public class Settings {
-	// System's document directory (home directory on Linux)
+	/**
+	 * Document directory of this system
+	 */
 	public static final File DOCUMENT_DIRECTORY = FileSystemView.getFileSystemView().getDefaultDirectory();
+	/**
+	 * {@link File} of the setting file, in document directory
+	 */
 	public static final File FILE = new File(DOCUMENT_DIRECTORY, "randomtsw-settings.json");
 
-	// Config file path, empty if no config file is saved or loaded yet
+	/**
+	 * Path to the configuration file
+	 */
 	public String configFilePath = "";
 
-	// Reads the settings file, creates one with an empty config file path if it does not exist
+	/**
+	 * Load setting from the file
+	 * @return {@link Settings} object
+	 * @throws IOException File read exception
+	 */
 	public static Settings load() throws IOException {
 		final Settings settings = new Settings();
 		if (!FILE.exists()) {
@@ -37,6 +50,10 @@ public class Settings {
 		return settings;
 	}
 
+	/**
+	 * Save setting to the file
+	 * @throws IOException File write exception
+	 */
 	public void save() throws IOException {
 		final JsonObject root = new JsonObject();
 		root.addProperty("configFilePath", configFilePath);

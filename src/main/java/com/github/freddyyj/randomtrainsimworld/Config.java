@@ -10,9 +10,11 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-// Reads and writes the excluded routes, locomotives, liveries, journeys and scenarios.
-// Main keeps the inclusions, this class only stores what is excluded, by name.
-// Excluded items are kept, so new routes or locomotives are included by default.
+/**
+ * Configuration class to store the inclusion/excludion data
+ *
+ * It loads and stores the excluded data.
+ */
 public class Config {
 	private static final int VERSION = 2;
 
@@ -29,21 +31,33 @@ public class Config {
 	// Route name -> scenario names
 	private final Map<String, Set<String>> excludedScenarios = new HashMap<>();
 
-	// Does not read the file, call load() for it
+	/**
+	 * A constructor with the {@link File} of the configuration
+	 * @param configFile File of the configuration
+	 */
 	public Config(final File configFile) {
 		this.configFile = configFile;
 	}
 
+	/**
+	 * A constructor with the path to the configuration file
+	 * @param configFilePath Patch to the configuration file
+	 */
 	public Config(final String configFilePath) {
 		this(new File(configFilePath));
 	}
 
-	// Config without a file, save() needs a file so use Main.saveAs() first
+	/**
+	 * A constructor with empty configuration (All included)
+	 */
 	public Config() {
 		this((File) null);
 	}
 
-	// Reads the file, nothing is excluded if the file does not exist
+	/**
+	 * Load a configuration fron the file
+	 * @throws IOException Exception from the File I/O
+	 */
 	public void load() throws IOException {
 		excludedRoutes.clear();
 		excludedLocomotives.clear();
@@ -78,27 +92,61 @@ public class Config {
 		}
 	}
 
+	/**
+	 * Check the route is excluded
+	 * @param route A {@link Route} object
+	 * @return `true` if the route is excluded, `false` otherwise
+	 */
 	public boolean isRouteExcluded(final Route route) {
 		return excludedRoutes.contains(route.name);
 	}
 
+	/**
+	 * Check the locomotive is excluded in the route
+	 * @param route A {@link Route} of the locomotive
+	 * @param locomotive A {@link Locomotive} object
+	 * @return `true` if the locomotive is excluded, `false` otherwise
+	 */
 	public boolean isLocomotiveExcluded(final Route route, final Locomotive locomotive) {
 		return excludedLocomotives.getOrDefault(route.name, Set.of()).contains(locomotive.name);
 	}
 
+	/**
+	 * Check the livery is excluded in the locomotive and route
+	 * @param route A route of the locomotive
+	 * @param locomotive A locomotive of the livery
+	 * @param livery A livery, in string
+	 * @return `true` if the livery is excluded, `false` otherwise
+	 */
 	public boolean isLiveryExcluded(final Route route, final Locomotive locomotive, final String livery) {
 		return excludedLiveries.getOrDefault(route.name, Map.of()).getOrDefault(locomotive.name, Set.of()).contains(livery);
 	}
 
+	/**
+	 * Check the journey is excluded in the route
+	 * @param route A route
+	 * @param journey A journey name in the route
+	 * @return `true` if the journey is excluded, `false` otherwise
+	 */
 	public boolean isJourneyExcluded(final Route route, final String journey) {
 		return excludedJourneys.getOrDefault(route.name, Set.of()).contains(journey);
 	}
 
+	/**
+	 * Check the scenario is excluded in the route
+	 * @param route A route
+	 * @param scenario A {@link Scenario} in the route
+	 * @return `true` if the scenario is excluded, `false` otherwise
+	 */
 	public boolean isScenarioExcluded(final Route route, final Scenario scenario) {
 		return excludedScenarios.getOrDefault(route.name, Set.of()).contains(scenario.name);
 	}
 
-	// Writes everything not included in main, then they become the excluded names of this config
+	/**
+	 * Save the current change to the file
+	 * @param main A {@link Main} object to get the updates
+	 * @throws IOException I/O exception from file write
+	 */
 	public void save(final Main main) throws IOException {
 		if (configFile == null) {
 			throw new IllegalStateException("Config file path is not set");
@@ -151,8 +199,11 @@ public class Config {
 		}
 	}
 
-	// True if main includes or excludes something differently from this config
-	// Names in the file that no longer exist in the data are not counted
+	/**
+	 * Check the data is changed from the file
+	 * @param main A {@link Main} object
+	 * @return `true` if the data is different, `false` otherwise
+	 */
 	public boolean isChanged(final Main main) {
 		for (final Route route : main.routes.values()) {
 			if (main.includedRoutes.contains(route) == isRouteExcluded(route)) return true;

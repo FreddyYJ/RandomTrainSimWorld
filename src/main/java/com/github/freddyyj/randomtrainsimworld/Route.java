@@ -19,25 +19,30 @@ import java.util.Map;
 
 /**
  * A route class
- * <p>
- *     Route name is a name of route.(ex. Sand Patch Grade)
  *
- *     Route code is a 2 to 4 length code of this route.(ex. SPG if this route is Sand Patch Grade)
- * </p>
+ * Each field is mostly used to generate a full description.
  * @author FreddyYJ_
  */
 public class Route {
 	public final String name;
+	/**
+	 * A map of the locomotive and its liveries
+	 */
 	public final ImmutableMap<Locomotive, ImmutableList<String>> locomotives;
 	public final Nation nation;
 	public final ImmutableList<String> journeys;
 	public final ImmutableList<Scenario> scenarios;
+	/**
+	 * Description from the official Steam page of the route DLC
+	 */
 	public final String description;
 
+	/**
+	 * A default constructor with entire fields
+	 */
 	public Route(final String name, final Map<Locomotive,List<String>> locomotives, final Nation nation,
 				 final List<String> journeys, final List<Scenario> scenarios, final String description) {
 		this.name = name;
-		// Read-only copies, including each liveries list (ImmutableMap keeps the order)
 		this.locomotives = ImmutableMap.copyOf(Maps.transformValues(locomotives, ImmutableList::copyOf));
 		this.nation = nation;
 		this.journeys = ImmutableList.copyOf(journeys);
@@ -45,7 +50,11 @@ public class Route {
 		this.description = description;
 	}
 
-	// Reads a route from a JSON file (e.g. resources/routes/usa/sand patch grade.json)
+	/**
+	 * A constructor from the json file in resources
+	 * @param jsonFilePath Path to json file
+	 * @param loadedLocomotives Loaded locomotives from json files, to prevent the exception
+	 */
 	public Route(final Path jsonFilePath, final Map<String, Locomotive> loadedLocomotives) {
 		final JsonObject json;
 		try (Reader reader = Files.newBufferedReader(jsonFilePath, StandardCharsets.UTF_8)) {
@@ -87,6 +96,10 @@ public class Route {
 		this.description = json.get("description").getAsString();
 	}
 
+	/**
+	 * Get full description
+	 * @return Full description
+	 */
 	public String getDescriptionString() {
 		return "Name: " + name + "\n" +
 				"Nation: " + nation + "\n" +

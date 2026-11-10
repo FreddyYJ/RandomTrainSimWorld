@@ -17,31 +17,44 @@ import java.util.stream.Stream;
  * @author FreddyYJ_
  */
 public class Main {
+	/**
+	 * All routes
+	 */
 	public final ImmutableMap<String, Route> routes;
+	/**
+	 * All locomotives
+	 */
 	public final ImmutableList<Locomotive> locomotives;
-	// Included items to pick from, changed only by the include/exclude methods below
+
 	private final Set<Route> routeInclusion = new HashSet<>();
 	private final Map<Route,Set<Locomotive>> locomotiveInclusion = new HashMap<>();
-	// Included livery names for each locomotive on each route
 	private final Map<Route,Map<Locomotive,Set<String>>> liveryInclusion = new HashMap<>();
 	private final Map<Route,Set<String>> journeyInclusion = new HashMap<>();
 	private final Map<Route,Set<Scenario>> scenarioInclusion = new HashMap<>();
-	// Read-only views of the inclusions above, they show the changes made by the include/exclude methods
+
+	// Included data, to prevent modifying the data from outside
 	public final Set<Route> includedRoutes = Collections.unmodifiableSet(routeInclusion);
 	public final Map<Route,Set<Locomotive>> includedLocomotives;
 	public final Map<Route,Map<Locomotive,Set<String>>> includedLiveries;
 	public final Map<Route,Set<String>> includedJourneys;
 	public final Map<Route,Set<Scenario>> includedScenarios;
+
 	private Config config;
 	private Settings settings;
 	private static Main core=null;
 
+	/**
+	 * Main method, to launch the GUI
+	 */
 	public static void main(String[] args) {
 		// Main is created in the GUI, so errors while loading data can be shown in an alert
 		Application.launch(com.github.freddyyj.randomtrainsimworld.gui.Main.class);
 	}
 
-	public Main() {
+	/**
+	 * Main constructor to initialize the data structure
+	 */
+	Main() {
 		// Load every bundled route and locomotive file, including subdirectories (e.g. usa/)
 		// Routes are keyed by their names (ImmutableMap keeps the file order)
 		final ImmutableMap.Builder<String, Route> routeBuilder = ImmutableMap.builder();
@@ -175,14 +188,14 @@ public class Main {
 	}
 
 	/**
-	 * Save and close save file.
+	 * Save and close config file.
 	 */
 	public void save() throws IOException {
 		config.save(this);
 	}
 
 	/**
-	 * Save savefile at specific path.
+	 * Save config at specific path.
 	 * @param path file path
 	 */
 	public void saveAs(String path) throws IOException {
@@ -196,7 +209,7 @@ public class Main {
 	}
 
 	/**
-	 * Reload savefile from specific path.
+	 * Reload config file from specific path.
 	 * @param path file path
 	 */
 	public void reload(String path) throws IOException {
@@ -249,11 +262,17 @@ public class Main {
 		return config.isChanged(this);
 	}
 
-	// False until a config file is saved or loaded, then save() can be used
+	/**
+	 * Check the config is loaded from or stored to the file
+	 * @return `true` if the config is loaded or stored, `false` otherwise
+	 */
 	public boolean hasConfigFile() {
 		return config.configFile != null;
 	}
 
+	/**
+	 * Exception that the route is not found by the name
+	 */
 	public static class RouteNotFoundException extends RuntimeException {
 		public RouteNotFoundException(final String routeName) {
 			super("Route " + routeName + " not found in the pool");

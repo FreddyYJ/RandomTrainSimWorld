@@ -15,12 +15,21 @@ import java.util.List;
 
 /**
  * A locomotive class
+ *
+ * The fields are used to generate the description.
+ * The information is mostly from Wikipedia.
  * @author FreddyYJ_
  */
 public class Locomotive {
 	public final String name;
+	/**
+	 * See {@link Nation} for the available nations
+	 */
 	public final Nation nation;
 	public final ImmutableList<String> liveries;
+	/**
+	 * Type of the locomotive (e.g., Diesel Electric Locomotive, Electric Multiple Unit)
+	 */
 	public final String type;
 	public final String manufacturer;
 	public final String power;
@@ -30,6 +39,9 @@ public class Locomotive {
 	public final Integer totalProduced;
 	public final String description;
 
+	/**
+	 * A constructor with the entire information
+	 */
 	public Locomotive(final String name, final Nation nation, final List<String> liveries,
 					  final String type, final String manufacturer, final String power,
 					  final String maxSpeed, final String manufacturedYear, final String gauge, final Integer totalProduced,
@@ -78,6 +90,10 @@ public class Locomotive {
 		this.description = json.get("description").getAsString();
 	}
 
+	/**
+	 * Generate and returns a full description, with the information
+	 * @return Full description
+	 */
 	public String getDescriptionString() {
 		return "Name: " + name + "\n" +
 				"Nation: " + nation + "\n" +

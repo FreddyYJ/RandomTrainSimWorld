@@ -1,5 +1,5 @@
 /**
- * RandomTSW is random picker for Train Sim World.
+ * RandomTSW provides the feature to see the information of the route, locomotive, etc. and pick them randomly
  * @author FreddyYJ_
  */
 module RandomTrainSimWorld.main {
