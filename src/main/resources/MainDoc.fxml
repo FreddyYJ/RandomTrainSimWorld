@@ -93,6 +93,8 @@
             <TextField fx:id="textPickedJourney" editable="false"/>
             <Button fx:id="buttonRandomJourney" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomJourney" text="Pick Journey"/>
+            <Button fx:id="buttonRandomJourneyAll" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomJourneyAll" text="Pick Journey (All Routes)"/>
          </VBox>
 
          <!-- Scenario pane: content (VBox of checkboxes) is set per route by the controller -->
@@ -107,6 +109,8 @@
             <TextField fx:id="textPickedScenario" editable="false"/>
             <Button fx:id="buttonRandomScenario" maxWidth="Infinity" mnemonicParsing="false"
                     onAction="#onRandomScenario" text="Pick Scenario"/>
+            <Button fx:id="buttonRandomScenarioAll" maxWidth="Infinity" mnemonicParsing="false"
+                    onAction="#onRandomScenarioAll" text="Pick Scenario (All Routes)"/>
          </VBox>
       </SplitPane>
 

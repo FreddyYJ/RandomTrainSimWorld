@@ -90,6 +90,8 @@ public class MainController {
     private TextField textPickedJourney;
     @FXML
     private Button buttonRandomJourney;
+    @FXML
+    private Button buttonRandomJourneyAll;
 
     // Scenario pane
     @FXML
@@ -102,6 +104,8 @@ public class MainController {
     private TextField textPickedScenario;
     @FXML
     private Button buttonRandomScenario;
+    @FXML
+    private Button buttonRandomScenarioAll;
 
     @FXML
     private Button buttonRandomAll;
@@ -629,6 +633,37 @@ public class MainController {
     }
 
     @FXML
+    private void onRandomJourneyAll(ActionEvent event) {
+        final Main main = Main.getInstance();
+
+        // Included journeys of all included routes, paired with their route
+        final List<Map.Entry<Route, String>> allJourneys = new ArrayList<>();
+        for (final Route route : main.includedRoutes) {
+            for (final String journey : main.includedJourneys.get(route)) {
+                allJourneys.add(Map.entry(route, journey));
+            }
+        }
+        if (allJourneys.isEmpty()) {
+            new Alert(AlertType.ERROR, "No journeys are included to pick from!").show();
+            return;
+        }
+        final Map.Entry<Route, String> picked = allJourneys.get(random.nextInt(allJourneys.size()));
+        final Route route = picked.getKey();
+
+        // Pick the route of the journey too
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
+
+        // After updateJourneyPane, which resets the picked journey
+        pickedJourney = picked.getValue();
+        textPickedJourney.setText(pickedJourney);
+    }
+
+    @FXML
     private void onRandomScenario(ActionEvent event) {
         final Main main = Main.getInstance();
         if (pickedRoute == null) {
@@ -642,6 +677,38 @@ public class MainController {
             return;
         }
         pickedScenario = includedScenarios.get(random.nextInt(includedScenarios.size()));
+        textPickedScenario.setText(pickedScenario.name);
+        textScenarioDescription.setText(pickedScenario.getDescriptionString());
+    }
+
+    @FXML
+    private void onRandomScenarioAll(ActionEvent event) {
+        final Main main = Main.getInstance();
+
+        // Included scenarios of all included routes, paired with their route
+        final List<Map.Entry<Route, Scenario>> allScenarios = new ArrayList<>();
+        for (final Route route : main.includedRoutes) {
+            for (final Scenario scenario : main.includedScenarios.get(route)) {
+                allScenarios.add(Map.entry(route, scenario));
+            }
+        }
+        if (allScenarios.isEmpty()) {
+            new Alert(AlertType.ERROR, "No scenarios are included to pick from!").show();
+            return;
+        }
+        final Map.Entry<Route, Scenario> picked = allScenarios.get(random.nextInt(allScenarios.size()));
+        final Route route = picked.getKey();
+
+        // Pick the route of the scenario too
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
+
+        // After updateScenarioPane, which resets the picked scenario
+        pickedScenario = picked.getValue();
         textPickedScenario.setText(pickedScenario.name);
         textScenarioDescription.setText(pickedScenario.getDescriptionString());
     }
