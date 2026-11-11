@@ -1,0 +1,17 @@
+{
+  "name": "Class 350",
+  "nation": "UK",
+  "liveries": [
+    "London Northwestern Railway",
+    "West Midlands Trains",
+    "London Midland"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Siemens",
+  "power": "2,680 hp/2,000 kW",
+  "max_speed": "110 mph (180 km/h)",
+  "manufactured_year": "2005-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 87,
+  "description": "The British Rail Class 350 Desiro is a class of electric multiple unit passenger train built by Siemens Mobility to its Desiro design between 2004 and 2014. Fifty are operated by West Midlands Trains, having previously been operated by Central Trains, Silverlink, Southern, London Midland, First TransPennine Express and TransPennine Express. The remaining 37 are in storage and are scheduled to be transferred to Northern Trains between 2028 and 2030."
+}

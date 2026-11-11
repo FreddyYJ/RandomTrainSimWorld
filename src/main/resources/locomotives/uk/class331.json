@@ -1,0 +1,15 @@
+{
+  "name": "Class 331",
+  "nation": "UK",
+  "liveries": [
+    "Northern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "CAF",
+  "power": "2,360 hp/1,760 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2017-2020",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 43,
+  "description": "The British Rail Class 331 Civity is a class of electric multiple unit built by CAF, owned by Eversholt Rail Group, and currently operated by Northern Trains. A total of 43 units have been built – 31 three-car units and 12 four-car units. Construction of the trains started in July 2017 and they were phased into service from 1 July 2019."
+}

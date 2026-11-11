@@ -1,0 +1,17 @@
+{
+  "name": "Class 37",
+  "nation": "UK",
+  "liveries": [
+    "RailFreight",
+    "Europhoenix",
+    "BR"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "English Electric",
+  "power": "1,750 hp/1,305 kW",
+  "max_speed": "80-90 mph (130-145 km/h)",
+  "manufactured_year": "1960-1965",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 309,
+  "description": "The British Rail Class 37 is a diesel–electric locomotive. Also known as the English Electric Type 3, the class was ordered as part of the British Rail modernisation plan. They were originally numbered in two series, D6600–D6608 and D6700–D6999.\n\nBuilt in the early 1960s, the Class 37 became a familiar sight on many parts of the British Rail network, in particular forming the main motive power for InterCity services in East Anglia and within Scotland. They also performed well on secondary and inter-regional services for many years. Many are still in use today on freight, maintenance, and empty stock movement duties. The Class 37s are known to some railway enthusiasts as \"tractors\", a nickname given due to the similarities between the sound of the Class 37's engine and that of a tractor."
+}

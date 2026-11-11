@@ -1,0 +1,15 @@
+{
+  "name": "Class A3 4472 Flying Scotsman",
+  "nation": "UK",
+  "liveries": [
+    "Flying Scotsman"
+  ],
+  "type": "Steam Locomotive",
+  "manufacturer": "Doncaster Works",
+  "power": "N/A",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "1923",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 1,
+  "description": "No. 4472 Flying Scotsman is an LNER Class A3 4-6-2 \"Pacific\" type steam locomotive built in 1923 for the London and North Eastern Railway (LNER) at Doncaster Works to a design by Sir Nigel Gresley. It was employed on long-distance express passenger trains on the East Coast Main Line, notably on the Flying Scotsman service between London King's Cross and Edinburgh Waverley, after which it was named."
+}

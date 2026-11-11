@@ -1,0 +1,24 @@
+{
+  "name": "Class 43 HST",
+  "nation": "UK",
+  "liveries": [
+    "GWR",
+    "East Midlands Trains",
+    "Great British Railways",
+    "GWR 43002",
+    "GWR 43093",
+    "GWR 43185",
+    "GWR Unbranded",
+    "GWR Vinyl Logo",
+    "GWR The Welshman",
+    "GWR Geraint Thomas"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "British Rail Engineering, Limited Crewe Works",
+  "power": "2,250 hp/1,678 kW",
+  "max_speed": "125 mph (201 km/h)",
+  "manufactured_year": "1975-1982",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 197,
+  "description": "The British Rail Class 43 (HST) is the TOPS classification used for the InterCity 125 High Speed Train (formerly Classes 253 and 254) diesel-electric power cars, built by British Rail Engineering Limited from 1975 to 1982, and in service in the UK since 1976.\n\nThe class is officially the fastest diesel locomotive in the world, with an absolute maximum speed of 148.5 mph (239.0 km/h), and a regular service speed of 125 mph (201 km/h). The record run was led by 43102 (43302) and trailed by 43159."
+}

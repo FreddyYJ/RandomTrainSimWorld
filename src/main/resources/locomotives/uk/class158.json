@@ -1,0 +1,17 @@
+{
+  "name": "Class 158",
+  "nation": "UK",
+  "liveries": [
+    "East Midlands Trains",
+    "ScotRail",
+    "Levenmouth Rail Link"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "350-400 hp/260-300 kW",
+  "max_speed": "90 mph (145 km/h)",
+  "manufactured_year": "1990-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 180,
+  "description": "The British Rail Class 158 Express Sprinter is a type of diesel multiple unit (DMU) passenger train. It is a member of the Sprinter series of regional trains, produced as a replacement for British Rail's first generation of DMUs; of the other members, the Class 159 is almost identical to the Class 158, having been converted from Class 158 to Class 159 in two batches to operate express services from London Waterloo to the West of England."
+}

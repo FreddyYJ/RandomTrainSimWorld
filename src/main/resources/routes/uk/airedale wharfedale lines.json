@@ -1,0 +1,105 @@
+{
+  "name": "Airedale & Wharfedale Lines",
+  "locomotives": {
+    "uk/class331": [
+      "Northern"
+    ],
+    "uk/class801": [
+      "LNER"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class333": [
+      "Northern"
+    ],
+    "uk/class08": [
+      "BR"
+    ],
+    "uk/class20": [
+      "BR"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class43": [
+      "GWR",
+      "East Midlands Trains",
+      "43185",
+      "43002"
+    ],
+    "uk/class47": [
+      "BR Intercity"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/class802": [
+      "GBR"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ],
+    "uk/jubilee": [
+      "Black"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Airedale and Wharfedale Lines",
+    "A Northern Trilogy"
+  ],
+  "scenario": {
+    "Sunday Shuttle": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["Class 331 Northern"]
+    },
+    "The Midnight Train from Platform 0": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 331 Northern"]
+    },
+    "Calling in a Favour": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 801 LNER"]
+    },
+    "Wagon Trouble": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "Digital Detox": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 331 Northern"]
+    },
+    "Call to Depot Duty": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 333 Northern"]
+    },
+    "Divine Diversion": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 333 Northern"]
+    },
+    "Railway Roll Call": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 333 Northern", "Class 331 Northern", "Class 801 LNER", "Class 66 DB"]
+    }
+  },
+  "description": "Make way for the north of England and hurry through the quaint commuter hills of Yorkshire; the complex Airedale & Wharfedale Network is ready for steadfast service in Train Sim World 7! Aboard modern Northern traction, operate across a variety of lines that converge into two major cities: Leeds and Bradford.\n\nToday’s network started in 1846 with the Leeds and Bradford Railway linking the two historic cities, and extending through the industrious hills to Skipton the following year, forming what is now known as the Airedale Line. The Midland Railway and the North Eastern co-owned the 1860s-built line to Ilkley, which would eventually form part of the Wharfedale Line. They have come a long way since, with the combined network being one of the busiest outside of the South East."
+}

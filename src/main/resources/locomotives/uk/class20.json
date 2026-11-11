@@ -1,0 +1,22 @@
+{
+  "name": "Class 20",
+  "nation": "UK",
+  "liveries": [
+    "BR Headcode Box",
+    "BR Disc",
+    "BR Ex Disc",
+    "RailFreight Headcode Box",
+    "RailFreight Disc",
+    "RailFreight Ex Disc",
+    "RailFreight",
+    "Direct Rail Services"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "English Electric",
+  "power": "1,000 hp/746 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "1957-1962, 1965-1968",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 228,
+  "description": "The British Rail Class 20, otherwise known as an English Electric Type 1, is a class of diesel-electric locomotive. In total, 228 locomotives in the class were built by English Electric between 1957 and 1968, the large number being in part because of the failure of other early designs in the same power range to provide reliable locomotives.\n\nThe locomotives were originally numbered D8000–D8199 and D8300–D8327. They are known by railway enthusiasts as \"Choppers\"."
+}

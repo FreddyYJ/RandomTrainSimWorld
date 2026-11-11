@@ -1,0 +1,15 @@
+{
+  "name": "Class 333",
+  "nation": "UK",
+  "liveries": [
+    "Northern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "CAF",
+  "power": "1,900 hp/1,400 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2000-2003",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 16,
+  "description": "The British Rail Class 333 is a class of electric multiple unit (EMU) passenger train built by CAF between 2000 and 2003 for Northern Spirit (later Arriva Trains Northern), with traction equipment supplied by Siemens Transportation Systems. All have passed to subsequent franchises and subsequent operators Northern Rail, Arriva Rail North and Northern Trains."
+}

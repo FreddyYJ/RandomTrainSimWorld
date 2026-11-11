@@ -1,0 +1,20 @@
+{
+  "name": "Class 66",
+  "nation": "UK",
+  "liveries": [
+    "DB",
+    "DB Schenker",
+    "EWS",
+    "Direct Rail Services",
+    "ONE",
+    "EWS RHTT"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Diesel (EMD)",
+  "power": "3,200 hp/2,400 kW",
+  "max_speed": "75 mph (120 km/h)",
+  "manufactured_year": "1998-2008, 2014-2015",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 480,
+  "description": "The British Rail Class 66 is a type of six-axle diesel-electric freight locomotive developed in part from the Class 59, for use on UK railways. Since its introduction the class has been successful and has been sold to British and other European railway companies. In Continental Europe it is marketed as the EMD Class 66 (JT42CWR)."
+}

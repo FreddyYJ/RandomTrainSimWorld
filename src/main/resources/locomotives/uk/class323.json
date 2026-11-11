@@ -1,0 +1,17 @@
+{
+  "name": "Class 323",
+  "nation": "UK",
+  "liveries": [
+    "West Midlands Trains",
+    "Regional Railways",
+    "Northern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hunslet Transportation Projects, Holec Ridderkerk",
+  "power": "1,566 hp/1,168 kW",
+  "max_speed": "90 mph (145 km/h)",
+  "manufactured_year": "1992-1995",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 43,
+  "description": "The British Rail Class 323 is a class of electric multiple unit (EMU) passenger train built by Hunslet Transportation Projects and Holec. All 43 units were built from 1992 through to 1995, although mockups and prototypes were built and tested in 1990 and 1991."
+}
