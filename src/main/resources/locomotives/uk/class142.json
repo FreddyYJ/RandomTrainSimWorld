@@ -1,0 +1,19 @@
+{
+  "name": "Class 142",
+  "nation": "UK",
+  "liveries": [
+    "Provincial",
+    "Orange",
+    "Skipper",
+    "Transport for Wales",
+    "Arriva Trains Wales"
+  ],
+  "type": "Diesel Mechanical/Hydraulic Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "200-225 hp/149-168 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "1985-1987",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 96,
+  "description": "Class 142 diesel multiple unit (DMU) passenger trains were built for British Rail (BR) from 1985 to 1987, with a high level of commonality with the widely used Leyland National bus. They are part of the Pacer family of railbuses. The class was withdrawn from service in 2020, due to its non-compliance with key accessibility legislation."
+}

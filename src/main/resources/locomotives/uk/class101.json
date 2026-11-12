@@ -1,0 +1,15 @@
+{
+  "name": "Class 101",
+  "nation": "UK",
+  "liveries": [
+    "BR"
+  ],
+  "type": "Diesel Mechanical Multiple Unit",
+  "manufacturer": "Metropolitan Cammell",
+  "power": "300 hp/224 kW",
+  "max_speed": "70 mph (113 km/h)",
+  "manufactured_year": "1956-1960",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 620,
+  "description": "The British Rail Classes 101 and 102 diesel-mechanical multiple units were built by Metro-Cammell at Washwood Heath in Birmingham, England, from 1956 to 1959, following construction of a series of prototype units. These classes proved to be some of the most successful and longest-lived of BR's First Generation DMUs, second in longevity only to the Class 121, with the final five units being withdrawn on 24 December 2003. The oldest set was, by then, just over 47 years old."
+}

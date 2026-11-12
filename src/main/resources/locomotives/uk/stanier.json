@@ -1,0 +1,15 @@
+{
+  "name": "Stanier 8F Class",
+  "nation": "UK",
+  "liveries": [
+    "Stanier 8F"
+  ],
+  "type": "Steam Locomotive",
+  "manufacturer": "Crewe Works, Horwich Works, North British Loco",
+  "power": "1,300-1,400 hp/969-1,040 kW",
+  "max_speed": "N/A",
+  "manufactured_year": "1935-1945",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 331,
+  "description": "The London, Midland and Scottish Railway (LMS) Stanier Class 8F is a class of steam locomotives designed for hauling heavy freight. 852 were built between 1935 and 1946 (not all to LMS order), as a freight version of William Stanier's successful Black Five, and the class saw extensive service overseas during and after the Second World War."
+}

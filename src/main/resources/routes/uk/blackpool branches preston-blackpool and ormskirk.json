@@ -1,0 +1,77 @@
+{
+  "name": "Blackpool Branches: Preston-Blackpool & Ormskirk",
+  "locomotives": {
+    "uk/class142": [
+      "Provincial",
+      "Orange",
+      "Skipper"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "RailFreight",
+      "47484"
+    ],
+    "uk/class08": [
+      "BR"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class86": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class87": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/stanier": [
+      "Stanier 8F"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Exploring the Fylde Coast"
+  ],
+  "scenario": {
+    "Blackpool Illuminations": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 47/4 BR"]
+    },
+    "Oiled Up": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 47/4 BR"]
+    },
+    "DMU Debacle": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["Class 142 Provincial"]
+    },
+    "Back and Forth": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 142 Provincial"]
+    },
+    "Put a Gronk on it": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 08 BR"]
+    }
+  },
+  "description": "All aboard for Brum! Climb onto one of the most unique modern trains in Britain, delve into dense commuter operations and explore West Midlands territory, including the famed Lickey Incline. Bustling duties await in Train Sim World®: Birmingham Cross-City Line: Lichfield - Bromsgrove & Redditch.\n\nThe bespoke and hard-working BR Class 323 arrives in Train Sim World® for non-stop modern-day action on the dense commuter network of Birmingham. In service for over 25 years, the Class 323 is renown for its distinctive charm, rapid performance, and unique design – having been built by Hunslet, a motive power veteran dating back to the 1860s.\n\nDressed in the latest West Midlands Railway livery, the BR Class 323 is the exclusive traction on the Cross-City Line. This unit works frequent services between Lichfield Trent Valley, Four Oaks and Birmingham New Street, onward to its two southern destinations of Redditch, and since 2018, Bromsgrove, which lies at the foot of the famed Lickey Incline, the steepest sustained mainline gradient in Britain.\n\nThe Cross-City Line itself is packed with rich history and culture. The earliest sections of the line date back to the 1830s, although it wasn’t considered a single network until the 1970s. One of the more notable stations on the line is Bournville, home to a Cadbury’s Chocolate Factory, which explains the station’s one-of-a-kind purple branding, matching the confectionery’s appearance. The factory alone draws in 100,000s of tourists, and being just 1 of the 25 stations on the route, it’s easy to see the line’s importance and popularity."
+}

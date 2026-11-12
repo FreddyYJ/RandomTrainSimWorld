@@ -1,0 +1,16 @@
+{
+  "name": "Class 87",
+  "nation": "UK",
+  "liveries": [
+    "BR",
+    "Intercity"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Crewe Works",
+  "power": "4,850-5,000 hp/3,620-3,700 kW",
+  "max_speed": "110 mph (177 km/h)",
+  "manufactured_year": "1973-1975",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 36,
+  "description": "The British Rail Class 87 is a type of electric locomotive designed and built by British Rail Engineering Limited (BREL) between 1973 and 1975. A total of thirty-six locomotives were constructed, to work passenger and freight services over the West Coast Main Line (WCML)."
+}

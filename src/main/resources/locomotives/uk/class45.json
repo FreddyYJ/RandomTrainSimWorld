@@ -1,0 +1,15 @@
+{
+  "name": "Class 45",
+  "nation": "UK",
+  "liveries": [
+    "BR"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Derby Works, Crewe Works",
+  "power": "2,500 hp/1,864 kW",
+  "max_speed": "90 mph (145 km/h)",
+  "manufactured_year": "1960-1962",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 127,
+  "description": "The British Rail Class 45 or Sulzer Type 4 are a type of diesel locomotives built by British Railways' Derby and Crewe Works between 1960 and 1962. Along with the similar Class 44 and 46 locomotives, they became known as Peaks."
+}
