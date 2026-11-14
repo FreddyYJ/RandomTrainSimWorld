@@ -1,0 +1,179 @@
+{
+  "name": "East Coast Main Line: Peterborough-Doncaster",
+  "locomotives": {
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class801": [
+      "LNER"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Green",
+      "47484"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ],
+    "uk/class802": [
+      "GBR"
+    ],
+    "uk/class43": [
+      "East Midlands Trains"
+    ],
+    "uk/class52": [
+      "BR",
+      "Maroon"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/class700": [
+      "Thameslink"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Cargo Line: Intermodal",
+    "The Quick and the Shed",
+    "Brunel and Friends",
+    "The Steamy Affair",
+    "Paint It Blue"
+  ],
+  "scenario": {
+    "4E30 Felixstowe North-Leeds Terminal": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6L55 Tinsley Yard-Ripple Lane": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 66 DB"]
+    },
+    "4E20 Felixstowe-Masborough": {
+      "difficulty": 4,
+      "length": "2:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "Hot Seat": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 801 LNER"]
+    },
+    "Testing the Limits": {
+      "difficulty": 1,
+      "length": "1:10",
+      "locomotive": ["Class 801 LNER"]
+    },
+    "Job Center": {
+      "difficulty": 5,
+      "length": "0:50",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Limping Off": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 801 LNER"]
+    },
+    "In Threes": {
+      "difficulty": 3,
+      "length": "1:24",
+      "locomotive": ["Class 801 LNER"]
+    },
+    "Double Up": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Class 45 BR", "Class 47 47484"]
+    },
+    "Brunel Comes Home": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 48 47484"]
+    },
+    "Taking A Peak": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["Class 45 BR"]
+    },
+    "Whistle While You Work": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 40 BR"]
+    },
+    "Scottish Brunel": {
+      "difficulty": 3,
+      "length": "1:25",
+      "locomotive": ["Class 47 47484"]
+    },
+    "Isambard Comes North": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 47 47484"]
+    },
+    "Peterborough Parking": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 47 47484"]
+    },
+    "Brunel Nights": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 47 47484"]
+    },
+    "Weather Woes": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 47 47484"]
+    },
+    "Christmas to the Cross": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Class 40 BR"]
+    },
+    "Re-Record": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Flying Scotsman"]
+    },
+    "Winter Wonderland": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Flying Scotsman"]
+    },
+    "The Fact Controller": {
+      "difficulty": 2,
+      "length": "1:50",
+      "locomotive": ["Flying Scotsman"]
+    },
+    "Raising the Shed": {
+      "difficulty": 5,
+      "length": "2:00",
+      "locomotive": ["Flying Scotsman"]
+    },
+    "Flying the Flag": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 802 GBR", "Class 801 LNER"]
+    },
+    "Can't Park There, Sir!": {
+      "difficulty": 4,
+      "length": "0:55",
+      "locomotive": ["Class 802 GBR"]
+    }
+  },
+  "description": "Make way for the north of England and hurry through the quaint commuter hills of Yorkshire; the complex Airedale & Wharfedale Network is ready for steadfast service in Train Sim World 7! Aboard modern Northern traction, operate across a variety of lines that converge into two major cities: Leeds and Bradford.\n\nToday’s network started in 1846 with the Leeds and Bradford Railway linking the two historic cities, and extending through the industrious hills to Skipton the following year, forming what is now known as the Airedale Line. The Midland Railway and the North Eastern co-owned the 1860s-built line to Ilkley, which would eventually form part of the Wharfedale Line. They have come a long way since, with the combined network being one of the busiest outside of the South East."
+}

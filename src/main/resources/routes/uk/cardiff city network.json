@@ -1,0 +1,89 @@
+{
+  "name": "Cardiff City Network",
+  "locomotives": {
+    "uk/class150": [
+      "Transport for Wales",
+      "Arriva Trains Wales"
+    ],
+    "uk/class153": [
+      "Transport for Wales",
+      "Arriva Trains Wales"
+    ],
+    "uk/class142": [
+      "Transport for Wales",
+      "Arriva Trains Wales"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class43": [
+      "GWR",
+      "GWR Vinyl Logo",
+      "43185",
+      "43002"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "EWS RHTT"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Cardiff City Network",
+    "TfW Class 142 Journey"
+  ],
+  "scenario": {
+    "Translator": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 153 TfW"]
+    },
+    "Bay Blockage": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 150 TfW"]
+    },
+    "St David's Day": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 153 TfW"]
+    },
+    "Unexpected Delivery": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 153 TfW"]
+    },
+    "Adverse Conditions": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["Class 153 TfW"]
+    },
+    "Depot Start": {
+      "difficulty": 1,
+      "length": "1:15",
+      "locomotive": ["Class 142 TfW"]
+    },
+    "End of Day": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 142 TfW"]
+    },
+    "Stormy Aftermath": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["Class 142 TfW"]
+    },
+    "The Long Way Round": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["Class 142 TfW"]
+    },
+    "The Taff Traverser": {
+      "difficulty": 2,
+      "length": "1:45",
+      "locomotive": ["Class 142 TfW"]
+    }
+  },
+  "description": "All aboard for Brum! Climb onto one of the most unique modern trains in Britain, delve into dense commuter operations and explore West Midlands territory, including the famed Lickey Incline. Bustling duties await in Train Sim World®: Birmingham Cross-City Line: Lichfield - Bromsgrove & Redditch.\n\nThe bespoke and hard-working BR Class 323 arrives in Train Sim World® for non-stop modern-day action on the dense commuter network of Birmingham. In service for over 25 years, the Class 323 is renown for its distinctive charm, rapid performance, and unique design – having been built by Hunslet, a motive power veteran dating back to the 1860s.\n\nDressed in the latest West Midlands Railway livery, the BR Class 323 is the exclusive traction on the Cross-City Line. This unit works frequent services between Lichfield Trent Valley, Four Oaks and Birmingham New Street, onward to its two southern destinations of Redditch, and since 2018, Bromsgrove, which lies at the foot of the famed Lickey Incline, the steepest sustained mainline gradient in Britain.\n\nThe Cross-City Line itself is packed with rich history and culture. The earliest sections of the line date back to the 1830s, although it wasn’t considered a single network until the 1970s. One of the more notable stations on the line is Bournville, home to a Cadbury’s Chocolate Factory, which explains the station’s one-of-a-kind purple branding, matching the confectionery’s appearance. The factory alone draws in 100,000s of tourists, and being just 1 of the 25 stations on the route, it’s easy to see the line’s importance and popularity."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Class 153",
+  "nation": "UK",
+  "liveries": [
+    "Transport for Wales",
+    "Arriva Trains Wales"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "Hunslet-Barclay",
+  "power": "285 hp/213 kW (per engine)",
+  "max_speed": "75 mph (120 km/h)",
+  "manufactured_year": "1987-1988",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 70,
+  "description": "The British Rail Class 153 Super Sprinter are a type of diesel-hydraulic railcars, which were converted from two-coach Class 155 diesel multiple units in the early 1990s. The class was intended for service on rural branch lines, either where passenger numbers do not justify longer trains or to boost the capacity on services with high passenger volume."
+}

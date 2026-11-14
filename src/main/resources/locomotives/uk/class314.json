@@ -1,0 +1,15 @@
+{
+  "name": "Class 314",
+  "nation": "UK",
+  "liveries": [
+    "ScotRail"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "880 hp/660 kW",
+  "max_speed": "70 mph (113 km/h)",
+  "manufactured_year": "1979-2019",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 16,
+  "description": "The British Rail Class 314 is a retired class of alternating current electric multiple unit (EMU) trains built by British Rail Engineering Limited's Holgate Road carriage works in 1979. They were a class of units derived from British Rail's 1971 prototype suburban EMU design which, as the BREL 1972 family, eventually encompassed 755 vehicles over five production classes (313, 314, 315, 507 and 508)."
+}

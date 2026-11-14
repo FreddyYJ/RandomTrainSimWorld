@@ -1,0 +1,15 @@
+{
+  "name": "Class 700",
+  "nation": "UK",
+  "liveries": [
+    "Thameslink"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Siemens",
+  "power": "4,400 hp/3,300 kW",
+  "max_speed": "100 mph (160 km/h)",
+  "manufactured_year": "2014-2018",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 115,
+  "description": "The British Rail Class 700 Desiro City is an electric multiple unit passenger train from the Desiro City family built by Siemens Mobility. It is capable of operating on 25 kV 50 Hz AC from overhead wires or 750 V DC from third rail. 115 trainsets were built between 2014 and 2018, for use on the Thameslink network, as part of the Thameslink Programme in the United Kingdom. As of 2026, they are operated by Greater Thameslink Railway."
+}

@@ -1,0 +1,110 @@
+{
+  "name": "Cathcart Circle Line",
+  "locomotives": {
+    "uk/class380": [
+      "ScotRail"
+    ],
+    "uk/class314": [
+      "ScotRail"
+    ],
+    "uk/class20": [
+      "RailFreight",
+      "Direct Rail Services"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "BR Intercity",
+      "47484"
+    ],
+    "uk/class52": [
+      "BR"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class158": [
+      "ScotRail"
+    ],
+    "uk/class170": [
+      "ScotRail"
+    ],
+    "uk/class385": [
+      "ScotRail"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Desirable Journey",
+    "Like Clockwork"
+  ],
+  "scenario": {
+    "Press Release": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["Class 380 ScotRail"]
+    },
+    "Semi Circle Service": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 380 ScotRail"]
+    },
+    "Dr Snow": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 380 ScotRail"]
+    },
+    "Around and Around": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 314 ScotRail"]
+    },
+    "Extra Time": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 314 ScotRail"]
+    },
+    "Divergent": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 314 ScotRail"]
+    },
+    "Collector": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 314 ScotRail"]
+    },
+    "Dreich Day": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["Class 314 ScotRail"]
+    },
+    "Pure Baltic": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 314 ScotRail"]
+    }
+  },
+  "description": "Experience the hustle and bustle of a modern suburban network using classic electric traction, link Glasgow's suburbs along the Cathcart Circle Line. Now fully remastered as part of a free update, operate out of Glasgow Central and take in the all-new detail in Train Sim World®!\n\nThe Cathcart Circle Line and its branches date back to the late 1800s, the line between Glasgow and Cathcart via Mount Victoria opened in 1866, with the circle being completed via Shawlands in 1894. Neilston station followed close behind, opening in 1903, with the branches between there and Newton acting as a through route for coal trains. While the days of freight are long gone, both branches remain a core part of the Strathclyde commuter network to this day.\n\nTake control of the instantly recognisable “PEP” in the form of the BR Class 314 EMU, adorning ScotRail’s Saltire livery, and go to work on a variety of services. Shuttle between Glasgow, Newton and Neilston, and call at stations along the entirety of the Cathcart Circle in both clockwise and anti-clockwise directions. Take things for a turn by running services from Glasgow to Glasgow, and bring trains in and out of Shields depot and Neilston turnback siding."
+}

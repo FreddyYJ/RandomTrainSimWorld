@@ -1,0 +1,15 @@
+{
+  "name": "Class 385",
+  "nation": "UK",
+  "liveries": [
+    "ScotRail"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "335 hp/250 kW (per motor)",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2015-2019",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 70,
+  "description": "The British Rail Class 385 eXpress is a type of electric multiple unit built by Hitachi Rail. Initially operated by Abellio ScotRail, and now its state-owned successor, a total of 70 units have been built, divided into 46 three-car and 24 four-car sets. Based on the design of the Hitachi A-train, they are part of the Hitachi AT200 product family and are branded as eXpress by Scotrail."
+}
