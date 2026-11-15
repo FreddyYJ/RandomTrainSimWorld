@@ -1,0 +1,75 @@
+{
+  "name": "Northern Trans-Pennine",
+  "locomotives": {
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "47484"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class08": [
+      "BR"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class52": [
+      "BR"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Northern Trans-Pennine Journey"
+  ],
+  "scenario": {
+    "Tools Of The Trade": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["Class 08 BR"]
+    },
+    "Standedge Struggle": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 40 BR"]
+    },
+    "Whistler & Gronk": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 08 BR", "Class 40 BR"]
+    },
+    "Trans-Pennine": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["Class 101 BR"]
+    },
+    "Driving Rain": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 45 BR"]
+    },
+    "Down and Out": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 101 BR"]
+    },
+    "Rescue Run": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 45 BR"]
+    },
+    "Red Bank Rotation": {
+      "difficulty": 4,
+      "length": "0:20",
+      "locomotive": ["Class 47 BR"]
+    }
+  },
+  "description": "Towering moors, challenging grades and tight curves are yours to conquer in Train Sim World®: Northern Trans-Pennine, bringing a bygone era of British Rail roaring back to life. Operate your trains over an aging rail network with out-of-date infrastructure and no modern safety systems to assist you. Reproduced in exquisite detail, every station, signal and milepost feel so real you could almost reach back in time and touch them.\n\nIt’s your job to carry passengers and freight over the famous Trans-Pennine Railway. Manage your powerful locomotives and enjoy the charm of running loco-hauled services that no longer exist today over the twisting railway carving its way through England’s Pennine Hills. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of a chapter of British railways long forgotten in time.\n\nTake control of three icons of British motive power, the BR Class 45 express passenger locomotive, the BR Class 47 mixed traffic locomotive and the BR Class 101 Diesel Multiple Unit. Featuring authentic Diesel-Electric and Diesel-Mechanical simulations underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

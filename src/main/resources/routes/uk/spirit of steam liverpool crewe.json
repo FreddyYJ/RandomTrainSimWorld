@@ -1,0 +1,48 @@
+{
+  "name": "Spirit of Steam: Liverpool-Crewe",
+  "locomotives": {
+    "uk/jubilee": [
+      "Junilee"
+    ],
+    "uk/stanier": [
+      "Stanier 8F"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Let Off Some Steam"
+  ],
+  "scenario": {
+    "Bovine Blockage": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Jubilee"]
+    },
+    "The Tables have Turned": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Jubilee"]
+    },
+    "Really Reliable Rescue": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Stanier 8F"]
+    },
+    "Time For Scouse": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Jubilee"]
+    },
+    "Worst Winter Of All": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Stanier 8F"]
+    },
+    "Moving round the Mersey": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["Jubilee", "Stanier 8F"]
+    }
+  },
+  "description": "Step back in time and discover the soot and sounds of the romantic steam era; climb aboard iconic living locomotives hungry for coal and water, and work hard on busy passenger and freight services through historic Merseyside and Cheshire with Train Sim World®: Spirit of Steam: Liverpool Lime Street - Crewe!\n\nImmersed in the middle of the British Railways steam era, take control of the famous LMS Jubilee Class locomotive, resplendent in nostalgic BR Brunswick Green livery, adorned with BR’s late crest. Carry passengers on a journey of a lifetime along the West Coast Main Line, over the Runcorn Railway Bridge and right into the heart of Merseyside with this express 4-6-0. Additionally, be in charge the hard-working LMS Stanier 8F Class locomotive, its rugged BR Late Black guise and 2-8-0 wheel configuration better suited to hauling lower speed, heavy freight trains.\n\nMaster the art of steam simulation and take on the challenge of the 1950s - with no modern comforts to rely on, the only safety system is your wit! Learn the finesse and rhythm of each locomotive to determine your speed and keep to the timetable."
+}

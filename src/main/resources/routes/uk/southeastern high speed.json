@@ -1,0 +1,198 @@
+{
+  "name": "Southeastern High Speed",
+  "locomotives": {
+    "uk/class700": [
+      "Thameslink"
+    ],
+    "uk/class375": [
+      "South Eastern",
+      "South Eastern (White)"
+    ],
+    "uk/class465": [
+      "South Eastern"
+    ],
+    "uk/class395": [
+      "South Eastern"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class37": [
+      "Phoenix"
+    ],
+    "uk/class47": [
+      "BR"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/jubilee": [
+      "Jubilee"
+    ],
+    "france/tgv-duplex": [
+      "SNCF"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "We built this Desiro City",
+    "Southeastern Speed",
+    "Southeastern Stars",
+    "The Red Shed's Redemption"
+  ],
+  "scenario": {
+    "Desiro City on-Test": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Shortened": {
+      "difficulty": 1,
+      "length": "1:20",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Changeover": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Shattered": {
+      "difficulty": 4,
+      "length": "0:30",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Skip": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Delays": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "Desiro City Showers": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 700 Thameslink"]
+    },
+    "6V18 Allington Aggregate-Whatley Quarry": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6Y73 Hoo Junction-Tonbridge West Yard": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Highspeed Run": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 395 South Eastern"]
+    },
+    "Joining In": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "Shopping Shuttle": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 395 South Eastern"]
+    },
+    "Tricky Tunnels": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 395 South Eastern"]
+    },
+    "Last Stop": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "Hoo Dares Wins": {
+      "difficulty": 3,
+      "length": "1:05",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Extended Service": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 465 South Eastern"]
+    },
+    "Filling In": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 465 South Eastern"]
+    },
+    "Riders on the Thames": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 465 South Eastern"]
+    },
+    "Temporary Contract": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 465 South Eastern"]
+    },
+    "Javelin Throw": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 395 South Eastern"]
+    },
+    "Empty Evening": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 465 South Eastern"]
+    },
+    "Morning Storm": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "Off the Grid": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["Class 395 South Eastern"]
+    },
+    "Out With The Old": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 37 Phoenix"]
+    },
+    "In With The New": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 37 Phoenix"]
+    },
+    "Risky Rescue": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 37 Phoenix"]
+    },
+    "Dawn of the Shed": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 66 EWS RHTT"]
+    },
+    "Night Cleaner": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["Class 66 EWS RHTT"]
+    },
+    "Once In A Hoo Moon": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 66 EWS RHTT"]
+    }
+  },
+  "description": "Experience the unique and exciting blend of classic main line running and thrilling high-speed commuting, aboard state-of-the-art motive power, in London and the Garden of England with Train Sim World®: Southeastern Highspeed – now including Ashford International and Dartford!\n\nVersatility and modern precision combine in the BR Class 395 EMU, Britain’s fastest train, operating at 140mph to offer commuters domestic high-speed services between London, Ebbsfleet International and Ashford International on the state-of-the-art HS1, as well as being able to operate on Kent’s classic main lines through to Medway and Faversham. Master the TVM430 signalling and power change modes in this sleek masterpiece.\n\nTake charge of classic services on the Chatham Main Line with the reliable BR Class 375/9, running in a variety of formations between Rochester and Faversham. This southern region mainstay has been in service since the turn of the century, continue its next chapter by keeping an eye on the signals and weaving through the Medway Towns.\n\nGet a taste of the 90s with the unmistakable motor whines of the BR Class 465/9, fill in the gaps with additional commuter services on the Chatham Main Line, or go full “Kent Link Networker” on the many trains that stretch between Medway, Gravesend and Dartford. Keep up your precision to stay on schedule."
+}

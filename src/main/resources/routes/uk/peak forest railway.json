@@ -1,0 +1,51 @@
+{
+  "name": "Peak Forest Railway",
+  "locomotives": {
+    "uk/jubilee": [
+      "Junilee"
+    ],
+    "uk/stanier": [
+      "Stanier 8F"
+    ],
+    "uk/fowler": [
+      "Fowler 4F"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Perfecting the Peaks"
+  ],
+  "scenario": {
+    "Chinley Gala": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Fowler 4F", "Jubilee", "Stanier 8F"]
+    },
+    "All Mixed Up": {
+      "difficulty": 3,
+      "length": "2:20",
+      "locomotive": ["Stanier 8F"]
+    },
+    "Breaking the Bank": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["Fowler 4F"]
+    },
+    "Peak Shunting": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Fowler 4F"]
+    },
+    "Deep Freeze": {
+      "difficulty": 2,
+      "length": "1:20",
+      "locomotive": ["Stanier 8F"]
+    },
+    "Royal Appointment": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["Jubilee"]
+    }
+  },
+  "description": "Step back in time and discover a long-lost railway, from old-time stations to heavy limestone operations. Re-tread the rails through historical English countryside in the hard-working Fowler 4F. The quaint and waning years of 1960s steam is brought back to life in Train Sim World®: Peak Forest Railway!\n\nThe romantic steam era returns to Train Sim World with the introduction of the iconic Fowler 4F. Built in Derby and dating back to the early 1920s, this prolific fleet of locomotives were designed for mid-ranged freight work by Henry Fowler, Chief Mechanical Engineer of the LMS railway. With 575 produced, but only a handful surviving into preservation, rekindle the flames of this workhorse 0-6-0 tender legend.\n\nTackle challenging loads; hefty ICI Limestone Hoppers, local and long-distance passenger trains all await haulage through the endlessly picturesque Peak District. Go to battle with banking locomotives and double-heading to conquer the steep gradients which blast through the English countryside of yesteryear. Rails cling to hillsides and fly over valleys on this now lost and once vital main line."
+}
