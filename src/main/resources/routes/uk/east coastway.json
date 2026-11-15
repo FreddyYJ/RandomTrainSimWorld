@@ -1,0 +1,130 @@
+{
+  "name": "East Coastway",
+  "locomotives": {
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class377": [
+      "Southern"
+    ],
+    "uk/class171": [
+      "Southern"
+    ],
+    "uk/class313": [
+      "Southern"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class37": [
+      "RailFreight",
+      "Phoenix"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "47484"
+    ],
+    "uk/class52": [
+      "BR"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class375": [
+      "South Eastern"
+    ],
+    "uk/class387": [
+      "Gatwick Express"
+    ],
+    "uk/class395": [
+      "South Eastern"
+    ],
+    "uk/class700": [
+      "Thameslink"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "East Coastway Journey",
+    "East Coastway 171 and 377",
+    "South Coast Shuttle"
+  ],
+  "scenario": {
+    "French Connection": {
+      "difficulty": 1,
+      "length": "0:15",
+      "locomotive": ["Class 377 Southern"]
+    },
+    "Loose Connection": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 377 Southern"]
+    },
+    "Cutting Closure": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Enthusiast Excursion": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 377 Southern"]
+    },
+    "Eastbourne End": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 377 Southern"]
+    },
+    "Bridge Strike": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 171 Southern"]
+    },
+    "Unit Drag": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 171 Southern"]
+    },
+    "Iced Over": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 171 Southern"]
+    },
+    "Double Trouble": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 313 Southern"]
+    },
+    "Far Reaches": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 313 Southern"]
+    },
+    "It's Coming Home": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 313 Southern"]
+    }
+  },
+  "description": "The East Coastway route opened in stages, starting as early as 1846, as part of the growing network sprouting out of Brighton - Britain’s first rail-served seaside town. Reaching Eastbourne 3 years later, followed by the Seaford branch in 1864, the line’s purpose has been simple and consistent for over 160 years - the mass movement of people (and goods) to and from key coastal locations."
+}

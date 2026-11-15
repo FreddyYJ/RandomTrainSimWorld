@@ -1,0 +1,15 @@
+{
+  "name": "Class 395 Javelin",
+  "nation": "UK",
+  "liveries": [
+    "South Eastern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "4,510 hp/3,360 kW",
+  "max_speed": "140 mph (225 km/h)",
+  "manufactured_year": "2007-2009",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 29,
+  "description": "The British Rail Class 395 Javelin is a dual-voltage electric multiple-unit (EMU) passenger train built by Hitachi Rail as part of the Hitachi AT300 family for high-speed commuter services on High Speed 1 and elsewhere on the South Eastern franchise. The whole fleet is operated by Southeastern."
+}

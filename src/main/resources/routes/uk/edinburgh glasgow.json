@@ -1,0 +1,119 @@
+{
+  "name": "Edinburgh Glasgow",
+  "locomotives": {
+    "uk/class158": [
+      "ScotRail"
+    ],
+    "uk/class385": [
+      "ScotRail"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class43": [
+      "GWR",
+      "GWR Vinyl Logo",
+      "43002",
+      "43185"
+    ],
+    "uk/class170": [
+      "ScotRail"
+    ],
+    "uk/class314": [
+      "ScotRail"
+    ],
+    "uk/class380": [
+      "ScotRail"
+    ],
+    "uk/class801": [
+      "LNER"
+    ],
+    "uk/jubilee": [
+      "Black"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Sprinter Express",
+    "Edinburgh Glasgow Line",
+    "Edinburgh Freight Pack"
+  ],
+  "scenario": {
+    "2N50 Stirling-Glasgow Queen Street": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "1R72 Glasgow Queen Stree-Edinburgh": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "5N40 Glasgow-Eastfield Depot": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "Time To Glas Go": {
+      "difficulty": 2,
+      "length": "1:20",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "High Grounds": {
+      "difficulty": 3,
+      "length": "1:05",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "Don't Mist Around": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "Snow Drifting In Rails": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "One Step To Freedom": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "Spring Morning": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 66 DRS"]
+    },
+    "On A Roll": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 66 DRS"]
+    },
+    "Double Trouble": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 385 ScotRail"]
+    },
+    "Rainy Recall": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 66 ONE"]
+    },
+    "New Year's Eve": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Class 385 ScotRail"]
+    }
+  },
+  "description": "Rapid inter-city action in state-of-the-art traction awaits! Discover Scotland’s two biggest cities and take charge of dense commuter services on ScotRail’s principal rail line. The modern Class 385 is ready for service in Train Sim World®: ScotRail Express: Edinburgh - Glasgow.\n\nDiscover Scotland’s first inter-city railway! Out of the 5 railway lines between Edinburgh and Glasgow, the most important for inter-city travel has always been the line via Falkirk High. Being the most direct and with 8 intermediate stations en route, trains have been offering a shuttle-like service between the two cities for the past 180 years.\n\nBrand new in every right, enter the ScotRail BR Class 385! Built between 2015 and 2019, this fleet of “eXpress” multiple units were designed to overhaul and expand ScotRail’s electric fleet. Following an innovative modernisation of Scotland’s Central Belt, which saw electrification come to many key lines, the Class 385 entered service in 2018, and since has allowed for fully electric services on the mainline and brought new traction to existing lines.\n\nAdorned in “eXpress” branding, these 100mph capable units make light work of the Edinburgh - Glasgow via Falkirk High route. Platform extensions allow for 8-car trains to carry up to 456 passengers, 45% more than the previous 6-car diesel fleet. There are both 3 and 4-car variants of the Class 385 for different uses across the network, with a total of 70 now in daily service."
+}

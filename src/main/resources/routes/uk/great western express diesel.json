@@ -1,0 +1,57 @@
+{
+  "name": "Great Western Express (Diesel Legends)",
+  "locomotives": {
+    "uk/class52": [
+      "BR"
+    ],
+    "uk/class08": [
+      "BR"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "47484"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Diesel Legends of Great Western"
+  ],
+  "scenario": {
+    "Pick Up Line": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 52 BR"]
+    },
+    "Traffic 101": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 101 BR"]
+    },
+    "Fix Up": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 08 BR", "Class 52 BR"]
+    },
+    "Snow Slough": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["Class 52 BR"]
+    },
+    "All Change": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 101 BR"]
+    }
+  },
+  "description": "Diesel Legends of the Great Western offers an entirely new perspective through the train cabs of yesteryear. An age before HSTs and Turbos; Westerns and heritage slammers reigned supreme and you can take control of these long-gone services in Train Sim World®.\n\nFeaturing the BR Class 52, Class 101 and Class 08, this collection for Great Western Express features all-new gameplay representative of the early 1970s, with loco-hauled trains on the fast lines and mechanically-geared DMUs on commuter runs, with shunting and empty stock movements around Old Oak Common. Through a selection of engaging scenarios and an entirely separate timetable, the services of the 1970s are brought back to life."
+}

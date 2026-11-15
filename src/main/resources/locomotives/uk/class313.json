@@ -1,0 +1,15 @@
+{
+  "name": "Class 313",
+  "nation": "UK",
+  "liveries": [
+    "Southern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "880 hp/656 kW",
+  "max_speed": "70 mph (120 km/h)",
+  "manufactured_year": "1976-2023",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 64,
+  "description": "The British Rail Class 313 is a class of dual-voltage electric multiple units (EMU) suburban and regional passenger trains. Built by British Rail Engineering Limited at Holgate Road carriage works between February 1976 and April 1977, they were the first production units that were derived from British Rail's 1971 prototype suburban EMU design which, as the BREL 1972 family, eventually encompassed 755 vehicles over five production classes (313, 314, 315, 507 and 508). They were the first second-generation EMUs to be constructed for British Rail and the first British Rail units with both a pantograph for 25 kV 50 Hz AC overhead lines and contact shoe equipment for 750 V DC third rail supply. They were, additionally, the first units in Britain to employ multi-function automatic Tightlock couplers, which include electrical and pneumatic connections allowing the coupling and uncoupling of units to be performed unassisted by the driver whilst in the cab."
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Glossop Line: Manchester-Hadfield & Glossop",
+  "locomotives": {
+    "uk/class323": [
+      "Northern"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/jubilee": [
+      "Jubilee"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Station Approach"
+  ],
+  "scenario": {
+    "Water Works": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Gossip Line": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Three Point Turn": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Depot Delivery": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Are you local?": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "On Guard": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 323 Northern"]
+    }
+  },
+  "description": "Climb aboard the Hyper Networker and embark on a journey in Northwest England. Magnificent Mancunian scenery comes to life along the echoes of the fallen Woodhead Line. Surviving as part of the Northern Trains network, experience the quaint Glossop Line in Train Sim World®!\n\nThe distinctive charm, rapid performance, and unique design of the BR Class 323 feels at home on the shuttling service of Manchester’s Glossop Line. Built by Hunslet as an EMU dedicated to modernising the North, they are a familiar sight and popular with enthusiasts. Enjoy life aboard the 323 in a compact commuter package, taking things slower and enjoying the countryside beyond the city outskirts.\n\nWearing the bright and bold Northern Trains livery, the BR Class 323 is the exclusive electric traction on the Glossop Line. Keep on your feet as you constantly change ends, performing unique turnback procedures at Hadfield and Glossop on the well-known triangle junction at Dinting, before making the sedate run back to the grand Manchester Piccadilly."
+}

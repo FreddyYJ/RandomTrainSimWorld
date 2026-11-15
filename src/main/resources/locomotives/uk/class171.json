@@ -1,0 +1,15 @@
+{
+  "name": "Class 171",
+  "nation": "UK",
+  "liveries": [
+    "Southern"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "422 hp/315 kW (per engine)",
+  "max_speed": "100 mph (160 km/h)",
+  "manufactured_year": "2003-2004",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 20,
+  "description": "The British Rail Class 171 Turbostar is a type of diesel-hydraulic multiple unit passenger train built by Bombardier Transportation at Derby Litchurch Lane Works in England. It is identical to the Class 170, except for the replacement of the BSI coupler with a Dellner coupler. This provision was made to allow emergency joining with Class 377 DC third-rail electric units, which Southern runs extensively on most lines. The units work on the southern regions of the British railway system, operating services from London Bridge to Uckfield and from Eastbourne to Ashford International, these routes being unelectrified between Hurst Green Junction and Uckfield and between Ore and Ashford International, respectively."
+}

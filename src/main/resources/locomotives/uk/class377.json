@@ -1,0 +1,15 @@
+{
+  "name": "Class 377",
+  "nation": "UK",
+  "liveries": [
+    "Southern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "1,100-1,600 hp/800-1,200 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2003-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 211,
+  "description": "The British Rail Class 377 Electrostar is a British dual-voltage electric multiple unit passenger train (EMU) built by Bombardier Transportation on its Electrostar platform at Derby Litchurch Lane Works from 2001 to 2014."
+}

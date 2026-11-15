@@ -1,0 +1,155 @@
+{
+  "name": "Great Western Express",
+  "locomotives": {
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class43": [
+      "GWR",
+      "GBR",
+      "GWR Unbranded",
+      "GWR Vinyl Logo",
+      "GWR The Welshman",
+      "GWR Geraint Thomas",
+      "GWR 43002",
+      "GWR 43093"
+    ],
+    "uk/class166": [
+      "GWR",
+      "GBR"
+    ],
+    "uk/class37": [
+      "Phoenix"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "Green",
+      "47484"
+    ],
+    "uk/class52": [
+      "BR",
+      "Maroon"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class165": [
+      "GWR"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class350": [
+      "London Northwestern Railway",
+      "London Midland"
+    ],
+    "uk/class484": [
+      "London"
+    ],
+    "uk/class802": [
+      "GWR"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Cargo Line: Aggregates",
+    "Cargo Line: Military",
+    "Cargo Line: Petroleum",
+    "Farewell HST",
+    "Great Western Express Journey"
+  ],
+  "scenario": {
+    "6A87 East Usk Yard-West Drayton Railhead": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6A09 Acton Yard-Hayes Railhead": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6C51 West Drayton Railhead-Whatley Quarry": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6V03 Warminster MoD-Shoeburyness MoD": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6M45 Shoeburyness MoD-Marchwood MoD": {
+      "difficulty": 2,
+      "length": "1:20",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6A48 Bicester MoD-Shoeburyness MoD": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6V70 Lindsey Oil Refinery-Colnbrook BAA Terminal": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6A32 Theale Puma-Harwich Refinery": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Back in Blue": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 43 43002"]
+    },
+    "Open Day": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["Class 43 43093"]
+    },
+    "Farewell": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 43 43002", "Class 43 43093", "Class 43 43185", "Class 43 Geraint Thomas"]
+    },
+    "Down the Line": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 166 GWR"]
+    },
+    "Christmas Closures": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 43 GWR"]
+    },
+    "Aggregate Industries": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 66 DB"]
+    },
+    "West World": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 43 GWR"]
+    },
+    "Drag Line": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Class 66 DB"]
+    }
+  },
+  "description": "Return to the rails of Great Western Railway and revisit Train Sim World’s first ever UK route with the completely overhauled free update to Great Western Express! Re-experience the route like you’ve never seen it before, with new and improved scenery, modern TSW features, train upgrades and more, brought to you by Grump Dog Games.\n\nHeading out of London and running due west at speed, the Great Western Main Line is the key corridor between the Capital, the Thames Valley and out into the far reaches of the West Country & Wales. Engineered by Isambard Kingdom Brunel, the Great Western Railway laid the foundations for what would become one of Britain’s busiest railways."
+}
