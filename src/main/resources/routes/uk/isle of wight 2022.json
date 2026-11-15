@@ -1,0 +1,40 @@
+{
+  "name": "Isle of Wight 2022",
+  "locomotives": {
+    "uk/class484": [
+      "Isle of Wight"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Isle of Wight 2022"
+  ],
+  "scenario": {
+    "Brading Rescue": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 484 IoW"]
+    },
+    "Fear The Storm": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 484 IoW"]
+    },
+    "Sea Transport Service": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 484 IoW"]
+    },
+    "Blow Me Away": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 484 IoW"]
+    },
+    "Finish The Isle": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 484 IoW"]
+    }
+  },
+  "description": "Experience a unique marvel of rail innovation, an Underground veteran turned Solent explorer. Modern-day Isle of Wight duties await with Rivet Games’ Island Line 2022: BR Class 484 for Train Sim World®!\n\nFor the past 50 years, the Island Line, which traverses the Isle of Wight from the water-lapped Ryde Pier south to Shanklin, has been uniquely operated by otherwise life-expired London Underground tube stock. 1967 saw the introduction of the Standard Stock, given new life as the Class 485 and 486, which were then replaced in 1989 with the Class 483, itself formed from old 1938 Stock. Being over 80 years old though, the 483s were in dire need of a replacement.\n\nThe tradition of using ex-Underground stock would continue, but in a way that would rock the boat for the line as it was. An order for 5 Vivarail D-Trains, rebuilt and modernised vehicles from the District Line D78 Stock, was placed. Being sub-surface trains, this saw the line overhauled to accommodate the new, taller fleet. Platforms were rebuilt, track was altered, new signalling was installed.\n\nFollowing months of upgrades and testing, the new BR Class 484 entered service in November 2021. These 2-car EMUs retain their Underground soul, but are also kitted out with modern cabs, revised interiors, digital destination displays, and new headlights."
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Manchester Airport Commuter",
+  "locomotives": {
+    "uk/class323": [
+      "Northern"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "EWS RHTT"
+    ],
+    "uk/class87": [
+      "Intercity"
+    ],
+    "uk/class150": [
+      "Transport for Wales"
+    ],
+    "uk/class153": [
+      "Transport for Wales",
+      "Arriva Trains Wales"
+    ],
+    "uk/class158": [
+      "East Midlands Trains",
+      "ScotRail"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class350": [
+      "London Northwestern Railway",
+      "London Midland"
+    ],
+    "uk/class390": [
+      "Avanti West Coast"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Explore Manchester"
+  ],
+  "scenario": {
+    "Unit Swap": {
+      "difficulty": 3,
+      "length": "0:55",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Styal Line Surfeit": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Single File": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Returning Home": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["Class 323 Northern"]
+    },
+    "Stockport Shuttle": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 323 Northern"]
+    }
+  },
+  "description": "From the complex Piccadilly station to the modern airport terminus, multiple lines combine to serve Greater Manchester commuters aboard Northern Trains traction. Experience a variety of services and intricate station details with Alan Thomson Simulation’s first route in Train Sim World®.\n\nA railway network with complex history, the lines which service the heart of Manchester date back as far as the 1840s. The mainline through Stockport established as a major trunk route and quickly became overloaded. It was supplemented in the early 1900s with the addition of the Styal Line, an alternative path between Wilmslow and Manchester. In 1993, a spur would be built off this new line to serve Manchester Airport, taking trains directly under the flight path and right next to EGCC’s second air terminal."
+}

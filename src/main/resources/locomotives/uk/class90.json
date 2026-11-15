@@ -1,0 +1,19 @@
+{
+  "name": "Class 90",
+  "nation": "UK",
+  "liveries": [
+    "DB Blue",
+    "DB Red",
+    "Freightliner Green (New)",
+    "Freightliner Green (Old)",
+    "Freightliner Grey"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "British Rail Engineering",
+  "power": "3,730 hp/5,000 kW",
+  "max_speed": "110 mph (177 km/h)",
+  "manufactured_year": "1987-1990",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 50,
+  "description": "The British Rail Class 90 is a type of electric locomotive built for mixed-traffic duties, operating from 25 kV AC overhead lines and producing 5,000 bhp (3,700 kW). It weighs 84.5 tonnes and can typically achieve a top speed of 110 mph (177 km/h)."
+}

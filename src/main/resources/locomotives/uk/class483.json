@@ -1,0 +1,15 @@
+{
+  "name": "Class 483",
+  "nation": "UK",
+  "liveries": [
+    "Isle of Wight"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Metro-Cammell",
+  "power": "670 hp/500 kW",
+  "max_speed": "45 mph (72 km/h)",
+  "manufactured_year": "1937-1940",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 10,
+  "description": "The British Rail Class 483 electric multiple units were originally built as 1938 tube stock units for London Underground. They were extensively refurbished between 1989 and 1992 by Eastleigh Works, for use on services on the Isle of Wight's Island Line. This was despite having already been used for nearly 50 years on the London Underground network. The units replaced the even older and life-expired British Rail Classes 485 and 486 units which were introduced in 1967, but were originally built as 'Standard' stock units for the London Electric Railway in 1923."
+}

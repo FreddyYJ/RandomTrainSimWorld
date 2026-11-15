@@ -1,0 +1,40 @@
+{
+  "name": "Isle of Wight",
+  "locomotives": {
+    "uk/class483": [
+      "Isle of Wight"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Isle of Wight"
+  ],
+  "scenario": {
+    "Summer Southbound": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 483 IoW"]
+    },
+    "Northbound at Night": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 483 IoW"]
+    },
+    "Engineering Interruption": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 483 IoW"]
+    },
+    "Smallbrook Shuttle": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Class 483 IoW"]
+    },
+    "Morning Start Up": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 483 IoW"]
+    }
+  },
+  "description": "Experience one of the most unique railway lines in England and climb aboard the country’s oldest operational rolling stock with Rivet Games’ Train Sim World®: Isle of Wight.\n\nIt’s your job to operate Ryde Rail services along the Island Line, the remaining portion of the rail network found on the Isle of Wight. Manage the complexities of keeping to the timetable, including while operating on single track sections. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of a most unique railway line.\n\nTake control of the oldest traction in revenue earning service in Britain, the veteran BR Class 483, which started life on the London Underground as 1938 Stock. Operating on the Island Line since 1989, this reworked ex-tube stock was chosen for the line as standard mainline stock is too tall to fit through the Ryde Tunnel. Featuring authentic DC Camshaft EMU simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced."
+}

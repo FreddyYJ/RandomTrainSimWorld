@@ -1,0 +1,15 @@
+{
+  "name": "Class 378",
+  "nation": "UK",
+  "liveries": [
+    "Transport for London"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "3,200 hp/2,400 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "2008-2011",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 57,
+  "description": "The British Rail Class 378 Capitalstar is an electric multiple unit passenger train specifically designed for the London Overground network. It is part of Bombardier Transportation's Electrostar family. A total of 57 five-car trains have been built, most of which were originally built as three- or four-car units."
+}

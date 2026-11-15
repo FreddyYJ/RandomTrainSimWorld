@@ -1,0 +1,63 @@
+{
+  "name": "Medway Valley Line",
+  "locomotives": {
+    "uk/class375": [
+      "South Eastern"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class47": [
+      "Green"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "EWS RHTT"
+    ],
+    "uk/class395": [
+      "South Eastern"
+    ],
+    "uk/class465": [
+      "South Eastern"
+    ],
+    "uk/class700": [
+      "Thameslink"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "A Very Medway Valley Journey"
+  ],
+  "scenario": {
+    "Early Morning": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "Looking for Trouble": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "Unexpected Express": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "A Baaaaaad Time.": {
+      "difficulty": 4,
+      "length": "0:15",
+      "locomotive": ["Class 375 South Eastern"]
+    },
+    "It's Snow Good": {
+      "difficulty": 5,
+      "length": "1:05",
+      "locomotive": ["Class 375 South Eastern"]
+    }
+  },
+  "description": "Embark on a scenic journey through the Garden of England with Firefly Simulations’ Medway Valley Line in Train Sim World®! Explore the Kent countryside aboard Southeastern services via the county town of Maidstone, hugging along the bank of the Medway and weaving through industrious landscapes between Strood, Paddock Wood & Tonbridge.\n\nThe Medway Valley Line dates back to 1847 as the South Eastern Railway’s effort to connect Maidstone to their London - Dover mainline. With this branch line that followed the path of the River Medway, hop and fruit traffic could remain competitive by taking advantage of rail-based connections to the capital and the English Channel. Following the line’s early success, it was extended in 1856 further along the valley to Strood, joining up with the northern stretch of the SER network."
+}

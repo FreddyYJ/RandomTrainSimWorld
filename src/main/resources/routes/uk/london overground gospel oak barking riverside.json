@@ -1,0 +1,63 @@
+{
+  "name": "London Overground: Gospel Oak-Barking Riverside",
+  "locomotives": {
+    "uk/class710": [
+      "Transport for London"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class37": [
+      "RailFreight",
+      "Phoenix"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/jubilee": [
+      "Jubilee"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Triumph On The Thames"
+  ],
+  "scenario": {
+    "Football Focus": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 710 TfL"]
+    },
+    "The Flood": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 710 TfL"]
+    },
+    "Halloween Goblin": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["Class 710 TfL"]
+    },
+    "Stock OC": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 710 TfL"]
+    },
+    "Remember Remember": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 710 TfL"]
+    }
+  },
+  "description": "An Aventra Adventure awaits in Train Sim World®! Discover the dense North & East London boroughs aboard modern traction, traversing a newly electrified and extended line fit for future riverside service. Become something of a London Overground driver yourself and conquer the pumpkin-orange passenger duties of the Suffragette line: Gospel Oak - Barking Riverside.\n\n150 years in the making; the Gospel Oak to Barking Line was happenstance-constructed through the means of multiple companies building adjacent lines. As links, junctions and various termini were built and changed, this meandering route through no less than 7 of North & East London’s boroughs took shape as a vital strategic railway, albeit not a well looked after one.\n\nOnce earmarked for closure, and allowed to be rundown into disarray, Transport for London (TfL) took the line under their wing alongside other routes in 2007 when London Overground was launched to transform them into lines fit for the future. State-of-the-art throughout, the line from Gospel Oak is now an electrified, high density passenger route, making use of the brand-new Class 710 Aventra, while also still leaving space for freight as part of the National Rail network.\n\nHaving spent years with an avid community following, the route became affectionately known as the ‘GOBLIN’, a portmanteau of Gospel Oak - Barking Line. But from February 2024, with TfL’s renaming of all London Overground routes, it is now officially known as the Suffragette line, in recognition of how the early 20th century movement, particularly the working-class movement in the East End, empowered women to have a significant impact on society in the past, present and will continue to do so in the future."
+}

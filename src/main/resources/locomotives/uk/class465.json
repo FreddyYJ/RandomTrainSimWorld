@@ -1,0 +1,15 @@
+{
+  "name": "Class 483",
+  "nation": "UK",
+  "liveries": [
+    "South Eastern"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "British Rail Engineering, ABB, Metro-Cammell, Alstom",
+  "power": "3,300 hp/2,240 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "1991-1994",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 147,
+  "description": "The British Rail Class 465 Networker are electric multiple unit passenger trains that were built by Metro-Cammell, GEC-Alsthom, British Rail Engineering Limited (BREL) and ABB Rail between 1991 and 1994. Originally operated by Network SouthEast,[6] these units are now operated by Southeastern."
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Class 710",
+  "nation": "UK",
+  "liveries": [
+    "Transport for London"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "N/A",
+  "max_speed": "75 mph (120 km/h)",
+  "manufactured_year": "2017-2020",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 54,
+  "description": "The British Rail Class 710 Aventra is a class of electric multiple unit passenger trains built by Bombardier Transportation for use on the London Overground network. The trains are part of Bombardier's Aventra family. The contract to provide 45 four-car trains was awarded in July 2015 and the trains were originally due to enter service in May 2018, although introduction was delayed until May 2019."
+}
