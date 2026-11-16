@@ -1,0 +1,146 @@
+{
+  "name": "West Coast Main Line: Preston-Carlisle",
+  "locomotives": {
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "47484"
+    ],
+    "uk/class86": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class08": [
+      "BR",
+      "BR Type A",
+      "BR Type B",
+      "BR Type C",
+      "BR Type D",
+      "BR Type C Weathered"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class87": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class142": [
+      "Provincial",
+      "Orange",
+      "Skipper"
+    ],
+    "uk/jubilee": [
+      "Jubilee"
+    ],
+    "uk/flying-scotsman": [
+      "Flying-Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "BR Class 86/2 Journey",
+    "Cargo Line: Military",
+    "Cargo Line: Nuclear",
+    "Continuing the Climb",
+    "Exploring the Northern Fells"
+  ],
+  "scenario": {
+    "A Helping Hand": {
+      "difficulty": 3,
+      "length": "1:40",
+      "locomotive": ["Class 86 Intercity"]
+    },
+    "Delayed and Rerouted": {
+      "difficulty": 3,
+      "length": "1:05",
+      "locomotive": ["Class 86 BR"]
+    },
+    "Cross Country Can": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 86 Intercity"]
+    },
+    "The European": {
+      "difficulty": 1,
+      "length": "1:35",
+      "locomotive": ["Class 86 Intercity"]
+    },
+    "It's Coming Home!": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 86 BR"]
+    },
+    "6G64 Longtown MoD-Heysham Harbour": {
+      "difficulty": 3,
+      "length": "1:40",
+      "locomotive": ["Class 47 BR"]
+    },
+    "6M00 Kineton MoD-Longtown MoD": {
+      "difficulty": 4,
+      "length": "1:45",
+      "locomotive": ["Class 47 BR"]
+    },
+    "6V64 Glen Douglas MoD-Bicester MoD": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["Class 47 BR"]
+    },
+    "6M56 Berkley C.E.G.B.-Sellafield B.N.F.": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 47 BR"]
+    },
+    "6Z53 Heysham Harbour-Crewe Sidings": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 47 BR"]
+    },
+    "6K41 Valley Nuclear Electric-Sellafield B.N.F.": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["Class 47 BR"]
+    },
+    "Southbound Liner": {
+      "difficulty": 4,
+      "length": "2:25",
+      "locomotive": ["Class 87 BR"]
+    },
+    "Correct Collection": {
+      "difficulty": 3,
+      "length": "1:40",
+      "locomotive": ["Class 08 BR Type A"]
+    },
+    "Tap Changer": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 87 Intercity"]
+    },
+    "First Generation Stopper": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 101 BR"]
+    },
+    "Broken Down": {
+      "difficulty": 3,
+      "length": "1:35",
+      "locomotive": ["Class 47 BR"]
+    }
+  },
+  "description": "From Just Trains: tap into the nostalgic 1980s and run up the most picturesque section of the famed West Coast Main Line in Train Sim World®; the stunning and immersive 90+ miles of Preston to Carlisle awaits aboard classic British AC electric traction. Embark on InterCity passenger and trundling freight duties, or take a trip to the Morecambe coast, all in TSW’s longest UK route to date!\n\nExperience the roles of British Rail staff between the cities of Carlisle and Preston amidst a complex 1986/87 timetable. Master the intricacies of the powerful BR Class 87/0. Controlling the tap changer technology is paramount for racing over the famous steep incline of Shap summit on a variety of services. From the non-stop InterCity runs, to the slower cross-country hops serving Lancaster, Oxenholme and Penrith. Haul passengers in true BR comfort with both the venerable Mk2a and the new Mk3a coaches!\n\nWith both the 87 and the ever-versatile Class 47; mingle between passenger services and wait your turn in passing loops on freight services. Gear up for a trip to the seaside too with shuttles along the Morecambe branch, driving the improved classic diesel, the Class 101 DMU. Hang up the master key entirely to safely dispatch trains and check tickets with Conductor Mode."
+}

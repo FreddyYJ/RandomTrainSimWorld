@@ -1,0 +1,224 @@
+{
+  "name": "WCML South: London Euston to Milton Keynes",
+  "locomotives": {
+    "uk/class390": [
+      "Avanti West Coast"
+    ],
+    "uk/class805": [
+      "Avanti West Coast"
+    ],
+    "uk/class90": [
+      "DB Red",
+      "DB Blue",
+      "Freightliner Green (New)",
+      "Freightliner Green (Old)",
+      "Freightliner Grey"
+    ],
+    "uk/class20": [
+      "Direct Rail Services"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class350": [
+      "London Northwestern Railway",
+      "London Midland"
+    ],
+    "uk/class377": [
+      "Southern"
+    ],
+    "uk/class47": [
+      "Green"
+    ],
+    "uk/class52": [
+      "BR",
+      "Maroon"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class378": [
+      "Transport for London"
+    ],
+    "uk/class710": [
+      "Transport for London"
+    ],
+    "uk/class807": [
+      "Avanti West Coast"
+    ],
+    "uk/1972iistock": [
+      "Underground"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "West Coast Speed",
+    "Drive the Next Generation of Express Travel",
+    "Freight With The Skoda",
+    "Cargo Line: Intermodal",
+    "Cargo Line: Nuclear",
+    "Cargo Line: Vans",
+    "The Main Course",
+    "The Thin Shed Line"
+  ],
+  "scenario": {
+    "Refreshing Refurb": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 390 AWC"]
+    },
+    "Watford Bypass": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 390 AWC"]
+    },
+    "Pend-No-Lean-No": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 390 AWC"]
+    },
+    "9S44 Bound for Edinburgh": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 805 AWC"]
+    },
+    "1A26 Blocked at Camden": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 805 AWC"]
+    },
+    "9G25 Turnback at Watford": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 805 AWC"]
+    },
+    "1Z47 Wembley Final Special": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 805 AWC"]
+    },
+    "1P07 Saturday Night Crawl": {
+      "difficulty": 4,
+      "length": "0:55",
+      "locomotive": ["Class 805 AWC"]
+    },
+    "Rescue Team Are Go": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 90 DB Red"]
+    },
+    "Shift Full Of Changes": {
+      "difficulty": 2,
+      "length": "1:25",
+      "locomotive": ["Class 90 Freightliner Green (New)"]
+    },
+    "Christmas Delivery": {
+      "difficulty": 3,
+      "length": "1:15",
+      "locomotive": ["Class 90 Freightliner Green (New)"]
+    },
+    "4L84 East Midlands Gateway-Barking Eurohub": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 66 DB"]
+    },
+    "4M24 London Gateway-East Midlands Gateway": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "4L44 Trafford Park-London Gateway": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6O62 Crewe Sidings-Dungeness P.S.": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["Class 20 DRS"]
+    },
+    "6M95 Dungeness P.S.-Sellafield B.N.F.": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["Class 20 DRS"]
+    },
+    "6M44 Dollands Moor-Daventry Terminal": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6O06 Ditton Foundry-Dollands Moor": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6M52 Dollands Moor-Daventry Terminal": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6O81 Daventry Terminal-Dollands Moor": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6M15 Dollands Moor-Ditton Foundry": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "6O53 Daventry Terminal-Dollands Moor": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 66 DB"]
+    },
+    "Service Saviour": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 377 Southern", "Class 350 LNR"]
+    },
+    "Football Frenzy": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Back In Service": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Heavy Traffic": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Carriage Collector": {
+      "difficulty": 4,
+      "length": "0:20",
+      "locomotive": ["Class 350 LNR", "Class 377 Southern"]
+    },
+    "Shed Life": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 66 DB"]
+    },
+    "Spoil from London": {
+      "difficulty": 2,
+      "length": "1:20",
+      "locomotive": ["Class 66 DB"]
+    },
+    "Shed Rising": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 66 DB"]
+    }
+  },
+  "description": "Commuter action abounds along the bustling 4-track West Coast Main Line in Train Sim World®. Dash through the complex layout of London Euston aboard the hard-working Class 350 and embark across the Northwest corner of the Capital to Milton Keynes, with expresses and stoppers alike.\n\nBritain’s busiest and oldest inter-city railway into London, the West Coast Main Line, stretches northward out of the brutalist hub of Euston and plays host to over 30 million passengers a year. This monster mainline runs at capacity all hours of the day, with fast and slow lines offering local and longer-distance commuter destinations.\n\nAccelerating through the dense boroughs of Camden and Brent, the WCML is accompanied by further passenger and freight action. The Bakerloo line surfaces at Queens Park, and shares tracks with the Lioness line. At the massive complex of yards near Wembley, Southern join into the fray with their unique cross-London, dual-voltage commuter service."
+}

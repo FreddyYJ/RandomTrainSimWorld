@@ -1,0 +1,73 @@
+{
+  "name": "West Coast Main Line: Crewe-Preston",
+  "locomotives": {
+    "uk/class08": [
+      "BR",
+      "BR Type A",
+      "BR Type B",
+      "BR Type C",
+      "BR Type D"
+    ],
+    "uk/class20": [
+      "BR Headcode Box",
+      "BR Disc",
+      "BR Ex Disc",
+      "RailFreight Headcode Box",
+      "RailFreight Disc",
+      "RailFreight Ex Disc"
+    ],
+    "uk/class47": [
+      "BR",
+      "RailFreight",
+      "Intercity"
+    ],
+    "uk/class86": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class87": [
+      "BR",
+      "Intercity"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class142": [
+      "Provincial",
+      "Orange",
+      "Skipper"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Crewe to Preston Journey"
+  ],
+  "scenario": {
+    "Merry Go Round": {
+      "difficulty": 3,
+      "length": "1:55",
+      "locomotive": ["Class 20 RailFreight Disc"]
+    },
+    "Out With a Bang": {
+      "difficulty": 3,
+      "length": "1:35",
+      "locomotive": ["Class 86 Intercity"]
+    },
+    "Thunderbirds are Go!": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["Class 47 BR", "Class 20 BR Headcode Box"]
+    },
+    "Locomotive on Test": {
+      "difficulty": 4,
+      "length": "2:05",
+      "locomotive": ["Class 86 BR", "Class 47 BR"]
+    },
+    "Deep Coal": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 47 BR"]
+    }
+  },
+  "description": "Take in the sights and sounds of 1980s action with Just Trains’ 2nd stretch of the classic West Coast Main Line, between Crewe and Preston, in Train Sim World. From pit to power station, go full-throttle - or not, as the case may be - on Britain’s iconic merry-go-round coal trains, and wind through Warrington & Wigan on express passenger duties.\n\nThe West Coast Main Line was built by many smaller companies during the birth of the railway era. Following the Grand Junction Railway’s arrival into historic Crewe from Warrington, the North Union Railway extended north, taking rails through Wigan and Preston. By 1846 a full connection all the way from London to Carlisle had been established.\n\nIn Train Sim World, get to work across a busy section of 1980s West Coast Main Line on a variety of mixed-traffic trains. Play your part in keeping the lights on by transporting, shunting and delivering coal-laden Merry-Go-Round services between Bickershaw and Parkside collieries to Fiddlers Ferry Power Station, or make good use of the national grid by powering at speed through the North-West of England aboard electric-hauled expresses.\n\nAt your disposal is the BR Class 86/4, a versatile subclass of the iconic AC electric fleet, capable of working in multiple with other locos on both passenger and freight haulage. Supporting alongside is the hard-working and upgraded duo of the Class 20/0 and Class 47/3, both of which sport Slow Speed controls for crawling with their coal. Featuring a myriad of classic liveries, all motive power will look the part while hauling all-new HAA hoppers, upgraded HEA hoppers, and air-con equipped Mk2 coaches."
+}

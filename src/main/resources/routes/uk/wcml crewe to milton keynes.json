@@ -1,0 +1,110 @@
+{
+  "name": "WCML: Crewe to Milton Keynes",
+  "locomotives": {
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class350": [
+      "London Northwestern Railway",
+      "London Midland"
+    ],
+    "uk/class807": [
+      "Avanti West Coast"
+    ],
+    "uk/class37": [
+      "Phoenix"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class150": [
+      "Transport for Wales"
+    ],
+    "uk/class153": [
+      "Transport for Wales",
+      "Arriva Trains Wales"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class323": [
+      "Northern"
+    ],
+    "uk/class390": [
+      "Avanti West Coast"
+    ],
+    "uk/class805": [
+      "Avanti West Coast"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "MLA Mover",
+    "Experience the heart of the WCML!"
+  ],
+  "scenario": {
+    "Shunting Around Crewe": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "Bring them Home, to Basford Hall!": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "A Crowd of Class 70's": {
+      "difficulty": 2,
+      "length": "2:20",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "Late Night Return!": {
+      "difficulty": 2,
+      "length": "2:15",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "Trent Valley Wayfinding": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Class 807 AWC"]
+    },
+    "Rugby Transfer": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 807 AWC", "Class 350 LNR"]
+    },
+    "A Troubled Evening": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Polesworth Recovery": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Snow Troubles": {
+      "difficulty": 4,
+      "length": "1:20",
+      "locomotive": ["Class 807 AWC"]
+    },
+    "Into the Eye of the Storm": {
+      "difficulty": 5,
+      "length": "0:55",
+      "locomotive": ["Class 350 LNR"]
+    },
+    "Rugby Dispatcher": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 807 AWC", "Class 350 LNR"]
+    }
+  },
+  "description": "Race through the heart of the Black Country and serve West Midlands commuters with All Aboard Studios’ debut route, Train Sim World®: West Coast Main Line: Birmingham - Crewe! Embark on modern passenger services from the cab of the versatile & varied BR Class 350 EMU.\n\nThe West Coast Main Line was built by many smaller companies during the birth of the railway era, but the central and oldest section of the route was the Grand Junction Railway. Perhaps one of the oldest long-distance railways in the World, the GJR was designed to link the famed Liverpool & Manchester to Birmingham. Their chosen route weaved out of Birmingham to Stafford via Wolverhampton, before heading up to Crewe.\n\nIn the following years since its opening in 1837, and with additions like the Stour Valley Line via Dudley, the line played a strategic role in the development of the industrial Black Country and saw a boom in traffic. With the eventual merge to create the LNWR, and later LMS, the route became a vital section of the WCML, Britain’s busiest main line."
+}
