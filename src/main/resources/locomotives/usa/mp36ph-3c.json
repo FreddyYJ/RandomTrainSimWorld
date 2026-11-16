@@ -1,0 +1,16 @@
+{
+  "name": "MP36PH-3C",
+  "nation": "USA",
+  "liveries": [
+    "Metrolink",
+    "Caltrain"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "MotivePower",
+  "power": "3,600 hp/2,700 kW",
+  "max_speed": "82-102 mph (132-164 km/h)",
+  "manufactured_year": "2003-2024",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 103,
+  "description": "The MPI MPXpress is a line of diesel-electric locomotives built by MotivePower (a subsidiary of Wabtec) for commuter rail service. There are five MPXpress models: MP36PH-3S, MP36PH-3C, MP40PH-3C, MP32PH-Q, and MP54AC."
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Antelope Valley Line",
+  "locomotives": {
+    "usa/f125": [
+      "Metrolink"
+    ],
+    "usa/rotem-bi-level": [
+      "Metrolink"
+    ],
+    "usa/f59phr": [
+      "Metrolink"
+    ],
+    "usa/mp36ph-3c": [
+      "Metrolink"
+    ],
+    "usa/ac4400cw": [
+      "Union Pacific"
+    ],
+    "usa/es44c4": [
+      "BNSF"
+    ],
+    "usa/sd70ace": [
+      "Union Pacific",
+      "BNSF",
+      "Missouri Pacific",
+      "Western Pacific",
+      "Katy",
+      "Rio Grande",
+      "Chicago & North Western",
+      "Southern Pacific"
+    ],
+    "usa/f7": [
+      "ATSF"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "California Dreaming",
+    "F59PHR Fanatic"
+  ],
+  "scenario": {
+    "Con Fare": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["F125 Metrolink"]
+    },
+    "Impossible Mission": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["F125 Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Blockbuster": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["F125 Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Take a Hike": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["N/A"]
+    },
+    "Home at the Depot": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["F125 Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Stuck in LA": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["F59PHR Metrolink"]
+    },
+    "F236": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["F59PHR Metrolink"]
+    },
+    "Farewell F59": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["F59PHR Metrolink"]
+    }
+  },
+  "description": "Run to the hills and experience the hefty power of modern American diesel! Tackle the tough terrain of Californian canyons with the Antelope Valley Line, between the sprawling Los Angeles cityscape and desert bushes of Lancaster in almighty Metrolink traction. West Coast rails are yours to explore in Train Sim World®!\n\nOpen the throttle and embark on Metrolink commuter services with their sleek and unique F125 diesel fleet. The F125 “Spirit”, first built in 2015, marked a return to new traction for the American market, being Electro-Motive’s first new passenger equipment in over a decade. Meeting the latest in emissions standards, Metrolink’s message was decidedly green, with the stylish streamlining being inspired by European loco designs.\n\nTurn tail with the twinned Rotem Commuter Cars, complete with a cab car allowing for push-pull operations in the termini of LA Union Station and Lancaster. Double decker in form, and just as bold as the F125, they make for a potent and effective mix for the dense LA suburbs and rural Soledad Canyon."
+}

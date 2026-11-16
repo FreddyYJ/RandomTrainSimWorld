@@ -1,0 +1,22 @@
+{
+  "name": "SD70ACe",
+  "nation": "USA",
+  "liveries": [
+    "Union Pacific",
+    "BNSF",
+    "Missouri Pacific",
+    "Western Pacific",
+    "Katy",
+    "Rio Grande",
+    "Chicago & North Western",
+    "Southern Pacific"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Diesel (EMD)",
+  "power": "4,300-4,500 hp/3,200-3,400 kW",
+  "max_speed": "70 mph (110 km/h)",
+  "manufactured_year": "1992-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 2134,
+  "description": "The EMD SD70 is a series of diesel-electric locomotives manufactured by Electro-Motive Diesel. This locomotive family is an extension and improvement of the EMD SD60 series. Production commenced in late 1992[1][page needed] and since then over 5,700 units have been produced; most of these are the SD70M, SD70MAC, and SD70ACe models. While the majority of the production was ordered for use in North America, various models of the series have been used worldwide. All locomotives of this series are hood units with C-C trucks, except the SD70ACe-P4 and SD70MACH which have a B1-1B wheel configuration, and the SD70ACe-BB, which has a B+B-B+B wheel arrangement."
+}
