@@ -1,0 +1,15 @@
+{
+  "name": "Class 09",
+  "nation": "UK",
+  "liveries": [
+    "Green"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Darlington Works, Horwich Works",
+  "power": "350 hp/261 kW",
+  "max_speed": "27.5 mph (44.3 km/h)",
+  "manufactured_year": "1959-1961",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 26,
+  "description": "The British Rail Class 09 is a class of 0-6-0 diesel locomotive designed primarily for shunting and short-distance freight trips along branch lines."
+}

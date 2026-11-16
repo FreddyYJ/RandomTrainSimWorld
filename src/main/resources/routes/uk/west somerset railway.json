@@ -1,0 +1,132 @@
+{
+  "name": "West Somerset Railway",
+  "locomotives": {
+    "uk/class09": [
+      "Green"
+    ],
+    "uk/class47": [
+      "Green",
+      "BR",
+      "Intercity",
+      "47484"
+    ],
+    "uk/class33": [
+      "Green"
+    ],
+    "uk/class52": [
+      "Maroon"
+    ],
+    "uk/class08": [
+      "BR",
+      "BR Type A",
+      "BR Type B",
+      "BR Type C",
+      "BR Type D",
+      "BR Type C Weathered"
+    ],
+    "uk/class20": [
+      "RailFreight"
+    ],
+    "uk/class31": [
+      "BR"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class150": [
+      "GWR"
+    ],
+    "uk/jubilee": [
+      "Jubilee",
+      "Black",
+      "Crimson"
+    ],
+    "uk/fowler": [
+      "Fowler 4F"
+    ],
+    "uk/stanier": [
+      "Stanier 8F"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "West Somerset Journey",
+    "Quantock Cromptons",
+    "Western Workhorse"
+  ],
+  "scenario": {
+    "Preparation Work": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Class 47 Green"]
+    },
+    "To the Beach": {
+      "difficulty": 1,
+      "length": "1:15",
+      "locomotive": ["Class 09 Green"]
+    },
+    "Minehead Shunter Part 1": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 09 Green"]
+    },
+    "Minehead Shunter Part 2": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["Class 37 Green"]
+    },
+    "Land Cruise": {
+      "difficulty": 1,
+      "length": "1:15",
+      "locomotive": ["Class 47 Green"]
+    },
+    "Finishing Up": {
+      "difficulty": 4,
+      "length": "1:40",
+      "locomotive": ["Class 47 Green"]
+    },
+    "Minehead Mariner": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 33 Green"]
+    },
+    "Pit Stop": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 33 Green"]
+    },
+    "Take It Home": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Class 33 Green"]
+    },
+    "Swap Shop": {
+      "difficulty": 3,
+      "length": "0:20",
+      "locomotive": ["Class 52 Maroon"]
+    },
+    "Western Revival": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 52 Maroon"]
+    },
+    "Gala Gathering": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["Class 52 Maroon"]
+    }
+  },
+  "description": "Rolling hills, golden meadows and seaside views await along Britain’s longest standard gauge preserved line; the West Somerset Railway. Now fully remastered as part of a free update, operate heritage galas with classic British traction and take in the all-new and volumetric Somerset skies, enhanced foliage and more in Train Sim World®!\n\nKeep tourists entertained with a diesel-bashing display of powerful locomotives! The standard timetable for West Somerset Railway lets you experience a thrilling diesel gala; drive the iconic Class 47 and Class 09, as well as other British classics from your collection such as the Class 33, Class 52 and change gears by experiencing Tees Valley Line’s Class 101.\n\nGo further into the past and recreate the romantic era of steam, as an all-new second timetable now brings steam gala potential to West Somerset! Owners of historical Add-Ons such as Peak Forest and West Cornwall Steam Railtour will find the line populated with powerful steam; drive the Jubilee, 8F and 4F on passenger and demonstration freight services, and of course, the World-famous Flying Scotsman also makes an appearance!"
+}
