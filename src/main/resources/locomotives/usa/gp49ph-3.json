@@ -1,0 +1,15 @@
+{
+  "name": "GP49PH-3",
+  "nation": "USA",
+  "liveries": [
+    "Tri-Rail"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD)",
+  "power": "2,800 hp/2,090 kW",
+  "max_speed": "65 mph (105 km/h)",
+  "manufactured_year": "1983-1985",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 9,
+  "description": "The EMD GP49 is a 4-axle diesel locomotive built by General Motors Electro-Motive Division. Power was provided by an EMD 645F3B 12-cylinder engine which generated 2,800 horsepower (2.09 MW). The GP49 was marketed as one of four models in the 50 series introduced in 1979. The 50 series includes GP/SD49 and GP/SD50. Both the GP and SD50 were relatively popular with a total of 278 GP50s and 427 SD50s built. The SD49 was advertised but never built and a total of nine GP49s were built."
+}

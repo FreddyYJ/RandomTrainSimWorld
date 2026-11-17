@@ -1,0 +1,16 @@
+{
+  "name": "M7",
+  "nation": "USA",
+  "liveries": [
+    "M7A MTA",
+    "LIRR"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "2,120 hp/1,580 kW (per unit)",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "1999-2006",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 1172,
+  "description": "The M7 is an electric multiple unit railroad car built by Bombardier for use on the MTA's Long Island Rail Road (LIRR) and Metro-North Railroad. With delivery beginning in 2002, the M7 replaced the M1 railcars on both railroads as well as the ACMUs on Metro-North. The cars built for Metro-North were designated as the M7As, and contain minor differences from the M7s found on the LIRR. A total of 1,172 M7 cars were built for the two railroads."
+}

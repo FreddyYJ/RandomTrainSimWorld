@@ -1,0 +1,75 @@
+{
+  "name": "Morristown Line: New York & Hoboken-Dover",
+  "locomotives": {
+    "usa/arrowiii": [
+      "NJT"
+    ],
+    "usa/alp-46": [
+      "NJT"
+    ],
+    "usa/multi-level-commuter": [
+      "NJT"
+    ],
+    "usa/alp-45dp": [
+      "NJT"
+    ],
+    "usa/acela": [
+      "Amtrak"
+    ],
+    "usa/acs-64": [
+      "Amtrak",
+      "Amtrak 50 Anniv."
+    ],
+    "usa/amfleet": [
+      "Amtrak"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "The Garden State",
+    "Journey To The Summit"
+  ],
+  "scenario": {
+    "Teaching Train": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["ALP-46 NJT"]
+    },
+    "Tucked In": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Arrow III NJT"]
+    },
+    "Safety Helmet": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Multi-Level Commuter Cab Car NJT"]
+    },
+    "Back in the Quiver": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Arrow III NJT"]
+    },
+    "Waiting on Line": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Multi-Level Commuter Cab Car NJT"]
+    },
+    "Twin Peaks": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["ALP-45DP NJT"]
+    },
+    "Rosa Rescue": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["ALP-45DP NJT"]
+    },
+    "No Power No Problem": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["ALP-45DP NJT"]
+    }
+  },
+  "description": "March across the Morris & Essex County suburbs and dart to the commuter town of Dover in classic electric equipment. New York awaits with the NJ TRANSIT® Morristown Line, ready for bustling rail operations in Train Sim World® – all aboard for Hoboken!\n\nThe Morristown line dates back to the lucrative 1830s, when New Jersey locals needed a connection to New York City. Born to carry people, the line accelerated in popularity among passengers, being extended to Dover by 1848. As time passed and companies merged, it became part of the many electrified lines into New York, and Hoboken terminal, and today is a frequent commuter line operated by NJ TRANSIT®.\n\nOne of the staples on the line is the Arrow III, also known as the Jersey Arrow. Original designs for this fleet of electric railcars date back as far as 1968 for the Pennsylvania Railroad, although the latest 3rd generation was built in 1977. Hoboken Division Arrow IIIs are denoted by a 25K sticker adorned on each cab end, meaning they are setup for 25kV use, as opposed to Newark Division’s 12kV electrification."
+}

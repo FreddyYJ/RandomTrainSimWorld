@@ -1,0 +1,16 @@
+{
+  "name": "M3",
+  "nation": "USA",
+  "liveries": [
+    "M3A MTA",
+    "LIRR"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Budd Company",
+  "power": "640 hp/480 kW (per motor)",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "1984-1986",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 316,
+  "description": "The M1 and M3 are two similar series of electric multiple unit rail cars built by the Budd Company for the Long Island Rail Road, the Metro-North Railroad, and Metro-North's predecessors, Penn Central and Conrail. Originally branded by Budd as Metropolitans, the cars are more popularly known under their model names, M1 (late 1960s/early 1970s cars) and M3 (mid-1980s cars). The Metro-North cars were branded under the M1A and M3A series."
+}

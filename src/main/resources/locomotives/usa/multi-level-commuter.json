@@ -1,0 +1,15 @@
+{
+  "name": "Multi-Level Commuter Cab Car",
+  "nation": "USA",
+  "liveries": [
+    "NJT"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "N/A",
+  "max_speed": "110 mph (177 km/h)",
+  "manufactured_year": "2006-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 62,
+  "description": "The Bombardier MultiLevel Coach is a bi-level passenger rail car for use on North American commuter rail lines. Originally built by Bombardier Transportation beginning in 2006, they are now built by Alstom since 2021, which markets the coaches as part of their Adessia series."
+}

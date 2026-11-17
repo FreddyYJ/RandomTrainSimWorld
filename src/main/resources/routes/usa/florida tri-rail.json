@@ -1,0 +1,78 @@
+{
+  "name": "Florida Tri-Rail",
+  "locomotives": {
+    "usa/bl36ph": [
+      "Tri-Rail"
+    ],
+    "usa/rotem-bi-level": [
+      "Tri-Rail"
+    ],
+    "usa/f40ph-3c": [
+      "Tri-Rail"
+    ],
+    "usa/sd40-2": [
+      "CSX"
+    ],
+    "usa/gp38-2": [
+      "CSX"
+    ],
+    "usa/gp49ph-3": [
+      "Tri-Rail"
+    ],
+    "usa/ac4400cw": [
+      "CSX",
+      "CSX YN2"
+    ],
+    "usa/c40-8w": [
+      "CSX"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "The Sunshine State",
+    "Miami Nice!"
+  ],
+  "scenario": {
+    "Welcome to Miami": {
+      "difficulty": 3,
+      "length": "0:55",
+      "locomotive": ["BL36PH Tri-Rail"]
+    },
+    "CSX: Miami": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["GP38-2 CSX"]
+    },
+    "Tonight's the Night": {
+      "difficulty": 3,
+      "length": "0:20",
+      "locomotive": ["F40PH-3C Tri-Rail"]
+    },
+    "Miami Metro": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Rotem Bi-Level Cab Car Tri-Rail"]
+    },
+    "The Heat": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["Rotem Bi-Level Cab Car Tri-Rail", "BL36PH Tri-Rail"]
+    },
+    "Mic Drop": {
+      "difficulty": 1,
+      "length": "0:10",
+      "locomotive": ["GP49PH-3 Tri-Rail"]
+    },
+    "Support Act": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["GP49PH-3 Tri-Rail"]
+    },
+    "Slo Rida": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["GP49PH-3 Tri-Rail"]
+    }
+  },
+  "description": "All Aboard for the Sunshine State! Ride the rails of Florida for the first time in Train Sim World 7. Take charge of Tri-Rail services under the dramatic coastal sun, and carry cargo with CSX power, as you surf through South Florida between bustling Miami Airport, and Fort Lauderdale to Boca Raton.\n\nStarting life as part of CSX’s Miami Subdivision, the rails of South Florida first played host to Tri-Rail services in 1989, adding a regular commuter flow through the suburbs north of Miami. Initially only a temporary measure while I95 was widened, ridership numbers demanded the service be made permanent. With many upgrades over time, including line doubling and station rebuilds, the line now serves around 30,000 passengers a day."
+}
