@@ -1,0 +1,15 @@
+{
+  "name": "CTC-3",
+  "nation": "USA",
+  "liveries": [
+    "MBTA"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "MBB",
+  "power": "N/A",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "1987-1988",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 0,
+  "description": "The CTC-3 is a type of cab car used by MBTA Commuter Rail which features in the NEC: Boston - Providence & MBTA Commuter: Boston - Framingham/Worcester Line DLCs. It is pushed by F40PH-3 & HSP46 locomotives."
+}

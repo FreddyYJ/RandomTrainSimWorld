@@ -1,0 +1,24 @@
+{
+  "name": "ES44AC",
+  "nation": "USA",
+  "liveries": [
+    "Norfolk Southern",
+    "Monongahela",
+    "Southern",
+    "Nickel Plate Road",
+    "Central of Georgia",
+    "Pennsylvania",
+    "Norfolk & Western",
+    "Lehigh Valley",
+    "Interstate",
+    "Norfolk Southern (1942-1982)"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "General Electric (GE)",
+  "power": "4,400 hp/3,300 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "2003-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 3888,
+  "description": "The ES44AC (Evolution Series, 4,400 hp, AC traction) replaced the AC4400CW model in the General Electric catalogue. These locomotives have been ordered by every Class I freight railroad in North America, as well as some exports: Union Pacific, BNSF Railway, CSX Transportation, Canadian Pacific, Kansas City Southern, and Ferromex were among the many companies to purchase the model, while later companies like Norfolk Southern, Canadian National, Iowa Interstate, Cemex (despite only receiving one unit), Cerrejón (coal field in Colombia), Cartier Railway, and CREX (Citicorp/Citirail leasing) have since ordered units."
+}

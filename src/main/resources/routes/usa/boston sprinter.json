@@ -1,0 +1,88 @@
+{
+  "name": "Boston Sprinter",
+  "locomotives": {
+    "usa/f40ph-3c": [
+      "MBTA"
+    ],
+    "usa/ctc-3": [
+      "MBTA"
+    ],
+    "usa/acs-64": [
+      "Amtrak",
+      "Amtrak 50 Anniv."
+    ],
+    "usa/hsp46": [
+      "MBTA"
+    ],
+    "usa/ctc-5": [
+      "MBTA"
+    ],
+    "usa/acela": [
+      "Amtrak"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "City Sprinter",
+    "Motivated Power",
+    "Acceleration and Excellence"
+  ],
+  "scenario": {
+    "Marching In": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["ACS-64 Amtrak"]
+    },
+    "Foundations": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["F40PH-3C MBTA"]
+    },
+    "Cold as Ice": {
+      "difficulty": 5,
+      "length": "1:30",
+      "locomotive": ["F40PH-3C MBTA", "CTC-3 MBTA"]
+    },
+    "Long Way Round": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["CTC-3 MBTA"]
+    },
+    "Reverse Engineering": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["ACS-64 Amtrak"]
+    },
+    "Coupling Up To Boston": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["HSP46 MBTA", "CTC-5 MBTA"]
+    },
+    "Delivery for Providence": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["HSP46 MBTA"]
+    },
+    "Road Blocker": {
+      "difficulty": 4,
+      "length": "1:05",
+      "locomotive": ["HSP46 MBTA", "CTC-3 MBTA"]
+    },
+    "Gimme 5": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Acela Express Amtrak"]
+    },
+    "High Speed US": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Acela Express Amtrak"]
+    },
+    "I Just Cleaned There": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Acela Express Amtrak"]
+    }
+  },
+  "description": "Experience the fastest rail line in America, from modern suburbia to sprawling countryside, linking the state capitals of Massachusetts and Rhode Island, in command of both Amtrak® Regional and MBTA Commuter operations with Train Sim World®: Northeast Corridor: Boston - Providence.\n\nIt’s a new dawn, it’s a new day, the Northeast Corridor: Boston - Providence route now features the same volumetric skies and lighting as introduced in Train Sim World 3!\n\nHurry long-distance passengers on Northeast Regional services between the two state capitals with the modern Amtrak ACS-64 and climb aboard the striking MBTA F40PH-3C, operating commuter services between each suburban hub along the way, as well as on the quaint Stoughton branch.\n\nThe Boston and Providence Railroad dates back to the 1830s, making it one of the United States’ oldest railroads. Making travel easier than ever, the line played a part in the development of America’s commuter suburbs, a purpose which the line still serves to this day. Now part of the Northeast Corridor, with both MBTA and Amtrak at the helm, bustling commuter and high speed operations frequent the line hundreds of times a day."
+}

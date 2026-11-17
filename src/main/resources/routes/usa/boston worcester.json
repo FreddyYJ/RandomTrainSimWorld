@@ -1,0 +1,73 @@
+{
+  "name": "Boston Worcester",
+  "locomotives": {
+    "usa/f40ph-3c": [
+      "MBTA"
+    ],
+    "usa/ctc-3": [
+      "MBTA"
+    ],
+    "usa/hsp46": [
+      "MBTA"
+    ],
+    "usa/ctc-5": [
+      "MBTA"
+    ],
+    "usa/acela": [
+      "Amtrak"
+    ],
+    "usa/acs-64": [
+      "Amtrak",
+      "Amtrak 50 Anniv."
+    ],
+    "usa/ac4400cw": [
+      "CSX",
+      "CSX YN2"
+    ],
+    "usa/sd40-2": [
+      "CSX",
+      "CSX YN2"
+    ],
+    "usa/c40-8w": [
+      "CSX"
+    ],
+    "usa/gp38-2": [
+      "CSX"
+    ],
+    "usa/sd40": [
+      "CSX"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "It's a Marathon, not a Sprint!"
+  ],
+  "scenario": {
+    "Take Me Home From The Ball Game": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["HSP46 MBTA"]
+    },
+    "Patriots Run": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["F40PH-3C MBTA", "CTC-3 MBTA"]
+    },
+    "Draft Day": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["HSP46 MBTA", "CTC-5 MBTA"]
+    },
+    "Reverse Reverse": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["F40PH-3C MBTA", "CTC-5 MBTA"]
+    },
+    "Southampton Slog": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["F40PH-3C MBTA", "CTC-3 MBTA", "CTC-5 MBTA"]
+    }
+  },
+  "description": "Take charge of passenger traffic in dashing MBTA purple and shuttle through the commuter suburbs of Central Massachusetts. Operate the sleek HSP46, twinned with modern bilevel equipment, and make the home run on the bustling rails out of Boston South and Back Bay, out onto the busy Framingham/Worcester Line in Train Sim World®!\n\nPlay your part in transporting thousands of passengers every day along the MBTA Network. Set in 2019; weave out of Boston’s South station, sharing tracks with the northern top of the Northeast Corridor for just a mile before leaving the wires behind, and embarking on an all-new journey to Worcester, serving more than a dozen towns and communities on the way with a variety of service patterns.\n\nExperience working a regional line with complex in-cab signalling and a mix-up of train formations, operating from 4 different cabs! Take on the roles of MBTA in new ways; play as a conductor to check tickets and safely dispatch your train. With Free Roam, explore the route in your own way, and if you own the speedy Northeast Corridor, hop between each route to swap shifts and run to Providence!"
+}

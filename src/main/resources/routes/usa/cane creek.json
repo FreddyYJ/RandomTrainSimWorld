@@ -1,0 +1,78 @@
+{
+  "name": "Cane Creek",
+  "locomotives": {
+    "usa/ac4400cw": [
+      "Union Pacific"
+    ],
+    "usa/sd40-2": [
+      "Union Pacific"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Cane Creek Journey"
+  ],
+  "scenario": {
+    "Tank Car Setouts": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["AC4400CW UP"]
+    },
+    "Siding to Siding": {
+      "difficulty": 1,
+      "length": "0:15",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "LDG-51 Part 1: Thompson to Seven Mile": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "LDG-51 Part 2: Seven Mile to Potash": {
+      "difficulty": 5,
+      "length": "2:00",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "LDG-51 Part 3: Potash to Thompson": {
+      "difficulty": 2,
+      "length": "2:00",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "LDP-46 Part 1: Brendel to Moab": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["AC4400CW UP"]
+    },
+    "LDP-46 Part 2: Moab to Brendel": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["AC4400CW UP"]
+    },
+    "All Along the Line": {
+      "difficulty": 1,
+      "length": "1:50",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "The Big Mine": {
+      "difficulty": 1,
+      "length": "0:10",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "Mine to Mainline": {
+      "difficulty": 1,
+      "length": "1:50",
+      "locomotive": ["AC4400CW UP"]
+    },
+    "Follow the Dirt Train": {
+      "difficulty": 1,
+      "length": "1:10",
+      "locomotive": ["AC4400CW UP"]
+    },
+    "Canyon Explorer": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["SD40-2 UP"]
+    }
+  },
+  "description": "Journey through the American West’s awe-inspiring, rugged, and remote desert scenery while tackling heavy tonnage and daunting grades with the Union Pacific Cane Creek Subdivision route for Train Sim World®!\n\nMasterfully developed for Train Sim World® by Skyhook Games, this new route re-creates Union Pacific’s famed Cane Creek Subdivision, also known as the Cane Creek Branch. Widely renowned for its extraordinary western desert scenery, the Cane Creek Subdivision extends from a connection with Union Pacific’s Green River Subdivision at Brendel, Utah south to Potash, Utah, 35.8 route miles. As created for Train Sim World®, the route also includes a five-mile section of the Green River Subdivision east from Brendel to Thompson, Utah.\n\nThe Cane Creek Subdivision offers heavy-haul, tough American railroading at its best. From Potash to Brendel, the line climbs nearly a thousand feet in elevation over a “roller coaster” profile featuring frequent gradients of 1.2 percent, curves of up to 6 degrees, and a journey through 7,059-foot-long Bootlegger Tunnel. The Cane Creek Branch is a rail line that requires big diesels and lots of horsepower, and you’ll take the throttle of the Union Pacific’s General Electric AC4400CW and Electro-Motive SD40-2 diesels as are included with the route.\n\nBy American railroad standards, the Cane Creek Branch is a newcomer, opened in 1962 by Union Pacific predecessor D&RGW to serve a sprawling potash mine facility at Potash. You’ll handle potash line-haul and switching duties, and you’ll also climb aboard Union Pacific’s big six-axle diesels to handle the railroad’s noted “dirty dirt trains” which lug contaminated mine tailings from Moab to Brendel."
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Acela Express",
+  "nation": "USA",
+  "liveries": [
+    "Amtrak"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "6,200 hp/4,600 kW",
+  "max_speed": "150 mph (240 km/h)",
+  "manufactured_year": "1998-2001",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 20,
+  "description": "The first-generation Acela Express trainset is a unique trainset used on the Acela, Amtrak's flagship high-speed service along the Northeast Corridor (NEC) in the Northeastern United States. When they debuted in 2000, the sets were the fastest in the Americas, reaching speeds of up to 150 miles per hour (240 km/h) on 33.9 miles (54.6 km) of the route. Built between 1998 and 2001 by a consortium of Alstom and Bombardier, each set consists of two power cars derived from units that Alstom built for the TGV and six passenger cars based on the LRC design Bombardier created for Via Rail."
+}
