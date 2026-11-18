@@ -1,0 +1,87 @@
+{
+  "name": "Peninsula Corridor",
+  "locomotives": {
+    "usa/f40ph-2cat": [
+      "Caltrain"
+    ],
+    "usa/gallery": [
+      "Caltrain"
+    ],
+    "usa/gp38-2": [
+      "Union Pacific"
+    ],
+    "usa/mp15dc": [
+      "Caltrain"
+    ],
+    "usa/mp36ph-3c": [
+      "Caltrain"
+    ],
+    "usa/bi-level": [
+      "Caltrain"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Peninsula Corridor Journey",
+    "MP15DC Switcher",
+    "Baby Bullet"
+  ],
+  "scenario": {
+    "Californian Commuter": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["F40PH-2CAT Caltrain"]
+    },
+    "Clean and Tidy": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["F40PH-2CAT Caltrain", "Gallery Cab Car Caltrain"]
+    },
+    "Dirty Dirt Drive": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["GP38-2 UP"]
+    },
+    "Rocky Road": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["GP38-2 UP"]
+    },
+    "Home Run": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Gallery Cab Car Caltrain"]
+    },
+    "Cutting the Cars": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["MP15DC Caltrain"]
+    },
+    "Santa Clara Saviour": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["MP15DC Caltrain"]
+    },
+    "Ballasting Act": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["MP15DC Caltrain"]
+    },
+    "Early Riser": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["MP36PH-3C Caltrain"]
+    },
+    "Cruising the Bay": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Bi-Level Cab Car Caltrain"]
+    },
+    "Bay Area Breakdown": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Bi-Level Cab Car Caltrain", "MP36PH-3C Caltrain"]
+    }
+  },
+  "description": "Experience the City that never sleeps. From the Big Apple to New Jersey suburbs, non-stop action awaits aboard premier electric traction. Serve the East Coast well with NJ TRANSIT and Amtrak® passenger equipment, brought to life in Train Sim World®: Northeast Corridor: New York - Trenton.\n\nGet to work on dense passenger operations aboard the iconic NJ TRANSIT ALP-46. All-modern, all-powerful, the ALP-46 is derived from its European cousin, the BR 101. Twinned with capacity-crunching Multilevel equipment, hurry commuters by the hundreds between Trenton and New York Penn Station from the workhorse itself or the striking cab car.\n\nGo the distance in speed and style. Between the heart of all-stopper action, take charge and race through on express Amtrak services, powered by the stalwart ACS-64, also a relative of European motive power. Sprint between cities with Amfleets in-tow and get a taste of retro tech from the cosy confines of the ex-metroliner cab car, push becomes shove with 8600 hp on your tail!"
+}

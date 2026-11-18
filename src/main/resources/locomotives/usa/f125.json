@@ -2,7 +2,8 @@
   "name": "F125",
   "nation": "USA",
   "liveries": [
-    "Metrolink"
+    "Metrolink",
+    "Metrolink Christmas"
   ],
   "type": "Diesel Electric Locomotive",
   "manufacturer": "Electro-Motive Diesel (EMD)",
