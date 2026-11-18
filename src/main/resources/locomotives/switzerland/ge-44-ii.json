@@ -1,0 +1,22 @@
+{
+  "name": "GE 4/4 II",
+  "nation": "Switzerland",
+  "liveries": [
+    "Rhätische Bahn",
+    "Rhätische Bahn 619 Bernina",
+    "Rhätische Bahn 620 Bever-Scuol",
+    "Rhätische Bahn 622 Hakone Tozan",
+    "Rhätische Bahn 623 Anni-Jahre",
+    "Rhätische Bahn 627 Chur-Arosa",
+    "Rhätische Bahn 629 Neubau Albulatunnel",
+    "Rhätische Bahn 630 Chur-Disentis"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "SLM, BBC",
+  "power": "2,210 hp/1,650 kW",
+  "max_speed": "90 km/h (56 mph)",
+  "manufactured_year": "1973-1984",
+  "gauge": "Meter Gauge (1,000 mm)",
+  "total": 23,
+  "description": "The Rhaetian Railway Ge 4/4 II is a class of metre gauge Bo′Bo′ electric locomotives operated by the Rhaetian Railway (RhB), which is the main railway network in the Canton of Graubünden, Switzerland."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ČD 843",
+  "nation": "Czech",
+  "liveries": [
+    "N1",
+    "N1 LED",
+    "N2",
+    "Red"
+  ],
+  "type": "Diesel Multiple Unit",
+  "manufacturer": "Škoda Vagonka",
+  "power": "805 hp/600 kW",
+  "max_speed": "110 km/h (68 mph)",
+  "manufactured_year": "1997",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 31,
+  "description": "The ČD Class 843 is a four-axle diesel multiple unit which was manufactured by Škoda Vagonka. They have been the operator since the beginning of České dráhy for main lines in the Czech Republic, and is the successor to ČD Class 842."
+}

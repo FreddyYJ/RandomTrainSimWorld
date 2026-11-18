@@ -1,0 +1,73 @@
+{
+  "name": "Liberec-Stará Paka",
+  "locomotives": {
+    "czech/cd750": [
+      "Green",
+      "Blue",
+      "Green Yellow Stripe",
+      "Red Yellow",
+      "Red Yellow Star"
+    ],
+    "czech/cd843": [
+      "N1",
+      "N1 LED",
+      "N2",
+      "Red"
+    ],
+    "germany/br642": [
+      "DB"
+    ]
+  },
+  "nation": "Czech",
+  "journey": [
+    "Bohemian Adventures"
+  ],
+  "scenario": {
+    "Squall Line": {
+      "difficulty": 3,
+      "length": "1:50",
+      "locomotive": ["ČD 843"]
+    },
+    "Swimsuit Weather": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["ČD 843"]
+    },
+    "End of day": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["ČD 843"]
+    },
+    "Goodbye": {
+      "difficulty": 1,
+      "length": "1:30",
+      "locomotive": ["ČD 843"]
+    },
+    "Can You Fix It": {
+      "difficulty": 5,
+      "length": "1:15",
+      "locomotive": ["ČD 843"]
+    },
+    "A Bit Of Shunting-part 1": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["ČD 750"]
+    },
+    "A Bit Of Shunting-part 2": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["ČD 750"]
+    },
+    "From Factory To Factory": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["ČD 750"]
+    },
+    "Mudslide": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["ČD 750"]
+    }
+  },
+  "description": "Head for the hills aboard trains anew in Liberec - Stará Paka from Vector Simulations! From the unique controls of the Class 843 to the iconic “Goggles” cab of the Class 750, tackle a mix of passenger & freight operations along a busy & treacherous single-track mountain pass in Train Sim World’s first Czech route.\n\nThe route which today tightly navigates its way from Liberec to Stará Paka was built in the 1850s as a section of a route from Germany to Pardubice. Born from a desire to primarily shift cargo - in particular, supporting the lucrative coal industry - the unforgiving terrain was bested by railway builders both domestic, and with the expertise from other countries more climatised to complicated rail routes."
+}
