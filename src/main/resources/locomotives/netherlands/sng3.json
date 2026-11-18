@@ -1,0 +1,15 @@
+{
+  "name": "SNG3",
+  "nation": "Netherlands",
+  "liveries": [
+    "Nederlandse Spoorwegen"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "CAF",
+  "power": "N/A",
+  "max_speed": "160 km/h (100 mph)",
+  "manufactured_year": "2018-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 68,
+  "description": "The Sprinter New Generation (SNG) is an electric multiple unit train from the Dutch Railways or Nederlandse Spoorwegen. The trains are designed and built by the Spanish train builder Construcciones y Auxiliar de Ferrocarriles (CAF), who bases the trains on the Civity platform. With a top speed of 160 km/h (100 mph), the trains are primarily intended to replace older train equipment (primarily the Urban Regional Material (NS SGMm) and the push-pull double decker DDM-1 carriages), but are also intended for the growth of the number of passengers on the Hoofdrailnet or main rail network."
+}

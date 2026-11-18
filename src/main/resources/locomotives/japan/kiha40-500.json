@@ -1,0 +1,17 @@
+{
+  "name": "Kiha 40-500",
+  "nation": "Japan",
+  "liveries": [
+    "Tohoku",
+    "NGT",
+    "STK"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "Fuji",
+  "power": "N/A",
+  "max_speed": "95 km/h (59 mph)",
+  "manufactured_year": "1977-1983",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 888,
+  "description": "The KiHa 40 series (Japanese: キハ40系, Hepburn: Kiha-yonjū-kei) are diesel multiple unit (DMU) railcars introduced by Japanese National Railways (JNR) in 1977 for non-electrified suburban and rural services in Japan. Operation was transferred to the various Japan Railways Group companies following the privatization of JNR."
+}
