@@ -9,7 +9,7 @@ public enum Nation {
     Germany("Germany"),
     Switzerland("Swiss"),
     Japan("Japan"),
-    Netherland("Netherland"),
+    Netherlands("Netherlands"),
     Austria("Austria"),
     France("France"),
     Czech("Czech"),

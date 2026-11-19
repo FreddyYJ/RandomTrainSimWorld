@@ -1,0 +1,15 @@
+{
+  "name": "GP9RM",
+  "nation": "USA",
+  "liveries": [
+    "Canadian National"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD), General Motors Diesel (GMD)",
+  "power": "1,750 hp/1,300 kW",
+  "max_speed": "65 mph (105 km/h)",
+  "manufactured_year": "1954-1963",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 165,
+  "description": "The EMD GP9 is a four-axle diesel-electric locomotive built by General Motors' Electro-Motive Division between 1954 and 1963. The GP9 succeeded the GP7 as the second model of EMD's General Purpose (GP) line, incorporating a new sixteen-cylinder engine which generated 1,750 horsepower (1.30 MW). This locomotive type was offered both with and without control cabs; locomotives built without control cabs were called GP9B locomotives. The GP9 was succeeded by the similar but slightly more powerful GP18."
+}

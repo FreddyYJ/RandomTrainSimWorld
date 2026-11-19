@@ -83,6 +83,7 @@ public class Main {
 			throw new UncheckedIOException("Failed to list route or locomotive files", e);
 		}
 		routes = routeBuilder.build();
+		System.out.println(routes.size() + " routes read"); // Should be 86 currently
 		locomotives = locomotiveBuilder.build();
 
 		// Include everything at first

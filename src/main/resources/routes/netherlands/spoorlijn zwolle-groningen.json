@@ -1,0 +1,54 @@
+{
+  "name": "Spoorlijn Zwolle-Groningen",
+  "locomotives": {
+    "netherlands/icmm3": [
+      "Nederlandse Spoorwegen"
+    ],
+    "netherlands/sng3": [
+      "Nederlandse Spoorwegen"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "germany/br193": [
+      "DB"
+    ]
+  },
+  "nation": "Netherlands",
+  "journey": [
+    "Netherlands Navigator"
+  ],
+  "scenario": {
+    "Groningen Hero": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["SNG3 NS"]
+    },
+    "Maintenance Madness": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["SNG3 NS"]
+    },
+    "Double Up": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["ICMm3 NS"]
+    },
+    "ATB Out": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["ICMm3 NS"]
+    },
+    "Retirement Party": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["ICMm3 NS"]
+    },
+    "That's Not My Train": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["SNG3 NS"]
+    }
+  },
+  "description": "Welcome to the Netherlands! Embark on an all-new European journey in Train Sim World® with Spoorlijn Zwolle - Groningen. Run express Nederlandse Spoorwegen services from the raised cab of the iconic ICMm “Koploper” and dash between commuter towns with the modern SNG Sprinter. A new country and new challenges await with our first Dutch route!\n\nThe line between Zwolle and Groningen owes its lineage to the State Railways Construction Act of 1860, which would see the construction of the Netherlands’ first 3 major State-owned railway routes, linking key large towns and cities. Zwolle - Meppel was built as part of Line A, with Line C branching off at Meppel to continue towards Groningen via Assen. By 1870, the connection between Zwolle and Groningen was complete.\n\nWith the advance of time, the route has been periodically upgraded, not least of all in the 1970s with rebuilt stations and 1.5 kV overhead electrification, the standard for Dutch railways. The 70s also saw the introduction of the famous NS Intercity Materieel, known more widely as the Koploper. As of November 2023, the line through Hoogeveen station has been widened and realigned to increase the speed of intercity services."
+}

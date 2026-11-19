@@ -1,0 +1,53 @@
+{
+  "name": "Semmeringbahn",
+  "locomotives": {
+    "austria/1116": [
+      "ÖBB"
+    ],
+    "austria/4024": [
+      "ÖBB"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "uk/class47": [
+      "BR"
+    ]
+  },
+  "nation": "Austria",
+  "journey": [
+    "Yodel all the way!"
+  ],
+  "scenario": {
+    "Firewatch": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Blizzard Bus": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Milkshake": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["ÖBB 1116 Taurus"]
+    },
+    "Snowed In": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "I Need A Hero": {
+      "difficulty": 5,
+      "length": "0:50",
+      "locomotive": ["ÖBB 1116 Taurus"]
+    }
+  },
+  "description": "Explore the World’s first true mountain railway in Train Sim World®! Work winding trains at altitude through the rocky, forested peaks of the Austrian Alpine terrain. Climb the Semmering Pass before hastening downgrade towards historic Wiener Neustadt. Control iconic ÖBB traction on your Semmeringbahn adventure!\n\nFrom the spacious cab of the famed ÖBB 1116 “Taurus”, and the sleek ÖBB 4024, become one with the rugged peaks on the World Heritage Semmeringbahn. Constructed 170 years ago, the line between Mürzzuschlag and Gloggnitz was the first standard gauge mountain railway in Europe. Seamlessly blending nature and technology, the line traverses the pass through many hairpin turns, over a dozen tunnels and iconic bridges and viaducts.\n\nBy contrast, the Semmeringbahn is but a section of the equally historical Südbahn, which runs with faster lines and less demanding infrastructure. After pivoting through the peaks to Gloggnitz, the line, which itself dates back to 1842, straightens out and makes haste for Wiener Neustadt, the busiest station in Lower Austria."
+}

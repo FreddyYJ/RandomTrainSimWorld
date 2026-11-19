@@ -1,0 +1,42 @@
+{
+  "name": "Tadami Line",
+  "locomotives": {
+    "japan/kiha40-500": [
+      "Tohoku",
+      "NGT",
+      "STK"
+    ]
+  },
+  "nation": "Japan",
+  "journey": [
+    "A journey in Aizu area"
+  ],
+  "scenario": {
+    "Hanami": {
+      "difficulty": 1,
+      "length": "0:43",
+      "locomotive": ["Kiha 40-500 Tohoku"]
+    },
+    "Revival": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["Kiha 40-500 NGT"]
+    },
+    "Leaf Peeping": {
+      "difficulty": 1,
+      "length": "0:55",
+      "locomotive": ["Kiha 40-500 Tohoku"]
+    },
+    "Midsummer": {
+      "difficulty": 1,
+      "length": "0:58",
+      "locomotive": ["Kiha 40-500 Tohoku"]
+    },
+    "Going home": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Kiha 40-500 Tohoku"]
+    }
+  },
+  "description": "Embark on a new kind of journey in Train Sim World! With Union Workshop’s Tadami Line, the dense valleys and quaint, trundling rails of rural Japan make their debut! Explore the stunning nature of Fukushima Prefecture, and climb aboard narrow-gauge traction, taking on local passenger duties among the mountains.\n\nThe picturesque Tadami Line dates to 1928, when the first section of the line, known then as the Aizu Railway, branched off from Aizu-Wakamatsu to Aizu-Yanaizu. It would take many decades for the line to gradually extend along the winding Tadami River, opening as far as Aizu-Kawaguchi by 1956, and eventually Tadami in 1963.\n\nThe route the railway takes makes it one of the most scenic lines in Japan, and it has been awarded for its beauty, and taking travellers away from the beaten path on a journey time forgot.\n\nIn Train Sim World, marvel at the cherry blossoms and iconic bridges as your traverse the unexplored regions of Oku Aizu. The route is set prior to the pivotal rainstorm of 2011, which damaged the line and cut services short at Aizu-Kawaguchi, leaving Tadami with a shuttle bus for a little over a decade. This allows you to explore over 80km of pure scenic wonder, from Aizu-Wakamatsu, through Aizu-Kawaguchi, and all the way to Tadami; every corner is a new postcard! Explore a visually unique environment on foot with local Japanese architecture, culture and geography all represented in stunning detail."
+}

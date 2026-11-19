@@ -1,0 +1,66 @@
+{
+  "name": "S-Bahn Vorarlberg",
+  "locomotives": {
+    "austria/4024": [
+      "ÖBB"
+    ],
+    "germany/br185": [
+      "DB"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ],
+    "germany/br182": [
+      "MRCE"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "switzerland/rabe-523": [
+      "SBB CFF FFS"
+    ]
+  },
+  "nation": "Austria",
+  "journey": [
+    "Climb Every Mountain"
+  ],
+  "scenario": {
+    "Night Change": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["BR 193 Vectron Railpool"]
+    },
+    "Whiteout": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Die Grosse Tour": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "International Rescue": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Go Hard": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Just Like In The Movies": {
+      "difficulty": 3,
+      "length": "0:20",
+      "locomotive": ["ÖBB 4024"]
+    },
+    "Pick Up": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    }
+  },
+  "description": "Take the train to Austria! Spanning cross-border, the busy Vorarlberg S-Bahn line shuttles from quaint German island life to the foothills of the Austrian Alps. All-new and bustling ÖBB traffic awaits in Train Sim World®.\n\nAustria – a neighbouring country to both Germany and Switzerland, both already in Train Sim World, is known for many things but not least of all its stunning scenery, and of course its railway network. Nationally operated by ÖBB, or Austrian Federal Railways, passengers rank the service among some of the best within the EU, linking to the country’s neighbours and serving locals within.\n\nLakeshore and mountainous views abound as you uphold ÖBB’s service on their densely packed Vorarlberg S-Bahn. Operated by the ÖBB 4024 Talent EMU, previous generation predecessor to the Talent 2, the S1 line starts off on the island of Lindau, Germany, before promptly making its way back onto the mainland, and over the border into Austria’s westernmost state."
+}

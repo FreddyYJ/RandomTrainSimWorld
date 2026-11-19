@@ -1,0 +1,49 @@
+{
+  "name": "Mittenwaldbahn",
+  "locomotives": {
+    "austria/1020": [
+      "ÖBB"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DBB"
+    ],
+    "germany/br365": [
+      "DBB"
+    ]
+  },
+  "nation": "Austria",
+  "journey": [
+    "Mountain Adventure"
+  ],
+  "scenario": {
+    "Runaway": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 111 DBB"]
+    },
+    "Kufstein Kerfuffle": {
+      "difficulty": 3,
+      "length": "1:35",
+      "locomotive": ["ÖBB 1020"]
+    },
+    "Ski Slope Special": {
+      "difficulty": 4,
+      "length": "2:30",
+      "locomotive": ["ÖBB 1020"]
+    },
+    "A Shovely Time": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["ÖBB 1020"]
+    },
+    "Local Collection": {
+      "difficulty": 3,
+      "length": "1:40",
+      "locomotive": ["ÖBB 1020"]
+    }
+  },
+  "description": "The might of machinery makes a molehill out of a mountain – step back into 1989 and embark on the daring climb of TSG’s Mittenwaldbahn in Train Sim World®. Featuring steep gradients, stunning scenery and the iconic “Krokodil”, embark on a nostalgic adventure between Germany & Austria!\n\nAlso known as the Karwendelbahn, the Mittenwaldbahn traverses the Alps between Bavaria, Germany, and Tyrol, Austria. Talks of a mountain railway went back as far as the 1880s, although no trains would turn a wheel over the pass until 1912. The line was planned to be electrified from the start, to make tackling the route much easier.\n\nEven with electric traction, traversing a mountain range is no small feat for a standard gauge railway. The Mittenwaldbahn features many tunnels and iconic bridges, with incredible ruling gradients as steep as 3.8%. Such lines offer challenge, but also scenic wonder; take in the sights of the peaks and valleys, with the rails rising as high as 1.1 km above sea level."
+}
