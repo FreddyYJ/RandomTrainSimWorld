@@ -1,0 +1,62 @@
+{
+  "name": "Northeast Corridor Metro-North: New York-Stamford",
+  "locomotives": {
+    "usa/m8": [
+      "Metro-North Railroad"
+    ],
+    "usa/acs-64": [
+      "Amtrak",
+      "Amtrak 50 Anniv."
+    ],
+    "usa/sd40-2": [
+      "CSX"
+    ],
+    "usa/m3": [
+      "M3A MTA"
+    ],
+    "usa/m7": [
+      "M7A MTA"
+    ],
+    "usa/acela": [
+      "Amtrak"
+    ],
+    "usa/alp-46": [
+      "NJT"
+    ],
+    "usa/multi-level-commuter": [
+      "NJT"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "A Day in the Life"
+  ],
+  "scenario": {
+    "Student Engineer": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["M8 MNR"]
+    },
+    "Drawbridge Drama": {
+      "difficulty": 2,
+      "length": "0:55",
+      "locomotive": ["M8 MNR"]
+    },
+    "Snow Day": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["M8 MNR"]
+    },
+    "New Year's Resolution": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["M8 MNR"]
+    },
+    "Hours of Service": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["ACS-64 Amtrak"]
+    }
+  },
+  "description": "Big Apple Railroading takes a turn north for the third installment of Northeast Corridor in Train Sim World® - next stop: Stamford! Go dual-voltage with the hard-working Metro-North M8 on commuter runs out of Grand Central Terminal, traverse Hells Gate Bridge and dive into New York Penn Station aboard Amtrak® services, and keep industries moving with the CSX SD40-2.\n\nWhat is shared today by both Metro-North and Amtrak, the winding section of Northeast Corridor that heads north towards Connecticut, was built by the New York and New Haven Railroad in the 1840s. Following the path of the Long Island Sound, the route was designed to offer a direct land-based line to New York (cutting water-based journey times significantly). Following mergers, electrification and modernisation, the rest is history, and the line became part of the busiest passenger corridor in the US."
+}

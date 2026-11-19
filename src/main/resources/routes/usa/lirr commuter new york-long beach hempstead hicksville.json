@@ -1,0 +1,66 @@
+{
+  "name": "LIRR Commuter: New York-Long Beach, Hempstead & Hicksville",
+  "locomotives": {
+    "usa/m7": [
+      "LIRR"
+    ],
+    "usa/m9": [
+      "LIRR"
+    ],
+    "usa/m3": [
+      "LIRR"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "New York, New York"
+  ],
+  "scenario": {
+    "Ferrying Folks": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Metropolitan Mover": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Hicksville Handler": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Driving Range": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["M9 LIRR"]
+    },
+    "Cutting Down": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["M9 LIRR"]
+    },
+    "Can You Dig It?": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["M9 LIRR"]
+    },
+    "Hydro City": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["M7 LIRR", "M9 LIRR"]
+    },
+    "This Fire": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["M7 LIRR"]
+    },
+    "Double Duty": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["M9 LIRR"]
+    }
+  },
+  "description": "Time to truly experience America’s busiest commuter railroad in Train Sim World®! Return to Long Island and delve deep into an enhanced New York – Hicksville route, now including the Long Beach branch, new lighting and skies, overhauled signalling, and an all-new bustling timetable making use of key LIRR traction, including the state-of-the-art M9!\n\nAs one of two important networks owned and operated by the MTA, the Long Island Rail Road stretches east out of the bustling New York metropolis from 2 key terminals; Atlantic and New York Penn. Serving on average a quarter of a million passengers a day, it’s easily North America’s busiest commuter railroad, with many services per hour, and also the USA’s oldest, having been in continuous operation since 1834."
+}

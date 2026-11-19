@@ -1,0 +1,17 @@
+{
+  "name": "Class 170",
+  "nation": "UK",
+  "liveries": [
+    "West Midlands Trains",
+    "CrossCountry",
+    "ScotRail"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "ADtranz, Bombardier",
+  "power": "422 hp/315 kW (per engine)",
+  "max_speed": "100 mph (160 km/h)",
+  "manufactured_year": "1999-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 139,
+  "description": "The British Rail Class 170 Turbostar is a British diesel-hydraulic multiple unit passenger train designed and built by Adtranz, and later by Bombardier Transportation, at Derby Litchurch Lane Works."
+}

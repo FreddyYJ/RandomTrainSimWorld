@@ -1,0 +1,121 @@
+{
+  "name": "Hauptstrecke Hamburg-Lübeck",
+  "locomotives": {
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br463diesel": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br101": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br147": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br406": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "German Diesel Power",
+    "Hectic Hamburg & Schleswig-Holstein"
+  ],
+  "scenario": {
+    "Late Picker": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Early Bird": {
+      "difficulty": 1,
+      "length": "0:55",
+      "locomotive": ["BR 218 DB"]
+    },
+    "To The Rescue": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 218 DB"]
+    },
+    "Foul Weather Freight": {
+      "difficulty": 3,
+      "length": "1:10",
+      "locomotive": ["BR 218 DB"]
+    },
+    "New to the Area": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["BR 112 DB"]
+    },
+    "Evening Rescue": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 182 MRCE"]
+    },
+    "Bargteheide Return": {
+      "difficulty": 1,
+      "length": "1:10",
+      "locomotive": ["BR 112 DB", "Doppelstockwagen DB"]
+    },
+    "Turnback Freight": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["BR 182 MRCE"]
+    },
+    "ICE Night": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Doppelstockwagen DB"]
+    }
+  },
+  "description": "Experience regional passenger and heavy freight duties in North Germany, linking the country’s 2nd largest city to the commuter towns of Schleswig-Holstein with Train Sim World®: Hauptstrecke Hamburg - Lübeck.\n\nPlans to directly link Hamburg and Lübeck by rail date back to the 1830s, as part of an effort to improve journey times along the cross-border route into Denmark. It would take a further 3 decades until the line actually opened, but once rails were laid, the line quickly became the busiest and most important in Schleswig-Holstein. Today, Deutsche Bahn run regular passenger services along the line, taking commuters and travellers to and from Europe’s 2nd busiest station.\n\nIt’s your job to take charge of the services across this route; bundle commuters into the high-capacity doppelstock coaches, and keep the industrial scene thriving by operating key freight traffic.\n\nTake control of the classic DB BR 112, either from the locomotive itself or from afar in the cab car, on stopping and semi-fast services between Hamburg and Lübeck. Alternatively, climb aboard the instantly recognisable ES 64 U2 adorning the sleek MRCE Black scheme, and haul a variety of freight trains."
+}

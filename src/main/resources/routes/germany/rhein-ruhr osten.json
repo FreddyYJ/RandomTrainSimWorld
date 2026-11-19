@@ -1,0 +1,120 @@
+{
+  "name": "Rhein-Ruhr Osten",
+  "locomotives": {
+    "germany/br422": [
+      "DB"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "Dispolok",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "On The Shunt",
+    "Rhein-Ruhr Osten Journey"
+  ],
+  "scenario": {
+    "The Distributor": {
+      "difficulty": 1,
+      "length": "1:05",
+      "locomotive": ["DB G6"]
+    },
+    "Hibernal Heaven": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["DB G6"]
+    },
+    "Piece of Cake": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["DB G6"]
+    },
+    "Container Shuffle": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["DB G6"]
+    },
+    "Free Roam Hagen": {
+      "difficulty": 1,
+      "length": "2:00",
+      "locomotive": ["DB G6"]
+    },
+    "Setting Out": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["BR 185 MRCE"]
+    },
+    "Freight Diversion": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 185 MRCE"]
+    },
+    "Commuter Conclusion": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["BR 422 DB"]
+    },
+    "Technical Difficulties": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["BR 185 MRCE"]
+    },
+    "Ruhr Run": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 422 DB"]
+    }
+  },
+  "description": "The hustle and bustle of urban sprawl passenger operations and intermix of freight are yours to experience in Train Sim World®: Rhein-Ruhr Osten. Take in the scenic backdrop of the North Rhine-Westphalia as you carry out passenger and freight duties whilst negotiating the busy Rhein-Ruhr route. Reproduced in exquisite detail, every station, signal and milepost feel so real you could almost reach out and touch them.\n\nIt’s your job to carry passengers and freight over the Rhein-Ruhr. Manage your trains through the route as it forges along two separate paths and deliver your cargo on-time. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of German railways at their best.\n\nTake control of two very different German electric trains, the DB BR 422 EMU as they serve the many passenger stations, and the MRCE BR 185.5 on freight duty. Featuring authentic AC Electric simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

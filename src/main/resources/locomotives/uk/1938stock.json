@@ -1,0 +1,15 @@
+{
+  "name": "1938 Tube Stock",
+  "nation": "UK",
+  "liveries": [
+    "Underground"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Metro-Cammell, BRC & W",
+  "power": "N/A",
+  "max_speed": "45 mph (72 km/h)",
+  "manufactured_year": "1937-1940",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 322,
+  "description": "The London Underground 1938 Stock is a London Underground tube stock design. A total of 1,121 cars were built by Metro-Cammell and Birmingham RC&W. An additional 173 cars were added to the fleet by the end of 1953, comprising 91 new builds (the 1949 Tube Stock), 76 conversions from Pre-1938 Tube Stock or 1935 Tube Stock, and six unconverted cars of 1935 Tube Stock, and the stock was used on the London Underground until 1988. During their long lives they worked on the Bakerloo, Northern, Piccadilly, East London, Central, and Northern City lines. Ten sets were refurbished and ran on the Isle of Wight as Class 483, making them the oldest passenger rolling stock operating timetabled services on the National Rail network at the time of their withdrawal in January 2021."
+}

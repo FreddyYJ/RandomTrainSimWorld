@@ -1,0 +1,15 @@
+{
+  "name": "Bi-Level Cab Car",
+  "nation": "USA",
+  "liveries": [
+    "Caltrain"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Hawker SIddelely, Can Car, UTDC, Bombardier, Alstom",
+  "power": "N/A",
+  "max_speed": "79 mph (105 km/h)",
+  "manufactured_year": "1976-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 1510,
+  "description": "The BiLevel Coach is a bilevel passenger railcar designed for commuter rail service in North America and currently manufactured by Alstom. It was originally developed for GO Transit in the Greater Toronto Area in the mid-1970s and has since been used by commuter rail agencies in Canada and the United States. They have been previously manufactured by Hawker Siddeley, Urban Transportation Development Corporation (UTDC), SNC-Lavalin and Bombardier. Production began at the former Canadian Car and Foundry (Can Car) plant in Thunder Bay, Ontario, where the cars have continued to be built."
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Linke Rheinstrecke: Mainz-Koblenz",
+  "locomotives": {
+    "germany/br194": [
+      "Green Crocodile"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br463": [
+      "DB Mint"
+    ],
+    "germany/br111": [
+      "DBB"
+    ],
+    "germany/br218": [
+      "DBB"
+    ],
+    "germany/br363": [
+      "DBB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br628": [
+      "DB Mint"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Heavy Duty",
+    "Gorge-ous"
+  ],
+  "scenario": {
+    "Koblenz Komplications": {
+      "difficulty": 4,
+      "length": "1:40",
+      "locomotive": ["BR 194 DBB"]
+    },
+    "Green Crocodile Freight": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["BR 194 DBB"]
+    },
+    "Cold Steel": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 110 DB"]
+    },
+    "Red Rhine": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["BR 110 DB"]
+    },
+    "Castle Collection": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 103 DB"]
+    },
+    "Jump Around": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 103 DB"]
+    },
+    "Single Line Rider": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 103 DB"]
+    },
+    "All Change": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["BR 110 DB", "BR 103 DB"]
+    }
+  },
+  "description": "Wind the clock back to the 1990s and experience the flagship of the Deutsche Bundesbahn; be enveloped by stunning Rheinland countryside, from the shimmering river to castle-topped hills, and serve historical towns in style with Train Sim World®: Linke Rheinstrecke: Mainz - Koblenz!\n\nBefore the days of ICE trainsets and bespoke high-speed lines, express services used fast locomotives on existing routes. With a staggering output just shy of 10,000 horsepower, the legendary DB BR 103, parading its eye-catching cream and gold accents, is no exception, and would once haul Trans Europ Express and Intercity services throughout Germany.\n\nTrundle past historical buildings and through quaint riverside towns on the Western face of the Rhine, between the larger cities of Mainz and Koblenz. Hauling long rakes of Intercity coaches, the BR 103 is well equipped for fulfilling its non-stop duties on this scenic line.\n\nServe each town and village with the refreshing mint tones of the n-Wagen, pushed and pulled by the classic, Orient Red-wearing BR 110.3. Between these 2 nostalgic electric locomotives, master the art of tap changer controls, and passenger services long before the mass arrival of dostos and multiple units."
+}

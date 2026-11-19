@@ -1,0 +1,95 @@
+{
+  "name": "West Cornwall Local",
+  "locomotives": {
+    "uk/class150": [
+      "Regional Railways"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/jubilee": [
+      "Black",
+      "Crimson"
+    ],
+    "uk/class08": [
+      "BR"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "47484"
+    ],
+    "uk/class101": [
+      "BR"
+    ],
+    "uk/class142": [
+      "Provincial",
+      "Orange",
+      "Skipper"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "The Cornish Coastal Journey",
+    "The Railtour Rover Journey"
+  ],
+  "scenario": {
+    "A Cornish Circle": {
+      "difficulty": 1,
+      "length": "1:40",
+      "locomotive": ["Class 150 Regional Railways"]
+    },
+    "Late Night Finish": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["Class 150 Regional Railways"]
+    },
+    "Coastal Takeover": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["Class 150 Regional Railways"]
+    },
+    "Slow Ride": {
+      "difficulty": 5,
+      "length": "1:30",
+      "locomotive": ["Class 37 RailFreight"]
+    },
+    "Sleepy Delivery": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 37 RailFreight"]
+    },
+    "Reliving History": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Jubilee Crimson"]
+    },
+    "Royal Service": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 37 RailFreight", "Jubilee Crimson"]
+    },
+    "Cooling Off Steam": {
+      "difficulty": 4,
+      "length": "1:05",
+      "locomotive": ["Jubilee Black"]
+    },
+    "Old Troubles With Modern Solutions": {
+      "difficulty": 5,
+      "length": "1:05",
+      "locomotive": ["Jubilee Black"]
+    },
+    "Arriving Home For Christmas": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Jubilee Crimson"]
+    }
+  },
+  "description": "Experience the rolling hills and picturesque countryside of the “Great Western”, aboard classic British diesel traction, with Rivet Games’ West Cornwall Local: Penzance - St Austell & St Ives route. Step back into the 1990s and relive this line in the pre-BR privatisation era.\n\nThe Cornish Main Line has long been the backbone for Cornwall. Opened in 1867, the line weaves its way through the landscape linking Cornwall to the rest of the country. Brunel originally built the line to his unique 7ft “broad gauge”, but in 1892 the route was converted to standard gauge. For those areas not reached by the main line, branches sprawl out to serve local communities, such as the St Ives Bay Line, which also sees tourist traffic - holidaymakers keen to make a coastal getaway.\n\nIt’s your job to take charge of the various services on this scenic route; carry passengers through the Cornish Countryside on local Regional Railways services and shuttle to and fro along the St Ives branch. Alternatively, take on the challenge of freight over the hills.\n\nBe in control of the recognisable BR Class 150/2, a staple of any rural regional line in England, resplendent in Regional Railways livery. Alternatively, experience more classic motive power in the form of the BR Class 37/5, sporting Railfreight Grey livery, and accompanied by YCV ‘Turbot’ and YGB ‘Seacow’ wagons."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ACS-64",
+  "nation": "USA",
+  "liveries": [
+    "Amtrak",
+    "Amtrak 50 Anniv."
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Siemens",
+  "power": "8,600 hp/6,400 kW",
+  "max_speed": "125 mph (201 km/h)",
+  "manufactured_year": "2012-2016",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 70,
+  "description": "The Siemens ACS-64, or Amtrak Cities Sprinter, is an electric locomotive designed by Siemens Mobility for use on the Northeast Corridor (NEC) and the Keystone Corridor in the northeastern United States. The design was based on locomotives Siemens created for use in Europe and Asia, but with changes to comply with American standards. The ACS-64 is built at the Siemens factory in Florin, California, located outside of Sacramento."
+}

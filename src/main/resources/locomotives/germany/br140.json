@@ -1,0 +1,15 @@
+{
+  "name": "BR 140",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Krauss-Maffei, Krupp, Henschel, Siemems, AEG, BBC",
+  "power": "5,000 hp/3,700 kW",
+  "max_speed": "100 km/h (62 mph)",
+  "manufactured_year": "1957-1973",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 879,
+  "description": "The Baureihe E 40 is a German Standard electric locomotive (German: Einheits-Elektrolokomotive) commissioned by the Deutsche Bundesbahn in 1955, designed for freight trains. Since the 1968 renumbering, it is listed as Class 140 and Class 139."
+}

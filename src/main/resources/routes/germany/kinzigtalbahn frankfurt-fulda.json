@@ -1,0 +1,169 @@
+{
+  "name": "Kinzigtalbahn: Frankfurt-Fulda",
+  "locomotives": {
+    "germany/br193": [
+      "DB",
+      "Railpool",
+      "FlixTrain"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br463": [
+      "DB",
+      "DB Mint"
+    ],
+    "germany/br483": [
+      "DB"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br403": [
+      "DB"
+    ],
+    "germany/br423": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Old dog, new Flix",
+    "On the Case",
+    "One and One and One"
+  ],
+  "scenario": {
+    "Hanau Heart Rate Raiser": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 193 Vectron FlixTrain"]
+    },
+    "Delays Expected": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["BR 193 Vectron FlixTrain"]
+    },
+    "Right Place, Right Time": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 193 Vectron FlixTrain"]
+    },
+    "Check A Train": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 193 Vectron FlixTrain"]
+    },
+    "Test Train": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 193 Vectron DB"]
+    },
+    "Pull!": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 114 DB"]
+    },
+    "Frankfurt Ferry": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 146 DB", "Doppelstockwagen DB"]
+    },
+    "Mind the Gap": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 411 ICET"]
+    },
+    "ICE into the night": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 411 ICET"]
+    },
+    "Cheesed to Meet You": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 193 Vectron DB", "Dopperstockwagen DB"]
+    },
+    "Old Heroes": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 111 DB"]
+    },
+    "Melted ICE": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 111 DB"]
+    },
+    "Rail Recovery": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 111 DB"]
+    }
+  },
+  "description": "Welcome to Frankfurt! Explore the rails of a sprawling modern metropolis, and take control of regional, commuter and inter-city express duties in Train Sim World®. Lean into the action with the all-new DB BR 411 ICE-T; tilting heavy metal optimised for smooth and faster travel. An extravaganza of electric traction awaits!\n\nAs a vital commuter, regional and international hub, the massive Frankfurt (Main) Hbf needs little introduction and is regarded as one of the most important stations in Germany. All traffic in all directions; take ICE and regional trains on a sharp curve out of the city Eastward and wind through the Kinzig Valley to the highspeed interchange at Fulda.\n\nTilting traction is twinned with an array of Deutsche Bahn’s finest. From the classic cab of the DB BR 114 to the modern screens of the DB BR 193 Vectron; embark on regional passenger and heavy freight in-between the ICE action."
+}

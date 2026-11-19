@@ -1,0 +1,84 @@
+{
+  "name": "Horseshoe Curve",
+  "locomotives": {
+    "usa/gp38-2": [
+      "Norfolk Southern",
+      "Union Pacific"
+    ],
+    "usa/es44ac": [
+      "Norfolk Southern",
+      "Monongahela",
+      "Southern",
+      "Nickel Plate Road",
+      "Central of Georgia",
+      "Pennsylvania",
+      "Norfolk & Western",
+      "Lehigh Valley",
+      "Interstate",
+      "Norfolk Southern (1942-1982)"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "The Train, The Horseshoe and The Curve",
+    "Fallen Flags"
+  ],
+  "scenario": {
+    "Pushed aside": {
+      "difficulty": 4,
+      "length": "1:15",
+      "locomotive": ["GP38-2 NS"]
+    },
+    "Honk for the camera": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["ES44AC NS"]
+    },
+    "Does Wet Coal Burn?": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["ES44AC NS"]
+    },
+    "Complication at Cresson": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["GP38-2 NS"]
+    },
+    "Evening Tidy Up": {
+      "difficulty": 5,
+      "length": "0:50",
+      "locomotive": ["GP28-2 NS"]
+    },
+    "Altoona Alignment": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["ES44AC Heritage Units"]
+    },
+    "Portage Process": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["ES44AC LEH", "ES44AC CEN"]
+    },
+    "Gallitzin Around": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["ES44AC MON", "ES44AC NOR"]
+    },
+    "Miner Inconvenience": {
+      "difficulty": 5,
+      "length": "1:30",
+      "locomotive": ["ES44AC NSR", "ES44AC NIC"]
+    },
+    "Knowing the Wye": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["ES44AC INT", "ES44AC NOR"]
+    },
+    "Gathering Gondolas": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["ES44AC NIC", "ES44AC NSR"]
+    }
+  },
+  "description": "Horseshoe Curve! In American railroading, there are few places that evoke more history and drama. Horseshoe Curve was J. Edgar Thompson’s engineering marvel and the signature achievement of the great Pennsylvania Railroad’s 1850s crossing of the Allegheny Mountains. And now, as today operated by railroading giant Norfolk Southern, Horseshoe Curve comes to Train Sim World®!\n\nAs part of contemporary Norfolk Southern’s Pittsburgh Line, famed Horseshoe Curve is today as vital, captivating, and busy as ever. Train Sim World®’s Horseshoe Curve route, created by Skyhook Games, extends from the great and bustling shop town of Altoona, Pennsylvania across the rugged Alleghenies to Johnstown, Pennsylvania, 40 miles. And also included in the route is 15 miles of the historic and coal-rich South Fork Secondary extending from the main line at South Fork to Windber, Pennsylvania. All the legendary features of this great American railroad – the fabulous, 1.8 percent, 2,375-foot-long curve at Kittanning Point, massive Juniata Shops in Altoona, the Gallitzin Tunnels, the steep and treacherous “Slide” east from the summit, the helper station at Cresson, and more, come to life in the route!"
+}

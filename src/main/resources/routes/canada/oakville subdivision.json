@@ -1,0 +1,48 @@
+{
+  "name": "Oakville Subdivision",
+  "locomotives": {
+    "usa/gp9rm": [
+      "Canadian National"
+    ],
+    "usa/gp38-2": [
+      "Canadian National"
+    ]
+  },
+  "nation": "Canada",
+  "journey": [
+    "Oakville Subdivision Journey"
+  ],
+  "scenario": {
+    "Maple Leaf Motoring": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["GP9RM CN"]
+    },
+    "In with the New": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["GP38-2 CN"]
+    },
+    "Petrochemical Chaos": {
+      "difficulty": 5,
+      "length": "1:15",
+      "locomotive": ["GP9RM CN"]
+    },
+    "Equipment Move": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["GP38-2 CN"]
+    },
+    "Break it Down": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["GP9RM CN"]
+    },
+    "Hamilton Explorer": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["GP9RM CN", "GP38-2 CN"]
+    }
+  },
+  "description": "Experience bustling freight yards, heavy industries, and classic motive power set in the stunning Lake Ontario territory with Train Sim World®: Canadian National Oakville Subdivision. Operate your trains over a rail network represented how it is today, complete with a multitude of lineside industries that are served day-in, day-out by rail. Reproduced in exquisite detail, every rail yard, signal, and milepost feel so real you could almost reach out and touch them.\n\nIt’s your job to haul freight along Canadian National’s bustling Oakville Subdivision. Manage the complexities of serving various industries, picking up and dropping off tonnage with switching moves aplenty. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of a busy railroad.\n\nTake control of a duo of Canadian National’s freight fleet, the GP9rm – complete with its spacious post-rebuild cab – and the GP38-2, which together work freight duties along the Oakville Subdivision. Featuring authentic Diesel-Electric simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

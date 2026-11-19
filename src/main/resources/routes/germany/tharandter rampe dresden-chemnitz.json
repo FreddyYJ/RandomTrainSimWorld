@@ -1,0 +1,101 @@
+{
+  "name": "Tharandter Rampe: Dresden-Chemnitz",
+  "locomotives": {
+    "germany/br612": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE",
+      "Railpool"
+    ],
+    "germany/br101": [
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool",
+      "FlixTrain"
+    ],
+    "germany/br442": [
+      "DB",
+      "Leipzig S-Bahn"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Welcome to Chemnitz"
+  ],
+  "scenario": {
+    "Fast Line to Freiberg": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 612 DB"]
+    },
+    "Double Header": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 185 Railpool"]
+    },
+    "Cut and Shunt": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 363 DBB"]
+    },
+    "Traffic Jam": {
+      "difficulty": 3,
+      "length": "1:25",
+      "locomotive": ["BR 612 DB"]
+    },
+    "Better Late than Never": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Thundering Through": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 612 DB"]
+    }
+  },
+  "description": "Lean into yesteryear and experience the challenge of unique tilting diesel traction. Power out of Dresden, tackle steep gradients bordered by forest, and drive through the picturesque valleys of Saxony and beyond to Chemnitz with Train Sim World®: Tharandter Rampe.\n\nBuilt in sections throughout the mid-19th Century, the line between Dresden and Chemnitz faced treacherous terrain, gradients as steep as 2.6% were constructed through the valleys between Freiburg and Dresden making for a treacherous climb and descent for rail traffic. The line has also seen many sections rebuilt over the years to account for increasing demand and congestion. As of 2012, the line was already electrified, however was still served by diesel traction to connect with unelectrified lines beyond Chemnitz.\n\nIt’s your job to take control of the various services on this challenging route. Climb aboard the iconic DB BR 612, this 2-car diesel multiple unit is capable of tilting around corners, being able to achieve higher average speeds while maintaining passenger comfort on regional journeys. Keep commuters moving on the Dresden S-Bahn, running S3 services between Freiburg, Tharandt and Dresden with the DB BR 143. Haul freight with the on-lease Railpool BR 185.2, and take on the challenge of shunting from the quaint DB BR 363."
+}

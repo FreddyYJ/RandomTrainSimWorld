@@ -1,0 +1,20 @@
+{
+  "name": "Class 08",
+  "nation": "UK",
+  "liveries": [
+    "BR",
+    "BR Type A",
+    "BR Type B",
+    "BR Type C",
+    "BR Type D",
+    "BR Type C Weathered"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Crewe Works, Darlington Works, Derby Works, Doncaster Works, Horwich Works",
+  "power": "350-400 hp/261-298 kW",
+  "max_speed": "15-20 mph (24-32 km/h)",
+  "manufactured_year": "1952-1962",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 996,
+  "description": "The British Rail Class 08 is a class of diesel–electric shunting locomotives built by British Railways (BR). As the standard BR general-purpose diesel shunter, the class became a familiar sight at major stations and freight yards. Since their introduction in 1952, however, the nature of rail traffic in Britain has changed considerably. Freight trains are now mostly fixed rakes of wagons, and passenger trains are mostly multiple units or have driving van trailers, neither requiring the attention of a shunting locomotive. Consequently, a large proportion of the class has been withdrawn from mainline use and stored, scrapped, exported or sold to industrial or heritage railways.\n\nAs of 2020, around 100 locomotives remained working on industrial sidings and on the main British railway network. On heritage railways, they have become particularly common, appearing on many of the preserved standard-gauge lines in Britain, with over 80 preserved, including the first one built."
+}

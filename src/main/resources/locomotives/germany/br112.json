@@ -1,0 +1,15 @@
+{
+  "name": "BR 112",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "LEW Hennigsdorf, AEG",
+  "power": "4,990 hp/3,720 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1990-1994",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 130,
+  "description": "Following German reunification, the rail routes to Berlin were rebuilt with a maximum speed of more than 120 km/h (75 mph). The Deutsche Reichsbahn had no locomotives capable of this speed so it had to acquire new faster locomotives. However, the Class 212 locomotives had originally been designed with a maximum speed of 160 km/h (99 mph). After four prototype locomotives (numbered 212 002 to 212 005, the number 212 001 had originally been used for 143 001 and was not reused) a series of 35 locomotives (212 006 to 212 040) was delivered."
+}

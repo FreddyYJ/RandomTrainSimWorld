@@ -1,0 +1,15 @@
+{
+  "name": "BR 422",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "3,150 hp/2,350 kW",
+  "max_speed": "140 km/h (87 mph)",
+  "manufactured_year": "2007-2011",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 84,
+  "description": "The Class 422 is a series of four-car electric multiple units that are a derivative of the DBAG Class 423. The two inner cars in the set are designated as Class 432 vehicles."
+}

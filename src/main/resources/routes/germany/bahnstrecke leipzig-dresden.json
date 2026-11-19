@@ -1,0 +1,168 @@
+{
+  "name": "Bahnstrecke Leipzig-Dresden",
+  "locomotives": {
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB",
+      "Leipzig S-Bahn"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br463diesel": [
+      "DB"
+    ],
+    "germany/br612": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "austria/1116": [
+      "ÖBB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Saxony Appeal",
+    "Pocketable Waggons",
+    "Indestructible V 90"
+  ],
+  "scenario": {
+    "Expert. Simply Delivered.": {
+      "difficulty": 3,
+      "length": "0:55",
+      "locomotive": ["BR 145 Expert"]
+    },
+    "Nahverkehr": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["BR 145 Expert"]
+    },
+    "Auf Abwegen": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["BR 145 Expert"]
+    },
+    "Faulty Friday": {
+      "difficulty": 5,
+      "length": "1:30",
+      "locomotive": ["BR 145 Expert"]
+    },
+    "Leipzig's Big Helper": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 264 DB"]
+    },
+    "Chemical Chaos": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 294 DB"]
+    },
+    "Can't be Contained": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 294 DB"]
+    },
+    "Diceversion": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 411 ICET"]
+    },
+    "Put It In Reverse": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 143 DB"]
+    },
+    "Geisterwagen": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Wagon Once-Over": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["BR 363 DBB"]
+    },
+    "Above Ground Adventure": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["BR 442 DB"]
+    },
+    "Caught With Your Pantograph Down": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    }
+  },
+  "description": "Go beyond the boundaries of Nahverkehr Dresden and accelerate westbound all the way to Leipzig in Train Sim World®. Drive modern ICE, regional and freight traffic along the oldest long-distance railway in Germany.\n\nBuilt in 1839, the Leipzig-Dresden railway was the first long-distance line in Germany, and one of the oldest in the country. Over time the line earned a reputation for being one of the busiest as well, and its age meant it has seen many improvements to keep up with demand. Today, it is a modern commuter network and LZB-equipped intercity line in one.\n\nVariety abounds for such a diverse network, with multiple trains operating different services, and on diverging lines. The innovative ICE-T is the main express traffic between Dresden and Leipzig, using the avoiding line in the East and LZB in the West. Regional services are often handled with the iconic BR 442, which also operated local services towards Großenhain. Loco-hauled Dostos get double duty, operating both regional and S-bahn S1 services."
+}

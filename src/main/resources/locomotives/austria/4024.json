@@ -1,0 +1,15 @@
+{
+  "name": "ÖBB 4024",
+  "nation": "Austria",
+  "liveries": [
+    "ÖBB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "2,040 hp/1,520 kW",
+  "max_speed": "140 km/h (90 mph)",
+  "manufactured_year": "1998-2008",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 830,
+  "description": "The Talent is a multiple unit light train manufactured by Bombardier that was developed by Waggonfabrik Talbot in Aachen shortly before the company was acquired by Bombardier in 1995. The name Talent is an acronym in German for TALbot LEichter Nahverkehrs-Triebwagen (in English, Talbot light suburban self-propelled car).\n\nIt comes in a number of variants, including high-floor, low-floor, diesel-mechanical, diesel-hydraulic, diesel-electric, electric, and tilting, and in lengths of two, three, or four carriages. As with most multiple-unit trains, Talent units can run individually, or be coupled together to form longer trains."
+}

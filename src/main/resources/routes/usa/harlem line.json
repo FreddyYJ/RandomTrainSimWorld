@@ -1,0 +1,43 @@
+{
+  "name": "Harlem Line",
+  "locomotives": {
+    "usa/m3": [
+      "M3A MTA"
+    ],
+    "usa/m7": [
+      "M7A MTA"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Big Apple a Day"
+  ],
+  "scenario": {
+    "Train to the Game": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["M3A MTA", "M7A MTA"]
+    },
+    "Peak Performance": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["M7A MTA"]
+    },
+    "Budds to the Big Apple": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["M3A MTA"]
+    },
+    "Snow Globetrotters": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["M3A MTA"]
+    },
+    "Subway Series Direct": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["M7A MTA"]
+    }
+  },
+  "description": "Experience a bustling corridor in the heart of Manhattan! Operate modern and classic equipment as you ferry commuters in and out of the iconic Grand Central Terminal; hurry them across the tightly packed Park Avenue, over the Harlem River, and out to the New York suburbs with Train Sim World®: Harlem Line.\n\nBuilt by the New York and Harlem Railroad, and long part of the famed New York Central, the Harlem Line offers thorough appeal and non-stop bustling action in and out of “The Big Apple”. From Grand Central Terminal, the Harlem Line emerges and rides above Park Avenue, before arriving at Harlem 125th Street. On the north side of the Park Avenue Bridge, the line starts to branch out, with the Harlem Line extending onward through Woodlawn, and along the Bronx River to North White Plains, where a yard resides as many trains originate and terminate there."
+}

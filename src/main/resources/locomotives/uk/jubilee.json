@@ -1,0 +1,17 @@
+{
+  "name": "Jubilee Class",
+  "nation": "UK",
+  "liveries": [
+    "Jubilee",
+    "Black",
+    "Crimson"
+  ],
+  "type": "Steam Locomotive",
+  "manufacturer": "Crewe Works, Derby Works, North British Loco",
+  "power": "N/A",
+  "max_speed": "N/A",
+  "manufactured_year": "1934-1936",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 191,
+  "description": "The London, Midland and Scottish Railway (LMS) Jubilee Class is a class of steam locomotive designed for main line passenger work. 191 locomotives were built between 1934 and 1936. They were built concurrently with the similar looking LMS Stanier Class 5 4-6-0. They were nicknamed Red Staniers (due to their crimson liveries) and Jubs."
+}

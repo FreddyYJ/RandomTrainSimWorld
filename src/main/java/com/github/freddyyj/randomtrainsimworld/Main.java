@@ -1,16 +1,15 @@
 package com.github.freddyyj.randomtrainsimworld;
 
-import com.github.freddyyj.randomtrainsimworld.config.Config;
-import com.github.freddyyj.randomtrainsimworld.config.RouteReader;
-import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
-import com.github.freddyyj.randomtrainsimworld.config.WeatherReader;
-import com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import javafx.application.Application;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * main class for control logics
@@ -18,302 +17,266 @@ import java.util.List;
  * @author FreddyYJ_
  */
 public class Main {
-	private ArrayList<Route> routes;
+	/**
+	 * All routes
+	 */
+	public final ImmutableMap<String, Route> routes;
+	/**
+	 * All locomotives
+	 */
+	public final ImmutableList<Locomotive> locomotives;
+
+	private final Set<Route> routeInclusion = new HashSet<>();
+	private final Map<Route,Set<Locomotive>> locomotiveInclusion = new HashMap<>();
+	private final Map<Route,Map<Locomotive,Set<String>>> liveryInclusion = new HashMap<>();
+	private final Map<Route,Set<String>> journeyInclusion = new HashMap<>();
+	private final Map<Route,Set<Scenario>> scenarioInclusion = new HashMap<>();
+
+	// Included data, to prevent modifying the data from outside
+	public final Set<Route> includedRoutes = Collections.unmodifiableSet(routeInclusion);
+	public final Map<Route,Set<Locomotive>> includedLocomotives;
+	public final Map<Route,Map<Locomotive,Set<String>>> includedLiveries;
+	public final Map<Route,Set<String>> includedJourneys;
+	public final Map<Route,Set<Scenario>> includedScenarios;
+
+	private Config config;
+	private Settings settings;
+	private static Main core=null;
 
 	/**
-	 * Get locomotive list.
-	 * @return locomotive list
+	 * Main method, to launch the GUI
 	 */
-	public HashMap<Route, List<Locomotive>> getLocos() {
-		return locos;
+	public static void main(String[] args) {
+		// Main is created in the GUI, so errors while loading data can be shown in an alert
+		Application.launch(com.github.freddyyj.randomtrainsimworld.gui.Main.class);
 	}
 
-	private HashMap<Route,List<Locomotive>> locos;
-	private List<Weather> weathers;
-	private SaveLoco unselectedLocos;
-	private Config config;
-	private static Main core=null;
-	public static void main(String[] args) {
-		try {
-			RouteReader.reload();
-			WeatherReader.reload();
+	/**
+	 * Main constructor to initialize the data structure
+	 */
+	Main() {
+		// Load every bundled route and locomotive file, including subdirectories (e.g. usa/)
+		// Routes are keyed by their names (ImmutableMap keeps the file order)
+		final ImmutableMap.Builder<String, Route> routeBuilder = ImmutableMap.builder();
+		final ImmutableList.Builder<Locomotive> locomotiveBuilder = ImmutableList.builder();
+		// One shared object per locomotive, keyed by its path under locomotives/ without .json (e.g. "usa/gp38-2")
+		final Map<String, Locomotive> locomotivesByPath = new HashMap<>();
+		final Path locomotiveDirectory = Utils.getResourcePath("/locomotives");
+		try (Stream<Path> routeFiles = Files.walk(Utils.getResourcePath("/routes"));
+			 Stream<Path> locomotiveFiles = Files.walk(locomotiveDirectory)) {
+			// Locomotives first, since routes refer to them
+			locomotiveFiles.filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".json")).sorted()
+					.forEach(path -> {
+						final Locomotive locomotive = new Locomotive(path);
+						locomotiveBuilder.add(locomotive);
+						// Always use "/" as separator, same as route JSON keys
+						final Path relativePath = locomotiveDirectory.relativize(path);
+						final String key = relativePath.toString().replace(relativePath.getFileSystem().getSeparator(), "/");
+						locomotivesByPath.put(key.substring(0, key.length() - ".json".length()), locomotive);
+					});
+			routeFiles.filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".json")).sorted()
+					.forEach(path -> {
+						final Route route = new Route(path, locomotivesByPath);
+						routeBuilder.put(route.name, route);
+					});
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new UncheckedIOException("Failed to list route or locomotive files", e);
 		}
-		Application.launch(com.github.freddyyj.randomtrainsimworld.gui.Main.class);
-		
+		routes = routeBuilder.build();
+		System.out.println(routes.size() + " routes read");
+		locomotives = locomotiveBuilder.build();
+
+		// Include everything at first
+		final ImmutableMap.Builder<Route, Set<Locomotive>> locomotiveViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Map<Locomotive, Set<String>>> liveryViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Set<String>> journeyViews = ImmutableMap.builder();
+		final ImmutableMap.Builder<Route, Set<Scenario>> scenarioViews = ImmutableMap.builder();
+		for (final Route route : routes.values()) {
+			routeInclusion.add(route);
+			final Set<Locomotive> routeLocomotives = new HashSet<>(route.locomotives.keySet());
+			final Map<Locomotive, Set<String>> routeLiveries = new HashMap<>();
+			final ImmutableMap.Builder<Locomotive, Set<String>> routeLiveryViews = ImmutableMap.builder();
+			for (final Map.Entry<Locomotive, ImmutableList<String>> entry : route.locomotives.entrySet()) {
+				// Liveries of this locomotive on this route
+				final Set<String> liveries = new HashSet<>(entry.getValue());
+				routeLiveries.put(entry.getKey(), liveries);
+				routeLiveryViews.put(entry.getKey(), Collections.unmodifiableSet(liveries));
+			}
+			final Set<String> routeJourneys = new HashSet<>(route.journeys);
+			final Set<Scenario> routeScenarios = new HashSet<>(route.scenarios);
+			locomotiveInclusion.put(route, routeLocomotives);
+			liveryInclusion.put(route, routeLiveries);
+			journeyInclusion.put(route, routeJourneys);
+			scenarioInclusion.put(route, routeScenarios);
+
+			// Wrap the inner sets too, so nothing inside the views can be changed
+			locomotiveViews.put(route, Collections.unmodifiableSet(routeLocomotives));
+			liveryViews.put(route, routeLiveryViews.build());
+			journeyViews.put(route, Collections.unmodifiableSet(routeJourneys));
+			scenarioViews.put(route, Collections.unmodifiableSet(routeScenarios));
+		}
+		includedLocomotives = locomotiveViews.build();
+		includedLiveries = liveryViews.build();
+		includedJourneys = journeyViews.build();
+		includedScenarios = scenarioViews.build();
+
+		// Settings remember the config file of the last run
+		try {
+			settings = Settings.load(); // Creates the settings file at the first run
+		} catch (IOException e) {
+			System.err.println("Failed to read settings file: " + e.getMessage());
+			settings = new Settings();
+		}
+
+		// Exclude what the last config file has, or keep everything included without one
+		config = new Config();
+		if (!settings.configFilePath.isEmpty()) {
+			try {
+				reload(settings.configFilePath);
+			} catch (IOException e) {
+				System.err.println("Failed to read config file: " + e.getMessage());
+			}
+		}
 	}
 
 	/**
 	 * Get instance.
 	 * @return instance of this class
 	 */
-	public static Main getInstance() throws IOException {
+	public static Main getInstance() {
 		if (core==null) core=new Main();
 		return core;
 	}
 
-	/**
-	 * default constructor
-	 */
-	protected Main() throws IOException {
-		routes=new ArrayList<>();
-		locos=new HashMap<>();
-		weathers=new ArrayList<>();
+	public void includeRoute(final Route route) {
+		routeInclusion.add(route);
+	}
 
-		config=new Config();
+	public void excludeRoute(final Route route) {
+		routeInclusion.remove(route);
+	}
 
-		// create Route list and Locomotive list
-		RouteReader.reload();
-		List<RouteReader> readers=RouteReader.getRouteReaders();
-		for (int i=0;i<readers.size();i++){
-			RouteReader currentReader=readers.get(i);
-			routes.add(currentReader.getRoute());
+	public void includeLocomotive(final Route route, final Locomotive locomotive) {
+		locomotiveInclusion.get(route).add(locomotive);
+	}
 
-			List<Locomotive> locoList=currentReader.getLocomotives();
-			locos.put(routes.get(i),locoList);
-		}
+	public void excludeLocomotive(final Route route, final Locomotive locomotive) {
+		locomotiveInclusion.get(route).remove(locomotive);
+	}
 
-		// create weather list
-		WeatherReader.reload();
-		weathers=WeatherReader.getWeathers();
+	public void includeLivery(final Route route, final Locomotive locomotive, final String livery) {
+		liveryInclusion.get(route).get(locomotive).add(livery);
+	}
 
-		// If no save file exist
-		if (config.getConfig("DefaultSaveFilePath")==null)
-			unselectedLocos=new SaveLoco(routes);
-		else {
-			unselectedLocos=new SaveLoco(routes, config.getConfig("DefaultSaveFilePath"));
-		}
+	public void excludeLivery(final Route route, final Locomotive locomotive, final String livery) {
+		liveryInclusion.get(route).get(locomotive).remove(livery);
+	}
 
-		if (unselectedLocos.hasSavefile()) reload();
+	public void includeJourney(final Route route, final String journey) {
+		journeyInclusion.get(route).add(journey);
+	}
+
+	public void excludeJourney(final Route route, final String journey) {
+		journeyInclusion.get(route).remove(journey);
+	}
+
+	public void includeScenario(final Route route, final Scenario scenario) {
+		scenarioInclusion.get(route).add(scenario);
+	}
+
+	public void excludeScenario(final Route route, final Scenario scenario) {
+		scenarioInclusion.get(route).remove(scenario);
 	}
 
 	/**
-	 * Get {@link SaveLoco} that has unselected routes and locos list.
-	 * @return {@link SaveLoco} object
+	 * Save and close config file.
 	 */
-	public SaveLoco getUnselectedLocos() {
-		return unselectedLocos;
+	public void save() throws IOException {
+		config.save(this);
 	}
 
 	/**
-	 * Reload unselected routes, locos and weathers list.
-	 */
-	public void reload(){
-		for (int i=0;i<routes.size();i++){
-			for (int j=0;j<unselectedLocos.getRoute().size();j++){
-				if (routes.get(i).getName().equals(unselectedLocos.getRoute().get(j))) {
-					routes.get(i).isSelected=false;
-					break;
-				}
-			}
-			ArrayList<String> locos=unselectedLocos.getLocomotive(routes.get(i));
-			for (int k=0;k<this.locos.get(routes.get(i)).size();k++){
-				for (int l=0;l<locos.size();l++){
-					if (this.locos.get(routes.get(i)).get(k).getName().equals(locos.get(l))){
-						this.locos.get(routes.get(i)).get(k).isSelected=false;
-						break;
-					}
-				}
-			}
-		}
-
-		for (int i=0;i<weathers.size();i++){
-			for (int j=0;j<unselectedLocos.getWeather().size();j++){
-				if (weathers.get(i).getName().equals(unselectedLocos.getWeather().get(j))){
-					weathers.get(i).isSelected=false;
-					break;
-				}
-			}
-		}
-	}
-
-	/**
-	 * Get route list.
-	 * @return routes list
-	 */
-	public List<Route> getRoutes(){return routes;}
-
-	/**
-	 * Get weather list.
-	 * @return weather list
-	 */
-	public List<Weather> getWeathers(){return weathers;}
-
-	/**
-	 * Get {@link Route} object with specific name.
-	 * <p>
-	 *     If {@link Route} object with name was not found, returns null.
-	 * </p>
-	 * @param name route name
-	 * @return {@link Route} object
-	 */
-	public Route getRoute(String name) {
-		for (int i=0;i<routes.size();i++) {
-			if (routes.get(i).getName().equals(name)) {
-				return routes.get(i);
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * Get list of {@link Locomotive} objects with specific route name.
-	 * <p>
-	 *     If routeName was not found, returns null.
-	 * </p>
-	 * @param routeName route name
-	 * @return list of {@link Locomotive} object
-	 */
-	public List<Locomotive> getLocomotive(String routeName) {
-		com.github.freddyyj.randomtrainsimworld.Route route=getRoute(routeName);
-		if (locos.get(route).size()>=1)
-			return locos.get(route);
-		else return null;
-	}
-
-	/**
-	 * Get {@link Locomotive} object with specific route name and locomotive name.
-	 * <p>
-	 *     If routeName or locoName was not found, returns null.
-	 * </p>
-	 * @param routeName route name
-	 * @param locoName locomotive name
-	 * @return {@link Locomotive} object
-	 */
-	public Locomotive getLocomotive(String routeName,String locoName){
-		List<Locomotive> locoList=getLocomotive(routeName);
-		for (int i=0;i<locoList.size();i++){
-			if (locoList.get(i).getName().equals(locoName)) return locoList.get(i);
-		}
-		return null;
-	}
-
-	/**
-	 * Get {@link Weather} object with specific weather name.
-	 * <p>
-	 *     If not found, return null.
-	 * </p>
-	 * @param name weather name
-	 * @return {@link Weather} object
-	 */
-	public Weather getWeather(String name) {
-		for (int i=0;i<weathers.size();i++) {
-			if (weathers.get(i).getName().equals(name)) {
-				return weathers.get(i);
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * Add or remove {@link Route} from routes list.
-	 * @param isSelected add when true, remove when false
-	 * @param route {@link Route} that want to add or remove
-	 */
-	public void selectRoute(boolean isSelected, Route route) {
-		if (!isSelected) {
-			unselectedLocos.addRoute(route);
-			route.isSelected=false;
-		}
-		else {
-			unselectedLocos.removeRoute(route);
-			route.isSelected=true;
-		}
-	}
-	/**
-	 * Add or remove {@link Locomotive} from locomotive list.
-	 * @param isSelected add when true, remove when false
-	 * @param loco {@link Locomotive} that want to add or remove
-	 * @param route {@link Route} of loco
-	 */
-	public void selectLocomotive(boolean isSelected, Locomotive loco, Route route) {
-		List<Locomotive> locoList=getLocomotive(route.getName());
-		if (!isSelected) {
-			unselectedLocos.addLocomotive(loco);
-			loco.isSelected=false;
-		}
-		else {
-			unselectedLocos.removeLocomotive(loco);
-			loco.isSelected=true;
-		}
-
-	}
-	/**
-	 * Add or remove {@link Weather} from weather list.
-	 * @param isSelected add when true, remove when false
-	 * @param weather {@link Weather} that want to add or remove
-	 */
-	public void selectWeather(boolean isSelected, Weather weather) {
-		if (!isSelected) {
-			unselectedLocos.addWeather(weather);
-			weather.isSelected=false;
-		}
-		else {
-			unselectedLocos.removeWeather(weather);
-			weather.isSelected=true;
-		}
-
-	}
-
-	/**
-	 * Save and close save file.
-	 */
-	public void close() throws IOException {
-		if (unselectedLocos.hasSavefile()) unselectedLocos.save();
-	}
-
-	/**
-	 * Save savefile at specific path.
+	 * Save config at specific path.
 	 * @param path file path
 	 */
 	public void saveAs(String path) throws IOException {
-		setSaveFilePath(path);
-		unselectedLocos.save();
+		final Config newConfig = new Config(path);
+		newConfig.save(this);
+		config = newConfig; // Save to this file from now on
+
+		// Load this file at the next startup
+		settings.configFilePath = path;
+		settings.save();
 	}
 
 	/**
-	 * Reload savefile from specific path.
+	 * Reload config file from specific path.
 	 * @param path file path
 	 */
-	public void reloadSaveFile(String path) throws FileNotFoundException {
-		setSaveFilePath(path);
-		unselectedLocos.reload();
-	}
-
-	/**
-	 * Set savefile path to specific path.
-	 * @param path file path
-	 */
-	public void setSaveFilePath(String path) {
-		config.setConfig("DefaultSaveFilePath", path);
-		unselectedLocos.setFilePath(path);
-	}
-
-	/**
-	 * Get savefile path.
-	 * @return file path
-	 */
-	public String getSaveFilePath() {
-		String path;
-		try {
-			 path=config.getConfig("DefaultSaveFilePath");
-		}catch (NullPointerException e) {
-			path=null;
+	public void reload(String path) throws IOException {
+		final Config newConfig = new Config(path);
+		newConfig.load(); // Keep the current config if this fails
+		config = newConfig;
+		// Load this file at the next startup, skip writing if it is already there
+		if (!path.equals(settings.configFilePath)) {
+			settings.configFilePath = path;
+			settings.save();
 		}
-		return path;
+
+		// Refill the inclusions in place, so the read-only views keep showing them
+		for (final Route route : routes.values()) {
+			if (config.isRouteExcluded(route)) routeInclusion.remove(route);
+			else routeInclusion.add(route);
+
+			final Set<Locomotive> locomotives = locomotiveInclusion.get(route);
+			locomotives.clear();
+			for (final Map.Entry<Locomotive, ImmutableList<String>> entry : route.locomotives.entrySet()) {
+				final Locomotive locomotive = entry.getKey();
+				if (!config.isLocomotiveExcluded(route, locomotive)) locomotives.add(locomotive);
+
+				final Set<String> liveries = liveryInclusion.get(route).get(locomotive);
+				liveries.clear();
+				for (final String livery : entry.getValue()) {
+					if (!config.isLiveryExcluded(route, locomotive, livery)) liveries.add(livery);
+				}
+			}
+
+			final Set<String> journeys = journeyInclusion.get(route);
+			journeys.clear();
+			for (final String journey : route.journeys) {
+				if (!config.isJourneyExcluded(route, journey)) journeys.add(journey);
+			}
+
+			final Set<Scenario> scenarios = scenarioInclusion.get(route);
+			scenarios.clear();
+			for (final Scenario scenario : route.scenarios) {
+				if (!config.isScenarioExcluded(route, scenario)) scenarios.add(scenario);
+			}
+		}
 	}
 
 	/**
-	 * Get routes, locos or weathers selection are changed.
-	 * @return true if selection changed
+	 * Get whether included routes or locos are changed.
+	 * @return true if inclusion changed
 	 */
-	public boolean isSaveChanged(){return unselectedLocos.isChanged();}
+	public boolean isSaveChanged() {
+		return config.isChanged(this);
+	}
 
 	/**
-	 * Save configuration.
+	 * Check the config is loaded from or stored to the file
+	 * @return `true` if the config is loaded or stored, `false` otherwise
 	 */
-	public void saveConfig() throws IOException {
-		config.save();
+	public boolean hasConfigFile() {
+		return config.configFile != null;
+	}
+
+	/**
+	 * Exception that the route is not found by the name
+	 */
+	public static class RouteNotFoundException extends RuntimeException {
+		public RouteNotFoundException(final String routeName) {
+			super("Route " + routeName + " not found in the pool");
+		}
 	}
 }

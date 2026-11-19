@@ -1,0 +1,167 @@
+{
+  "name": "Cajon Pass",
+  "locomotives": {
+    "usa/es44c4": [
+      "BNSF"
+    ],
+    "usa/sd40-2": [
+      "BNSF",
+      "ATSF",
+      "Union Pacific"
+    ],
+    "usa/f7": [
+      "ATSF"
+    ],
+    "usa/sd70ace": [
+      "Union Pacific",
+      "BNSF",
+      "Missouri Pacific",
+      "Western Pacific",
+      "Katy",
+      "Rio Grande",
+      "Chicago & North Western",
+      "Southern Pacific"
+    ],
+    "usa/gp60m": [
+      "BNSF H2",
+      "BNSF H4"
+    ],
+    "usa/c40-8w": [
+      "CSX",
+      "ATSF"
+    ],
+    "usa/ac4400cw": [
+      "CSX",
+      "CSX YN2",
+      "Union Pacific"
+    ],
+    "usa/es44ac": [
+      "Norfolk Southern",
+      "Monongahela",
+      "Southern",
+      "Nickel Plate Road",
+      "Central of Georgia",
+      "Pennsylvania",
+      "Norfolk & Western",
+      "Lehigh Valley",
+      "Interstate",
+      "Norfolk Southern (1942-1982)"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Passing Grade",
+    "Furious F7",
+    "Carry On Cajon",
+    "Super Fleet GP60M",
+    "Santa Fe All the Way"
+  ],
+  "scenario": {
+    "Shop Class": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["ES44C4 BNSF"]
+    },
+    "Through Fire and Flames": {
+      "difficulty": 3,
+      "length": "1:05",
+      "locomotive": ["ES44C4 BNSF"]
+    },
+    "Barstow-away": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["SD40-2 BNSF"]
+    },
+    "Slip'n'Slide": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["SD40-2 BNSF"]
+    },
+    "Command & Concrete": {
+      "difficulty": 2,
+      "length": "1:30",
+      "locomotive": ["SD40-2 BNSF"]
+    },
+    "Free Switching": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["SD40-2 BNSF", "ES44C4 BNSF"]
+    },
+    "Switching It Up": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["F7 ATSF"]
+    },
+    "Up Down Left Right A B B A": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["F7 ATSF"]
+    },
+    "Horn on the Fourth of July": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["F7 ATSF"]
+    },
+    "Manifest Madness": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["SD70ACe BNSF"]
+    },
+    "Truckin' Along": {
+      "difficulty": 3,
+      "length": "1:45",
+      "locomotive": ["SD70ACe BNSF"]
+    },
+    "Twilight Train": {
+      "difficulty": 4,
+      "length": "2:00",
+      "locomotive": ["SD70ACe BNSF"]
+    },
+    "Super Fleet, Part 2": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["GP60M BNSF H2"]
+    },
+    "Super Fleet, Part 1": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["GP60M BNSF H2"]
+    },
+    "Barstow Bound": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["GP60M BNSF H4"]
+    },
+    "The Kaiser Hauler": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["GP60M BNSF H4"]
+    },
+    "Cargill Turn": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["SD40-2 ATSF"]
+    },
+    "Cushenbury Turn": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["SD40-2 ATSF"]
+    },
+    "Unexpected Delays": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["C40-8W ATSF"]
+    },
+    "Last Lap to San Berdoo": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["C40-8W ATSF"]
+    },
+    "Thorn Road-Switcher": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["SD40-2 ATSF"]
+    }
+  },
+  "description": "Experience the challenge of hauling a nation’s freight industry on the back of your 4000-horsepower shoulders. Tackle stunning mountain ranges and blinding deserts as you tote tonnage through the winding curves of California with Train Sim World®: Cajon Pass.\n\nClimb aboard the masterclass in design that is the ES44C4, a state-of-the-art diesel electric locomotive capable of incredible tractive effort. Operated by BNSF in their hundreds, this beast of a machine makes easy work of any heavy load and is primed to do battle with the fierce grades and harsh conditions of the Cajon Pass.\n\nSit down in the classic cab of the venerable SD40-2, an all-American hero which is nationwide-renowned for its yesteryear mainline service. Now a veteran, the SD40-2 is kept to secondary duties, as such you will be in charge of local working and switching in yards and industries.\n\nHaul and interact with a wide variety of freight cars along the way. The world revolves on shipping containers, carry these on rails with the Maxi Stack IV cars. Keep the automotive industry turning over by delivering cars in the Autoracks. Fuel up and bear the responsibility of flammables with tanker cars. Deliver a multitude of loads aboard the Boxcars and Bulkhead Flat Cars."
+}

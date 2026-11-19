@@ -1,0 +1,15 @@
+{
+  "name": "MP15DC",
+  "nation": "USA",
+  "liveries": [
+    "Caltrain"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD)",
+  "power": "1,500 hp/1,119 kW",
+  "max_speed": "65 mph (105 km/h)",
+  "manufactured_year": "1974-1980",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 351,
+  "description": "The EMD MP15, sometimes referenced as MP15DC, is a 1,500 hp (1,119 kW) diesel–electric road switcher locomotive model produced by General Motors' Electro-Motive Division between 1974 and 1980. It was equipped with a V12 12-645E engine sporting a Roots blower. The length was either 47 ft 8 in (14.53 m) or 48 ft 8 in (14.83 m) depending on the build date."
+}

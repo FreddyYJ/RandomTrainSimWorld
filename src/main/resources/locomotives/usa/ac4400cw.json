@@ -1,0 +1,17 @@
+{
+  "name": "AC4400CW",
+  "nation": "USA",
+  "liveries": [
+    "CSX",
+    "CSX YN2",
+    "Union Pacific"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "General Electric (GE)",
+  "power": "4,400 hp/3,300 kW",
+  "max_speed": "70 mph (113 km/h)",
+  "manufactured_year": "1993-2004",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 3558,
+  "description": "The GE AC4400CW, sometimes referred to as \"AC44CW\", is a 4,400 horsepower (3,300 kW) diesel-electric locomotive that was built by GE Transportation Systems between 1993 and 2004. It is similar to the Dash 9-44CW, but uses AC traction motors instead of DC, with a separate inverter per motor."
+}

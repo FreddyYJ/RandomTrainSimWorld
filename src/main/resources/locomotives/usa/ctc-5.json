@@ -1,0 +1,15 @@
+{
+  "name": "CTC-5",
+  "nation": "USA",
+  "liveries": [
+    "MBTA"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Hyundai Rotem",
+  "power": "N/A",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "2012-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 71,
+  "description": "The Massachusetts Bay Transportation Authority operates a fleet of approximately 300 bilevel railcars on its Commuter Rail system. The cars are manufactured to the MBTA's specification by Kawasaki Railcar Manufacturing and Hyundai Rotem, in 7 variants that include standard coaches and cab cars. The first cars entered service in 1990, and new cars are planned to be built until the late 2020s."
+}

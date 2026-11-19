@@ -1,0 +1,137 @@
+{
+  "name": "Midland Main Line",
+  "locomotives": {
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/class43": [
+      "East Midlands Trains"
+    ],
+    "uk/class37": [
+      "RailFreight",
+      "Phoenix"
+    ],
+    "uk/class45": [
+      "BR"
+    ],
+    "uk/class47": [
+      "Green"
+    ],
+    "uk/class52": [
+      "BR",
+      "Maroon"
+    ],
+    "uk/class170": [
+      "CrossCountry"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/jubilee": [
+      "Black"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Cargo Line: Aggregates",
+    "Cargo Line: Petroleum",
+    "Midlands 70",
+    "Midland Main Line"
+  ],
+  "scenario": {
+    "6M26 Eastleigh Yard-Mountsorrel Railhead": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Mountsorrel Yard Work": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6E22 Mountsorrel Railhead-Doncaster Decoy": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6O77 Sinfin Sidings-Grain Oil Terminal": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "6M49 Grain Oil Terminal-Sinfin Sidings": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 66 EWS"]
+    },
+    "Empty Bins Galore": {
+      "difficulty": 1,
+      "length": "1:30",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "Possession Preparation": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "In With The New, Out With The Old": {
+      "difficulty": 3,
+      "length": "2:10",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "70 To The Rescue!": {
+      "difficulty": 4,
+      "length": "1:55",
+      "locomotive": ["Class 70 Freightliner"]
+    },
+    "Easy Trip": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 158 EMT"]
+    },
+    "The Night Train": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 158 EMT"]
+    },
+    "Set Pieces": {
+      "difficulty": 3,
+      "length": "0:20",
+      "locomotive": ["Class 158 EMT"]
+    },
+    "Chasing Yellows": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 43 EMT"]
+    },
+    "Sno' Trouble at All": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["Class 158 EMT"]
+    },
+    "Not Quite Awake": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 43 EMT"]
+    },
+    "Can't Make Your Mind Up?": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["Class 158 EMT"]
+    }
+  },
+  "description": "Welcome to the East Midlands! Experience express, and local passenger duties between a trifecta of scenic English counties. Swoosh through the countryside and sprint to the finish aboard renowned traction. The locals of Leicester, Derby and Nottingham await in Train Sim World®: Midland Main Line!\n\nClimb aboard the regional staple of the UK, the BR Class 158 Sprinter. This 1990s-born DMU has served as the backbone of the nation, running everywhere from Wick to Penzance, and beyond with export models also reaching Thailand! Shuttle through the East Midlands on local services, sporting the iconic East Midlands Trains livery, calling at every station, taking in the local sights and rumbling by on Cummins prime mover technology.\n\nFrom a rumble to a roar, race through the towns in the legendary HST. Also wearing the colourful swooshes of EMT, the HST – complete in Midland Main Line condition (different lights, cab and interior) – is a world-renowned icon, which for over 40 years was the flagship of UK Intercity travel. Rekindle the now lost time of VP185 traction and get up to speed on EMT’s long distance expresses."
+}

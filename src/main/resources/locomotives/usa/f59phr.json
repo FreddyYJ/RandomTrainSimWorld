@@ -1,0 +1,15 @@
+{
+  "name": "F59PHR",
+  "nation": "USA",
+  "liveries": [
+    "Metrolink"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD)",
+  "power": "3,000 hp/2,240 kW",
+  "max_speed": "110 mph (177 km/h)",
+  "manufactured_year": "1988-1994",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 72,
+  "description": "The EMD F59PH is a four-axle 3,000 hp (2 MW) B-B diesel-electric locomotive built by General Motors Electro-Motive Division from 1988 to 1994. A variant, the F59PHI, was produced from 1994 to 2001. The F59PH was originally built for GO Transit commuter operation in the Toronto region. Metrolink in Southern California also purchased a fleet for its 1992 launch. The streamlined F59PHI was designed for Amtrak California intercity service. A total of 72 F59PH and 83 F59PHI locomotives were built."
+}

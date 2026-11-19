@@ -1,0 +1,76 @@
+{
+  "name": "London Underground Bakerloo Line",
+  "locomotives": {
+    "uk/1938stock": [
+      "Underground"
+    ],
+    "uk/1972iistock": [
+      "Underground",
+      "Silver"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Past Life on the Underground",
+    "Life on the Underground",
+    "History Book on the Shelf"
+  ],
+  "scenario": {
+    "Blast From The Past": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["1938 Tube Stock"]
+    },
+    "Rainy Nights": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["1938 Tube Stock"]
+    },
+    "Old Dog, Same Tricks": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["1938 Tube Stock"]
+    },
+    "Zone One": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["1972 Mk.II Tube Stock"]
+    },
+    "A Round Haul": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["1972 Mk.II Tube Stock"]
+    },
+    "Travelling The Tube": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["1972 Mk.II Tube Stock"]
+    },
+    "Calling All Stations": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["1972 Mk.II Tube Stock"]
+    },
+    "Taking Stock": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["1972 Mk.II Tube Stock"]
+    },
+    "Test Run": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["1972 Mk.II Tube Stock Silver"]
+    },
+    "Rail Tour": {
+      "difficulty": 2,
+      "length": "0:55",
+      "locomotive": ["1972 Mk.II Tube Stock Silver"]
+    },
+    "Underground Return Ticket": {
+      "difficulty": 3,
+      "length": "1:05",
+      "locomotive": ["1972 Mk.II Tube Stock Silver"]
+    }
+  },
+  "description": "Experience the hustle and bustle of packed-in commuters, trains every few minutes, the echo of screeching rails in tunnels with the classic Bakerloo Line, rendered in its entirety within Train Sim World®!\n\nDating back to 1906, the Baker Street and Waterloo Railway is among the veterans of the London Underground network, serving 25 stations in total, both nestled beneath the city in deep-level tunnels and settled upon the surface in the suburban north-west of London. It didn’t take long for the portmanteau “Bakerloo” to appear, a name which it is still known by today.\n\nIt's not just the ancient walls and platforms which have earned a veteran status, the line is served by the clunky and stoic 1972 Mark 2 Tube Stock, the oldest stock on the Underground network. Still hard-working, the 1972 Stock runs day-in, day-out on the Bakerloo, with some individual units clocking in at over 220 miles of working per day."
+}

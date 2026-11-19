@@ -1,0 +1,15 @@
+{
+  "name": "Class 220",
+  "nation": "UK",
+  "liveries": [
+    "CrossCountry"
+  ],
+  "type": "Diesel Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "750 hp/559 kW (per engine)",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2000-2001",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 34,
+  "description": "The British Rail Class 220 Voyager is a class of diesel-electric high-speed multiple unit passenger trains built in Belgium by Bombardier Transportation in 2000 and 2001. They were introduced in 2001 to replace the 20-year-old InterCity 125 and almost 40-year-old Class 47-hauled Mark 2 fleets operating on the Cross Country Route. They were initially operated by Virgin CrossCountry and since 2007 have been operated by CrossCountry."
+}

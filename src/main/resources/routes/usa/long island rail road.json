@@ -1,0 +1,59 @@
+{
+  "name": "Long Island Rail Road",
+  "locomotives": {
+    "usa/m7": [
+      "LIRR"
+    ],
+    "usa/m3": [
+      "LIRR"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Budd M3 Journey",
+    "Long Island Railroad Journey"
+  ],
+  "scenario": {
+    "Ferrying Folks": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Metropolitan Mover": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Hicksville Handler": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["M3 LIRR"]
+    },
+    "Change at Jamaica": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["M7 LIRR"]
+    },
+    "Suburban Sunset": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["M7 LIRR"]
+    },
+    "Race Day Run": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["M7 LIRR"]
+    },
+    "Kings & Queens": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["M7 LIRR"]
+    },
+    "Maintenance Maneuver": {
+      "difficulty": 4,
+      "length": "0:45",
+      "locomotive": ["M7 LIRR"]
+    }
+  },
+  "description": "Experience America’s busiest commuter railroad and all the bustle and challenges of railroading in New York City in Train Sim World®: Long Island Rail Road. The famed “LIRR” operates 24/7 and carries more than 350,000 commuters each weekday, and you’ll take the controls of the railroad’s modern LIRR M7 EMUs to keep the trains moving in and out of New York City and through America’s busiest rail junction at Jamaica, New York. The Long Island Rail Road route features all three of LIRR’s key New York-area stations – Penn Station, Atlantic Terminal, and Long Island City – extends east to Hicksville, New York, and includes the captivating Hempstead Branch.\n\nIt’s your job to deliver New York area commuters to work – and back home – on time and happy, calling at a total of 26 LIRR stations. Just imagine the excitement and challenges as you navigate LIRR’s always-busy main line and make your way through Jamaica which hosts more than 1,000 trains a day. Whether you’re at the controls of a LIRR M7, riding along, or watching the show from trackside, experience all the sights and sounds of American commuter railroading at its bustling best.\n\nTake the controls of Long Island Rail Road’s workhorse LIRR M7 Electric-Multiple-Unit (EMU), with authentic operating controls and featuring an authentic DC Electric simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make it feel just like the real thing."
+}

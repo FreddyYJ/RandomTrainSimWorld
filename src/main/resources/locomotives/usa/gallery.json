@@ -1,0 +1,15 @@
+{
+  "name": "Gallery Cab Car",
+  "nation": "USA",
+  "liveries": [
+    "Caltrain"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Budd Company, Pullman-Standard, St. Louis Car, American Car & Foundry, Canadian Vickers, Amerail, Nippon Sharyo",
+  "power": "N/A",
+  "max_speed": "79 mph (127 km/h)",
+  "manufactured_year": "1950-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 27,
+  "description": "The Gallery Car is a bilevel rail car, originally created by the Budd Company in 1950 for Commuter Operations on the Chicago, Burlington & Quincy Railroad's Suburban Service. Besides Budd, it has had six total different manufacturers since its creation, being Pullman-Standard, St. Louis Car Company, American Car & Foundry, Canadian Vickers, Amerail, and Nippon Sharyo. Many of these double-decker passenger cars were built by Budd and Pullman-Standard between the 1950s and 1970s for various passenger rail operators in the United States, with a small order by Canadian Vickers for service in Canada."
+}

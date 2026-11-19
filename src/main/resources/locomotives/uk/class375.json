@@ -1,0 +1,16 @@
+{
+  "name": "Class 375",
+  "nation": "UK",
+  "liveries": [
+    "South Eastern",
+    "South Eastern (White)"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "ADtranz, Bombardier",
+  "power": "1,300-2,000 hp/1,000-1,500 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "1999-2005",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 140,
+  "description": "The British Rail Class 375 Electrostar is an electric multiple unit train that was built at Derby Litchurch Lane Works, thirty units by Adtranz from 1999 to 2001, and 110 units by Bombardier Transportation (successors to Adtranz) from 2001 to 2004. The class form part of the Electrostar family of units, which also includes classes 357, 376, 377, 378, 379 and 387, the most numerous type of EMU introduced since the privatisation of British Rail."
+}

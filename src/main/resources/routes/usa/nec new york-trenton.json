@@ -1,0 +1,53 @@
+{
+  "name": "NEC: New York-Trenton",
+  "locomotives": {
+    "usa/acs-64": [
+      "Amtrak",
+      "Amtrak 50 Anniv."
+    ],
+    "usa/amfleet": [
+      "Amtrak"
+    ],
+    "usa/alp-46": [
+      "NJT"
+    ],
+    "usa/multi-level-commuter": [
+      "NJT"
+    ],
+    "usa/acela": [
+      "Amtrak"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Conquering the Corridor"
+  ],
+  "scenario": {
+    "Havoc Across The Hudson": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["ALP-46 NJT"]
+    },
+    "Sunny Side Up": {
+      "difficulty": 2,
+      "length": "0:55",
+      "locomotive": ["ACS-64 Amtrak"]
+    },
+    "Winter in the City": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["ALP-46 NJT", "Multi-Level Commuter Cab Car NJT"]
+    },
+    "Cab to the Race": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["Multi-Level Commuter Cab Car NJT"]
+    },
+    "NYE in NYC": {
+      "difficulty": 3,
+      "length": "1:35",
+      "locomotive": ["ACS-64 Amtrak", "Amfleet Cab Car"]
+    }
+  },
+  "description": "Experience the City that never sleeps. From the Big Apple to New Jersey suburbs, non-stop action awaits aboard premier electric traction. Serve the East Coast well with NJ TRANSIT and Amtrak® passenger equipment, brought to life in Train Sim World®: Northeast Corridor: New York - Trenton.\n\nGet to work on dense passenger operations aboard the iconic NJ TRANSIT ALP-46. All-modern, all-powerful, the ALP-46 is derived from its European cousin, the BR 101. Twinned with capacity-crunching Multilevel equipment, hurry commuters by the hundreds between Trenton and New York Penn Station from the workhorse itself or the striking cab car.\n\nGo the distance in speed and style. Between the heart of all-stopper action, take charge and race through on express Amtrak services, powered by the stalwart ACS-64, also a relative of European motive power. Sprint between cities with Amfleets in-tow and get a taste of retro tech from the cosy confines of the ex-metroliner cab car, push becomes shove with 8600 hp on your tail!"
+}

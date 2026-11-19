@@ -1,0 +1,19 @@
+{
+  "name": "ČD 750",
+  "nation": "Czech",
+  "liveries": [
+    "Green",
+    "Blue",
+    "Green Yellow Stripe",
+    "Red Yellow",
+    "Red Yellow Star"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "ČKD",
+  "power": "1,777 hp/1,325 kW",
+  "max_speed": "100 km/h (62 mph)",
+  "manufactured_year": "1968-1977",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 408,
+  "description": "T478.3 is a class of locomotives built for Czechoslovak State Railways to replace the most powerful steam locomotives (such as 477.0, 475.1 or 498.1) in heavy passenger and freight service. Their design is based on the type T478.1; the main difference is the new, more powerful V12 diesel engine."
+}

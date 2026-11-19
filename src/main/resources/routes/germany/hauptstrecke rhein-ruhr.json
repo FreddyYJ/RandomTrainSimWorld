@@ -1,0 +1,112 @@
+{
+  "name": "Hauptstrecke Rhein-Ruhr",
+  "locomotives": {
+    "germany/br422": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br101": [
+      "DB"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Hauptstrecke Rhein-Ruhr Journey",
+    "Intercity 101"
+  ],
+  "scenario": {
+    "Essen Connection": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Destination Duisburg": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 422 DB"]
+    },
+    "Snow Time": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 425 DB"]
+    },
+    "S1 Express": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Fog on the Rhein": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["BR 422 DB"]
+    },
+    "Changeover": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["BR 101 DB"]
+    },
+    "Power Balance": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["BR 101 DB"]
+    },
+    "All Together": {
+      "difficulty": 5,
+      "length": "0:50",
+      "locomotive": ["BR 101 DB"]
+    }
+  },
+  "description": "Experience bustling regional and commuter operations from aboard modern and well-known traction with Train Sim World® Hauptstrecke Rhein-Ruhr. Drive your trains over a rail network represented how it is today, complete with both routes between Essen and Bochum that are populated by different trains and services. Reproduced in exquisite detail, every station, signal and milepost feel so real you could almost reach out and touch them.\n\nIt’s your job to carry passengers along Deutsche Bahn’s ever-busy Hauptstrecke Rhein-Ruhr. Manage the complexities of keeping to the timetable, picking up and dropping off passengers in a timely yet safe and comfortable manner. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of a modern commuter line.\n\nTake control of a duo of DB multiple units, the hard-working DB BR 425 which is used on regional services by the dozen throughout Germany, and the DB BR 422 that works exclusively for the S-Bahn Rhein-Ruhr. Together the two work passenger duties along the route. Featuring authentic AC EMU simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

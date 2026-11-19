@@ -1,0 +1,92 @@
+{
+  "name": "Schnellfahrstrecke Nürnberg-Ingolstadt",
+  "locomotives": {
+    "germany/br403": [
+      "DB"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br286": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE",
+      "Railpool"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool",
+      "FlixTrain"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br412": [
+      "DB"
+    ],
+    "germany/br442": [
+      "DB"
+    ],
+    "germany/br463": [
+      "DB",
+      "DB Mint"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Highspeed Master"
+  ],
+  "scenario": {
+    "ICE3 Testdrive": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "Opening Drive": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "Head and Tails": {
+      "difficulty": 4,
+      "length": "1:05",
+      "locomotive": ["BR 101 DB", "BR 286 Bpmmbdzf"]
+    },
+    "Unusual Freight": {
+      "difficulty": 4,
+      "length": "1:15",
+      "locomotive": ["BR 101 DB"]
+    },
+    "Golden Hour": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 403 ICE3"]
+    }
+  },
+  "description": "Accelerate to thrill-seeking speeds and work the fastest regional services in Germany with Schnellfahrstrecke Nürnberg - Ingolstadt! In conjunction with Pilot21, TSG deliver - for the first time - true German 300 km/h operations in Train Sim World; take the ICE 3 faster than you ever have before, and shuttle between stops with the classic DB BR 101.\n\nThe high-speed line between Nürnberg and Ingolstadt opened to traffic in 2006 as part of a longer connection between Berlin and Munich. Following the path of the A9 motorway, the line cuts through the forested landscape to prioritise speed, resulting in many tunnels, gentle sweeping curves and dominating gradients.\n\nBecome a driver along the fastest German route to date in Train Sim World. Race non-stop on ICE services between Ingolstadt and Nurnberg, taking in the 90km of break-neck route at 5km a minute. Hop onto the fastest regional services in Germany, hurrying along at a more leisurely 200 km/h, and stopping at intermediate stations nestled among the valleys.\n\nYour high-speed traction takes the form of the ICE 3, the iconic staple for Germany’s fastest domestic services, and featuring the full red stripe variant for the first time. Ready up for regional services aboard the bold red, München-Nürnberg-Express inscribed coaches & cab car, working in push-pull configuration with the classic & time-weathered DB BR 101."
+}

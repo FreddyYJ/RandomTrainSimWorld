@@ -1,0 +1,88 @@
+{
+  "name": "Sherman Hill: Cheyenne-Laramie",
+  "locomotives": {
+    "usa/sd70ace": [
+      "Union Pacific",
+      "Missouri Pacific",
+      "Western Pacific",
+      "Katy",
+      "Rio Grande",
+      "Chicago & North Western",
+      "Southern Pacific"
+    ],
+    "usa/sd40-2": [
+      "Union Pacific"
+    ],
+    "usa/ac4400cw": [
+      "Union Pacific"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Over the Hill",
+    "A splash of color"
+  ],
+  "scenario": {
+    "Something Old, Something New": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["SD70ACe UP"]
+    },
+    "Switcheroo": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "Get over it": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["SD70ACe UP"]
+    },
+    "Build Up": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["SD40-2 UP"]
+    },
+    "Magnet for Trouble": {
+      "difficulty": 4,
+      "length": "1:40",
+      "locomotive": ["SD70ACe UP"]
+    },
+    "Sandbox Switching": {
+      "difficulty": 2,
+      "length": "N/A",
+      "locomotive": ["SD70ACe UP", "SD40-2 UP"]
+    },
+    "The Gathering": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["SD70ACe UP", "SD40-2 UP"]
+    },
+    "Circle of Celebration": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["SD70ACe MP", "SD70ACe WP", "SD70ACe SP"]
+    },
+    "Heritage Help Out": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["SD70ACe MP", "SD70ACe KT"]
+    },
+    "Dust or Bust": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["SD70ACe MP", "SD70ACe KT"]
+    },
+    "Colorful Climb": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["SD70ACe RG", "SD70ACe SP", "SD70ACe WP", "SD70ACe NW"]
+    },
+    "Hot Shot": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["SD70ACe NW", "SD70ACe SP"]
+    }
+  },
+  "description": "Experience all the grandeur of big-time, modern American freight railroading – bustling and constant action, tough grades, powerful diesels, majestic western scenery, and extraordinary history – come together on Union Pacific’s legendary Sherman Hill for Train Sim World® .\n\nIt’s a new dawn, it’s a new day, the Sherman Hill route now features the same volumetric skies and lighting as introduced in Train Sim World 3 !\n\nSherman Hill stretches 58 miles between the classic railroad cities of Cheyenne and Laramie, Wyoming, crossing the Continental Divide at an elevation of 8,015 feet. One of the crowning achievements of America’s Transcontinental Railroad, the crossing of Sherman Hill was built in the early 1860s and ever since has been a mecca of American railroading at its best. Throughout the decades, Sherman Hill, with its tough 1.5 percent westbound grade across the Laramie Mountains, has been home to Union Pacific’s biggest and best motive power, with today’s third-generation, high-horsepower diesels hauling double stacks, autos, manifest freight, coal, and more."
+}

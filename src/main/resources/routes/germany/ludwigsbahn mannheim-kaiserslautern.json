@@ -1,0 +1,171 @@
+{
+  "name": "Ludwigsbahn: Mannheim-Kaiserslautern",
+  "locomotives": {
+    "germany/br185": [
+      "DB",
+      "Railpool",
+      "MRCE"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br406": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br101": [
+      "DB",
+      "DB Expert",
+      "DB Expert Einziganders",
+      "DB Expert (MFD)",
+      "DB Expert (IC)"
+    ],
+    "germany/br103": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br286": [
+      "DB Expert"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br612": [
+      "DB"
+    ],
+    "germany/br628": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ],
+    "france/tgv-duplex": [
+      "SNCF"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Cargo Line: Gas",
+    "Mastering Mannheim"
+  ],
+  "scenario": {
+    "GC 59005 Mannheim Rbf-Tanklager Speyer": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["BR 185 DB"]
+    },
+    "GC 89444 Tanklager Speyer-Saarbrücken Rbf": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "GC 91102 Tanklager Rheingönheim": {
+      "difficulty": 1,
+      "length": "0:10",
+      "locomotive": ["BR 185 DB"]
+    },
+    "GC 59865 Saarbrücken Rbf-Ludwigshafen BASF Mitte": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    },
+    "GC 90128 Ludwigshafen BASF Mitte-Saarbrücken Rbf": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    },
+    "GC 59911 Tanklager Speyer-Ludwigshafen BASF": {
+      "difficulty": 1,
+      "length": "0:15",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Rheinland-Pfalz Runner": {
+      "difficulty": 3,
+      "length": "2:00",
+      "locomotive": ["BR 194"]
+    },
+    "Rheinland-Pfalz Rescue": {
+      "difficulty": 4,
+      "length": "1:20",
+      "locomotive": ["BR 194"]
+    },
+    "Chemical Courier": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Very Important Inspector": {
+      "difficulty": 5,
+      "length": "0:40",
+      "locomotive": ["BR 111 DB"]
+    },
+    "Merry Blizzmas": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Kaiserslautern Annual Fair": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["BR 111 DB", "Doppelstockwagen DB"]
+    },
+    "Two State Shuffle": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["BR 425 DB"]
+    },
+    "Bypassing the Limit": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["BR 406 ICE3M"]
+    }
+  },
+  "description": "An historically important mainline, the Pfälzische Ludwigsbahn was built in sections throughout the mid-1800s. The line originally terminated on the western side of the Rhine at Ludswighafen but was quickly extended over the eastern bank to Mannheim, followed eventually by the movement of the former station to create a seamless through line.\n\nThe line has 2 distinct halves; straight and level tracks rule the way between Mannheim and Neustadt, immediately after which, the tone of the line changes completely. A wall of forest punctuates the start of tight curves and close-up valleys, the rails gradually making their way further west to Kaiserslautern."
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Main-Spessart Bahn",
+  "locomotives": {
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br185": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br204": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Main-Spessart-Bahn Journey",
+    "DB BR 204"
+  ],
+  "scenario": {
+    "Saturday Circuit": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["BR 146 DB", "Doppelstockwagen DB"]
+    },
+    "Auto Runner": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Regional Express": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Doppelstock Delivery": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Fuel Exchange": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Hafenbahnhof Dock Delivery": {
+      "difficulty": 1,
+      "length": "0:20",
+      "locomotive": ["BR 204 DB"]
+    },
+    "Hafenbahnhof Order": {
+      "difficulty": 3,
+      "length": "0:25",
+      "locomotive": ["BR 204 DB"]
+    },
+    "Aschaffenburg Multiple Unit Delivery": {
+      "difficulty": 4,
+      "length": "0:30",
+      "locomotive": ["BR 204 DB"]
+    },
+    "Lohr Industrial Delivery": {
+      "difficulty": 2,
+      "length": "1:45",
+      "locomotive": ["BR 204 DB"]
+    }
+  },
+  "description": "A wondrous mix of steep gradients, scenic hillsides and swooping turns come to life in Train Sim World®: Main Spessart Bahn, a timeless freight-heavy and passenger-laden corridor through the heart of the German countryside. Reproduced in exquisite detail, every station, signal and milepost feel so real you could almost reach out and touch them.\n\nIt’s your job to carry freight and passengers over Main Spessart Bahn. Manage your powerful locomotives over the steep grade and deliver your cargo on-time. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of German railways at their best.\n\nTake control of two modern icons of German motive power, the DB BR 185.2 locomotive and the DB BR 146.2 locomotive and experience push-pull operation in the DoppelStockwagen control car. Featuring authentic electric simulations underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

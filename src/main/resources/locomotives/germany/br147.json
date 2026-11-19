@@ -1,0 +1,15 @@
+{
+  "name": "BR 147",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "7,500 hp/5,600 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1996-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 1800,
+  "description": "Alstom Traxx (sold as Bombardier TRAXX before 2021) is a modular product platform of mainline diesel-electric and electric locomotives. It was produced originally by Bombardier Transportation and later Alstom, and was built in both freight and passenger variants. The first version was a dual-voltage AC locomotive built for German railways from the year 2000. Later types included DC versions, as well as quadruple-voltage machines, able to operate on all four electrification schemes commonly used in Europe. The family was expanded in 2006 to include diesel-powered versions. Elements common to all variants include steel bodyshells, two bogies with two powered axles each, three-phase asynchronous induction motors, cooling exhausts on the roof edges, and wheel disc brakes.\n\nThe TRAXX brand name itself was introduced in 2003. The acronym stands for Transnational Railway Applications with eXtreme fleXibility. With the takeover of Bombardier Transportation by Alstom in January 2021, the trademark rights were transferred to the new owner. In the summer of 2023, Alstom extended the use of the word mark to the entire range of locomotives and completely stopped using its own word mark Prima . At the same time, communication was switched to the journalistic spelling Traxx and additional word marks were registered.\n\nLocomotives were primarily made for the railways of Germany, with orders coming from other countries including France, Israel, Switzerland, Sweden, Norway, Italy, Belgium, Luxembourg, Poland, Spain, Hungary, South Africa, the Netherlands and Romania.\n\nThe TRAXX locomotives were developed at Bombardier plants in Mannheim, Zürich Oerlikon in Switzerland and Vado Ligure in Italy. The final assembly of the vehicles takes place at Bombardier's locomotive production centres at Kassel in Germany and Vado Ligure (only the DC Variant)."
+}

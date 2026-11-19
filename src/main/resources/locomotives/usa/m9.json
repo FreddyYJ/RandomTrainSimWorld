@@ -1,0 +1,15 @@
+{
+  "name": "M9",
+  "nation": "USA",
+  "liveries": [
+    "LIRR"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Kawasaki",
+  "power": "2,200 hp/1,600 kW (per unit)",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "2017-2024",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 202,
+  "description": "The M9 is a class of electric multiple unit railroad cars being built by Kawasaki Heavy Industries for use on the MTA's Long Island Rail Road (LIRR) and Metro-North Railroad. They entered service September 11, 2019. These cars will replace the M3/M3A railcars built during the early 1980s, as well as expand the LIRR fleet to provide additional service after the completion of the LIRR's East Side Access project. A separate order of cars purchased for the LIRR and Metro-North using federal funding for the East Side Access project will also be designated M9A, these being built by Alstom."
+}

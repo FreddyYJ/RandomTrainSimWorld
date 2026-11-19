@@ -1,0 +1,145 @@
+{
+  "name": "Riviera Line: Exeter-Plymouth & Paignton",
+  "locomotives": {
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class150": [
+      "GWR"
+    ],
+    "uk/class802": [
+      "GWR",
+      "GBR"
+    ],
+    "uk/class43": [
+      "GWR",
+      "GBR",
+      "GWR Unbranded",
+      "GWR Vinyl Logo",
+      "GWR The Welshman",
+      "GWR Geraint Thomas",
+      "GWR 43002",
+      "GWR 43093"
+    ],
+    "uk/class08": [
+      "BR Type A",
+      "BR Type B",
+      "BR Type C",
+      "BR Type D"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class47": [
+      "BR",
+      "Intercity",
+      "Green",
+      "47484"
+    ],
+    "uk/class52": [
+      "BR",
+      "Maroon"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "EWS RHTT"
+    ],
+    "uk/class158": [
+      "East Midlands Trains"
+    ],
+    "uk/class166": [
+      "GWR",
+      "GBR"
+    ],
+    "uk/jubilee": [
+      "Jubilee",
+      "Black"
+    ],
+    "uk/stanier": [
+      "Stanier 8F"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "These are the Voyagers",
+    "Great Riviera Railway",
+    "Farewell HST",
+    "Riviera"
+  ],
+  "scenario": {
+    "Winteruptions": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 220 CrossCountry"]
+    },
+    "Limited Power": {
+      "difficulty": 3,
+      "length": "1:30",
+      "locomotive": ["Class 220 CrossCountry"]
+    },
+    "Day of the Dispatcher": {
+      "difficulty": 2,
+      "length": "0:20",
+      "locomotive": ["Class 220 CrossCountry", "Class 150 GWR", "Class 802 GWR"]
+    },
+    "Riviera Rendezvous": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 802 GBR"]
+    },
+    "Snow Stopper": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["Class 802 GBR"]
+    },
+    "Down by Dawlish": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 43 43185"]
+    },
+    "Riviera Rescue": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["Class 43 GBR", "Class 43 The Welshman"]
+    },
+    "Epilogue": {
+      "difficulty": 1,
+      "length": "0:10",
+      "locomotive": ["Class 43 43093"]
+    },
+    "From Beaches to Banks": {
+      "difficulty": 1,
+      "length": "1:30",
+      "locomotive": ["Class 802 GWR"]
+    },
+    "Harvest Market": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["Class 150 GWR"]
+    },
+    "Running On Fumes": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["Class 802 GWR"]
+    },
+    "Grand Opening": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Class 150 GWR"]
+    },
+    "Wave Wall Rescue": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 150 GWR"]
+    }
+  },
+  "description": "Dive down the Devon Banks and soar along the Dawlish Sea Wall with the legendary Riviera Line for Train Sim World®. Drive GWR services packed with holidaymakers for idyllic English coastal towns.\n\nBoth the Riviera and South Devon Main Lines were built in the mid-1800s. The challenging topography of the land saw rails navigate over hills and cling to coastlines. What followed was instant connections to seaside resorts and the ability to cross some of the most picturesque railway in England; as a result, the line soared in popularity.\n\nLong gone are the days of GWR’s infamous broad gauge and atmospheric railway systems, instead today, the Exeter - Plymouth line is part of the greater, modern UK railway network. The Intercity Express Programme was one such innovation that saw the introduction of bi-mode multiple units to replace fan-favourite High Speed Trains. From this, the Class 802 was introduced, a more powerful, longer-range version of the IEP’s Class 800, designed for better tackling the undulating, distant West Country hills."
+}

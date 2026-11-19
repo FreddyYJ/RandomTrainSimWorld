@@ -1,0 +1,40 @@
+{
+  "name": "LGV Méditerranée",
+  "locomotives": {
+    "france/tgv-duplex": [
+      "SNCF"
+    ]
+  },
+  "nation": "France",
+  "journey": [
+    "LGV Méditerranée"
+  ],
+  "scenario": {
+    "High Speed Rain": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["TGV Duplex 200"]
+    },
+    "Marseille Return": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["TGV Duplex 200"]
+    },
+    "Bad Things": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["TGV Duplex 200"]
+    },
+    "Depot Duty": {
+      "difficulty": 1,
+      "length": "0:40",
+      "locomotive": ["TGV Duplex 200"]
+    },
+    "Evening Engineering": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["TGV Duplex 200"]
+    }
+  },
+  "description": "Experience the excitement of high-speed rail, aboard the iconic TGV® Duplex, through sun-soaked Southern France with Train Sim World®: LGV Méditerranée.\n\nThe LGV Méditerranée was opened in 2001, designed as a dedicated high-speed line to finalise the link between Paris and the south coast of France. Operated by SNCF®, the convenience and comfort offered by this route puts it in competition with air travel for holidaymakers bound for “la mer”.\n\nIt’s your job to operate world-renowned TGV services across the stunning terrain of Southern France at a thrilling 320 km/h. Manage the complexities of keeping to the timetable, paying attention to the TVM430 signalling system, all while climbing and falling through the rollercoaster-like landscape."
+}

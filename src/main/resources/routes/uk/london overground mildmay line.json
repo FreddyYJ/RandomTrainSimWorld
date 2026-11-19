@@ -1,0 +1,63 @@
+{
+  "name": "London Overground: Mildmay line",
+  "locomotives": {
+    "uk/class378": [
+      "Transport for London"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class90": [
+      "DB Blue",
+      "DB Red",
+      "Freightliner Green (New)",
+      "Freightliner Green (Old)",
+      "Freightliner Grey"
+    ],
+    "uk/class484": [
+      "London"
+    ],
+    "uk/class710": [
+      "Transport for London"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Conquest of the Capital"
+  ],
+  "scenario": {
+    "Early Morning Service": {
+      "difficulty": 3,
+      "length": "0:53",
+      "locomotive": ["Class 378 TfL"]
+    },
+    "Route Learning": {
+      "difficulty": 1,
+      "length": "0:25",
+      "locomotive": ["Class 378 TfL"]
+    },
+    "Normal day in the office": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 378 TfL"]
+    },
+    "Engineering Works": {
+      "difficulty": 4,
+      "length": "1:10",
+      "locomotive": ["Class 378 TfL"]
+    },
+    "Christmas Chaos": {
+      "difficulty": 5,
+      "length": "0:45",
+      "locomotive": ["Class 378 TfL"]
+    }
+  },
+  "description": "The rails of North London keep the suburban zones of the city flowing day in, day out, and in Train Sim World 7, climb aboard the iconic London Overground Class 378 and serve this vital rail corridor between the boroughs of Brent, Camden, Hackney and more. Courtesy of Incredible Trains, the Mildmay line awaits!\n\nWhat is now recognisable today as the North London Line was built across 2 decades of staggered development and expansion between 1846 and 1869. Avoiding central London, the route is vital for cross-city connections while avoiding the busy core and is a vital freight artery as it links multiple mainlines together.\n\nMuch like the rest of the London Overground network, by the 90s and early 2000s, the North London Line was due an upgrade, and in 2007, TfL took over the line and overhauled it to be a modern commuter line with reliable and frequent service. Since 2010, the line has been operated by the instantly recognisable Class 378; originally delivered in 3-car formations, a 4th car was quickly added, and all were expanded to 5-car trains by 2017.\n\nWith TfL’s renaming of all London Overground routes, the North London Line is now officially known as the Mildmay line, honouring the nearby Mildmay Mission Hospital for its role in treating those affected by the HIV/AIDS crisis of the 1980s."
+}

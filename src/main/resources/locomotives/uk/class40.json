@@ -1,0 +1,15 @@
+{
+  "name": "Class 40",
+  "nation": "UK",
+  "liveries": [
+    "BR"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "English Electric",
+  "power": "2,000 hp/1,490 kW",
+  "max_speed": "90 mph (145 km/h)",
+  "manufactured_year": "1958-1962",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 200,
+  "description": "The British Rail Class 40 is a type of railway diesel-electric locomotive. A total of 200 were built by English Electric between 1958 and 1962, numbered D200-D399. Despite their initial success, by the time the last examples were entering service, they were already being replaced on some top-level duties by more powerful locomotives. As they were slowly relegated from express passenger use, the type found work on secondary passenger and freight services which they hauled for many years. The final locomotives ended regular service in 1985. The locomotives were commonly known as \"Whistlers\" because of the distinctive noise made by their turbochargers."
+}

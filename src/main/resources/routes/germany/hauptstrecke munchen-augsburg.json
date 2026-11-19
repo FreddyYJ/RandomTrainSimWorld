@@ -1,0 +1,101 @@
+{
+  "name": "Hauptstrecke München-Augsburg",
+  "locomotives": {
+    "germany/br423": [
+      "DB"
+    ],
+    "germany/br403": [
+      "DB"
+    ],
+    "germany/br110": [
+      "DB"
+    ],
+    "germany/br111": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br146": [
+      "DB"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "MRCE",
+      "Dispolok"
+    ],
+    "germany/br185": [
+      "DB",
+      "MRCE"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Speeding Through Life"
+  ],
+  "scenario": {
+    "Wash and Go": {
+      "difficulty": 1,
+      "length": "0:55",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "ICE Trouble": {
+      "difficulty": 4,
+      "length": "0:40",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "Commuter Confusion": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 423 DB"]
+    },
+    "Power Predicament": {
+      "difficulty": 5,
+      "length": "0:40",
+      "locomotive": ["BR 403 ICE3"]
+    },
+    "S-Bahn Shutdown": {
+      "difficulty": 3,
+      "length": "0:20",
+      "locomotive": ["BR 423 DB"]
+    }
+  },
+  "description": "Race through Bavaria and experience the hustle and bustle of modern commuting with Train Sim World® Hauptstrecke München - Augsburg.\n\nIt’s your job to operate Inter-City Express and S-Bahn services across the busy München – Augsburg railway. Manage the complexities of keeping to the timetable while calling at all stations on commuter services, or when taking in the thrill of 230 km/h operation. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of a high speed commuter corridor.\n\nTake control of a duo of Deutsche Bahn traction; get up to speed in the stylish DB BR 403 ICE 3, resplendent in its latest livery with the green stripe celebrating DB as Germany’s fastest climate protector, and climb aboard the hard-working DB BR 423 which spends its days hauling passengers on the S3 line out to Mammendorf. Featuring authentic AC EMU simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced."
+}

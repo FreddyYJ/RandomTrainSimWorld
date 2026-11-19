@@ -2,11 +2,9 @@ package com.github.freddyyj.randomtrainsimworld.gui;
 
 import com.github.freddyyj.randomtrainsimworld.*;
 import com.github.freddyyj.randomtrainsimworld.Main;
-import com.github.freddyyj.randomtrainsimworld.Random;
-import com.github.freddyyj.randomtrainsimworld.config.Config;
-import com.github.freddyyj.randomtrainsimworld.config.SaveLoco;
-import com.github.freddyyj.randomtrainsimworld.exception.FileNotFoundException;
-import com.github.freddyyj.randomtrainsimworld.exception.PermissionDeniedException;
+import com.github.freddyyj.randomtrainsimworld.Config;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,27 +23,19 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.Collator;
 import java.util.*;
 
 /**
  * Main controller of {@link com.github.freddyyj.randomtrainsimworld.gui.Main}.
- * Call {@link MainController#setRandom(Random)} to set random object to your custom class.
  */
 public class MainController {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private VBox boxRoute;
-    @FXML
-    private ScrollPane boxLoco;
-    @FXML
-    private VBox boxWeather;
-    @FXML
-    private TextField textPickedRoute;
-    @FXML
-    private TextField textPickedLoco;
-    @FXML
-    private TextField textPickedWeather;
+    private SplitPane splitMain;
+
+    // Menu
     @FXML
     private MenuItem itemSave;
     @FXML
@@ -56,11 +46,95 @@ public class MainController {
     private MenuItem itemClose;
     @FXML
     private MenuItem itemAbout;
-    private VBox currentRoute; // Box of locos that selected
+
+    // Route pane
+    @FXML
+    private SplitPane splitRoute;
+    @FXML
+    private VBox boxRoute;
+    @FXML
+    private ComboBox<String> comboNation;
+    @FXML
+    private CheckBox checkAllRoute;
+    @FXML
+    private CheckBox dummyRouteCheckBox; // Dummy, remove later
+    @FXML
+    private TextArea textRouteDescription;
+    @FXML
+    private TextField textPickedRoute;
+    @FXML
+    private Button buttonRandomRoute;
+
+    // Locomotive pane
+    @FXML
+    private SplitPane splitLoco;
+    @FXML
+    private CheckBox checkAllLoco;
+    @FXML
+    private ScrollPane boxLoco;
+    @FXML
+    private TextArea textLocoDescription;
+    @FXML
+    private TextField textPickedLoco;
+    @FXML
+    private Button buttonRandomLoco;
+
+    // Livery pane
+    @FXML
+    private CheckBox checkAllLivery;
+    @FXML
+    private ScrollPane boxLivery;
+    @FXML
+    private TextField textPickedLivery;
+    @FXML
+    private Button buttonRandomLivery;
+
+    // Journey pane
+    @FXML
+    private CheckBox checkAllJourney;
+    @FXML
+    private ScrollPane boxJourney;
+    @FXML
+    private TextField textPickedJourney;
+    @FXML
+    private Button buttonRandomJourney;
+    @FXML
+    private Button buttonRandomJourneyAll;
+
+    // Scenario pane
+    @FXML
+    private SplitPane splitScenario;
+    @FXML
+    private CheckBox checkAllScenario;
+    @FXML
+    private ScrollPane boxScenario;
+    @FXML
+    private TextArea textScenarioDescription;
+    @FXML
+    private TextField textPickedScenario;
+    @FXML
+    private Button buttonRandomScenario;
+    @FXML
+    private Button buttonRandomScenarioAll;
+
+    @FXML
+    private Button buttonRandomAll;
+    private VBox currentRoute; // Box of locos of the picked route
     private CheckBox currentBox; // Route Checkbox
     private Random random;
 
-    private HashMap<String,VBox> locomotiveVBoxs=new HashMap<>();
+    // Currently picked items (by click or random), null if not picked yet
+    private Route pickedRoute;
+    private Locomotive pickedLoco;
+    private String pickedLivery;
+    private String pickedJourney;
+    private Scenario pickedScenario;
+
+    // Checkbox boxes built once and reused, so the ticks are kept when shown again
+    private final Map<Route, VBox> locoBoxes = new HashMap<>();
+    private final Map<Route, VBox> journeyBoxes = new HashMap<>();
+    private final Map<Route, VBox> scenarioBoxes = new HashMap<>();
+    private final Map<Route, Map<Locomotive, VBox>> liveryBoxes = new HashMap<>();
 
     /**
      * default constructor
@@ -70,507 +144,650 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        Main core= null;
-        try {
-            core = Main.getInstance();
-        } catch (IOException e) {
-            System.out.println("Error occurred at initializing JavaFX!");
-            e.printStackTrace();
-            System.exit(1);
+        final Main core = Main.getInstance();
+
+        // Fill the route pane only, other panes are filled when a route is picked
+        boxRoute.getChildren().clear(); // Removes the dummy route
+        // Routes in A-Z order, ignoring case and accents (e.g. ü is sorted as u)
+        final List<String> routeNames = new ArrayList<>(core.routes.keySet());
+        routeNames.sort(Collator.getInstance(Locale.ENGLISH));
+        for (final String routeName : routeNames) {
+            final CheckBox routeCheckBox = new CheckBox(routeName); // Route is found by this name later
+            routeCheckBox.setSelected(core.includedRoutes.contains(core.routes.get(routeName))); // Ticks from the config
+            routeCheckBox.setPadding(new Insets(5., 0., 0., 5.));
+            routeCheckBox.setOnAction(this::onCheckRouteInclude);
+            routeCheckBox.setOnMouseClicked(this::onCheckRouteClick);
+            boxRoute.getChildren().add(routeCheckBox);
         }
 
-        // create UI elements depend on JSON file
-        for(int i=0;i<core.getRoutes().size();i++){
-            // add route checkbox
-            CheckBox route=new CheckBox(core.getRoutes().get(i).getName());
-            route.setSelected(true);
-            route.setOnAction(this::onCheckRouteSelect);
-            route.setOnMouseClicked(this::onCheckRouteClick);
-            route.setPadding(new Insets(5.,0.,0.,5.));
-            route.setId("check"+core.getRoutes().get(i).getCode());
-            boxRoute.getChildren().add(route);
-
-            // add route VBox in loco pane
-            VBox locoOfRoute=new VBox();
-            locoOfRoute.setDisable(true);
-            locoOfRoute.setVisible(false);
-            locoOfRoute.prefHeight(200.);
-            locoOfRoute.setId("box"+core.getRoutes().get(i).getCode());
-
-            // add locomotives in route VBox
-            for (int j=0;j<core.getLocomotive(core.getRoutes().get(i).getName()).size();j++){
-                String locoName=core.getLocomotive(core.getRoutes().get(i).getName()).get(j).getName();
-                CheckBox locomotive=new CheckBox(locoName);
-                locomotive.setOnAction(this::onCheckLocoSelect);
-                locomotive.setSelected(true);
-                locomotive.setPadding(new Insets(5.,0.,0.,5.));
-                locoOfRoute.getChildren().add(locomotive);
+        // Nation filter: "All" and the nations which have at least one route
+        final Set<Nation> nations = EnumSet.noneOf(Nation.class);
+        for (final Route route : core.routes.values()) {
+            nations.add(route.nation);
+        }
+        comboNation.getItems().add("All");
+        for (final Nation nation : nations) {
+            comboNation.getItems().add(nation.toString());
+        }
+        comboNation.setValue("All");
+        comboNation.setOnAction(event -> {
+            final String selected = comboNation.getValue();
+            for (final Node node : boxRoute.getChildren()) {
+                final Route route = core.routes.get(((CheckBox) node).getText());
+                final boolean shown = "All".equals(selected) || route.nation.toString().equals(selected);
+                node.setVisible(shown);
+                node.setManaged(shown); // Hidden ones take no space
             }
-
-            locomotiveVBoxs.put(core.getRoutes().get(i).getName(),locoOfRoute);
-        }
-
-        // add weather checkbox
-        for (int i=0;i<core.getWeathers().size();i++){
-            CheckBox weather=new CheckBox(core.getWeathers().get(i).getName());
-            weather.setSelected(true);
-            weather.setOnAction(this::onCheckWeatherSelect);
-            weather.setPadding(new Insets(5.,0.,0.,5.));
-            boxWeather.getChildren().add(weather);
-        }
-
-        anchorPane.sceneProperty().addListener((observableScene, oldScene, newScene) -> {
-            if (oldScene == null && newScene != null) {
-                newScene.setOnKeyPressed(this::onShortcut);
-            }
+            // "All" checkbox follows the shown routes only
+            updateCheckAll(checkAllRoute, boxRoute);
         });
+        updateCheckAll(checkAllRoute, boxRoute);
 
-        random=Random.getInstance();
+        random = new Random();
+    }
+
+    private void updateCheckAll(final CheckBox allCheckBox, final VBox box) {
+        // Ticked only if all shown checkboxes are ticked, routes hidden by the filter are ignored
+        allCheckBox.setSelected(box.getChildren().stream()
+                .filter(Node::isVisible)
+                .allMatch(node -> ((CheckBox) node).isSelected()));
+    }
+
+    /**
+     * Update Locomotive pane with the given {@link Route}.
+     * @param route a route object
+     */
+    private void updateLocoPane(final Route route) {
+        VBox locoBox = locoBoxes.get(route);
+        if (locoBox == null) {
+            // First time for this route, build the checkboxes
+            locoBox = new VBox();
+            for (final Locomotive locomotive : route.locomotives.keySet()) {
+                final CheckBox locoCheckBox = new CheckBox(locomotive.name);
+                locoCheckBox.setSelected(Main.getInstance().includedLocomotives.get(route).contains(locomotive));
+                locoCheckBox.setUserData(locomotive); // Keep the locomotive to find it from the checkbox
+                locoCheckBox.setPadding(new Insets(5., 0., 0., 5.));
+                locoCheckBox.setOnAction(this::onCheckLocoInclude);
+                locoCheckBox.setOnMouseClicked(this::onCheckLocoClick);
+                locoBox.getChildren().add(locoCheckBox);
+            }
+            locoBoxes.put(route, locoBox);
+        }
+        boxLoco.setContent(locoBox);
+        checkAllLoco.setDisable(false);
+        updateCheckAll(checkAllLoco, locoBox);
+        textLocoDescription.clear();
+        textPickedLoco.clear();
+        pickedLoco = null;
+
+        // Liveries depend on the locomotive, so reset them until one is picked
+        boxLivery.setContent(null);
+        checkAllLivery.setDisable(true);
+        checkAllLivery.setSelected(false);
+        textPickedLivery.clear();
+        pickedLivery = null;
+    }
+
+    /**
+     * Update Journey pane with the given {@link Route}.
+     * @param route a route object
+     */
+    private void updateJourneyPane(final Route route) {
+        VBox journeyBox = journeyBoxes.get(route);
+        if (journeyBox == null) {
+            // First time for this route, build the checkboxes
+            journeyBox = new VBox();
+            for (final String journey : route.journeys) {
+                final CheckBox journeyCheckBox = new CheckBox(journey);
+                journeyCheckBox.setSelected(Main.getInstance().includedJourneys.get(route).contains(journey));
+                journeyCheckBox.setPadding(new Insets(5., 0., 0., 5.));
+                journeyCheckBox.setOnAction(this::onCheckJourneyInclude);
+                journeyCheckBox.setOnMouseClicked(this::onCheckJourneyClick);
+                journeyBox.getChildren().add(journeyCheckBox);
+            }
+            journeyBoxes.put(route, journeyBox);
+        }
+        boxJourney.setContent(journeyBox);
+        checkAllJourney.setDisable(false);
+        updateCheckAll(checkAllJourney, journeyBox);
+        textPickedJourney.clear();
+        pickedJourney = null;
+    }
+
+    /**
+     * Update Scenario pane with the given {@link Route}.
+     * @param route a route object
+     */
+    private void updateScenarioPane(final Route route) {
+        VBox scenarioBox = scenarioBoxes.get(route);
+        if (scenarioBox == null) {
+            // First time for this route, build the checkboxes
+            scenarioBox = new VBox();
+            for (final Scenario scenario : route.scenarios) {
+                final CheckBox scenarioCheckBox = new CheckBox(scenario.name);
+                scenarioCheckBox.setSelected(Main.getInstance().includedScenarios.get(route).contains(scenario));
+                scenarioCheckBox.setUserData(scenario); // Keep the scenario to find it from the checkbox
+                scenarioCheckBox.setPadding(new Insets(5., 0., 0., 5.));
+                scenarioCheckBox.setOnAction(this::onCheckScenarioInclude);
+                scenarioCheckBox.setOnMouseClicked(this::onCheckScenarioClick);
+                scenarioBox.getChildren().add(scenarioCheckBox);
+            }
+            scenarioBoxes.put(route, scenarioBox);
+        }
+        boxScenario.setContent(scenarioBox);
+        checkAllScenario.setDisable(false);
+        updateCheckAll(checkAllScenario, scenarioBox);
+        textScenarioDescription.clear();
+        textPickedScenario.clear();
+        pickedScenario = null;
+    }
+
+    private void updateLiveryPane(final Route route, final Locomotive locomotive) {
+        // Same locomotive can be on several routes with different liveries, so cache per route
+        final Map<Locomotive, VBox> routeLiveryBoxes = liveryBoxes.computeIfAbsent(route, r -> new HashMap<>());
+        VBox liveryBox = routeLiveryBoxes.get(locomotive);
+        if (liveryBox == null) {
+            // First time for this locomotive on this route, build the checkboxes
+            liveryBox = new VBox();
+            // Liveries available on this route, null if the locomotive is not on the route
+            final List<String> liveries = route.locomotives.get(locomotive);
+            if (liveries != null) {
+                for (final String livery : liveries) {
+                    final CheckBox liveryCheckBox = new CheckBox(livery);
+                    liveryCheckBox.setSelected(Main.getInstance().includedLiveries.get(route).get(locomotive).contains(livery));
+                    liveryCheckBox.setUserData(locomotive); // Keep the locomotive this livery belongs to
+                    liveryCheckBox.setPadding(new Insets(5., 0., 0., 5.));
+                    liveryCheckBox.setOnAction(this::onCheckLiveryInclude);
+                    liveryCheckBox.setOnMouseClicked(this::onCheckLiveryClick);
+                    liveryBox.getChildren().add(liveryCheckBox);
+                }
+            }
+            routeLiveryBoxes.put(locomotive, liveryBox);
+        }
+        boxLivery.setContent(liveryBox);
+        checkAllLivery.setDisable(false);
+        updateCheckAll(checkAllLivery, liveryBox);
+        textPickedLivery.clear();
+        pickedLivery = null;
+    }
+
+    /**
+     * An event handler when a route is clicked.
+     * Show the description and update the panes.
+     * @param event an event object
+     */
+    @FXML
+    private void onCheckRouteClick(MouseEvent event) {
+        final Main main = Main.getInstance();
+        final Route route = main.routes.get(((CheckBox) event.getSource()).getText());
+        if (route == null) {
+            throw new Main.RouteNotFoundException(((CheckBox) event.getSource()).getText());
+        }
+
+        // Show the clicked route and refill the other panes for it
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
+    }
+
+    /**
+     * An event handler when a route checkbox is ticked or unticked.
+     * Include or exclude the route with the checkbox state.
+     * @param event an event object
+     */
+    @FXML
+    private void onCheckRouteInclude(ActionEvent event) {
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Main main = Main.getInstance();
+        final Route route = main.routes.get(checkBox.getText());
+        if (route == null) {
+            throw new Main.RouteNotFoundException(checkBox.getText());
+        }
+
+        if (!checkBox.isSelected()) {
+            // Excluded
+            main.excludeRoute(route);
+        }
+        else {
+            // Included
+            main.includeRoute(route);
+        }
+        updateCheckAll(checkAllRoute, boxRoute);
+    }
+
+    /**
+     * An event handler when a locomotive is clicked.
+     * Show the description and update the livery pane.
+     * @param event an event object
+     */
+    @FXML
+    private void onCheckLocoClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Locomotive loco = (Locomotive) checkBox.getUserData(); // Set in updateLocoPane
+
+        // Show the clicked loco and refill the other panes for it
+        textPickedLoco.setText(loco.name);
+        textLocoDescription.setText(loco.getDescriptionString());
+        updateLiveryPane(pickedRoute, loco);
+        pickedLoco = loco; // After updateLiveryPane, which resets the picked livery only
+    }
+
+    /**
+     * An event handler when a locomotive checkbox is ticked or unticked.
+     * Include or exclude the locomotive with the checkbox state.
+     * @param event an event object
+     */
+    @FXML
+    private void onCheckLocoInclude(ActionEvent event) {
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Main main = Main.getInstance();
+        final Route route = pickedRoute; // These checkboxes are shown only for the picked route
+        final Locomotive loco = (Locomotive) checkBox.getUserData(); // Set in updateLocoPane
+
+        if (!checkBox.isSelected()) {
+            // Excluded
+            main.excludeLocomotive(route, loco);
+        }
+        else {
+            // Included
+            main.includeLocomotive(route, loco);
+        }
+        updateCheckAll(checkAllLoco, (VBox) checkBox.getParent());
+    }
+
+    @FXML
+    private void onCheckLiveryClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final String livery = checkBox.getText();
+
+        textPickedLivery.setText(livery);
+        pickedLivery = livery;
+    }
+
+    /**
+     * An event handler when a livery checkbox is ticked or unticked.
+     * Include or exclude the livery with the checkbox state.
+     * @param event an event object
+     */
+    @FXML
+    private void onCheckLiveryInclude(ActionEvent event) {
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Main main = Main.getInstance();
+        final Route route = pickedRoute; // These checkboxes are shown only for the picked route
+        final Locomotive loco = (Locomotive) checkBox.getUserData(); // Set in updateLiveryPane
+
+        if (!checkBox.isSelected()) {
+            // Excluded
+            main.excludeLivery(route, loco, checkBox.getText());
+        }
+        else {
+            // Included
+            main.includeLivery(route, loco, checkBox.getText());
+        }
+        updateCheckAll(checkAllLivery, (VBox) checkBox.getParent());
+    }
+
+    @FXML
+    private void onCheckJourneyClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final String journey = checkBox.getText();
+
+        textPickedJourney.setText(journey);
+        pickedJourney = journey;
+    }
+
+    @FXML
+    private void onCheckJourneyInclude(ActionEvent event) {
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Main main = Main.getInstance();
+        final Route route = pickedRoute; // These checkboxes are shown only for the picked route
+
+        if (!checkBox.isSelected()) {
+            // Excluded
+            main.excludeJourney(route, checkBox.getText());
+        }
+        else {
+            // Included
+            main.includeJourney(route, checkBox.getText());
+        }
+        updateCheckAll(checkAllJourney, (VBox) checkBox.getParent());
+    }
+
+    @FXML
+    private void onCheckScenarioClick(MouseEvent event) {
+        if (pickedRoute == null) {
+            // Route not picked, early return
+            Alert routeNotPicked = new Alert(AlertType.ERROR, "A route is not picked!");
+            routeNotPicked.show();
+            return;
+        }
+
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Scenario scenario = (Scenario) checkBox.getUserData(); // Set in updateLocoPane
+
+        textPickedScenario.setText(scenario.name);
+        textScenarioDescription.setText(scenario.getDescriptionString());
+        pickedScenario = scenario;
+    }
+
+    @FXML
+    private void onCheckScenarioInclude(ActionEvent event) {
+        CheckBox checkBox = (CheckBox) event.getSource();
+        final Main main = Main.getInstance();
+        final Route route = pickedRoute; // These checkboxes are shown only for the picked route
+        final Scenario scenario = (Scenario) checkBox.getUserData(); // Set in updateScenarioPane
+
+        if (!checkBox.isSelected()) {
+            // Excluded
+            main.excludeScenario(route, scenario);
+        }
+        else {
+            // Included
+            main.includeScenario(route, scenario);
+        }
+        updateCheckAll(checkAllScenario, (VBox) checkBox.getParent());
+    }
+
+    @FXML
+    private void onCheckAll(ActionEvent event) {
+        final CheckBox allCheckBox = (CheckBox) event.getSource();
+        final boolean include = allCheckBox.isSelected(); // Kept, the handlers below update the "All" checkbox
+
+        // Checkbox list of the pane, only for the picked route (and locomotive)
+        final Node box;
+        if (allCheckBox == checkAllRoute) box = boxRoute;
+        else if (allCheckBox == checkAllLoco) box = boxLoco.getContent();
+        else if (allCheckBox == checkAllLivery) box = boxLivery.getContent();
+        else if (allCheckBox == checkAllJourney) box = boxJourney.getContent();
+        else box = boxScenario.getContent();
+        if (box == null) return;
+
+        for (final Node node : ((VBox) box).getChildren()) {
+            final CheckBox checkBox = (CheckBox) node;
+            // fire() toggles and runs the include/exclude handler; routes hidden by the filter are skipped
+            if (checkBox.isVisible() && checkBox.isSelected() != include) {
+                checkBox.fire();
+            }
+        }
+        allCheckBox.setSelected(include); // e.g. empty list
+    }
+
+    @FXML
+    private void onSave(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (!main.hasConfigFile()) {
+            // No config file yet, ask where to save it
+            onSaveAs(event);
+            return;
+        }
         try {
-            if (Main.getInstance().getUnselectedLocos().hasSavefile())
-                reload(Main.getInstance().getUnselectedLocos());
+            main.save();
         } catch (IOException e) {
-            System.out.println("Error occurred at initializing JavaFX!");
-            e.printStackTrace();
-            System.exit(1);
-        }
-    }
-
-    /**
-     * Set random class.
-     * <p>
-     *     If you want to set custom random class, call {@link com.github.freddyyj.randomtrainsimworld.gui.Main}.{@link com.github.freddyyj.randomtrainsimworld.gui.Main#controller}.setRandom(Random).
-     * </p>
-     * @param random extended {@link Random} object
-     */
-    public void setRandom(Random random){
-        this.random=random;
-    }
-
-    @FXML
-    protected void onCheckRouteClick(MouseEvent e) {
-        if (e.getSource() instanceof CheckBox) {
-            currentBox = (CheckBox) e.getSource();
-        }
-        if( currentRoute!=null){
-            currentRoute.setVisible(false);
-            currentRoute.setDisable(true);
-        }
-        Node routeBox = (Node) e.getSource();
-        String id = routeBox.getId();
-        currentRoute = getLocoBoxByID(id);
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-        boxLoco.setContent(currentRoute);
-
-        textPickedRoute.setText(((CheckBox) routeBox).getText());
-    }
-
-    @FXML
-    protected void onRandomAll(ActionEvent e) {
-        List<List<Locomotive>> locoList=new ArrayList<>();
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        for (int i=0;i<core.getRoutes().size();i++){
-            locoList.add(core.getLocomotive(core.getRoutes().get(i).getName()));
-        }
-
-        Locomotive loco = random.randomLocomotiveInAll(locoList);
-        Route route = loco.getRoute();
-
-        Weather weather = random.randomWeather(core.getWeathers());
-
-        textPickedRoute.setText(route.getName());
-        textPickedLoco.setText(loco.getName());
-        textPickedWeather.setText(weather.getName());
-
-        if (currentRoute!=null){
-            currentRoute.setVisible(false);
-            currentRoute.setDisable(true);
-        }
-        String name=getRouteByName(route.getName()).getId();
-        currentRoute = getLocoBoxByID(name);
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-        boxLoco.setContent(currentRoute);
-
-        currentBox=getRouteByName(loco.getRoute().getName());
-    }
-
-    @FXML
-    protected void onRandomRoute(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        Route selected=random.randomRoute(core.getRoutes());
-        CheckBox selectedRoute = getRouteByName(selected.getName());
-
-        if (currentRoute!=null){
-            currentRoute.setVisible(false);
-            currentRoute.setDisable(true);
-        }
-        textPickedRoute.setText(selectedRoute.getText());
-        currentRoute = getLocoBoxByID(selectedRoute.getId());
-        currentRoute.setVisible(true);
-        currentRoute.setDisable(false);
-        boxLoco.setContent(currentRoute);
-
-        currentBox=selectedRoute;
-    }
-
-    @FXML
-    protected void onRandomLoco(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        if (currentBox==null) return;
-        Locomotive selected=random.randomLocomotive(core.getLocomotive(currentBox.getText()));
-        CheckBox loco = getLocoByName(selected.getName(),currentBox.getText());
-
-        textPickedRoute.setText(currentBox.getText());
-        textPickedLoco.setText(loco.getText());
-    }
-
-    @FXML
-    protected void onRandomWeather(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        Weather weather = random.randomWeather(core.getWeathers());
-        textPickedWeather.setText(weather.getName());
-    }
-
-    @FXML
-    protected void onCheckLocoSelect(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        if (e.getSource() instanceof CheckBox) {
-            CheckBox selectedLoco = (CheckBox) e.getSource();
-            core.selectLocomotive(selectedLoco.isSelected(), core.getLocomotive(currentBox.getText(),selectedLoco.getText()), core.getRoute(currentBox.getText()));
+            new Alert(AlertType.ERROR, "Failed to save the config file:\n" + e.getMessage()).show();
         }
     }
 
     @FXML
-    protected void onCheckRouteSelect(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        if (e.getSource() instanceof CheckBox) {
-            CheckBox selectedRoute = (CheckBox) e.getSource();
-            core.selectRoute(selectedRoute.isSelected(), core.getRoute(selectedRoute.getText()));
-        }
-
-    }
-
-    @FXML
-    protected void onCheckWeatherSelect(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        if (e.getSource() instanceof CheckBox) {
-            CheckBox selectedWeather = (CheckBox) e.getSource();
-            core.selectWeather(selectedWeather.isSelected(), core.getWeather(selectedWeather.getText()));
-        }
-
-    }
-
-    @FXML
-    protected void onSaveAs(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-
-            FileChooser chooser = new FileChooser();
-            chooser.setTitle("Save File as");
-            chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
-            File currentFile = chooser.showSaveDialog(anchorPane.getScene().getWindow());
-            if (currentFile != null) {
-                core.saveAs(currentFile.getPath());
-            }
-        }catch (IOException excep){
-            handleException(excep);
-        }
-
-    }
-
-    @FXML
-    protected void onLoad(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-        }catch (IOException excep){
-            handleException(excep);
-            return;
-        }
-
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Load Save File");
+    private void onSaveAs(ActionEvent event) {
+        final FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save Config File");
         chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
-        File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
-        if (file != null) {
-            try {
-                core.reloadSaveFile(file.getPath());
-            } catch (IOException excep) {
-                handleException(excep);
-                return;
-            }
-            reload(core.getUnselectedLocos());
+        if (Settings.DOCUMENT_DIRECTORY.isDirectory()) {
+            chooser.setInitialDirectory(Settings.DOCUMENT_DIRECTORY);
+        }
+        chooser.setInitialFileName("randomtsw.json");
+        final File file = chooser.showSaveDialog(anchorPane.getScene().getWindow());
+        if (file == null) return; // Cancelled
+
+        try {
+            Main.getInstance().saveAs(file.getPath()); // Also remembered for the next startup
+        } catch (IOException e) {
+            new Alert(AlertType.ERROR, "Failed to save " + file.getPath() + ":\n" + e.getMessage()).show();
         }
     }
 
     @FXML
-    protected void onSave(ActionEvent e) {
-        Main core=null;
-        try{
-            core=Main.getInstance();
-
-            if (core.getSaveFilePath() != null)
-                core.saveAs(core.getSaveFilePath());
-            else {
-                onSaveAs(e);
-            }
-        }catch (IOException excep){
-            handleException(excep);
+    private void onLoad(ActionEvent event) {
+        final FileChooser chooser = new FileChooser();
+        chooser.setTitle("Load Config File");
+        chooser.getExtensionFilters().add(new ExtensionFilter("JSON File", "*.json"));
+        if (Settings.DOCUMENT_DIRECTORY.isDirectory()) {
+            chooser.setInitialDirectory(Settings.DOCUMENT_DIRECTORY);
         }
-}
+        final File file = chooser.showOpenDialog(anchorPane.getScene().getWindow());
+        if (file == null) return; // Cancelled
+
+        final Main main = Main.getInstance();
+        try {
+            main.reload(file.getPath());
+        } catch (IOException e) {
+            new Alert(AlertType.ERROR, "Failed to load " + file.getPath() + ":\n" + e.getMessage()).show();
+            return;
+        }
+
+        // Update the route ticks, they are kept by the route pane
+        for (final Node node : boxRoute.getChildren()) {
+            final CheckBox routeCheckBox = (CheckBox) node;
+            routeCheckBox.setSelected(main.includedRoutes.contains(main.routes.get(routeCheckBox.getText())));
+        }
+        updateCheckAll(checkAllRoute, boxRoute);
+
+        // Drop the cached checkboxes, they are built again with the loaded ticks
+        locoBoxes.clear();
+        journeyBoxes.clear();
+        scenarioBoxes.clear();
+        liveryBoxes.clear();
+        if (pickedRoute != null) {
+            // Show the picked route again, this resets the other picks
+            updateLocoPane(pickedRoute);
+            updateJourneyPane(pickedRoute);
+            updateScenarioPane(pickedRoute);
+        }
+    }
 
     @FXML
-    protected void onClose(ActionEvent e) {
-        Stage stage = (Stage) anchorPane.getScene().getWindow();
-        stage.close();
+    private void onHelp(ActionEvent event) {
+        new Alert(AlertType.INFORMATION, "Random Train Sim World is the simple tool to show" +
+                "the information of the routes, locomotives, etc. included in Train Sim World." +
+                "Also, it provides simple features to pick them randomly, to help you to decide which content to " +
+                "play. This tool is being updated actively, when a new DLC is released." +
+                "This project is maintained under MIT License.").show();
     }
 
     @FXML
-    protected void onHelp(ActionEvent e) {
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Random Train Sim World 2");
-        alert.setHeaderText("Random picker for Train Sim World");
-        alert.setContentText("Homepage: https://github.com/FreddyYJ/RandomTrainSimWorld2");
+    private void onRandomRoute(ActionEvent event) {
+        final Main main = Main.getInstance();
+        List<Route> includedRoutes = new ArrayList<>(main.includedRoutes);
+        if (includedRoutes.isEmpty()) {
+            Alert emptyRoutes = new Alert(AlertType.ERROR, "No routes are included to pick from!");
+            emptyRoutes.show();
+            return;
+        }
+        final Route route = includedRoutes.get(random.nextInt(includedRoutes.size()));
 
-        alert.showAndWait();
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
     }
 
     @FXML
-    protected void onShortcut(KeyEvent e) {
-        if (e.isShortcutDown()) {
-            if (e.getCode() == KeyCode.S) {
-                onSave(null);
-            }
+    private void onRandomLoco(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (pickedRoute == null) {
+            new Alert(AlertType.ERROR, "A route is not picked!").show();
+            return;
         }
+
+        List<Locomotive> includedLocos = new ArrayList<>(main.includedLocomotives.get(pickedRoute));
+        if (includedLocos.isEmpty()) {
+            new Alert(AlertType.ERROR, "No locomotives are included to pick from!").show();
+            return;
+        }
+        final Locomotive loco = includedLocos.get(random.nextInt(includedLocos.size()));
+
+        textPickedLoco.setText(loco.name);
+        textLocoDescription.setText(loco.getDescriptionString());
+        updateLiveryPane(pickedRoute, loco);
+        pickedLoco = loco; // After updateLiveryPane, which resets the picked livery only
     }
 
-    /**
-     * Reload selection of {@link CheckBox}s of routes, locomotives and weathers.
-     * @param save a {@link SaveLoco} object
-     */
-    public void reload(SaveLoco save) {
-        // reload routes
-        ObservableList<Node> routeList=this.boxRoute.getChildren();
-        for (int i = 0; i < routeList.size(); i++) {
-            CheckBox route= (CheckBox) routeList.get(i);
-            if (save.getRoute().contains(route.getText())) {
-                route.setSelected(false);
-            } else {
-                route.setSelected(true);
-            }
+    @FXML
+    private void onRandomLivery(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (pickedRoute == null || pickedLoco == null) {
+            new Alert(AlertType.ERROR, "A route or locomotive is not picked!").show();
+            return;
         }
 
-        // reload locomotives
-//        ObservableList<Node> locoBoxList=this.boxLoco.getChildren();
-        for (Map.Entry<String,VBox> boxByRoute: locomotiveVBoxs.entrySet()) {
-            VBox box= boxByRoute.getValue();
-            CheckBox route=null;
-            for (int i=0;i<routeList.size();i++){
-                if (((CheckBox) routeList.get(i)).getText().equals(boxByRoute.getKey())) {
-                    route = (CheckBox) routeList.get(i);
-                    break;
-                }
-            }
-            if (route==null){
-                throw new NullPointerException("MainController.reload(): No route found: "+boxByRoute.getKey());
-            }
-
-            ObservableList<Node> locoBox=box.getChildren();
-            for (int j = 0; j < locoBox.size(); j++) {
-                CheckBox loco= (CheckBox) locoBox.get(j);
-                try {
-                    loco.setSelected(!save.getLocomotive(Main.getInstance().getRoute(route.getText())).contains(loco.getText()));
-                } catch (IOException e) {
-                    handleException(e);
-                }
-
-            }
+        List<String> includedLiveries = new ArrayList<>(main.includedLiveries.get(pickedRoute).get(pickedLoco));
+        if (includedLiveries.isEmpty()) {
+            new Alert(AlertType.ERROR, "No liveries are included to pick from!").show();
+            return;
         }
-
-        // reload weathers
-        ObservableList<Node> weatherList=this.boxWeather.getChildren();
-        for (int i = 0; i < weatherList.size(); i++) {
-            CheckBox weather= (CheckBox) weatherList.get(i);
-            if (save.getWeather().contains(weather.getText())) {
-                weather.setSelected(false);
-            } else {
-                weather.setSelected(true);
-            }
-        }
-
+        pickedLivery = includedLiveries.get(random.nextInt(includedLiveries.size()));
+        textPickedLivery.setText(pickedLivery);
     }
 
-    /**
-     * Get {@link VBox} that has locomotive {@link CheckBox}s.
-     * @param routeId route {@link CheckBox} ID
-     * @return {@link VBox} that has locomotive {@link CheckBox}s
-     */
-    protected VBox getLocoBoxByID(String routeId) {
-        Collection<VBox> loco = locomotiveVBoxs.values();
-
-        String locoId;
-        String[] id = routeId.split("check");
-        locoId = id[1];
-        locoId = "box" + locoId;
-
-        for (VBox locomotive: loco) {
-            if (locomotive.getId().equals(locoId))
-                return locomotive;
+    @FXML
+    private void onRandomJourney(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (pickedRoute == null) {
+            new Alert(AlertType.ERROR, "A route is not picked!").show();
+            return;
         }
-        return null;
+
+        List<String> includedJourneys = new ArrayList<>(main.includedJourneys.get(pickedRoute));
+        if (includedJourneys.isEmpty()) {
+            new Alert(AlertType.ERROR, "No journeys are included to pick from!").show();
+            return;
+        }
+        pickedJourney = includedJourneys.get(random.nextInt(includedJourneys.size()));
+        textPickedJourney.setText(pickedJourney);
     }
 
-    /**
-     * Get route {@link CheckBox} with {@link VBox}.
-     * @param locoId {@link VBox} ID
-     * @return route {@link CheckBox}
-     */
-    protected CheckBox getRouteByVBox(VBox locoId) {
-        String id;
-        id = (locoId.getId().split("box"))[1];
-        id = "check" + id;
+    @FXML
+    private void onRandomJourneyAll(ActionEvent event) {
+        final Main main = Main.getInstance();
 
-        ObservableList<Node> routeList=this.boxRoute.getChildren();
-        for (int i = 0; i < routeList.size(); i++) {
-            if (routeList.get(i).getId().equals(id))
-                return (CheckBox) routeList.get(i);
-        }
-        return null;
-    }
-
-    /**
-     * Get route {@link CheckBox} with route name.
-     * @param name route name
-     * @return route {@link CheckBox}
-     */
-    protected CheckBox getRouteByName(String name){
-        ObservableList<Node> routeList=this.boxRoute.getChildren();
-        for (int i=0;i<routeList.size();i++){
-            if (((CheckBox)routeList.get(i)).getText().equals(name)) return (CheckBox)routeList.get(i);
-        }
-        return null;
-    }
-
-    /**
-     * Get locomotive {@link CheckBox} with locomotive name and route name.
-     * @param name locomotive name
-     * @param route route name
-     * @return locomotive {@link CheckBox}
-     */
-    protected CheckBox getLocoByName(String name, String route) {
-        int routeIndex=0;
-
-        ObservableList<Node> routeList=this.boxRoute.getChildren();
-        for (int i=0;i<routeList.size();i++){
-            if (((CheckBox)routeList.get(i)).getText().equals(route))
-                routeIndex=i;
-        }
-        ObservableList<Node> locoList = getLocoBoxByID(routeList.get(routeIndex).getId()).getChildren();
-        for (int i = 0; i < locoList.size(); i++) {
-            if (((CheckBox) locoList.get(i)).getText().equals(name))
-                return (CheckBox) locoList.get(i);
-        }
-        return null;
-    }
-
-    /**
-     * Get weather {@link CheckBox} with weather name.
-     * @param name weather name
-     * @return weather {@link CheckBox}
-     */
-    protected CheckBox getWeatherByName(String name) {
-        ObservableList<Node> weatherList=this.boxWeather.getChildren();
-        for (int i = 0; i < weatherList.size(); i++) {
-            if (((CheckBox) weatherList.get(i)).getText().equals(name))
-                return (CheckBox) weatherList.get(i);
-        }
-        return null;
-    }
-    private void handleException(Exception e){
-        Alert errorAlert=new Alert(AlertType.ERROR);
-        if (e instanceof FileNotFoundException){
-            FileNotFoundException exception= (FileNotFoundException) e;
-            if (exception.getErrorFile().equals(Config.FILE_NAME)){
-                errorAlert.setTitle("File Not Fonud!");
-                errorAlert.setHeaderText("Config file not found!");
-                errorAlert.setContentText("Did you delete config file manually?");
-            }
-            else{
-                errorAlert.setTitle("File Not Found!");
-                errorAlert.setHeaderText("Savefile not found!");
-                errorAlert.setContentText("Did you delete "+exception.getErrorFile()+" manually?");
+        // Included journeys of all included routes, paired with their route
+        final List<Map.Entry<Route, String>> allJourneys = new ArrayList<>();
+        for (final Route route : main.includedRoutes) {
+            for (final String journey : main.includedJourneys.get(route)) {
+                allJourneys.add(Map.entry(route, journey));
             }
         }
-        else if (e instanceof PermissionDeniedException){
-            PermissionDeniedException exception= (PermissionDeniedException) e;
-            if (exception.getErrorFile().equals(Config.FILE_NAME)){
-                errorAlert.setTitle("Permission Denied!");
-                errorAlert.setHeaderText("Cannot access config file!");
-                errorAlert.setContentText("Check permission of home or document directory.");
-            }
-            else{
-                errorAlert.setTitle("Permission Denied!");
-                errorAlert.setHeaderText("Cannot access savefile!");
-                errorAlert.setContentText("Check permission of "+exception.getErrorFile()+", or run in root.");
+        if (allJourneys.isEmpty()) {
+            new Alert(AlertType.ERROR, "No journeys are included to pick from!").show();
+            return;
+        }
+        final Map.Entry<Route, String> picked = allJourneys.get(random.nextInt(allJourneys.size()));
+        final Route route = picked.getKey();
+
+        // Pick the route of the journey too
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
+
+        // After updateJourneyPane, which resets the picked journey
+        pickedJourney = picked.getValue();
+        textPickedJourney.setText(pickedJourney);
+    }
+
+    @FXML
+    private void onRandomScenario(ActionEvent event) {
+        final Main main = Main.getInstance();
+        if (pickedRoute == null) {
+            new Alert(AlertType.ERROR, "A route is not picked!").show();
+            return;
+        }
+
+        List<Scenario> includedScenarios = new ArrayList<>(main.includedScenarios.get(pickedRoute));
+        if (includedScenarios.isEmpty()) {
+            new Alert(AlertType.ERROR, "No scenarios are included to pick from!").show();
+            return;
+        }
+        pickedScenario = includedScenarios.get(random.nextInt(includedScenarios.size()));
+        textPickedScenario.setText(pickedScenario.name);
+        textScenarioDescription.setText(pickedScenario.getDescriptionString());
+    }
+
+    @FXML
+    private void onRandomScenarioAll(ActionEvent event) {
+        final Main main = Main.getInstance();
+
+        // Included scenarios of all included routes, paired with their route
+        final List<Map.Entry<Route, Scenario>> allScenarios = new ArrayList<>();
+        for (final Route route : main.includedRoutes) {
+            for (final Scenario scenario : main.includedScenarios.get(route)) {
+                allScenarios.add(Map.entry(route, scenario));
             }
         }
-        else{
-            errorAlert.setTitle("Unknown error!");
-            errorAlert.setHeaderText("Unknown exception thrown!");
-            errorAlert.setContentText("error Message:\n"+e.getMessage());
+        if (allScenarios.isEmpty()) {
+            new Alert(AlertType.ERROR, "No scenarios are included to pick from!").show();
+            return;
         }
-        errorAlert.show();
+        final Map.Entry<Route, Scenario> picked = allScenarios.get(random.nextInt(allScenarios.size()));
+        final Route route = picked.getKey();
+
+        // Pick the route of the scenario too
+        pickedRoute = route;
+        textPickedRoute.setText(route.name);
+        textRouteDescription.setText(route.getDescriptionString());
+        updateLocoPane(route);
+        updateJourneyPane(route);
+        updateScenarioPane(route);
+
+        // After updateScenarioPane, which resets the picked scenario
+        pickedScenario = picked.getValue();
+        textPickedScenario.setText(pickedScenario.name);
+        textScenarioDescription.setText(pickedScenario.getDescriptionString());
+    }
+
+    @FXML
+    private void onRandomAll(ActionEvent event) {
+        final Main main = Main.getInstance();
+
+        // Route first, the others depend on it
+        onRandomRoute(event);
+        if (main.includedRoutes.isEmpty()) return; // Route pick failed, alert already shown
+
+        // A new route resets the picked locomotive, so null means the pick failed
+        onRandomLoco(event);
+        if (pickedLoco != null) {
+            onRandomLivery(event);
+        }
+
+        onRandomJourney(event);
+        onRandomScenario(event);
     }
 }

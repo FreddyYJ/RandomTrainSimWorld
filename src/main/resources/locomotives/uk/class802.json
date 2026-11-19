@@ -1,0 +1,16 @@
+{
+  "name": "Class 802",
+  "nation": "UK",
+  "liveries": [
+    "GWR",
+    "Great British Railways"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "940 hp/700 kW (per motor)",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2017-2020",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 60,
+  "description": "The British Rail Class 802 is a type of high-speed bi-mode multiple-unit passenger train designed and produced by the Japanese manufacturer Hitachi Rail. The type has been operated by Great Western Railway, TransPennine Express, and Hull Trains, and each of the train operating companies has given the units their own unique brand: Great Western Railway's units are branded Intercity Express Trains (IETs), TransPennine Express units are branded Nova 1s and Hull Trains' units are branded Paragons."
+}

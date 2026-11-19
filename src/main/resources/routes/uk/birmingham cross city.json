@@ -1,0 +1,113 @@
+{
+  "name": "Birmingham Cross-City",
+  "locomotives": {
+    "uk/class170": [
+      "West Midlands Trains",
+      "CrossCountry"
+    ],
+    "uk/class323": [
+      "West Midlands Trains",
+      "Regional Railways"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class43": [
+      "GWR"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "Direct Rail Services",
+      "ONE",
+      "EWS RHTT"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class350": [
+      "London Northwestern Railway",
+      "West Midlands Trains"
+    ],
+    "uk/class390": [
+      "Avanti West Coast"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Cross City Class 170",
+    "Regional Railway",
+    "Midlands Mayhem"
+  ],
+  "scenario": {
+    "Rerouted": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 170 WMT"]
+    },
+    "Tunnel Trap": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["Class 170 WMT"]
+    },
+    "Icy Incline": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["Class 170 WMT"]
+    },
+    "Outstabled but Stable": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["Class 323 RR"]
+    },
+    "Misty Morning Start": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 323 RR"]
+    },
+    "Engineering a Shunt": {
+      "difficulty": 2,
+      "length": "1:40",
+      "locomotive": ["Class 323 RR"]
+    },
+    "Regional Speed Restrictions": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 323 RR"]
+    },
+    "Regional Rescue": {
+      "difficulty": 3,
+      "length": "1:20",
+      "locomotive": ["Class 323 RR"]
+    },
+    "Snow Problem": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Class 323 WMR"]
+    },
+    "Ludicrous Display": {
+      "difficulty": 2,
+      "length": "0:25",
+      "locomotive": ["Class 323 WMR"]
+    },
+    "Chocolate Train": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 323 WMR"]
+    },
+    "Red, Red Whine": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["Class 323 WMR"]
+    },
+    "Thunderstruck": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 323 WMR"]
+    }
+  },
+  "description": "All aboard for Brum! Climb onto one of the most unique modern trains in Britain, delve into dense commuter operations and explore West Midlands territory, including the famed Lickey Incline. Bustling duties await in Train Sim World®: Birmingham Cross-City Line: Lichfield - Bromsgrove & Redditch.\n\nThe bespoke and hard-working BR Class 323 arrives in Train Sim World® for non-stop modern-day action on the dense commuter network of Birmingham. In service for over 25 years, the Class 323 is renown for its distinctive charm, rapid performance, and unique design – having been built by Hunslet, a motive power veteran dating back to the 1860s.\n\nDressed in the latest West Midlands Railway livery, the BR Class 323 is the exclusive traction on the Cross-City Line. This unit works frequent services between Lichfield Trent Valley, Four Oaks and Birmingham New Street, onward to its two southern destinations of Redditch, and since 2018, Bromsgrove, which lies at the foot of the famed Lickey Incline, the steepest sustained mainline gradient in Britain.\n\nThe Cross-City Line itself is packed with rich history and culture. The earliest sections of the line date back to the 1830s, although it wasn’t considered a single network until the 1970s. One of the more notable stations on the line is Bournville, home to a Cadbury’s Chocolate Factory, which explains the station’s one-of-a-kind purple branding, matching the confectionery’s appearance. The factory alone draws in 100,000s of tourists, and being just 1 of the 25 stations on the route, it’s easy to see the line’s importance and popularity."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Class 86",
+  "nation": "UK",
+  "liveries": [
+    "BR",
+    "Intercity"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Doncaster Works, English Electric",
+  "power": "3.600-5,000 hp/2,685-3,728 kW",
+  "max_speed": "100-110 mph (161-177 km/h)",
+  "manufactured_year": "1965-1966",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 100,
+  "description": "The British Rail Class 86 is a type of electric locomotives built during the mid-1960s. Developed as a standard electric locomotive from earlier prototype models, one hundred were built during 1965–66 to haul trains on the then newly-electrified West Coast Main Line (WCML) from London Euston to Birmingham, Crewe, Liverpool, Manchester, and later Preston and Glasgow. Introduction of the class enabled the replacement of many steam locomotives, which were finally withdrawn by British Rail (BR) in 1968."
+}

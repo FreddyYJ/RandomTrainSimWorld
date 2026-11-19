@@ -1,0 +1,115 @@
+{
+  "name": "Ruhr-Sieg Nord",
+  "locomotives": {
+    "germany/br185": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br363": [
+      "DB"
+    ],
+    "germany/br112": [
+      "DB"
+    ],
+    "germany/br114": [
+      "DB"
+    ],
+    "germany/br140": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br155": [
+      "DB",
+      "Press"
+    ],
+    "germany/br182": [
+      "DB",
+      "Dispolok"
+    ],
+    "germany/br187": [
+      "DB"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br218": [
+      "DB"
+    ],
+    "germany/br294": [
+      "DB"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "BR 363 Journey",
+    "Ruhr Sieg Nord Journey"
+  ],
+  "scenario": {
+    "Letmathe Lite": {
+      "difficulty": 2,
+      "length": "0:15",
+      "locomotive": ["BR 155 DB"]
+    },
+    "Steel Cycle": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 155 DB"]
+    },
+    "Fossil Fuels": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["BR 155 DB"]
+    },
+    "Trunk Service": {
+      "difficulty": 2,
+      "length": "1:40",
+      "locomotive": ["BR 363 DB"]
+    },
+    "Steel Gaze": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["BR 363 DB"]
+    },
+    "Cement Mixer": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["BR 363 DB"]
+    },
+    "Rise and Shine": {
+      "difficulty": 3,
+      "length": "0:10",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Freight Exchange": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Returning Empty": {
+      "difficulty": 3,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "Storm Trail": {
+      "difficulty": 4,
+      "length": "1:00",
+      "locomotive": ["Doppelstockwagen DB"]
+    },
+    "Heavy Metal": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["BR 185 DB"]
+    }
+  },
+  "description": "Deep valleys, tight curves and picturesque vistas are yours to experience in Train Sim World®: Ruhr-Sieg Nord, bringing one of Germany’s oldest railways to life. Operate your trains over the historic rails of the Ruhr Valley and keep to the precise timetable. Reproduced in exquisite detail, every station, signal and milepost feel so real you could almost reach out and touch them.\n\nIt’s your job to carry freight and passengers over the historic Ruhr-Sieg Railway. Manage your powerful locomotives over the twisting railway carving its way through the Ruhr Valley and deliver your cargo on-time. Whether you’re driving, riding along or watching the action, experience all the sights and sounds of German railways at their best.\n\nTake control of two icons of German electric motive power, the DB BR 185.2 freight locomotive and the DB BR 143 mixed traffic locomotive. Featuring an authentic AC Electric simulation underpinned with expert technical knowledge and real-world data, the performance, sounds and feel has been accurately reproduced to make them feel just like the real thing."
+}

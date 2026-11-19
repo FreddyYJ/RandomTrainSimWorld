@@ -1,0 +1,15 @@
+{
+  "name": "ALP-46",
+  "nation": "USA",
+  "liveries": [
+    "NJT"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Bombardier, ADtranz",
+  "power": "7,108 hp/5,300 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2001-2002",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 29,
+  "description": "The Bombardier ALP-46 is an electric locomotive built in Germany by Bombardier between 2001 and 2002 (and 2009–2011 for the ALP-46A) for use in the United States. It is derived from the German Class 101. New Jersey Transit (NJT) is the only railroad to operate this locomotive model, which is used across the electrified NJT system, specifically on the Northeast Corridor, North Jersey Coast, Morris & Essex, and Montclair-Boonton lines. These locomotives replaced the 32 ALP-44 locomotives, which were all retired by 2012."
+}

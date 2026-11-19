@@ -1,0 +1,15 @@
+{
+  "name": "Class 33",
+  "nation": "UK",
+  "liveries": [
+    "Green"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Birmingham Railway Carriage and Wagon Company",
+  "power": "1,550 hp/1,156 kW",
+  "max_speed": "85 mph (140 km/h)",
+  "manufactured_year": "1960-1962",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 98,
+  "description": "The British Rail Class 33, also known as the BRCW Type 3 or Crompton, is a class of Bo-Bo diesel-electric locomotives, ordered in 1957 and built for the Southern Region of British Railways between 1960 and 1962."
+}

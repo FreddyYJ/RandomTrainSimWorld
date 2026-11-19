@@ -1,0 +1,99 @@
+{
+  "name": "Arosalinie",
+  "locomotives": {
+    "switzerland/ge-44-ii": [
+      "Rhätische Bahn",
+      "Rhätische Bahn 619 Bernina",
+      "Rhätische Bahn 620 Bever-Scuol",
+      "Rhätische Bahn 622 Hakone Tozan",
+      "Rhätische Bahn 623 Anni-Jahre",
+      "Rhätische Bahn 627 Chur-Arosa",
+      "Rhätische Bahn 629 Neubau Albulatunnel",
+      "Rhätische Bahn 630 Chur-Disentis"
+    ]
+  },
+  "nation": "Switzerland",
+  "journey": [
+    "Arosa Line",
+    "Arosa Line Freight Pack",
+    "Arosa Line RhB Anniversary Collection"
+  ],
+  "scenario": {
+    "Arosa Northbound": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Ge 4/4 II RhB"]
+    },
+    "Arosa Southbound": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Ge 4/4 II RhB"]
+    },
+    "Timber Log Delivery": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Ge 4/4 II RhB"]
+    },
+    "Unloaded Wagon Wonderland": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["Ge 4/4 II RhB"]
+    },
+    "Tourist Excursion": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Ge 4/4 II RhB"]
+    },
+    "A Mixed Bag": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Ge 4/4 II RhB 622 Hakone Tozan"]
+    },
+    "Rolling Stones": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Ge 4/4 II RhB 622 Hakone Tozan"]
+    },
+    "Mail Delivery": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Ge 4/4 II RhB 629 Neubau Albulatunnel"]
+    },
+    "Uphill Haul": {
+      "difficulty": 4,
+      "length": "1:15",
+      "locomotive": ["Ge 4/4 II RhB 622 Hakone Tozan"]
+    },
+    "Mountain Rescue": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Ge 4/4 II RhB 629 Neubau Albulatunnel"]
+    },
+    "Alpine Photoshoot": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Ge 4/4 II RhB 619 Bernina"]
+    },
+    "Open Air Travel": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["Ge 4/4 II RhB 620 Bever-Scuol"]
+    },
+    "Waterlogged": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Ge 4/4 II RhB 623 Anni-Jahre"]
+    },
+    "Christmas Delivery": {
+      "difficulty": 2,
+      "length": "1:15",
+      "locomotive": ["Ge 4/4 II RhB 630 Chur-Disentis"]
+    },
+    "Tis The Season": {
+      "difficulty": 1,
+      "length": "1:10",
+      "locomotive": ["Ge 4/4 II RhB 627 Chur-Arosa"]
+    }
+  },
+  "description": "Experience nail-biting gradients, stunning Swiss scenery and classic motive power with Rivet Games’ Train Sim World®: Arosalinie!\n\nFrom Chur, the oldest town in Switzerland, to the summer and winter resorts at Arosa, the Arosalinie dates back to 1914 and represents the ultimate in rail engineering. With the use of numerous hairpin turns, mountainside tunnels and gradients as steep as 6%, this electrified, metre gauge railway line winds its way through the picturesque Schanfigg valley and offers vital connections for locals, is used to transport resources, and is popular with tourists. The sedate nature of the Arosalinie allows for prolonged exposure to the surrounding terrain, with the journey from end to the other taking about an hour.\n\nIt’s your job to take charge of the services along this stunning line; link remote communities together, take holidaymakers up through the mountains, and experience the unique blend of hauling both passenger and freight in the same consist.\n\nTake control of the classic RhB Ge 4/4 II electric locomotive, manage your speed and stick the timetable as you climb or descend over a kilometre in elevation, slowly drive through the streets of Chur and marvel at the grand Langwieser Viaduct."
+}

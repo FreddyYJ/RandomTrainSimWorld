@@ -1,0 +1,15 @@
+{
+  "name": "Class 805",
+  "nation": "UK",
+  "liveries": [
+    "Avanti West Coast"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "940 hp/700 kW (per motor)",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2021-2024",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 13,
+  "description": "The British Rail Class 805 Evero is a type of bi-mode multiple unit built by Hitachi Rail for Avanti West Coast. Part of the Hitachi AT300 family, 13 five-car units were built to replace Class 221s on services between London Euston, Birmingham New Street, Chester and stations on the North Wales Coast lines. Their introduction allowed the elimination of long-distance diesel working on electrified routes."
+}

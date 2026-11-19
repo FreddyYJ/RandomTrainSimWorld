@@ -1,0 +1,15 @@
+{
+  "name": "Class 70",
+  "nation": "UK",
+  "liveries": [
+    "Freightliner"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "General Electric",
+  "power": "3,690 hp/2,750 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "2008-2017",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 37,
+  "description": "The British Rail Class 70 is a Co-Co mainline freight GE PowerHaul locomotive series manufactured by General Electric in Erie, Pennsylvania, United States. They are operated in the United Kingdom by Freightliner and Colas Rail. These locomotives replaced the Class 59 as having the highest tractive effort of any Co-Co Diesel locomotive in use in the United Kingdom when they were introduced."
+}

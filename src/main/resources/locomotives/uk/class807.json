@@ -1,0 +1,15 @@
+{
+  "name": "Class 807",
+  "nation": "UK",
+  "liveries": [
+    "Avanti West Coast"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "940 hp/700 kW (per motor)",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2021-2025",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 10,
+  "description": "The British Rail Class 807 Evero is a type of electric multiple unit belonging to the Hitachi AT300 family, wihch were built by Hitachi Rail for train operator Avanti West Coast. Based on the Hitachi A-train design, a total of 10 seven-car units have been produced."
+}

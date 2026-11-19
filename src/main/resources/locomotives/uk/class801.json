@@ -1,0 +1,15 @@
+{
+  "name": "Class 801",
+  "nation": "UK",
+  "liveries": [
+    "LNER"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Hitachi",
+  "power": "303 hp/226 kW (per motor)",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2017-2020",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 42,
+  "description": "The British Rail Class 801 Azuma is a class of electric multiple unit (EMU) built by Hitachi Rail for London North Eastern Railway. The units have been built since 2017 at Hitachi's Newton Aycliffe Manufacturing Facility and have been used on services on the East Coast Main Line since 16 September 2019. As part of its production, the Class 801 units were ordered as part of the Intercity Express Programme and are in the Hitachi AT300 product family, alongside the closely related Class 800 units. LNER have branded the units as the Azuma, just like on their Class 800 units."
+}

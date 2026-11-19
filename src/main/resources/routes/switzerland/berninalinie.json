@@ -1,0 +1,40 @@
+{
+  "name": "Berninalinie",
+  "locomotives": {
+    "switzerland/allegra-8-12": [
+      "Rhätische Bahn"
+    ]
+  },
+  "nation": "Switzerland",
+  "journey": [
+    "Berninalinie"
+  ],
+  "scenario": {
+    "Scenic Views": {
+      "difficulty": 2,
+      "length": "1:35",
+      "locomotive": ["Allegra 8/12 RhB"]
+    },
+    "Early Morning Shift": {
+      "difficulty": 3,
+      "length": "0:55",
+      "locomotive": ["Allegra 8/12 RhB"]
+    },
+    "Hot Wheels": {
+      "difficulty": 4,
+      "length": "1:30",
+      "locomotive": ["Allegra 8/12 RhB"]
+    },
+    "Close Call Delivery": {
+      "difficulty": 3,
+      "length": "1:55",
+      "locomotive": ["Allegra 8/12 RhB"]
+    },
+    "A Train Filled with Christmas Spirit": {
+      "difficulty": 2,
+      "length": "1:45",
+      "locomotive": ["Allegra 8/12 RhB"]
+    }
+  },
+  "description": "Adventure to the Alps and traverse narrow-gauge territory, drive famed RhB services as you climb, descend and weave your way through the cross-border peaks of Switzerland, and for the first time, Italy. You are invited into the stunning Alpine landscape of Europe, with Rivet Games’ Berninalinie for Train Sim World®!\n\nStretching across the top of the Swiss Bernina Pass at Ospizio Bernina, over 2km above sea level, and making a daring path along the sides of mountains to the town of Tirano, marking Italy’s debut in Train Sim World, the Berninalinie ranks among the highest railways in Europe, and the World’s steepest, bearing down or steadily climbing 7% (1:14) gradients.\n\nPacked with detail, the picturesque Swiss Alps tower over this metre-gauge spectacle, from the hairpin turns and tunnels of Alp Grüm, to the unmistakable Brusio Spiral Viaduct. The slower pace of valley running gives one a chance to take in the views, either as a driver or fully relaxing as a passenger."
+}

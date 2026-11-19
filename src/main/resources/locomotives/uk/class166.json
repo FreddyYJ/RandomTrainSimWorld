@@ -1,0 +1,16 @@
+{
+  "name": "Class 166",
+  "nation": "UK",
+  "liveries": [
+    "GWR",
+    "GBR"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "ABB",
+  "power": "350 hp/260 kW (per engine)",
+  "max_speed": "90 mph (145 km/h)",
+  "manufactured_year": "1993-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 21,
+  "description": "The British Rail Class 166 Networker Turbo is a fleet of diesel-hydraulic multiple unit passenger trains, built by ABB Transportation at their Holgate Road Works in York between 1992 and 1993. They were specified by and built for British Rail, the state-owned railway operator in Great Britain at the time. The trains were designed as a faster, air-conditioned variant of the Class 165 Turbo, intended for longer-distance services, and, like the 165s, belong to the Networker family of trains. They are known as Networker Turbos to distinguish them from the electrically propelled members of that family. Today the 166s, alongside the 165s, are normally referred to as Thames Turbos, the Networker Turbo Express or just simply Turbos."
+}

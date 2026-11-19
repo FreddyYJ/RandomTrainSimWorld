@@ -1,0 +1,15 @@
+{
+  "name": "Class 380",
+  "nation": "UK",
+  "liveries": [
+    "ScotRail"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Siemens",
+  "power": "2,682 hp/2,000 kW",
+  "max_speed": "100 mph (161 km/h)",
+  "manufactured_year": "2009-2011",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 38,
+  "description": "The British Rail Class 380 Desiro is a type of electric multiple unit passenger train that operates on the National Rail network in Scotland, for ScotRail on various routes out of Glasgow Central. The three- and four-carriage trains were built in Germany by Siemens Mobility and entered into service in 2010."
+}

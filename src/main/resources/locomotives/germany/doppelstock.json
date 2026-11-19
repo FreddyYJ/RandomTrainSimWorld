@@ -1,0 +1,16 @@
+{
+  "name": "BR 766/767 Doppenstockwagen",
+  "nation": "Germany",
+  "liveries": [
+    "DB BR 766 DBpbzfa",
+    "DB BR 767 DABpbzfa"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "N/A",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1997-2025",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 55,
+  "description": "The Double-deck Coach is a bilevel passenger railcar used by various European railways and Israel Railways. It was manufactured by Alstom until 2025, and previously by Bombardier Transportation (until 2021), Adtranz, and DWA/Waggonbau Görlitz. The current generation of double-deck coaches can be run at speeds up to 200 km/h (125 mph). Depending on their configuration, each coach can seat 100 to 150 passengers."
+}

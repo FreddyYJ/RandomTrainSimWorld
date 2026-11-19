@@ -1,0 +1,50 @@
+{
+  "name": "Luzern Sursee",
+  "locomotives": {
+    "switzerland/rabe-523": [
+      "SBB CFF FFS"
+    ]
+  },
+  "nation": "Switzerland",
+  "journey": [
+    "The S-Bahn Zentralschweiz Journey"
+  ],
+  "scenario": {
+    "There And Back Again": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["RABe 523"]
+    },
+    "The Shower Express": {
+      "difficulty": 2,
+      "length": "0:40",
+      "locomotive": ["RABe 523"]
+    },
+    "Slippery Season": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["RABe 523"]
+    },
+    "Midnight Rush": {
+      "difficulty": 4,
+      "length": "0:50",
+      "locomotive": ["RABe 523"]
+    },
+    "Shedding The Weight": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["RABe 523"]
+    },
+    "Unexpected Express": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["RABe 523"]
+    },
+    "Detour Aid": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["RABe 523"]
+    }
+  },
+  "description": "Experience the thrill of racing around tight bends, tackling steep gradients, and providing an intense passenger service in the heart of Switzerland. State-of-the-art traction and systems await with Rivet Games’ S-Bahn Zentralschweiz: Luzern - Sursee!\n\nThe Central Switzerland S-Bahn project was introduced in 2004 to bring together the various regional lines around Luzern and Zug into a more centrally orientated commuter network, the heart of which is Luzern Railway Station. The network was broken up into many different lines, and the S1 traverses the rails of the former Oltern-Luzern railway, which dates back to 1856. Today the line is important as ever, serving as a commuter corridor linking together the towns within the canton of Luzern.\n\nIt’s your job to take control of the varied passenger services on this route. Take in the sights of Lake Sempach, Reuss and Kleine Emme Rivers, and weave through towns and industrial estates on both stopping S1 and Regional Express services between Luzern and Sursee."
+}

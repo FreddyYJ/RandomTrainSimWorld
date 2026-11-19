@@ -1,0 +1,15 @@
+{
+  "name": "BR 612",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "Bombardier, ADtranz",
+  "power": "1,510 hp/1,126 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "1998-2003",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 192,
+  "description": "The Class are a two car tilting DMU built between 1998 and 2003 by Adtranz, which Bombardier Transportation later acquired, in Hennigsdorf. The class are also known as RegioSwingers.\n\nThey were developed to replace the problematic DB Class 611. The sets worked fine between 1998 and 2004 until cracks were detected in a number of wheelsets and so the tilting system was disabled and curves on lines had to have reduced speed limits, which affected the timetables and connections. From 2005 the trains had the wheelsets replaced and the tilting system was back up and running. The maximum tilt is 8°.\n\nAfter ICE TD class 605 was grounded due to a fracture of an axle in one unit, it was replaced by class 612 on the Dresden-Munich line 2003, as replacement by anything other than a tilting DMU would have meant an extension of travel time. Even though class 612 was not constructed for ICE-type travelling comfort, 16 units were repainted in the ICE paint scheme and renumbered as class 612.4.\n\nThe RegioSwinger design is also used by Croatian Railways as class HŽ 7123."
+}

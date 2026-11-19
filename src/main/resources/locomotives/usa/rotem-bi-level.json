@@ -1,0 +1,16 @@
+{
+  "name": "Rotem Bi-Level Cab Car",
+  "nation": "USA",
+  "liveries": [
+    "Metrolink",
+    "Tri-Rail"
+  ],
+  "type": "Cab Car",
+  "manufacturer": "Hyundai Rotem",
+  "power": "N/A",
+  "max_speed": "N/A",
+  "manufactured_year": "N/A",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 0,
+  "description": "Rotem Commuter Cars are a series of multi-level passenger rail cars for commuter rail operations. They are manufactured by Hyundai Rotem."
+}

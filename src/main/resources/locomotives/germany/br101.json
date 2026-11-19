@@ -1,0 +1,19 @@
+{
+  "name": "BR 101",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "DB Expert",
+    "DB Expert Einziganders",
+    "DB Expert (MFD)",
+    "DB Expert (IC)"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "Adtranz",
+  "power": "8,583 hp/6,400 kW",
+  "max_speed": "200 km/h (125 mph)",
+  "manufactured_year": "1996-2002",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 145,
+  "description": "The DB Class 101 is a class of three-phase electric locomotives built by Adtranz and operated by DB Fernverkehr in Germany. 145 locomotives were built between 1996 and 1999 to replace the 30-year-old and aging Class 103 as the flagship of the Deutsche Bahn, primarily hauling Intercity services. As of 2026, this class is currently being retired and scrapped.\n\nIn the United States, the Bombardier ALP-46 is derived from the DB Class 101. The Bombardier Traxx shares a common heritage."
+}

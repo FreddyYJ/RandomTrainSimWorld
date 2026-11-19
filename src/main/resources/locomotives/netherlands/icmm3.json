@@ -1,0 +1,15 @@
+{
+  "name": "ICMm3",
+  "nation": "Netherlands",
+  "liveries": [
+    "Nederlandse Spoorwegen"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Talbot",
+  "power": "1,674-2,510 hp/1,248-1,872 kW",
+  "max_speed": "140 km/h (87 mph)",
+  "manufactured_year": "1990-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 30,
+  "description": "The Intercity Materieel (or ICM) (lit. transl. Intercity Material – transl. Intercity Rolling Stock) is an electric multiple unit (EMU) train type operated by the Nederlandse Spoorwegen in the Netherlands. The train received the nickname Koploper, because it had a so-called \"walk through head\". After these trains were modernized, the \"walk through heads\" were removed. The modernized train sets are referred to as Intercity Materieel Modern (ICMm)."
+}

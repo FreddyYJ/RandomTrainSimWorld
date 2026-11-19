@@ -1,0 +1,19 @@
+{
+  "name": "Class 47",
+  "nation": "UK",
+  "liveries": [
+    "BR",
+    "RailFreight",
+    "Intercity",
+    "Green",
+    "47484"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Brush Traction, British Rail Crewe Works",
+  "power": "2,580 hp/1,920 kW",
+  "max_speed": "75-95 mph (121-153 km/h)",
+  "manufactured_year": "1962-1968",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 512,
+  "description": "The British Rail Class 47 or Brush Type 4 is a class of diesel-electric locomotive that was developed in the 1960s by Brush Traction. A total of 512 Class 47s were built at Brush's Falcon Works in Loughborough and at British Railways' Crewe Works between 1962 and 1968, which made them the most numerous class of British mainline diesel locomotive."
+}

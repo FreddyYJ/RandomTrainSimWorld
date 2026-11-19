@@ -1,0 +1,15 @@
+{
+  "name": "RABe 523",
+  "nation": "Switzerland",
+  "liveries": [
+    "SBB CFF FFS"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Stadler",
+  "power": "2,350 hp/1,750 kW",
+  "max_speed": "160 km/h (99 mph)",
+  "manufactured_year": "2004-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 43,
+  "description": "Stadler FLIRT (Fast Light Innovative Regional Train) is a family of passenger multiple unit trainsets made by Stadler Rail of Switzerland. The trains have a maximum speed of 127 to 200 kilometres per hour (79 to 124 mph)."
+}

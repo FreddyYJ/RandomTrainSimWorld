@@ -1,0 +1,15 @@
+{
+  "name": "M8",
+  "nation": "USA",
+  "liveries": [
+    "Metro-North Railroad"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Kawasaki",
+  "power": "2,200 hp/1,600 kW (per unit)",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "2011-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 465,
+  "description": "The M8 is an electric multiple unit railroad car built by Kawasaki for use on the Metro-North Railroad New Haven Line and the CT Rail Shore Line East. The fleet of 471 cars first entered service in 2011, replacing the M2, M4 and M6 cars, which entered service in 1973, 1987 and 1994, respectively.[9] An additional 60-car order is currently finishing delivery in response to increased ridership and usage on Shore Line East."
+}

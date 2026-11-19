@@ -1,0 +1,83 @@
+{
+  "name": "Frankfurt S-Bahn: S1, S8 & S9",
+  "locomotives": {
+    "germany/br423": [
+      "DB"
+    ],
+    "germany/br430": [
+      "DB"
+    ],
+    "germany/br143": [
+      "DB"
+    ],
+    "germany/doppelstock": [
+      "DB BR 766",
+      "DB BR 767"
+    ],
+    "germany/br101": [
+      "DB"
+    ],
+    "germany/br145": [
+      "DB Expert",
+      "RBH Expert"
+    ],
+    "germany/br193": [
+      "DB",
+      "Railpool"
+    ],
+    "germany/br363": [
+      "DB",
+      "DBB"
+    ],
+    "germany/br401": [
+      "DB"
+    ],
+    "germany/br403": [
+      "DB"
+    ],
+    "germany/br411": [
+      "DB"
+    ],
+    "germany/br425": [
+      "DB"
+    ],
+    "germany/br642": [
+      "DB"
+    ],
+    "germany/g6": [
+      "DB Vossloh"
+    ]
+  },
+  "nation": "Germany",
+  "journey": [
+    "Split Focus"
+  ],
+  "scenario": {
+    "S-Bahn Breakdown": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 430 DB"]
+    },
+    "Regionalbahn Breakdown": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["BR 143 DB", "Doppelstockwagen DB"]
+    },
+    "Flip Flop": {
+      "difficulty": 1,
+      "length": "1:00",
+      "locomotive": ["BR 430 DB", "BR 143 DB"]
+    },
+    "Hear That Train A Comin'": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["BR 430 DB"]
+    },
+    "Triple Header": {
+      "difficulty": 1,
+      "length": "0:50",
+      "locomotive": ["BR 430 DB"]
+    }
+  },
+  "description": "Sprawling rails, stations galore and services in all directions – welcome to the Frankfurt S-Bahn: S1, S8 & S9 in Train Sim World®!\n\nThe S-Bahn Rhein-Main came about in the late 1970s, when various routes out of Frankfurt were brought together as a single network. Also built and added onto the network was a connection to Frankfurt Airport, both the S-Bahn itself in 1980, and long-distance trains in 1999.\n\nOver time, many additions and modifications have been made to the network to match increasing demand. In 2018, multiple lines introduced nightly operations, offering 24/7 service in and out of bustling Frankfurt."
+}

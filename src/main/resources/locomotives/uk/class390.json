@@ -1,0 +1,15 @@
+{
+  "name": "Class 390",
+  "nation": "UK",
+  "liveries": [
+    "Avanti West Coast"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Alstom, Fiat Ferroviaria",
+  "power": "1,160 hp/860 kW",
+  "max_speed": "125 mph (200 km/h)",
+  "manufactured_year": "2001-2005, 2010-2012",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 57,
+  "description": "The British Rail Class 390 Pendolino is a type of electric high-speed passenger train operated by Avanti West Coast in Great Britain, leased from Angel Trains.[3] They are electric multiple units, using Fiat Ferroviaria's tilting train Pendolino technology and built by Alstom."
+}

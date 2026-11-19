@@ -1,0 +1,100 @@
+{
+  "name": "San Bernardino Line: Los Angeles-San Bernardino",
+  "locomotives": {
+    "usa/mp36ph-3c": [
+      "Metrolink"
+    ],
+    "usa/rotem-bi-level": [
+      "Metrolink"
+    ],
+    "usa/f125": [
+      "Metrolink",
+      "Metrolink Christmas"
+    ],
+    "usa/gp60m": [
+      "BNSF H2",
+      "BNSF H4"
+    ],
+    "usa/f59phr": [
+      "Metrolink"
+    ],
+    "usa/es44c4": [
+      "BNSF"
+    ],
+    "usa/sd70ace": [
+      "BNSF"
+    ],
+    "usa/sd40-2": [
+      "BNSF"
+    ]
+  },
+  "nation": "USA",
+  "journey": [
+    "Metrolink Master",
+    "Metrolink Merriment",
+    "Super Fleet GP60M"
+  ],
+  "scenario": {
+    "Race Way": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["MP36PH-3C Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Depot Days": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["MP36PH-3C Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Eye of the Storm": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["MP36PH-3C Metrolink"]
+    },
+    "Rescue at the Ranch": {
+      "difficulty": 2,
+      "length": "1:05",
+      "locomotive": ["MP36PH-3C Metrolink", "Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Graduation Day": {
+      "difficulty": 3,
+      "length": "0:30",
+      "locomotive": ["Rotem Bi-Level Cab Car Metrolink"]
+    },
+    "Deck The Halls": {
+      "difficulty": 2,
+      "length": "0:30",
+      "locomotive": ["F125 Metrolink Christmas"]
+    },
+    "Santa's Coming to Town": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["F125 Metrolink Christmas"]
+    },
+    "Driving Home for Christmas": {
+      "difficulty": 2,
+      "length": "0:35",
+      "locomotive": ["F125 Metrolink Christmas"]
+    },
+    "Intermodal Transfer": {
+      "difficulty": 1,
+      "length": "0:35",
+      "locomotive": ["GP60M BNSF H4"]
+    },
+    "Kaiser First Road-Switcher": {
+      "difficulty": 4,
+      "length": "1:20",
+      "locomotive": ["GP60M BNSF H4"]
+    },
+    "Pasadena Sub Local": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["GP60M BNSF H2"]
+    },
+    "Steel Haul": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["GP60M BNSF H4"]
+    }
+  },
+  "description": "The might of Metrolink takes a turn out of sprawling Los Angeles for an east-west express in Train Sim World®. Dash between highways and city blocks in bullet-esque fashion, soaking in the sun and soaring to the industry-laden outskirts of the San Gabriel Mountains along the San Bernardino Line.\n\nOpen the throttle on Metrolink's regional passenger service with 2 icons of Californian rail. The striking MP36, often dubbed the Baby Bullet, works in tandem with the modern F125 “Spirit” on the daily duties out of LA’s Union Station. Facing East, diesel equipment duty takes passengers on a sunny trip to San Bernardino. Run back in the cab of Rotem, with mixed bi-level formations in-between, offering a different perspective for the returning rush towards LA."
+}

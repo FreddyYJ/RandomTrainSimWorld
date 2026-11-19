@@ -1,0 +1,88 @@
+{
+  "name": "Fife Circle Line: Edinburgh-Kirkcaldy & Dunfermline",
+  "locomotives": {
+    "uk/class158": [
+      "ScotRail"
+    ],
+    "uk/class170": [
+      "ScotRail"
+    ],
+    "uk/class40": [
+      "BR"
+    ],
+    "uk/class43": [
+      "GWR",
+      "GWR Vinyl Logo",
+      "43002",
+      "43185"
+    ],
+    "uk/class66": [
+      "DB",
+      "EWS",
+      "EWS RHTT"
+    ],
+    "uk/class220": [
+      "CrossCountry"
+    ],
+    "uk/class380": [
+      "ScotRail"
+    ],
+    "uk/class385": [
+      "ScotRail"
+    ],
+    "uk/jubilee": [
+      "Black"
+    ],
+    "uk/flying-scotsman": [
+      "Flying Scotsman"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Sprinter Express",
+    "Fife Circle Line"
+  ],
+  "scenario": {
+    "1L70 Perth-Edinburgh": {
+      "difficulty": 1,
+      "length": "0:45",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "2G75 Edinburgh-Glenrothes with Thornton": {
+      "difficulty": 2,
+      "length": "1:10",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "5K11 Empty Stock to Haymarket": {
+      "difficulty": 3,
+      "length": "0:50",
+      "locomotive": ["Class 158 ScotRail"]
+    },
+    "Fun Around The Firth": {
+      "difficulty": 1,
+      "length": "0:55",
+      "locomotive": ["Class 170 ScotRail"]
+    },
+    "Coming Full Circle": {
+      "difficulty": 2,
+      "length": "1:50",
+      "locomotive": ["Class 170 ScotRail"]
+    },
+    "High Winds": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["Class 170 ScotRail"]
+    },
+    "Scattered Spares": {
+      "difficulty": 3,
+      "length": "1:00",
+      "locomotive": ["Class 170 ScotRail"]
+    },
+    "Railway Rubbish": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 170 ScotRail"]
+    }
+  },
+  "description": "From the Scottish Capital to the Firth of Forth Lowlands, embark on key passenger services over iconic cantilevers and along picturesque coastline. ScotRail Turbos star in the spotlight, as this modern diesel legend populates the round-and-round rails of Rivet Games’ Fife Circle Line in Train Sim World® – now featuring the brand new Levenmouth Rail Link!\n\nWith a history dating back to the 1840s, what is operated today as the Fife Circle Line was built by multiple companies. Over time, lots of branch lines started to appear in both the regions of Fife and Lothian. However, there is one key obstacle which prevented the lines from initially joining up: the Firth of Forth, a mile-wide estuary north of Edinburgh.\n\nConstruction of the almighty Forth Bridge in 1890 changed everything. Spanning over 8000 ft, the cantilever bridge carried the railway high above the water and opened a vital connection between north and south. This led to the linking of lines via the coast, which itself is an extension of the East Coast Main Line, as well as the “loop line” which splits off at Inverkeithing and Kirkcaldy, via the city of Dunfermline."
+}

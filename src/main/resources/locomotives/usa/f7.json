@@ -1,0 +1,16 @@
+{
+  "name": "F7",
+  "nation": "USA",
+  "liveries": [
+    "ATSF",
+    "Clinchfield Railroad"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD), General Motors Diesel (GMD)",
+  "power": "1,500 hp/1,100 kW",
+  "max_speed": "65-102 mph (105-164 km/h)",
+  "manufactured_year": "1949-1953",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 2393,
+  "description": "The EMD F7 is a model of 1,500-horsepower (1,100 kW) diesel-electric locomotive produced between February 1949 and December 1953 by the Electro-Motive Division of General Motors (EMD) and General Motors Diesel (GMD)."
+}

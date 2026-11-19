@@ -1,0 +1,15 @@
+{
+  "name": "Fowler 4F Class",
+  "nation": "UK",
+  "liveries": [
+    "Fowler 4F"
+  ],
+  "type": "Steam Locomotive",
+  "manufacturer": "Derby Works, Crewe Works, St. Rollox Works, Horwich Works, North British Loco, Kerr/Stuart & Co., Andrew Barclay Sons & Co.",
+  "power": "N/A",
+  "max_speed": "N/A",
+  "manufactured_year": "1924-1941",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 575,
+  "description": "The London, Midland and Scottish Railway (LMS) Fowler Class 4F is a class of 0-6-0 steam locomotive designed for medium freight work. They represent the ultimate development of the Midland Railway's six-coupled tender engines. Many trainspotters knew them as \"Duck Sixes\", a nickname derived from their wheel arrangement."
+}

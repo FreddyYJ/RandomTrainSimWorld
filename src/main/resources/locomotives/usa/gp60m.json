@@ -1,0 +1,16 @@
+{
+  "name": "GP60M",
+  "nation": "USA",
+  "liveries": [
+    "BNSF H2",
+    "BNSF H4"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD)",
+  "power": "3,800 hp/2,800 kW",
+  "max_speed": "65 mph (105 km/h)",
+  "manufactured_year": "1985-1994",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 63,
+  "description": "The EMD GP60 is a model of 4-axle (B-B) diesel-electric locomotive built by General Motors Electro-Motive Division between 1985 and 1994. The GP60 was EMD's first engine that was classified as a \"third-generation\" locomotive. Hidden behind the electrical cabinet doors on the rear wall of the cab, the GP60 concealed a trio of microprocessors that monitored and managed a host of engine, cooling system and control functions. The engine's on-board microprocessors replaced hundreds of wiring circuits, dozens of relays and all but one module card, making it an improvement among EMD's engines."
+}

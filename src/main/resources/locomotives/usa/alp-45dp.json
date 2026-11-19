@@ -1,0 +1,15 @@
+{
+  "name": "ALP-45DP",
+  "nation": "USA",
+  "liveries": [
+    "NJT"
+  ],
+  "type": "Electric Diesel Dual Locomotive",
+  "manufacturer": "Bombardier, Alstom",
+  "power": "5,900 hp/4,400 kW (electric), 2,734 hp/2,039 kW (diesel)",
+  "max_speed": "125 mph (201 km/h) (electric), 100 mph (161 km/h) (diesel)",
+  "manufactured_year": "2010-2012, 2019-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 72,
+  "description": "The Bombardier ALP-45DP is a type of single cab dual-mode locomotive operated by New Jersey Transit and Exo. The locomotive was designed and originally built by Bombardier until 2021, and by Alstom since 2021."
+}

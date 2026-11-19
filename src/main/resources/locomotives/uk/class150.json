@@ -1,0 +1,18 @@
+{
+  "name": "Class 150",
+  "nation": "UK",
+  "liveries": [
+    "Transport for Wales",
+    "Arriva Trains Wales",
+    "GWR",
+    "Regional Railways"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "286 hp/213 kW (per engine)",
+  "max_speed": "75 mph (120 km/h)",
+  "manufactured_year": "1984-1987",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 137,
+  "description": "The British Rail Class 150 Sprinter is a class of diesel-hydraulic multiple unit passenger trains; they were developed and built by British Rail Engineering Limited at York Carriage Works between 1984 and 1987, for use on regional services across Great Britain. The type is a second-generation design, built to more modern standards and based on British Rail's Mark 3 body design for longer-distance services. It was developed alongside the lower-cost Pacers, which were built using bus parts for use on short-distance services. Two prototype units were built, followed by 135 production units in two batches. Further members of the Sprinter group were developed subsequently and introduced to service, including the Class 155, Class 156, Class 158 and Class 159."
+}

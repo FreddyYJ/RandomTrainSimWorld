@@ -1,0 +1,15 @@
+{
+  "name": "Allegra ABe 8/12",
+  "nation": "Switzerland",
+  "liveries": [
+    "Rhätische Bahn"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Stadler",
+  "power": "3,220-3,490 hp/2,400-2,600 kW",
+  "max_speed": "100 km/h (62 mph)",
+  "manufactured_year": "2009-2011",
+  "gauge": "Meter Gauge (1,000 mm)",
+  "total": 15,
+  "description": "The Rhaetian Railway ABe 8/12, which is also known as the Allegra, is a class of dual voltage metre gauge three car multiple unit trains of the Rhaetian Railway (RhB), which is the main railway network in the canton of Graubünden, Switzerland."
+}

@@ -1,0 +1,15 @@
+{
+  "name": "HSP46",
+  "nation": "USA",
+  "liveries": [
+    "MBTA"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "MotivePower",
+  "power": "4,650 hp/3,470 kW",
+  "max_speed": "80 mph (129 km/h)",
+  "manufactured_year": "2013-2014",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 40,
+  "description": "The MPI HSP46 is a four-axle AC-traction diesel-electric locomotive for commuter trains, designed and assembled by MotivePower. It meets EPA Tier 3 emissions standards. The launch customer is the Massachusetts Bay Transportation Authority (MBTA), whose first unit entered revenue service in April 2014."
+}

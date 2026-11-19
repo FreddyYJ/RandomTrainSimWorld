@@ -1,0 +1,15 @@
+{
+  "name": "TGV Duplex 200",
+  "nation": "France",
+  "liveries": [
+    "SNCF"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Alstom",
+  "power": "11,801 hp/8,800 kW",
+  "max_speed": "320 km/h (200 mph)",
+  "manufactured_year": "1995-2023",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 160,
+  "description": "The TGV Duplex is a French high-speed train of the TGV family, manufactured by Alstom, and operated by the French national railway company SNCF. They were the first TGV trainsets to use bi-level passenger carriages with a seating capacity of 508 passengers, increasing capacity on busy high-speed lines. While the TGV Duplex started as a small component of the TGV fleet, it has become one of the system's workhorses.\n\nA total of 160 Duplex trainsets were built: the original order of 89 first constructed in 1995, an additional 19 Réseau Duplex trainsets created as an extension of the TGV POS project in 2006, and 52 second-generation Dasye trainsets were first delivered in 2007 with revised traction motors and safety systems.\n\nThe Duplex design was further refined into the third generation Euroduplex."
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Class 165",
+  "nation": "UK",
+  "liveries": [
+    "GWR"
+  ],
+  "type": "Diesel Hydraulic Multiple Unit",
+  "manufacturer": "British Rail Engineering",
+  "power": "350 hp/260 kW (per engine)",
+  "max_speed": "75-90 mph (121-145 km/h)",
+  "manufactured_year": "1990-1992",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 76,
+  "description": "The British Rail Class 165 Networker Turbo is a fleet of suburban diesel-hydraulic multiple unit passenger trains (DMUs), originally specified by and built for the British Rail Thames and Chiltern Division of Network SouthEast. They were built by BREL York Works between 1990 and 1992. An express version was subsequently built in the form of the Class 166 Networker Turbo Express trains. Both classes are now referred to as \"Networker Turbos\", a name derived some three years later for the project that resulted in the related Class 365 and Class 465 EMUs."
+}

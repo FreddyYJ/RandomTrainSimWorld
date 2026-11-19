@@ -1,0 +1,16 @@
+{
+  "name": "BR 155",
+  "nation": "Germany",
+  "liveries": [
+    "DB",
+    "Press"
+  ],
+  "type": "Electric Locomotive",
+  "manufacturer": "LEW Hennigsdorf",
+  "power": "7,200 hp/5,400 kW",
+  "max_speed": "120 km/h (75 mph)",
+  "manufactured_year": "1977-1984",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 273,
+  "description": "The Deutsche Reichsbahn (East Germany) Class 250 (known since 1992 as Deutsche Bahn AG Class 155) is a German electric locomotive used on freight trains.[1] It is nicknamed the \"Electric Container\" or \"Powercontainer\" due to its distinctive carbody shape. It was the most powerful locomotive in the former GDR and is still in use with Deutsche Bahn AG."
+}

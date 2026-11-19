@@ -1,0 +1,16 @@
+{
+  "name": "Class 484",
+  "nation": "UK",
+  "liveries": [
+    "Isle of Wight",
+    "London"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Metro-Cammell",
+  "power": "601 hp/448 kW",
+  "max_speed": "60 mph (97 km/h)",
+  "manufactured_year": "2020-2021",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 5,
+  "description": "The British Rail Class 484 D-Train is a class of electric multiple unit built by rolling stock manufacturer Vivarail which operates on the Island Line on the Isle of Wight. Based on the British Rail Class 230 diesel multiple unit, the units are part of the Vivarail D-Train family, converted from London Underground D78 Stock originally manufactured in the late 1970s and early 1980s by Metro-Cammell."
+}

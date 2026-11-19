@@ -1,0 +1,15 @@
+{
+  "name": "F40PH-2CAT",
+  "nation": "USA",
+  "liveries": [
+    "Caltrain"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Division (EMD), General Motors Diesel (GMD), Morrison-Knudsen (MK), MotivePower (MPI)",
+  "power": "3,000-3,200 hp/2,200-2,400 kW",
+  "max_speed": "103-110 mph (166-177 km/h)",
+  "manufactured_year": "1975-2007",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 506,
+  "description": "The EMD F40PH is a four-axle 3,000–3,200 hp (2.2–2.4 MW) B-B diesel-electric locomotive built by General Motors Electro-Motive Division in several variants from 1975 to 1992. Intended for use on Amtrak's short-haul passenger routes, it became the backbone of Amtrak's diesel fleet after the failure of the EMD SDP40F. The F40PH also found widespread use on commuter railroads in the United States and with VIA Rail in Canada. Additional F40PH variants were manufactured by Morrison-Knudsen and MotivePower between 1988 and 2007, mostly rebuilt from older locomotives."
+}

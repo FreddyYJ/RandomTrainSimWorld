@@ -1,0 +1,15 @@
+{
+  "name": "Class 387",
+  "nation": "UK",
+  "liveries": [
+    "Gatwick Express"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Bombardier",
+  "power": "2,250 hp/1,680 kW (per motor)",
+  "max_speed": "110 mph (177 km/h)",
+  "manufactured_year": "2014-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 107,
+  "description": "The British Rail Class 387 Electrostar is a type of electric multiple unit passenger train built by Bombardier Transportation. They are part of the Electrostar family of trains. A total of 107 units were built, with the first train entering service with Thameslink in December 2014. The trains are currently in service with Gatwick Express, Great Northern, Great Western Railway, Heathrow Express and Southern. The Class 387 is a variation of the Class 379 with dual-voltage capability which allows units to run on 750 V DC third rail, as well as use 25 kV AC OLE. The class were the final rolling stock orders from the Bombardier Electrostar family with 2,805 vehicles built over 18 years between 1999 and 2017."
+}

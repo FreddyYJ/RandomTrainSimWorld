@@ -1,0 +1,15 @@
+{
+  "name": "ES44C4",
+  "nation": "USA",
+  "liveries": [
+    "BNSF"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "General Electric (GE)",
+  "power": "4,400 hp/3,300 kW",
+  "max_speed": "75 mph (121 km/h)",
+  "manufactured_year": "2003-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 49,
+  "description": "The Evolution Series is a line of diesel locomotives built by GE Transportation Systems (now owned by Wabtec), initially designed to meet the U.S. EPA's Tier 2 locomotive emissions standards that took effect in 2005. The line is the direct successor to the GE Dash 9 Series. The first pre-production units were built in 2003. Evolution Series locomotives are equipped with either AC or DC traction motors, depending on the customer's preference. All are powered by the GE GEVO engine."
+}

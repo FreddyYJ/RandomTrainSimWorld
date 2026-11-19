@@ -1,0 +1,16 @@
+{
+  "name": "F125",
+  "nation": "USA",
+  "liveries": [
+    "Metrolink",
+    "Metrolink Christmas"
+  ],
+  "type": "Diesel Electric Locomotive",
+  "manufacturer": "Electro-Motive Diesel (EMD)",
+  "power": "4,000 hp/3,000 kW",
+  "max_speed": "100-125 mph (160-201 km/h)",
+  "manufactured_year": "2015-2021",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 40,
+  "description": "The EMD F125 \"Spirit\" is a four-axle passenger diesel locomotive manufactured by Electro-Motive Diesel (EMD) for the North American market since 2015. It is powered by a Caterpillar C175-20 V20 diesel engine rated at 4,700 hp (3,500 kW). The locomotive is capable of traveling at a maximum in-service speed of 125 mph (201 km/h) pulling consists of up to 10 cars. It was EMD's first new passenger locomotive for the North American market in 15 years, with the most recent predecessor passenger locomotive being the EMD DE30AC and DM30AC built for the Long Island Rail Road. Metrolink is the only customer of the F125."
+}

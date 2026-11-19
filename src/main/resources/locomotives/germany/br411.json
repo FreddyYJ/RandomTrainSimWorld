@@ -1,0 +1,15 @@
+{
+  "name": "BR 411 ICET",
+  "nation": "Germany",
+  "liveries": [
+    "DB"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Siemens, Alstom",
+  "power": "N/A",
+  "max_speed": "230 km/h (145 mph)",
+  "manufactured_year": "1999-",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 60,
+  "description": "The ICE T or ICE-T, consisting of DB Classes 411 and 415, are German tilting electric multiple unit high-speed trains in service with DB Fernverkehr serving routes within Germany and to Austria."
+}

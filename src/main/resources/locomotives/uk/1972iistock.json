@@ -1,0 +1,16 @@
+{
+  "name": "1972 Mk.II Tube Stock",
+  "nation": "UK",
+  "liveries": [
+    "Underground",
+    "Silver"
+  ],
+  "type": "Electric Multiple Unit",
+  "manufacturer": "Metro-Cammell",
+  "power": "N/A",
+  "max_speed": "45 mph (72 km/h)",
+  "manufactured_year": "1972-1974",
+  "gauge": "Standard Gauge (1,435 mm)",
+  "total": 63,
+  "description": "The London Underground 1972 Stock is a type of rolling stock used on the London Underground. The 1972 Stock originally operated on the Northern line until 1999 to make up the shortfall in trains on the 1959 Tube Stock fleet, and then they were transferred to the Bakerloo line following their displacement by the 1995 Stock.[3] Following the withdrawal of the 1938 Stock-based British Rail Class 483 electric multiple units from the Isle of Wight in 2021, the 1972 Stock are now the oldest trains in regular passenger service in the United Kingdom. 63 seven-car trains were built in two separate batches."
+}

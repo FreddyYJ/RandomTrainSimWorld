@@ -1,0 +1,50 @@
+{
+  "name": "Thames Branch Lines",
+  "locomotives": {
+    "uk/class165": [
+      "GWR"
+    ],
+    "uk/class37": [
+      "RailFreight"
+    ],
+    "uk/class70": [
+      "Freightliner"
+    ],
+    "uk/class166": [
+      "GWR",
+      "GBR"
+    ]
+  },
+  "nation": "UK",
+  "journey": [
+    "Thames Branches"
+  ],
+  "scenario": {
+    "Divide and Conquer": {
+      "difficulty": 3,
+      "length": "0:35",
+      "locomotive": ["Class 165 GWR"]
+    },
+    "Rescue on the Windsor Branch": {
+      "difficulty": 4,
+      "length": "0:25",
+      "locomotive": ["Class 156 GWR"]
+    },
+    "Regatta Day": {
+      "difficulty": 1,
+      "length": "0:30",
+      "locomotive": ["Class 165 GWR"]
+    },
+    "The Marlow Donkey": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["Class 165 GWR"]
+    },
+    "Wedding Bells in Windsor": {
+      "difficulty": 1,
+      "length": "0:15",
+      "locomotive": ["Class 165 GWR"]
+    }
+  },
+  "description": "Token-up and tackle a trifecta of Thames Valley duties as no less than 3 routes - the Windsor, Marlow and Henley branch lines – arrive in Train Sim World courtesy of Incredible Trains! Expand your Great Western experience and hop across an iconic trio of tracks aboard Networker Turbo traction.\n\nOnce operated by the Metropolitan Railway, the branch to Windsor & Eton Central opened to provide connecting traffic to the iconic royal town. While the shortest of the 3 branches, its elevated tracks curving round and right up to Castle Hill, the public entrance to Windsor Castle, has made it a very popular and busy route.\n\nThe Marlow branch of the Great Western is an amalgamation of two historical routes, the Great Marlow Railway, and what remains of the Wycombe Railway. While originally built as a connection between the GWR and Chiltern main lines, today the tracks are curtailed at the aptly named Bourne End, where services then change ends to serve Marlow, a shuttle affectionately known as the Marlow Donkey.\n\nReferred to as the Regatta Line, the branch to Henley came about largely due to the proximity of the Thames, where riverside towns became a common sight. With the mainline through Twyford already in situ, the locals demanded a direct connection, and today, the near-straight branch still stands in its entirety and is at its busiest during riverside events."
+}
