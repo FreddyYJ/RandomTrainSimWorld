@@ -44,4 +44,11 @@ public class RouteTest {
         assertTrue(desc.contains("Name: Sand Patch Grade"));
         assertTrue(desc.contains("Nation: USA"));
     }
+
+    @Test
+    public void testRoutesRead() {
+        // Load every route from the bundled resources
+        Main main = new Main();
+        assertEquals(86, main.routes.size());
+    }
 }
