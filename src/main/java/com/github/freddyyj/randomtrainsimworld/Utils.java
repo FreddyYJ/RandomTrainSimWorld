@@ -13,6 +13,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystemAlreadyExistsException;
 import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 
@@ -34,6 +35,13 @@ public class Utils {
     public static Path getResourcePath(final String resourceName) {
         final URL url = Utils.class.getResource(resourceName);
         if (url == null) {
+            // Directories inside a jlink image are not visible to getResource(), use the jrt file system
+            if (Utils.class.getModule().isNamed()) {
+                final Path jrtPath = Path.of(URI.create("jrt:/" + Utils.class.getModule().getName() + resourceName));
+                if (Files.exists(jrtPath)) {
+                    return jrtPath;
+                }
+            }
             throw new IllegalArgumentException("Resource " + resourceName + " not found.");
         }
         try {
