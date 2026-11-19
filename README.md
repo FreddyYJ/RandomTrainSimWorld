@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v2.0.0
+* Completely reworked UI and data
+
 v1.4.2
 * Add a new route 'Thames Valley Line'
 * Add a new locomotives 'FL Class 70' in proper routes
