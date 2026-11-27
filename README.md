@@ -29,6 +29,9 @@ An installer will be stored in `build/jpackage`.
 Documentation: https://freddyyj.github.io/RandomTrainSimWorld/
 
 ## Changelog
+v2.0.1
+* Add a journey and scenarios for Cargo Line 8: Taschenwagen in S-Bahn Vorarlberg
+
 v2.0.0
 * Completely reworked UI and data
 

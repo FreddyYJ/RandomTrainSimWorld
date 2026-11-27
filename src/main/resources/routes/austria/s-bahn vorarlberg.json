@@ -23,7 +23,8 @@
   },
   "nation": "Austria",
   "journey": [
-    "Climb Every Mountain"
+    "Climb Every Mountain",
+    "Cargo Line: Taschenwagen"
   ],
   "scenario": {
     "Night Change": {
@@ -59,6 +60,36 @@
     "Pick Up": {
       "difficulty": 2,
       "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    },
+    "45861 Wolfurt-Wien ZvB": {
+      "difficulty": 2,
+      "length": "0:45",
+      "locomotive": ["BR 185 DB"]
+    },
+    "45860 Feldkirch-Wolfurt": {
+      "difficulty": 2,
+      "length": "1:00",
+      "locomotive": ["BR 185 DB"]
+    },
+    "41972 Wolfurt-Maasvlakte": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 185 DB"]
+    },
+    "41723 Wien ZvB-Wolfurt": {
+      "difficulty": 3,
+      "length": "0:40",
+      "locomotive": ["BR 185 DB"]
+    },
+    "43545 Wolfurt-Bludenz": {
+      "difficulty": 2,
+      "length": "0:50",
+      "locomotive": ["BR 185 DB"]
+    },
+    "41454 Maasvlakte-Wolfurt": {
+      "difficulty": 2,
+      "length": "0:45",
       "locomotive": ["BR 185 DB"]
     }
   },
